@@ -17,8 +17,11 @@ concurrency:
 
 jobs:
   ci:
-    runs-on: macos-latest
-    timeout-minutes: 20
+    # The Xcode 27 image, not macos-latest (Xcode 26): the project is in
+    # Xcode 27 format, and `swift test` compiles the string catalogs only
+    # from Swift 6.4 on; older toolchains copy them and every plural fails.
+    runs-on: xcode-27
+    timeout-minutes: 30
     env:
       # The tests check the mapping and the payloads against the subspace dev
       # repo (fixtures, golden files); without it they are skipped.
@@ -31,8 +34,8 @@ jobs:
           repository: we-are-the-borg/subspace
           path: subspace
       - name: Select the newest installed Xcode
-        # Decides the Swift toolchain for `swift test`. Only plain versioned
-        # bundles (Xcode_26.6.app), no beta/RC suffixes.
+        # Decides the Swift toolchain for `swift test` and the app build. Only
+        # plain versioned bundles (Xcode_27.2.app), no beta/RC suffixes.
         run: |
           xcode=$(ls -d /Applications/Xcode_*.app | grep -E '/Xcode_[0-9.]+\.app$' | sort -V | tail -1)
           if [ -z "$xcode" ]; then
@@ -47,11 +50,15 @@ jobs:
         run: |
           bash scripts/test-public-check.sh
           scripts/public-check.sh
+      # Quiet: failures and the summary only. Without it the parameterized
+      # tests print every argument, tens of thousands of lines.
       - name: Test SubspaceKit
         working-directory: SubspaceKit
-        run: swift test
+        run: swift test --quiet
       - name: Test CollectiveKit
         working-directory: CollectiveKit
-        run: swift test
-      # The app build (xcodebuild) is left out on purpose: the project is in
-      # Xcode 27 format and the runners have no Xcode 27 yet.
+        run: swift test --quiet
+      - name: Build the app
+        run: >
+          xcodebuild -project App/Collective.xcodeproj -scheme Collective
+          -configuration Debug CODE_SIGNING_ALLOWED=NO build
