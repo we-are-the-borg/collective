@@ -23,9 +23,11 @@ private let required = UpdateAvailability.required(installed: version("1.0.1"), 
 private func makeLink(
     _ statuses: [IntegrationStatus],
     _ availability: [SourceID: UpdateAvailability],
-    checksForUpdates: Bool = true
+    checksForUpdates: Bool = true,
+    app: String? = nil
 ) -> UpdateFooterLink? {
-    UpdateFooterLink(statuses: statuses, availability: availability, checksForUpdates: checksForUpdates)
+    UpdateFooterLink(statuses: statuses, availability: availability, checksForUpdates: checksForUpdates,
+                     appUpdate: app.map(version))
 }
 
 private func en(_ resource: LocalizedStringResource) -> String {
@@ -37,21 +39,21 @@ private func en(_ resource: LocalizedStringResource) -> String {
 @Suite struct UpdateFooterLinkTests {
     @Test func availableUpdateLinksToItsSource() throws {
         let link = try #require(makeLink([tool("a")], ["a": available]))
-        #expect(link.source == "a")
+        #expect(link.target == .source("a"))
         #expect(en(link.text) == "Update available")
         #expect(link.role == .info)
     }
 
     @Test func requiredBeatsAnEarlierAvailable() throws {
         let link = try #require(makeLink([tool("a"), tool("b")], ["a": available, "b": required]))
-        #expect(link.source == "b")
+        #expect(link.target == .source("b"))
         #expect(en(link.text) == "Update required")
         #expect(link.role == .warning)
     }
 
     @Test func firstInOrderWinsAmongEquals() {
-        #expect(makeLink([tool("b"), tool("a")], ["a": available, "b": available])?.source == "b")
-        #expect(makeLink([tool("b"), tool("a")], ["a": required, "b": required])?.source == "b")
+        #expect(makeLink([tool("b"), tool("a")], ["a": available, "b": available])?.target == .source("b"))
+        #expect(makeLink([tool("b"), tool("a")], ["a": required, "b": required])?.target == .source("b"))
     }
 
     @Test func noLinkWithoutAnUpdate() {
@@ -61,9 +63,27 @@ private func en(_ resource: LocalizedStringResource) -> String {
         #expect(makeLink([tool("a", .notInstalled)], ["a": required]) == nil)
     }
 
+    /// An app update ranks between a required and an available subspace update, and opens the app's update window.
+    @Test func anAppUpdateRanksBetweenRequiredAndAvailable() throws {
+        let app = try #require(makeLink([tool("a")], ["a": available], app: "1.3.0"))
+        #expect(app.target == .app)
+        #expect(app.kind == .app(version("1.3.0")))
+        #expect(en(app.text) == "App update available")
+        #expect(en(app.help) == "The Collective 1.3.0 is available")
+        #expect(app.role == .info)
+        #expect(makeLink([tool("a")], ["a": required], app: "1.3.0")?.target == .source("a"))
+        #expect(makeLink([tool("a")], [:], app: "1.3.0")?.target == .app)
+    }
+
+    /// A subspace link's tooltip is its text.
+    @Test func aSourceLinksHelpIsItsText() throws {
+        let link = try #require(makeLink([tool("a")], ["a": required]))
+        #expect(en(link.help) == "Update required")
+    }
+
     @Test func switchOffLeavesOnlyRequired() {
         #expect(makeLink([tool("a")], ["a": available], checksForUpdates: false) == nil)
-        #expect(makeLink([tool("a"), tool("b")], ["a": available, "b": required], checksForUpdates: false)?.source == "b")
+        #expect(makeLink([tool("a"), tool("b")], ["a": available, "b": required], checksForUpdates: false)?.target == .source("b"))
     }
 }
 

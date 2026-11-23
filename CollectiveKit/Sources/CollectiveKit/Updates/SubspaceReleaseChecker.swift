@@ -13,12 +13,14 @@ public final class SubspaceReleaseChecker {
     private var record: SubspaceReleaseRecord {
         didSet { store.record = record }
     }
-    @ObservationIgnored private var running: Task<Void, Never>?
+    /// Observed, so `isChecking` updates `Check Now`.
+    private var running: Task<Void, Never>?
     nonisolated private static let log = Logger(subsystem: "CollectiveKit", category: "subspace-updates")
 
-    /// The settings switch "Check for subspace updates", one for all sources.
-    /// Off, the app asks GitHub nothing and shows no release; the releases found
-    /// before stay stored, and switching on waits for the next due check.
+    /// The settings switch "Check for updates automatically", one for the app
+    /// and all sources. Off, the app asks GitHub nothing on its own and shows
+    /// only what `Check Now` found; the releases found before stay stored, and
+    /// switching on waits for the next due check.
     public var checksForUpdates: Bool {
         didSet { store.checksForUpdates = checksForUpdates }
     }
@@ -30,10 +32,11 @@ public final class SubspaceReleaseChecker {
         checksForUpdates = store.checksForUpdates
     }
 
-    /// The newest release the last successful lookup found; nil while checking is off.
+    /// The newest release the last successful lookup found; with checking off
+    /// only one that `Check Now` found.
     public func latest(for source: SourceID) -> SubspaceVersion? {
-        guard checksForUpdates else { return nil }
-        return record.sources[source.rawValue]?.latest.flatMap(SubspaceVersion.init)
+        guard let entry = record.sources[source.rawValue], checksForUpdates || entry.manual == true else { return nil }
+        return entry.latest.flatMap(SubspaceVersion.init)
     }
 
     /// What the source's plugin should get, from the installed version the probe
@@ -75,11 +78,24 @@ public final class SubspaceReleaseChecker {
         lookUp(sources, olderThan: Self.onOpenInterval, now: now)
     }
 
-    private func lookUp(_ sources: [SourceID: SubspaceRelease], olderThan interval: TimeInterval, now: Date) -> Task<Void, Never>? {
+    /// `Check Now`: every source at once, whatever the switch and the interval
+    /// say. The click is the consent; only a lookup already running wins.
+    /// - Returns: The lookup, or nil while one runs.
+    @discardableResult
+    public func checkNow(now: Date, sources: [SourceID: SubspaceRelease]) -> Task<Void, Never>? {
+        lookUp(sources, olderThan: nil, now: now)
+    }
+
+    /// Whether a lookup is under way, for `Check Now`'s disabled state.
+    public var isChecking: Bool { running != nil }
+
+    /// - Parameter interval: How old a source's last lookup must be; nil is `Check Now`.
+    private func lookUp(_ sources: [SourceID: SubspaceRelease], olderThan interval: TimeInterval?, now: Date) -> Task<Void, Never>? {
         // One lookup at a time: a window opened during the launch check must not ask again.
-        guard checksForUpdates, running == nil else { return nil }
+        guard checksForUpdates || interval == nil, running == nil else { return nil }
+        let manual = interval == nil
         let sources = sources.filter { source, _ in
-            guard let last = record.sources[source.rawValue]?.lastAttempt else { return true }
+            guard let interval, let last = record.sources[source.rawValue]?.lastAttempt else { return true }
             // A lookup later than now means the clock was set back; waiting for it could take years.
             return last > now || now.timeIntervalSince(last) >= interval
         }
@@ -110,6 +126,7 @@ public final class SubspaceReleaseChecker {
                 }
                 Self.log.notice("Latest subspace release for \(source.rawValue, privacy: .public): \(latest.description, privacy: .public)")
                 found.sources[source.rawValue, default: .init()].latest = latest.description
+                found.sources[source.rawValue, default: .init()].manual = manual ? true : nil
             }
             record = found
             running = nil

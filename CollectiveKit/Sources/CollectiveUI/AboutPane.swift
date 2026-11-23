@@ -4,9 +4,9 @@ import SwiftUI
 
 /// About: the centered head is the pane's heading, then what subspace is with one row per
 /// registered source, then the acknowledgements with their sheet of full license texts. Under
-/// the head's version the button row opens the release notes' sheet. The project link and the
-/// copyright line wait for the public repository, the update status line and `Check Now` for
-/// app updates; neither is drawn until then.
+/// the head's version the update status line, then the button row: `Check Now` or `Update…`,
+/// and `Release Notes…`, which opens the release notes' sheet. The project link and the
+/// copyright line are separate work and not drawn yet.
 struct AboutPane: View {
     let appIcon: Image
     let appName: String
@@ -16,6 +16,12 @@ struct AboutPane: View {
     let installedVersion: String?
     let sources: [SettingsSourceModel]
     var acknowledgements: Acknowledgements = .bundled
+    /// The update status line; nil draws neither it nor `Check Now`.
+    var update: AppUpdateStatusLine?
+    /// `Check Now`: the app checks itself and every subspace plugin.
+    var onCheckNow: () -> Void = {}
+    /// `Update…`: the app opens its update window.
+    var onUpdate: () -> Void = {}
     /// `nil` reads the bundled notes, bounded by `installedVersion`.
     var releaseNotes: ReleaseNotes?
     @State private var showsLicenseTexts = false
@@ -61,16 +67,27 @@ struct AboutPane: View {
                 .plexLineHeight(17, size: 12)
                 .foregroundStyle(.role(.textMuted))
                 .padding(.top, 2)
+            if let update { UpdateStatusLine(line: update).padding(.top, 14) }
             buttons.padding(.top, 12)
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 6)
     }
 
-    /// Centered, 10 apart. The update status line above it and `Check Now` / `Update…` before
-    /// `Release Notes…` come with app updates.
+    /// Centered, 10 apart: `Check Now`, or the primary `Update…` in its place, before `Release Notes…`.
     private var buttons: some View {
         HStack(spacing: 10) {
+            switch update?.button {
+            case .checkNow(let enabled)?:
+                Button(action: onCheckNow) { Text(SettingsText.checkNow) }
+                    .buttonStyle(.settings)
+                    .disabled(!enabled)
+            case .update?:
+                Button(action: onUpdate) { Text(SettingsText.updateApp) }
+                    .buttonStyle(.settingsPrimary)
+            case nil:
+                EmptyView()
+            }
             Button { showsReleaseNotes = true } label: { Text(SettingsText.releaseNotesButton) }
                 .buttonStyle(.settings)
         }
@@ -195,5 +212,42 @@ private struct AcknowledgementsList: View {
         // Inside the frame, as the design's CSS border is outside the content.
         .padding(1)
         .overlay { Rectangle().strokeBorder(.role(.border), lineWidth: 1) }
+    }
+}
+
+/// About's status line, 12/17 centered with 6 between the form and the text: the status word
+/// in the form's role, the detail in `textSubtle`, after a failed `Check Now` a second line
+/// 2 below in `textMuted`. VoiceOver reads it as one element and hears each change.
+private struct UpdateStatusLine: View {
+    let line: AppUpdateStatusLine
+
+    var body: some View {
+        VStack(spacing: 2) {
+            HStack(spacing: 6) {
+                SourceStatusShapeView(line.mark)
+                text.lineLimit(1)
+            }
+            if let explanation = line.explanation {
+                Text(explanation)
+                    .foregroundStyle(.role(.textMuted))
+                    .multilineTextAlignment(.center)
+            }
+        }
+        .font(.plexSans(12).monospacedDigit())
+        .plexLineHeight(17, size: 12)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(verbatim: spoken))
+        .onChange(of: line) { AccessibilityNotification.Announcement(spoken).post() }
+    }
+
+    private var text: Text {
+        let status = Text(line.status).foregroundStyle(.role(line.mark.role))
+        guard let detail = line.detail else { return status }
+        return status + Text(verbatim: " ") + Text(detail).foregroundStyle(.role(.textSubtle))
+    }
+
+    /// "Up to date · checked today at 14:02", the explanation after it.
+    private var spoken: String {
+        [line.status, line.detail, line.explanation].compactMap { $0.map { String(localized: $0) } }.joined(separator: " ")
     }
 }

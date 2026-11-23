@@ -242,10 +242,14 @@ public struct SettingsModel: Sendable, Equatable {
     public let panes: [SettingsPane]
     public let sources: [SettingsSourceModel]
     public let storedEvents: StoredEventsModel
+    /// A newer version of the app is known: About's sidebar row shows the arrow.
+    public let showsAboutUpdateArrow: Bool
 
-    public init(sources: [SettingsSourceModel], storedEvents: StoredEventsModel = StoredEventsModel(size: nil)) {
+    public init(sources: [SettingsSourceModel], storedEvents: StoredEventsModel = StoredEventsModel(size: nil),
+                appUpdateAvailable: Bool = false) {
         self.sources = sources
         self.storedEvents = storedEvents
+        showsAboutUpdateArrow = appUpdateAvailable
         panes = [.general, .appearance, .sessions, .notifications, .menuBar] + sources.map { .source($0.source) } + [.about]
     }
 
@@ -256,12 +260,17 @@ public struct SettingsModel: Sendable, Equatable {
         panes.arrowKeyStep(from: pane, by: offset) ?? panes.first ?? pane
     }
 
-    /// Under the "Check for subspace updates" switch: the first time the app
-    /// itself goes online, so it names where, how often, and that nothing is sent.
+    /// Under the "Check for updates automatically" switch: where the app goes
+    /// online, how often, that nothing is sent and that nothing installs itself.
     public static let updatesFootnote: LocalizedStringResource = .kit(
-        "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off.",
-        defaultValue: "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off."
+        "Once a day, The Collective asks GitHub whether a new version of the app or of subspace is published. Nothing about you or your sessions is sent. Updates are only installed when you choose to. A required subspace update is shown even when this is off.",
+        defaultValue: "Once a day, The Collective asks GitHub whether a new version of the app or of subspace is published. Nothing about you or your sessions is sent. Updates are only installed when you choose to. A required subspace update is shown even when this is off."
     )
+
+    /// What VoiceOver reads for About's sidebar row.
+    public var aboutRowAccessibilityLabel: LocalizedStringResource {
+        showsAboutUpdateArrow ? .kit("About, update available", defaultValue: "About, update available") : SettingsText.about
+    }
 
     /// The popup of "Keep finished sessions visible".
     public static let retentionOptions = FinishedRetention.allCases
@@ -464,9 +473,9 @@ public enum SettingsText {
     )
     /// The header of General's section with the update switch.
     public static let updates: LocalizedStringResource = .kit("Updates", defaultValue: "Updates")
-    /// One switch for all sources, on by default.
-    public static let checkForSubspaceUpdates: LocalizedStringResource = .kit(
-        "Check for subspace updates", defaultValue: "Check for subspace updates"
+    /// One switch for the app and all sources, on by default.
+    public static let checkForUpdatesAutomatically: LocalizedStringResource = .kit(
+        "Check for updates automatically", defaultValue: "Check for updates automatically"
     )
     // The line under each pane's heading.
     public static let generalDescription: LocalizedStringResource = .kit(
@@ -553,7 +562,12 @@ public enum SettingsText {
         "All releases on GitHub ↗", defaultValue: "All releases on GitHub ↗"
     )
 
-    /// The tooltip of a source's sidebar arrow.
+    /// About's button that checks the app and every subspace plugin at once.
+    public static let checkNow: LocalizedStringResource = .kit("Check Now", defaultValue: "Check Now")
+    /// About's primary button while an app update is available; it opens the update window.
+    public static let updateApp: LocalizedStringResource = .kit("Update…", defaultValue: "Update…")
+
+    /// The tooltip of a source's and of About's sidebar arrow.
     public static let updateAvailable: LocalizedStringResource = .kit("Update available", defaultValue: "Update available")
 }
 

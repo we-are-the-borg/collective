@@ -13,7 +13,7 @@ struct PopoverContent: View {
     let model: CollectiveModel
     let onSetUp: () -> Void
     let onSettings: () -> Void
-    let onOpenUpdate: (SourceID) -> Void
+    let onOpenUpdate: (UpdateFooterLink.Target) -> Void
 
     var body: some View {
         ModelClock { now in model.popoverModel(now: now) } content: { popover in

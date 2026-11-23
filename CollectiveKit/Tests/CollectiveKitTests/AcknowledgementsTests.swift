@@ -17,16 +17,22 @@ import Testing
 
     private func text(_ resource: LocalizedStringResource) -> String { String(localized: resource) }
 
+    /// The kit's pins and the packages only the app links (Sparkle), as the script reads them.
     @Test func listsEveryPinnedPackageWithItsVersionAndNothingElse() throws {
-        let pins = try PackagePin.parse(Data(contentsOf: Self.packageResolved))
-        #expect(!pins.isEmpty)
+        let kit = try PackagePin.parse(Data(contentsOf: Self.packageResolved))
+        let app = try PackagePin.parse(Data(contentsOf: Self.appPackageResolved))
+        #expect(!kit.isEmpty)
+        let pins = kit + app.filter { pin in !kit.contains { $0.identity == pin.identity } }
         #expect(Acknowledgements.bundled.packageMismatches(with: pins) == [])
     }
 
+    /// The app resolves the kit's packages itself and may drift from the kit's pins.
     @Test func theAppsPinsMatchTheListToo() throws {
         let pins = try PackagePin.parse(Data(contentsOf: Self.appPackageResolved))
         #expect(!pins.isEmpty)
-        #expect(Acknowledgements.bundled.packageMismatches(with: pins) == [])
+        #expect(Acknowledgements.bundled.packageMismatches(with: pins).filter {
+            if case .unpinned = $0 { false } else { true }
+        } == [])
     }
 
     @Test func reportsABumpedAnUnlistedAndAnUnpinnedPackage() throws {
@@ -58,6 +64,7 @@ import Testing
             .version(identity: "yams", listed: "6.2.2", pinned: "6.3.0"),
             .unlisted(identity: "swift-collections"),
             .unpinned(identity: "yyjson"),
+            .unpinned(identity: "sparkle"),
         ])
     }
 
@@ -75,7 +82,7 @@ import Testing
         #expect(sections.map(\.id) == [.libraries, .fontsAndIcons, .colorSchemes])
         #expect(sections.map { text($0.title) } == ["Libraries", "Fonts and icons", "Color schemes"])
         #expect(sections.map { $0.entries.map(\.name) } == [
-            ["GRDB.swift", "yyjson", "Swift Markdown", "swift-cmark", "Yams", "libyaml"],
+            ["GRDB.swift", "yyjson", "Swift Markdown", "swift-cmark", "Yams", "Sparkle", "libyaml"],
             ["Lucide", "Lobe Icons", "IBM Plex Sans", "IBM Plex Mono"],
             [
                 "Ayu", "Catppuccin", "Dracula", "Everforest", "GitHub", "Gruvbox", "Kanagawa", "Material",

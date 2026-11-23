@@ -151,9 +151,21 @@ import Testing
 
     @Test func theGeneralUpdatesTextsAreTheDesigns() {
         #expect(text(SettingsText.updates) == "Updates")
-        #expect(text(SettingsText.checkForSubspaceUpdates) == "Check for subspace updates")
+        #expect(text(SettingsText.checkForUpdatesAutomatically) == "Check for updates automatically")
         #expect(text(SettingsModel.updatesFootnote)
-            == "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off.")
+            == "Once a day, The Collective asks GitHub whether a new version of the app or of subspace is published. Nothing about you or your sessions is sent. Updates are only installed when you choose to. A required subspace update is shown even when this is off.")
         #expect(text(SettingsText.updateAvailable) == "Update available")
+        #expect(text(SettingsText.checkNow) == "Check Now")
+        #expect(text(SettingsText.updateApp) == "Update…")
+    }
+
+    /// About's sidebar row carries the arrow and says so while an app update is known.
+    @Test func aboutsRowShowsAnAppUpdate() {
+        let plain = SettingsModel(sources: [])
+        #expect(!plain.showsAboutUpdateArrow)
+        #expect(text(plain.aboutRowAccessibilityLabel) == "About")
+        let update = SettingsModel(sources: [], appUpdateAvailable: true)
+        #expect(update.showsAboutUpdateArrow)
+        #expect(text(update.aboutRowAccessibilityLabel) == "About, update available")
     }
 }

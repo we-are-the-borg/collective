@@ -67,10 +67,7 @@ struct SettingsWindowContent: View {
             eventRetention: $model.eventRetention,
             clearFailure: $model.storedEventsClearFailure,
             notificationPreferences: $model.notificationPreferences,
-            checksForUpdates: Binding(
-                get: { model.releaseChecker.checksForUpdates },
-                set: { model.releaseChecker.checksForUpdates = $0 }
-            ),
+            checksForUpdates: $model.checksForUpdates,
             menuBarAnimation: $model.menuBarAnimation,
             colorsEffortLevels: $model.colorsEffortLevels,
             themeChoice: Binding(
@@ -93,6 +90,7 @@ struct SettingsWindowContent: View {
             appName: Self.appName,
             version: Self.version,
             installedVersion: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
+            appUpdate: model.appUpdateStatusLine(now: Date()),
             onSetUp: { _ in openWindow.openSetupWindow() },
             onUpdate: model.runUpdate,
             onToggleUpdateOutput: model.setupRuns.toggleOutput(for:),
@@ -105,6 +103,8 @@ struct SettingsWindowContent: View {
             onShowThemesFolder: { CustomThemeCommands.showFolder(of: themes.library) },
             onShowThemeFile: CustomThemeCommands.showFile,
             onMoveThemeToTrash: { CustomThemeCommands.moveToTrash($0, in: themes.library) },
+            onCheckForUpdates: model.checkForUpdatesNow,
+            onShowAppUpdate: model.showAppUpdate,
             onQuit: { NSApplication.shared.terminate(nil) }
         )
         // Update runs show until the last of this and the setup window closes; see `SetupRuns`.

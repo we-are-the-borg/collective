@@ -15,10 +15,14 @@ public struct SubspaceReleaseRecord: Codable, Sendable, Equatable {
         public var lastAttempt: Date?
         /// The newest release of the last successful lookup.
         public var latest: String?
+        /// True when that lookup was `Check Now`, which shows its release even
+        /// with automatic checks off. Optional, so records from before decode.
+        public var manual: Bool?
 
-        public init(lastAttempt: Date? = nil, latest: String? = nil) {
+        public init(lastAttempt: Date? = nil, latest: String? = nil, manual: Bool? = nil) {
             self.lastAttempt = lastAttempt
             self.latest = latest
+            self.manual = manual
         }
     }
 

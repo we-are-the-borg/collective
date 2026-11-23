@@ -25,6 +25,7 @@ public struct SettingsView: View {
     let appName: String
     let version: String
     let installedVersion: String?
+    let appUpdate: AppUpdateStatusLine?
     let onSetUp: (SourceID) -> Void
     let onUpdate: (SourceID, SetupCardModel.CommandsBox.Footer.Button.Kind) -> Void
     let onToggleUpdateOutput: (SourceID) -> Void
@@ -37,6 +38,8 @@ public struct SettingsView: View {
     let onShowThemesFolder: () -> Void
     let onShowThemeFile: (URL) -> Void
     let onMoveThemeToTrash: (URL) -> Void
+    let onCheckForUpdates: () -> Void
+    let onShowAppUpdate: () -> Void
     let onQuit: () -> Void
 
     /// The window's own title, in the Window menu and the self-drawn title bar; the pane's
@@ -47,11 +50,12 @@ public struct SettingsView: View {
     ///   - appIcon: The app's own icon; the package cannot reach it.
     ///   - clearFailure: Why the last clear of the stored events failed; the view alerts while it is set and resets it on dismissal.
     ///   - notificationsTurnedOff: The user denied the app notifications in System Settings.
-    ///   - checksForUpdates: "Check for subspace updates" in General › Updates.
+    ///   - checksForUpdates: "Check for updates automatically" in General › Updates, for the app and subspace.
     ///   - menuBarAnimation: When and how fast the menu bar cube moves, in the Menu Bar pane.
     ///   - colorsEffortLevels: "Color effort levels" in General › Popover.
     ///   - themeChoice: The scheme per appearance, chosen in the Appearance pane; the app themes every window from it.
     ///   - reduceMotion: The system's Reduce Motion is on; the Menu Bar pane shows its note and greys out its controls.
+    ///   - appUpdate: About's update status line; nil draws neither it nor `Check Now`.
     ///   - onSetUp: "Set Up…"; the app opens the setup window.
     ///   - onUpdate: The update group's Update or Try Again; the app starts or retries that source's update.
     ///   - onToggleUpdateOutput: The update group's Show/Hide Output.
@@ -64,6 +68,8 @@ public struct SettingsView: View {
     ///   - onShowThemesFolder: The Appearance pane's "Show in Finder"; the app creates the themes folder if needed and opens it in Finder.
     ///   - onShowThemeFile: "Show in Finder" in a custom or error row's context menu; the app selects the file in Finder.
     ///   - onMoveThemeToTrash: "Move to Trash" in a custom or error row's context menu; the app moves the file to the Trash.
+    ///   - onCheckForUpdates: About's "Check Now"; the app checks itself and every subspace plugin.
+    ///   - onShowAppUpdate: About's "Update…"; the app opens its update window.
     ///   - onQuit: "Quit The Collective" under the sidebar; the app terminates.
     public init(
         model: SettingsModel,
@@ -84,6 +90,7 @@ public struct SettingsView: View {
         appName: String,
         version: String,
         installedVersion: String?,
+        appUpdate: AppUpdateStatusLine? = nil,
         onSetUp: @escaping (SourceID) -> Void,
         onUpdate: @escaping (SourceID, SetupCardModel.CommandsBox.Footer.Button.Kind) -> Void,
         onToggleUpdateOutput: @escaping (SourceID) -> Void,
@@ -96,6 +103,8 @@ public struct SettingsView: View {
         onShowThemesFolder: @escaping () -> Void,
         onShowThemeFile: @escaping (URL) -> Void,
         onMoveThemeToTrash: @escaping (URL) -> Void,
+        onCheckForUpdates: @escaping () -> Void = {},
+        onShowAppUpdate: @escaping () -> Void = {},
         onQuit: @escaping () -> Void
     ) {
         self.model = model
@@ -116,6 +125,7 @@ public struct SettingsView: View {
         self.appName = appName
         self.version = version
         self.installedVersion = installedVersion
+        self.appUpdate = appUpdate
         self.onSetUp = onSetUp
         self.onUpdate = onUpdate
         self.onToggleUpdateOutput = onToggleUpdateOutput
@@ -128,6 +138,8 @@ public struct SettingsView: View {
         self.onShowThemesFolder = onShowThemesFolder
         self.onShowThemeFile = onShowThemeFile
         self.onMoveThemeToTrash = onMoveThemeToTrash
+        self.onCheckForUpdates = onCheckForUpdates
+        self.onShowAppUpdate = onShowAppUpdate
         self.onQuit = onQuit
     }
 
@@ -194,7 +206,8 @@ public struct SettingsView: View {
                 )
             }
         case .about:
-            AboutPane(appIcon: appIcon, appName: appName, version: version, installedVersion: installedVersion, sources: model.sources)
+            AboutPane(appIcon: appIcon, appName: appName, version: version, installedVersion: installedVersion,
+                      sources: model.sources, update: appUpdate, onCheckNow: onCheckForUpdates, onUpdate: onShowAppUpdate)
         }
     }
 }

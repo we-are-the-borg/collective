@@ -255,6 +255,53 @@ private func check(_ checker: SubspaceReleaseChecker, now: Date, _ sources: [Sou
         #expect(github.requests.isEmpty)
     }
 
+    /// `Check Now` asks every source at once, also within the interval and with the switch off,
+    /// and its result shows with the switch off.
+    @Test func checkNowAsksWhateverTheSwitchAndTheIntervalSay() async throws {
+        let github = try FakeGitHub.real()
+        let store = MemoryStore()
+        store.checksForUpdates = false
+        let checker = SubspaceReleaseChecker(client: github, store: store)
+        await checker.checkNow(now: start, sources: both)?.value
+        #expect(github.requests.count == 2)
+        #expect(checker.latest(for: "claude-code") == v1_3_0)
+        await checker.checkNow(now: start + 1, sources: both)?.value
+        #expect(github.requests.count == 4)
+    }
+
+    /// A release an automatic lookup found stays hidden with the switch off; one from `Check Now` doesn't.
+    @Test func onlyACheckNowResultShowsWithTheSwitchOff() async throws {
+        let github = try FakeGitHub.real()
+        let checker = SubspaceReleaseChecker(client: github, store: MemoryStore())
+        await check(checker, now: start)
+        checker.checksForUpdates = false
+        #expect(checker.latest(for: "codex") == nil)
+        await checker.checkNow(now: start + hour, sources: both)?.value
+        #expect(checker.latest(for: "codex") == v1_1_0)
+        // The next automatic lookup takes the result over.
+        checker.checksForUpdates = true
+        await check(checker, now: start + 48 * hour)
+        checker.checksForUpdates = false
+        #expect(checker.latest(for: "codex") == nil)
+    }
+
+    /// `Check Now` shows as checking while its lookup runs, and never starts a second one.
+    @Test func checkNowRunsAloneAndShowsAsChecking() async throws {
+        let checker = SubspaceReleaseChecker(client: try FakeGitHub.real(), store: MemoryStore())
+        let first = try #require(checker.checkNow(now: start, sources: both))
+        #expect(checker.isChecking)
+        #expect(checker.checkNow(now: start, sources: both) == nil)
+        await first.value
+        #expect(!checker.isChecking)
+    }
+
+    /// A record written before `Check Now` existed decodes, its releases counting as automatic.
+    @Test func aRecordWithoutTheManualFlagDecodes() throws {
+        let json = #"{"sources":{"codex":{"lastAttempt":0,"latest":"1.1.0"}}}"#
+        let record = try JSONDecoder().decode(SubspaceReleaseRecord.self, from: Data(json.utf8))
+        #expect(record.sources["codex"] == .init(lastAttempt: Date(timeIntervalSinceReferenceDate: 0), latest: "1.1.0"))
+    }
+
     private func status(_ plugin: IntegrationStatus.Plugin, minimum: String? = nil, release: SubspaceRelease? = claudeCode) -> IntegrationStatus {
         var release = release
         release?.minimumVersion = minimum

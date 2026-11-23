@@ -274,7 +274,7 @@ scripts/acknowledgements.sh
 
 Commit both generated files.
 
-The script reads pinned dependencies from `CollectiveKit/Package.resolved` and collects their license and NOTICE files from the package checkouts. It runs `swift package resolve` if the checkouts are missing.
+The script reads pinned dependencies from `CollectiveKit/Package.resolved` and from the app's `Package.resolved` (in `App/Collective.xcodeproj`), which adds the packages only the app links, such as Sparkle. It collects their license and NOTICE files from the package checkouts. If checkouts are missing, it runs `swift package resolve` for the kit and `xcodebuild -resolvePackageDependencies` into `build/SourcePackages` for the app.
 
 For resources that aren't Swift packages, it reads names, SPDX identifiers, URLs and license files from `CollectiveKit/Acknowledgements/acknowledgements.json`. See the README in that directory for details.
 

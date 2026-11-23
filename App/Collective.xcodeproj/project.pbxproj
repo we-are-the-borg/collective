@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C77A5E8433B249243B3E312 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 15DAD140B4D1D6AC1B26CDEB /* Sparkle */; };
 		973D7F3CC3BE4504417DC1E8 /* SubspaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 416F0103FB24A02F672E7E70 /* SubspaceKit */; };
 		E116B2EF306ED1DA00CF74E7 /* CollectiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = E116B2EE306ED1DA00CF74E7 /* CollectiveKit */; };
 		E116B2F1306ED1DA00CF74E7 /* CollectiveUI in Frameworks */ = {isa = PBXBuildFile; productRef = E116B2F0306ED1DA00CF74E7 /* CollectiveUI */; };
@@ -32,6 +33,7 @@
 				E116B2EF306ED1DA00CF74E7 /* CollectiveKit in Frameworks */,
 				E116B2F1306ED1DA00CF74E7 /* CollectiveUI in Frameworks */,
 				973D7F3CC3BE4504417DC1E8 /* SubspaceKit in Frameworks */,
+				0C77A5E8433B249243B3E312 /* Sparkle in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				E116B2EE306ED1DA00CF74E7 /* CollectiveKit */,
 				E116B2F0306ED1DA00CF74E7 /* CollectiveUI */,
 				416F0103FB24A02F672E7E70 /* SubspaceKit */,
+				15DAD140B4D1D6AC1B26CDEB /* Sparkle */,
 			);
 			productName = Collective;
 			productReference = E1F6E589306ED09A0010AFF7 /* The Collective.app */;
@@ -107,6 +110,7 @@
 			packageReferences = (
 				E116B2ED306ED1DA00CF74E7 /* XCLocalSwiftPackageReference "../CollectiveKit" */,
 				A20607966B088B6E56BC2065 /* XCLocalSwiftPackageReference "../SubspaceKit" */,
+				27EFE06AECBF87B458A8C863 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E1F6E58A306ED09A0010AFF7 /* Products */;
@@ -273,6 +277,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "The Collective";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -307,6 +312,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "The Collective";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -359,7 +365,23 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		27EFE06AECBF87B458A8C863 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		15DAD140B4D1D6AC1B26CDEB /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27EFE06AECBF87B458A8C863 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		416F0103FB24A02F672E7E70 /* SubspaceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SubspaceKit;

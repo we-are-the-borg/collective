@@ -19,7 +19,7 @@ public struct PopoverView: View {
     private let onCheckAgain: () -> Void
     private let onSetUp: () -> Void
     private let onSettings: () -> Void
-    private let onOpenUpdate: (SourceID) -> Void
+    private let onOpenUpdate: (UpdateFooterLink.Target) -> Void
     private let onShowTerminal: (SessionKey) -> Void
     private let onRowSeen: (SessionItem) -> Void
 
@@ -33,7 +33,7 @@ public struct PopoverView: View {
     ///   - onCheckAgain: "Check Again" in the warning block; the app probes subspace again.
     ///   - onSetUp: "Set Up…" in the warning block; the app opens the setup window.
     ///   - onSettings: The settings button in the title bar or ⌘,; the app opens the settings window.
-    ///   - onOpenUpdate: The status bar's update link; the app opens that source's settings pane.
+    ///   - onOpenUpdate: The status bar's update link; the app opens the source's settings pane or its own update window.
     ///   - onArchive: The user archived something; the app archives it and keeps the undo.
     ///   - onUndo: The Undo button of one undo row.
     ///   - onUndoHover: The pointer entered or left an undo row; the app holds its timer meanwhile.
@@ -57,7 +57,7 @@ public struct PopoverView: View {
         onCheckAgain: @escaping () -> Void = {},
         onSetUp: @escaping () -> Void = {},
         onSettings: @escaping () -> Void = {},
-        onOpenUpdate: @escaping (SourceID) -> Void = { _ in },
+        onOpenUpdate: @escaping (UpdateFooterLink.Target) -> Void = { _ in },
         onShowTerminal: @escaping (SessionKey) -> Void = { _ in },
         onRowSeen: @escaping (SessionItem) -> Void = { _ in }
     ) {
@@ -180,10 +180,10 @@ public struct PopoverView: View {
             .layoutPriority(-1)
             Spacer(minLength: 0)
             if let link = model.footerLink {
-                Button { onOpenUpdate(link.source) } label: { UpdateLinkLabel(link: link) }
+                Button { onOpenUpdate(link.target) } label: { UpdateLinkLabel(link: link) }
                     .buttonStyle(.popoverIcon)
-                    .help(Text(link.text))
-                    .accessibilityLabel(Text(link.text))
+                    .help(Text(link.help))
+                    .accessibilityLabel(Text(link.help))
             }
         }
         .font(.plexSans(11.5))
