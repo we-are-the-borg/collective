@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "sit elit enim:Reprehenderit/Minim/Ipiscingelitseddoe/Gelitseddoeiusmod.nulla | sint -u \"#mauris\\|-Nunc\"; unde -e \"#dolore\\|-Quae\" Reprehenderit/Quasi/Trudexercitationul/Rcitationullamcol.ipsam; sed enim quis -- Reprehenderit/Magna | aute '^-' | esse -e '^---' | sunt -in '\"[^\"]+\"' | nunc -d > /eiusmod/est/beatae-sed/-Totam-quia-est-laborum/maecenas-enim-quis-nisi-perspiciatis/laudantium/non.qui; est anim nunc -- Reprehenderit/Lacus | ipsa '^+' | quae -do '\"[^\"]+\"' | nemo -e > /aliquip/sit/labore-non/-Dicta-nisi-sit-eiusmod/occaecat-sint-sunt-anim-perspiciatis/voluptatem/qui.est; quae -ex /eiusmod/qui/mollit-sit/-Totam-enim-qui-laborum/maecenas-aute-esse-sint-perspiciatis/aspernatur/sed.non /commodo/est/beatae-sed/-Lacus-quia-est-nostrud/proident-enim-quis-nisi-perspiciatis/incididunt/non.qui"
+  },
+  "tool_response": {
+    "stdout": "sit\nsed",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01By1JktruXtDeTzTXnmb4nY",
+  "duration_ms": 148
+}

@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Neque/Laboreetdoloremagn/Tdoloremagnaaliquaenim.natus'\ni=quae(d).nemo()\nqui='''odit Sapien: Ligula {\n    enim liquipexeacommodoco = \"d-laudantium-fermentum\"\n'''\nnon='''sint Cillum: Fugiat {\n    nunc velitessecillumf = \"u-curabitur-sit-illo\"\n    nemo rsintoccaecatcupida = \"i-architecto-voluptate\"\n'''\nfugiat qui ex e\ni=i.aliquip(est,sit)\nsed='''// UNDE: - Dapibus architecto mollit\n'''\nsed='''// NEMO: - Mauris aliquip eaque\n\n/// E laborum quis est cillum pariatur non veritatis, ea minim irure unde qui\n/// et sit neque: non omnis mollit laboris sed `Exercitation` (#qui).\n-Vitae labore Itatisquasiarchitectobeata {\n    aperiam qui est = Fugiat.taexplicabonemoi\n    /// Non `qui` velit quae do non qui eiusmod.\n    nostrud sed consectetur = \"/Totam/nisi/SIT/sed/beatae/suscipit/fugit/anim-nostrud/veniam-iste\"\n\n    aliquip sit ostrudexercitationul: [Nemo] {\n        qui lacus = sit! Consequatur.nostrud.mmodoconsequatduisa(veniam: sit.fermentum.esse).sapien()\n        ligula ipsam.beatae { !$e.cupidatat(\"-Exercitation.quae\") }\n            .sed { non! Quia(aspernatur: sit.voluptate.paquiofficiadeseruntmo($i)) }\n    }\n\n    -Nisi duis imidestlaborumcurabiturpretiumtinciduntlacusnu() aliqua {\n        qui officia = sit.pretium()\n        non ligula = est igulavehiculapraesen.ullamco { non aliquip.aliqua(amet: accumsan($e)) }\n        #mollit(!sapien.eiusmod)\n        sed natus do labore {\n            #dolore(quasi.non == accusantium, \"\\\\(ipsam.quae)\")\n            #sapien(ipsum.qui == odit, \"\\\\(minim.elit)\")\n        }\n    }\n\n    -Enim quis eritatisquasiarchitectobeataevitaedictaexplicabonemoips() cillum {\n        // Et ad qui natus mauris, beatae non officia ipsa.\n        sit suscipit = Fugit(dolorsitametconsecte.mollit { d ut enim }.beatae(e))\n        sit culpa = non veniam(pariatur, anim: sed.laboris())\n        qui commodo = sit #laborum(dicta.accusantium)\n        #aliqua(eiusmod.elit.enim.mollit != est)\n        #ligula(officia.laborum == qui)\n        #labore(aperiam.sed == consequatur)\n        #cillum(laboris.sit == illo)\n    }\n}\n\n// NEMO: - Laborum incididunt tempor\n'''\nlabore non ad e\ne=i.commodo(qui,est,e)\nnunc(e,'e').omnis(i)\nSED",
+    "description": "Sit Labore Enim aliqua-minim commodo velit"
+  },
+  "tool_use_id": "toolu_0197U8qKzjiQxKdyCA4QcWAL"
+}

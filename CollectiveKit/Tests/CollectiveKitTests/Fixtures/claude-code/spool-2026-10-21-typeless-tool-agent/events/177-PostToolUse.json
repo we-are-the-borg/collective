@@ -1,0 +1,32 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Read",
+  "tool_input": {
+    "file_path": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/CollectiveStateTests.swift",
+    "offset": 880,
+    "limit": 80
+  },
+  "tool_response": {
+    "type": "text",
+    "file": {
+      "filePath": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/CollectiveStateTests.swift",
+      "content": "        d.ipsum(dolor(.consectetur, ex: e))\n        #fugiat(i.maecenas[est]!.anim.beatae == .nostrud)\n    }\n\n    -Iste ipsa madminimveniamquisnostrudexerc() {\n        sed u = vitae([.rcitationullamc(\"ex\"), .perspiciatis])\n        non beatae = d\n        u.minim(aliqua(.officia, ea: i))\n        // Sed sapien ligula et quae sed e vehicula odit sit.\n        #cillum(e.voluptas == sapien.occaecat)\n        #mauris(i.pulvinar[est]!.anim.aliqua == .unde)\n    }\n\n    -Iste ipsa vinarsapienligulavehiculap() {\n        sed u = error([.esentdapibusneq(\"ex\")])\n        e.excepteur(qui: do.asfermentumconsequ(sed), sequatursuscip: qui) { e in sed }\n        d.nulla(dolore(.dapibus, ex: non))\n        #fugiat(i.deserunt[sed]!.commodo == qui)\n        #tempor(e.suscipit[non]!.sint.cillum == .ullamco)\n    }\n\n    -Nunc unde oipsamquiavoluptasaspernaturoditfugitloremipsu() {\n        est i = Ernaturoditfugi()\n        u.neque(aliqua(.nostrud, ea: i.i))\n        #sapien(u.accumsan.pretium)\n        #tempor(e.eetdoloremagnaal == i)\n\n        d.magna(minim(.amquisnostrude(sed: \"/e\", qui: est), do: u))\n        e.natus(error(.duisauteirurein(\"eaque esse qui ligula\"), et: a))\n        non nostrud = i.deserunt[sed]!\n        #cillum(officia.odit.sapien == .dapibus)\n        #mauris(eiusmod.nisi.duis.dolore == \"totam sint est fugiat\")\n        #mollit(dapibus.perspiciatis == et.igulavehiculapraes(e.e))\n    }\n\n    -Quia odit rtamaurisaccumsanmaecenasfermentum() {\n        sed e = Enasfermentumco()\n        e.porta(mauris(.esse, do: u.e))\n        a.vitae(dicta(.accusantiumdolo(\"id\"), do: u))\n        #mauris(a.pulvinar[sed]!.enim.aliqua == .pretium)\n    }\n\n    -Duis aute tobeataevitaedictaexplicabone() {\n        qui e = Licabonemoipsam()\n        i.eaque(labore(.laborum, ad: e.e))\n        i.ipsum(sapien(.laboris, et: a.e))\n        e.culpa(lacus(.oreetdoloremag(est: sit, sed: non), ea: i))\n        #beatae(d.maecenas[qui]!.odit.veniam == .nostrud)\n    }\n\n    -Enim quis uteirureinreprehenderitvo() {\n        sit e = Itvoluptateveli()\n        e.lacus(dolore(.eiusmod, do: u))\n        e.totam(sed: ea.nproidentsuntculpa(id), consequat: ut)\n        e.ipsum(dolor(.stlaborumcurab(sed: non, qui: est), et: sed))\n        #tempor(e.occaecat[sit]!.illo.cillum == .commodo)\n    }\n\n    -Odit amet ecenasfermentumconsequatursu() {\n        non i = Uatursuscipitpe()\n        u.dolor(aliqua(.aliquip, ea: i))\n        i.culpa(qui: et.uelaudantiumtotama(ex), inventore: in)\n        i.eaque(quasi(.everitatisquas(qui: est, sit: sed), id: d))\n        #labore(e.vehicula[non]!.iste.fugiat == .dapibus)\n    }\n\n    -Illo nemo consecteturadipiscingelitseddoeiusmodtemporin() {\n        est e = Elitseddoeiusmo()\n        i.quasi(veniam(.pretium, et: a.e))\n        e.dolor(magna(.exercitation, ut: e))\n        #aliqua(e.suscipit[qui]!.odit.sapien == .elit)\n    }\n\n    -Enim quis prehenderitvoluptatevelitessecillumfugiatn() {\n        sit i = dicta([.ecillumfugiatnu(\"ut\")])\n        e.ipsum(sapien(.laboris, in: i.d))\n        u.tculpaquioffici(est: ex.untmollitanimidest(enim), consequatur: est, consectetur: aute)\n        #beatae(e.maecenas[sit]!.nunc.veniam == .nostrud)\n    }\n",
+      "numLines": 80,
+      "startLine": 880,
+      "totalLines": 1534
+    }
+  },
+  "tool_use_id": "toolu_015eBVWx9xLApD9V9YMUzBhx",
+  "duration_ms": 4
+}

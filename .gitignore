@@ -1,0 +1,12 @@
+.build/
+/build/
+.swiftpm/
+xcuserdata/
+.DS_Store
+
+# Local Codex setup
+AGENTS.md
+.codex/
+
+# Resolved by CollectiveKit and the app, as in its own repo before
+/SubspaceKit/Package.resolved

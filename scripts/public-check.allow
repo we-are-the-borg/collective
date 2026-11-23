@@ -1,0 +1,54 @@
+# Exceptions for scripts/public-check.sh, one per line:
+#
+#   <rule|*> path <git glob, relative to the repo root>  # reason
+#   <rule|*> text <ERE, tested against the matched text>  # reason
+#   <rule|*> line <ERE, tested against the line up to the end of the match>  # reason
+#
+# A path entry leaves the file out of that rule; a text entry allows a match
+# wherever it occurs. A match may start with the character before it (the
+# rule's word boundary). A line entry is for a match that only what stands
+# before it makes harmless; end it with $ so that it allows that match alone.
+# Patterns hold no whitespace (use [[:space:]]), every entry needs a reason.
+
+# paths
+paths text ^([^A-Za-z0-9._-]|\\[nrt])?\\*/Users\\*/(user|Shared)$  # /Users/user is the scrubbed home of the subspace fixtures; /Users/Shared belongs to nobody
+paths text ^-Users-user([^A-Za-z0-9._]|$)  # the scrubbed home in Claude Code's encoded project names
+paths text ^([^A-Za-z0-9._-]|\\[nrt])?\\*/home\\*/user$  # the scrubbed Linux home
+
+# private-repo
+private-repo text ^de\.grml[i]n\.Collective(\.[A-Za-z0-9.-]+)?$  # the bundle id stays, so that existing installs keep their settings and notification permissions; so do ids derived from it
+
+# plan-refs
+plan-refs text ^[^A-Za-z0-9]?(we-are-the-borg/|wtb/)subspace#[1-9]  # issues of the public subspace repo keep their numbers (a bare subspace#n may mean an old private repo)
+plan-refs text ^/task[s]/[a-z0-9]+\.output\.?$  # Claude Code's background task output files in captured payloads, not the planning folder (also at the end of a sentence)
+plan-refs line (What|PR|issue|\(|\*\*)[[:space:]]?#[467][^A-Za-z0-9]{0,2}$  # subspace's own issues [4], [6] and [7] in its public capture (byte-equal copies under Fixtures/claude-code/2.1.285), named in replies and a file read as 'What #4', 'PR #4', 'issue #4', '(#4' and '**#6'/'**#7'; any other number is still reported
+plan-refs line \[Image[[:space:]]#[1-9][0-9]*\]$  # Claude Code's placeholder for an image pasted into a prompt, in captured payloads
+plan-refs line ^[[:space:]]*@Test\(arguments:[[:space:]]\["#[1][2]"$  # the first argument is deliberately invalid hex input for the colour parser test, not an issue reference
+plan-refs line ^[[:space:]]*#expect\(throws:[[:space:]]ParseColorError\.self\)[[:space:]]\{[[:space:]]try[[:space:]]SRGB\.parse\("#[1][2]"$  # the same invalid hex input, in the parse-error test
+
+# design-ids
+design-ids path SubspaceKit/Sources/SubspaceKit/Resources/Mappings/*.json  # byte-equal copies of the subspace mapping documents, whose evidence names subspace's capture runs
+design-ids line medium\)[[:space:]]and[[:space:]]R1–R[3][[:space:]]$  # the Codex capture runs of the subspace fixtures in CodexEffortFixtureTests, an R and a number like the border items
+design-ids line ^///[[:space:]]captured[[:space:]]\(R1–R[4]\)$  # the same Codex capture runs, where CodexEffortFixtureTests names the efforts they hold
+design-ids line ^[[:space:]]*///[[:space:]]S[46]:$  # LastInputFixtureTests labels its cases with the Claude Code capture run they replay, an S and a number like the jump button items
+design-ids text ^[^A-Za-z0-9]*S([1-9]a|1[1-9]|2[0-9])[^A-Za-z0-9]?$  # Claude Code capture runs as subspace names them; the design's S items stop at ten and carry no variant letter
+
+# addresses
+addresses path CollectiveKit/Acknowledgements/**  # copyright lines of third-party license texts
+addresses path CollectiveKit/Sources/CollectiveKit/Resources/Acknowledgements.json  # generated from those license texts
+addresses path THIRD_PARTY_NOTICES.md  # generated from those license texts
+addresses path **/NOTICE.md  # copyright lines of bundled third-party fonts, icons and schemes
+addresses path */**/LICENSE*  # third-party license texts in subfolders; the repo's own LICENSE at the root is checked
+addresses path LICENSE-*  # third-party license texts at the root
+addresses path **/license.txt  # third-party license texts (IBM Plex)
+addresses path CollectiveKit/Sources/CollectiveKit/Resources/Schemes/*.yaml  # author lines of the bundled third-party schemes
+addresses path CollectiveKit/Tests/CollectiveKitTests/Fixtures/unimatrix/schemes/*.yaml  # byte-equal copy of those schemes
+addresses path CollectiveKit/Tests/CollectiveKitTests/Fixtures/unimatrix/roles.json  # Unimatrix reference file, carries the scheme authors
+addresses text @(example\.(com|org|net)|[A-Za-z0-9.-]+\.(example|invalid|test))$  # reserved placeholder domains (RFC 2606)
+addresses text ^git@github\.com$  # the SSH user of a git remote, not an address
+addresses text @[0-9]+x\.png$  # image scale suffixes (name@2x.png)
+addresses text ^[A-Za-z0-9.-]+@openai-bundled\.mcp$  # Codex plugin ids (<plugin>@<marketplace>) in captured command lines
+identity path LICENSE  # the holder named in the copyright line of the repo's own licence
+
+# fixtures
+fixtures text :[[:space:]]*(\\?"(00000000-0000-0000-0000-000000000000|user-REDACTED)?|0)$  # scrubbed account identifiers, as in the subspace fixtures

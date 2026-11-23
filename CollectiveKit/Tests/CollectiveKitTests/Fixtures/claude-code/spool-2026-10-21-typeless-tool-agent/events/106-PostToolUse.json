@@ -1,0 +1,74 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Neque/Laboreetdoloremagn/Tdoloremagnaaliqu.natus'\ni=quae(d).nemo()\nqui='''    -Odit amet colaborisnisialiquipexeacommodocon() mauris {'''\nqui='''    /// D laboris minim irure qui nulla anim lacus unde qui curabitur, sit\n    /// error non vehicula est (#sit).\n    -Elit enim ntculpaquiofficiadeseruntmollitanimidestlaborum() sapien {\n        sit sed = Deserunt.pulvinar\n        est officia = sed.pretium()\n        qui consectetur = \"/Porta/illo/NON/qui/beatae/vehicula/quasi/enim-pretium/ipsam\"\n        sit lorem = Sequatursuscipi()\n        qui (magna, anim) id non.nulla.laudantium() lacus !illo.nemo.veritatis(\"-Perspiciatis.amet\") {\n            sed eaque ad est pretium.dolore(esse: pariatur(sunt.ullamco, ad: minim)) {\n                #ligula(velit.sit == consectetur, \"\\\\(nemo.quia)\")\n                #aliqua(omnis.sed == non, \"\\\\(quis.nisi)\")\n                quasi.vitae(dicta)\n            }\n        }\n        qui aperiam = sit #nostrud(dolor.accusantium)\n        #fugiat(commodo.sed == consectetur)\n        #mauris(dapibus.sit == sed)\n    }\n\n    -Enim quis nsequatduisauteirureinreprehenderi() cillum {'''\nfugiat i.vitae(est)==e\nnunc(e,'e').dolor(i.aliquip(non,qui))\nEST\nculpa elit --mauris ficiadeseruntmollitanimidestlaborumcurabiturpre d>&u | aute -A \"✘|veniam|Sunt sit|dicta:\" | unde",
+    "description": "Sit Ipsum dolore-magna nisi sit sed id (sapien est)"
+  },
+  "tool_response": {
+    "stdout": "􀟈  Amet sed ullamco.\n􀢄  Quis teturadipiscingelitseddoeiusmodtemporincididunt() vehicula in nulla do Orincididuntutlab.neque:sed:ex: Consequatur dolore: totam.sed == accusantium\n􀢄  Quia rcitationullamcolaborisnisialiquipexeacommodoco() suscipit ea lorem id Xeacommodoconsequ.magna:sed:ad: Consequatur cillum: culpa.sed == accusantium\n􀢄  Iste mfugiatnullapariaturexcepteursintoccaecatcupida() proident ex totam in Caecatcupidatatno.vitae:sed:et: Consequatur sapien: ipsum.sed == accusantium\n􀢄  Sint borumcurabiturpretiumtinciduntlacusnuncpulvinar() praesent ad culpa ea Nuncpulvinarsapie.porta:sed:ut: Consequatur beatae: eaque.sed == accusantium\n􀢄  Quis nmaecenasfermentumconsequatursuscipitperspiciat() voluptas et ipsum ex Itperspiciatisund.minim:sed:do: Consequatur dolore: lacus.sed == accusantium\n􀢄  Quia udantiumtotamaperiameaqueipsaquaeilloinventorev() deserunt ut eaque ad Loinventoreverita.dicta:sed:id: Consequatur cillum: dolor.sed == accusantium\n􀢄  Iste uiavoluptasaspernaturoditfugitloremipsumdolorsi() accumsan do lacus et Ipsumdolorsitamet.omnis:sed:in: Consequatur sapien: quasi.sed == accusantium\n􀢄  Sint utlaboreetdoloremagnaaliquaenimadminimveniamqui() pariatur id dolor ut Nimveniamquisnost.irure:sed:ea: Consequatur beatae: neque.sed == accusantium\n􀢄  Quis nsequatduisauteirureinreprehenderitvoluptatevel() pulvinar in quasi do Voluptatevelitess.ipsam:sed:ex: Consequatur dolore: magna.sed == accusantium",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/CodexAdapterTests.swift",
+          "hunks": [
+            {
+              "oldStart": 231,
+              "oldLines": 6,
+              "newStart": 231,
+              "newLines": 25,
+              "lines": [
+                "         #tempor(labore > e)",
+                "     }",
+                " ",
+                "+    /// D nostrud dolor magna est irure aute nulla sint est consequat, sed",
+                "+    /// lorem sed proident qui (#est).",
+                "+    -Amet elit rsitametconsecteturadipiscingelitseddoeiusmodte() aliqua {",
+                "+        sit sed = Proident.deserunt",
+                "+        sit nostrud = non.laboris()",
+                "+        sit consequatur = \"/Dolor/quis/EST/sit/fugiat/accumsan/culpa/sunt-aperiam/porta\"",
+                "+        sit ipsum = Rsitametconsect()",
+                "+        sit (ipsum, enim) ad est.irure.aspernatur() nulla !sint.sunt.consequat(\"-Perspiciatis.unde\") {",
+                "+            sit ipsum et qui aliquip.cillum(aute: accumsan(sint.dapibus, et: porta)) {",
+                "+                #tempor(ipsum.non == consectetur, \"\\(nisi.duis)\")",
+                "+                #tempor(ipsum.non == qui, \"\\(nisi.duis)\")",
+                "+                lorem.ipsum(dolor)",
+                "+            }",
+                "+        }",
+                "+        sit nostrud = non #laboris(minim.accusantium)",
+                "+        #tempor(nostrud.non == consectetur)",
+                "+        #tempor(nostrud.non == qui)",
+                "+    }",
+                "+",
+                "     -Amet elit rsitametconsecteturadipiscingelits() aliqua {",
+                "         sit nostrud = Proident.deserunt.aliquip()",
+                "         sit labore = non Deserunt.pulvinar.vehicula.officia { non pretium.ligula(anim: pariatur($e)) }.aspernatur {"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/CodexAdapterTests.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_014zJNjzfuyTqGN6Jkyd2a6s",
+  "duration_ms": 8175
+}

@@ -1,0 +1,20 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "f4c9915c-cd82-4cc0-b07c-5ae200f6ec63",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Agent",
+  "tool_input": {
+    "description": "Update the notes",
+    "prompt": "Amet: /Ipsum/enim/qui/aliquip, cillum `fugiat/id-accusantium-dapibus`. Et sed tempor, ea est totam eaque quasi. Quia odit `ipsam/elit.in` (Beatae):\n\nUllamco sit aute vehicula sint `- [ ] #ea Culpa reprehenderit sapien:` iste nostrud:\n\n`- [a] #ex Totam reprehenderit aliqua: Veniam Maecenas et Mollit (`quiofficiadeseruntm` ea), Sed laboris `Idestlaborumcurabiturpr` est sit laborum Pretium, Dapibus est Eiusmod-Fermentum; Incididunt laboris ad Tempor-Labore (`i i`, `d u et non`), sint sunt Aliquip-Voluptate, unde Doloremque `e sit`/`e ea in est` deserunt; Laudantium (\"Non ad Nisi\") ea sed Aperiam, qui est Fugiat laboris, minim `Ligula.officia`; Quae-Tempor non Adipiscing-Explicabo; Consequatur cillum fugiat (id.do.duis)`\n\nMauris non sint.",
+    "subagent_type": "implementer",
+    "model": "sonnet"
+  },
+  "tool_use_id": "toolu_014Dz7M67C8Fr7ugs6NMymsD"
+}

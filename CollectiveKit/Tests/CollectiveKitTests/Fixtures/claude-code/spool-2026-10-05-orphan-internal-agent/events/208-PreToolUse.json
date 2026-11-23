@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && aute -id 'Sint\\(\"|Ligula\\(\"|Neque\\(\"|\\.nunc\\(|reprehenderit(Natus|Ipsa|Totam)\\(|Veniam\\(\"|Officia\\(\"|Fugiat\\(explicabo|\"[E-E][i-i]+ ' Ullamco/Perspiciatis/*.minim Commodo/Reprehenderit/Perspiciatis/*.culpa | nunc -d 'ligula: .mauris' | quae -e Consequatur; quia ---; est -D .. elit --enim quis -- Est/; sit -I .. beatae --veritatis Est/; anim -ad \"tinciduntlacusnun\\|cillum Aperiam\" Eiusmod/Exercitation/Perspiciatis.error Aliquip/Reprehenderit | elit"
+  },
+  "tool_use_id": "toolu_01FLszhGcP2ihEazoGacu5aq"
+}

@@ -1,0 +1,28 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0b7aeacd-6bc5-4434-b752-6b94a20db5ba",
+  "permission_mode": "auto",
+  "agent_id": "a183282c31caebc12",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "eiusmod /nostrud/non/aliqua-est/-Irure-aute-non-culpa-dapibus/voluptas-nunc-unde-iste-exercitation/incididunt/eaque.ut | quia -ad; sit ligula --lorem",
+    "description": "Lorem ipsum.enim quis aliquip"
+  },
+  "tool_response": {
+    "stdout": "pariatur-nostrud ENIM aliqua #veniam -> #cillum\npraesent-laborum SINT ligula-neque #beatae -> #tempor\nproident-laboris QUAE veniam-cillum #fugiat -> #mollit\nsuscipit-aperiam ENIM beatae #tempor -> #labore\naute-esse QUI cillum {'culpa': '#mollit', 'sapien': 'ligula'} -> {'omnis': '#beatae', 'tempor': 'non(qui, aliqua)'}\namet-elit ENIM fugit-nisi #ligula -> #mauris\nesse-sint SUNT velit-laborum #veniam -> #cillum\nipsa-quae ILLO natus-mauris #beatae -> #tempor\nelit-enim-quis NISI aperiam-aute #mollit -> #sapien\nsunt-anim-nunc UNDE laborum-dolore #aliqua -> #veniam\nnemo-quia-odit SIT ligula {'eaque': '#beatae', 'tempor': 'labore'} -> {'ipsam': '#aliqua', 'veniam': 'est(sit, mollit)'}\nunde-iste-ipsa QUAE culpa-nemo #dolore -> #aliqua\namet-elit-enim QUIS eaque-officia #mauris -> #beatae\nsint-sunt-anim NUNC dolor-cillum #fugiat -> #mollit\nvelit-nulla-culpa EST amet {'porta': '#dolore', 'aliqua': 'veniam'} -> {'totam': '#fugiat', 'mollit': 'sapien'}\ndicta-ipsam-fugit UNDE ipsum-ipsa #aliqua -> #veniam\nirure-velit-nulla AMET elit #mauris -> #beatae\nnisi ullamco: {'dolore': a, 'sint': e}\nvitae pretium: {'unde': u, 'eiusmod-ipsum': e, 'labore': i, 'aliqua-velit': u, 'fugiat-mollit': e, 'ligula': i, 'natus-sint': u, 'eaque-officia': e, 'dicta-fugiat': i, 'eiusmod-nemo': e, 'laboris-tempor': e, 'velit-quis': d}\ndapibus aperiam: a\n E ligula/anim/sed/eaque/quasi.et\n A veniam/nemo/qui/ipsum/sapien.ut\n E beatae/nisi/sit/culpa/esse.do\n U fugiat/nunc/non/totam/curabitur.id\n D labore/quia/est/lorem/voluptate/dolor.quis\n D duis/velit-beatae.ex\n E neque/nunc.do",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_014KoSdzf82wTuUjeT4Eu1xn",
+  "duration_ms": 127
+}

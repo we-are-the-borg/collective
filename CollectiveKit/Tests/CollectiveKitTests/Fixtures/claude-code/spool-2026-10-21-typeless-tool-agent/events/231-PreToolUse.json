@@ -1,0 +1,19 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "a0e932c7-1a95-4074-882a-5e5afde9d6fc",
+  "permission_mode": "auto",
+  "agent_id": "adf12bbce1aab5633",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "amet -ut \"accusantium\" --laboris=*.minim . | duis -i \"/.nulla/\"; sint -u \"Aperiam\\|accusantium\\|Omnis\" natus/dolore/aliquip.do | nemo -et; est -e ea,non ipsum/nisi.ut; aute -a \"^e[e-i]\\. \\|^## Id-unde\" porta/ipsa.ad"
+  },
+  "tool_use_id": "toolu_01REYgmoMumCrAedM1F3JVN8"
+}

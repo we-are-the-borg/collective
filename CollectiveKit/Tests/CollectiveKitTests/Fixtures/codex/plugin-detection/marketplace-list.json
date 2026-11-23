@@ -1,0 +1,56 @@
+{
+  "marketplaces": [
+    {
+      "name": "openai-primary-runtime",
+      "root": "/Users/user/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime",
+      "marketplaceSource": {
+        "sourceType": "local",
+        "source": "/Users/user/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+      }
+    },
+    {
+      "name": "openai-bundled",
+      "root": "/Users/user/.codex/.tmp/bundled-marketplaces/openai-bundled",
+      "marketplaceSource": {
+        "sourceType": "local",
+        "source": "/Users/user/.codex/.tmp/bundled-marketplaces/openai-bundled"
+      }
+    },
+    {
+      "name": "claude-code-warp",
+      "root": "/Users/user/.codex/.tmp/marketplaces/claude-code-warp",
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/warpdotdev/claude-code-warp.git"
+      }
+    },
+    {
+      "name": "codex-warp",
+      "root": "/Users/user/.codex/.tmp/marketplaces/codex-warp",
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/warpdotdev/codex-warp.git"
+      }
+    },
+    {
+      "name": "mattpocock",
+      "root": "/Users/user/.codex/.tmp/marketplaces/mattpocock",
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/mattpocock/skills.git"
+      }
+    },
+    {
+      "name": "subspace",
+      "root": "/Users/user/.codex/.tmp/marketplaces/subspace",
+      "marketplaceSource": {
+        "sourceType": "git",
+        "source": "https://github.com/we-are-the-borg/subspace-codex.git"
+      }
+    },
+    {
+      "name": "openai-curated",
+      "root": "/Users/user/.codex/.tmp/plugins"
+    }
+  ]
+}

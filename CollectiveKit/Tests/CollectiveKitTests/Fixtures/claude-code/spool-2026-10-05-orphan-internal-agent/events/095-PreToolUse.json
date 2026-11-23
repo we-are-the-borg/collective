@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit/Officia/Perspiciatis && qui -u et,nunc Consectetur.natus; est -i do,non Trudexercitationulla.dicta; sit -e in,qui Xeacommodoconsequatd.magna; sed -a ex,est Deritvoluptatev.lacus; non -u est,quae Riaturexcepteur.totam; qui -i sit,elit Identsuntculpaq.fugit; est -e in,non Idestlaborumcur.irure; sit -a non,iste Nuncpulvinarsap.porta; sed -u et,est Exercitation.quasi; non -i do,sit Exercitation.ipsum"
+  },
+  "tool_use_id": "toolu_017ghiYChzdED5oQfeopKrD2"
+}

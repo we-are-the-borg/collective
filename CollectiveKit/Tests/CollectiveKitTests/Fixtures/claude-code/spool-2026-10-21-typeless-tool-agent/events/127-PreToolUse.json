@@ -1,0 +1,19 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Read",
+  "tool_input": {
+    "file_path": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Sources/ClaudeCode/ClaudeCodeSessionStatusSource.swift"
+  },
+  "tool_use_id": "toolu_011uFN4F9pyae2nJTyE1VLvN"
+}

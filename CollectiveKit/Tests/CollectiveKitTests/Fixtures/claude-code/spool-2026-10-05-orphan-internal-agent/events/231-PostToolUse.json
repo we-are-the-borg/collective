@@ -1,0 +1,28 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing && sit > do.quasi <<'QUI'\nmollit Aspernatur\nsed i = Liquipexeacommodoconseq(\"%est u\", exercitation: \"\\(a) e\")\nest i = Luptatevelitessecillumf(\"%non u\", exercitation: \"\\(a) e\")\ntotam(\"in==id:\", d == u)\nnon a = Quiofficiadeseruntmolli(\"Duis %- sed\", perspiciatis: \"Sint \\(u) sit\")\nsed e = Ntlacusnuncpulvinarsapi(\"Ipsa %- sit\", exercitation: \"Nemo \\(e) est\")\neaque(\"labore:\", i == i)\nEST\ncillum -e ad ex.magna i>&i | unde -u && ./et; ad /Neque/nemo/qui/ullamco && amet -ut \"Excepteur\\|==\\|praesent\\|loinventoreverit\" Sit/Voluptatem/*.fugit | sint -ut",
+    "timeout": 300000
+  },
+  "tool_response": {
+    "stdout": "do==ut: dolor\naliqua: minim\nSit/Aspernatur/Ddoeiusmodtempo.culpa:est:        et pariatur, occaecat == qui {\nEst/Incididunt/Exercitation.quasi:et:                est consequat: Colaborisnisialiquipex = enim.ipsum == .tempor ? .odoconsequatdu : .architecto",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_018JzNGzn6jempFsSPUwMLa6",
+  "duration_ms": 642
+}

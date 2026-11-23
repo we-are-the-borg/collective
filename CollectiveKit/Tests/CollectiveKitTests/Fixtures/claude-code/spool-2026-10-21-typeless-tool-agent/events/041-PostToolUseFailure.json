@@ -1,0 +1,21 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "ff9ddc4d-1fe7-471d-a44c-2d2e0e56e394",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUseFailure",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "sit u et $(deserunt aliquip | ea ',' '\\i' | esse -d voluptatem); et nunc \"== $e\"; proident ipsa \"$i\" d>/non/quia | odit -e \"voluptate\\|pariatur\" ; quis",
+    "description": "Amet sed non'a pulvinar tincidunt officia"
+  },
+  "tool_use_id": "toolu_017pe8L1Wb8RVMpw7ZNpiFDv",
+  "error": "Exit code 1\n== do.labore.Voluptatem",
+  "is_interrupt": false,
+  "duration_ms": 3419
+}

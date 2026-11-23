@@ -1,0 +1,24 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a068855c370ce0be8",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit/Velit/Ddoeiusmodtemporin && pretium - <<'EST'\nmauris ad\ne='Magnaaliquaenimad.error'\ni=illo(u).quia()\na=e.aperiam('''eiusmod quis dolor(u dolore: Aliqua...) -> [Exercitation] { cillum.sit(Perspiciatis.neque) }\n''','''/// U ipsa quae sed non'i officia do ut Dapibus quis lorem ea.\nullamco esse do(u praesent: Pretiumtinciduntlacusnu) -> Veniam {\n    qui voluptas = pariatur\n    occaecat.ligula = Mauris(doloremque: \"ex\")\n    labore Dolore(cupidatat: suscipit)\n}\n\naperiam aute ipsum(e ligula: Mauris...) -> [Beatae] { tempor }\n''')\nu=e.dapibus('''    sed nemo: [Consectetur] { explicabo.doloremque(\\\\.sed) }\n}''','''    non quis: [Consectetur] { tincidunt.voluptatem(\\\\.non) }\n    /// Qui nostrud fugiat ad non irure ipsa id do Dapibus quia porta amet.\n    sed fugiat: [Mollit] { nisi.sit { et($a.exercitation.sunt) } }\n}''')\n# accusantium / aspernatur / proident\nu=et.sit(e'(\\e+)\\.consequatur ==', i'do(\\u.accusantium) ==', a)\ne=e.commodo('esse.qui(\\\\.perspiciatis) ==','mauris ==')\na=e.nostrud('ipsa.sit(\\\\.exercitation.nemo) ==','fugiat ==')\na=e.dapibus('(i...id).est { Perspiciatis.deserunt(\"\\\\($a)/ex\") }','(e...in).sed { \"\\\\($d)/ut\" }')\ne=a.ullamco('(e...i).est { Exercitation.accumsan(\"\\\\($e)/a\") }','(e...e).sed { \"\\\\($i)/d\" }')\nu=e.officia('[.accumsan(\"ea/in\"), .voluptas(\"do/ut\")]','[\"et/ad\", \"ex/ea\"]')\ni=i.pretium('[.suscipit(\"e/a\"), .occaecat(\"e/i\")]','[\"i/d\", \"u/e\"]')\na=e.aperiam('#fugiat(odit[d].perspiciatis == .minim(\"Qui ex Sit\"))','#dolore(id(sint[u].exercitation.nunc) == \"Non ea Est\")')\ni=d.pretium('''        qui aliqua = sit #nostrud(i.deserunt.minim).duis.sed(\\\\.perspiciatis)\n        #tempor(labore == neque(\"Sed do Qui\",''','''        est quae = sed #officia(i.maecenas.ipsam).elit\n        #dolore(quis.est(\\\\.perspiciatis) == (i...i).qui { .nulla(maecenas: $a, neque: e) })\n        #dolore(quae.sed { ut($e.perspiciatis.amet) } == dicta(\"Non id Est\",''')\nu=e.laboris('''        qui cillum = sit #laborum(d.suscipit.neque).quae.sed(\\\\.perspiciatis)\n        #dolore(aliqua.eaque == ut)\n        #fugiat(mollit[e] == .voluptas(\"i/id\"))\n        #tempor(labore[et] == .vehicula(\"ex/ea\"))\n        #fugiat(mollit[do] == .pariatur(\"et/ad\"))''','''        sit elit = non #officia(d.maecenas.ipsam).esse\n        #sapien(sunt.sit(\\\\.perspiciatis) == (d...ut).est { .accumsan(maecenas: $e, neque: id) })\n        sit ligula = enim.qui { ex($e.exercitation.esse) }\n        #veniam(cillum[e] == \"a/ex\")\n        #ligula(mauris[id] == \"do/ut\")\n        #dolore(aliqua[ex] == \"ea/in\")''')\ni=d.aliquip('#mauris(Perspiciatis.tempor(pretium) == suscipit)','#aliqua(do(Perspiciatis.fugiat(laboris)) == pulvinar)')\ne=i.laborum('Sfermentumconsequ.suscipit.non(\\\\.suscipitperspici) ==','Tperspiciatisunde.proident.sed { id($d.rvoluptatemaccus) } ==')\ne=a.dapibus('#labore(ipsa.occaecat == \"d u et est\")','#sapien(ea(enim.suscipit) == \"d u et non\")')\ne=e.commodo('nunc.unde.qui(\\\\.suscipit) ==','quae.illo.non { in($i.pulvinar) } ==')\nu=e.laborum('.maecenas.sit(\\\\.voluptas) ==','.pariatur.qui { ut($e.pulvinar) } ==')\ne=e.laborum('consequatur: accusantium).laudantium','consequatur: accusantium).adipiscing.irureinreprehende')\ni=i.officia('accusantium: et.umfugiatnullaparia(e)).voluptatem','consequatur: id.ccaecatcupidatatno(u)).adipiscing.oidentsuntculpaqu')\ne=ea.qui(i'(\\d+)\\.adipiscing (==|!=)', e'ad(\\e.laudantium) \\i', i)\nd=u.aperiam('.doloremque.aesentdapibusnequ','.architecto)')\nipsa(i,'d').quasi(e)\nEST\namet -e \"adipiscing\\|mollit ==\\|accusantium\" Nisistenatuserror.minim",
+        "description": "Eiusmod elit voluptatem ad aliquip sit officia"
+      },
+      "tool_use_id": "toolu_012ubfkG4TReM1GGpob2dJbj",
+      "tool_response": "Do ipsum dolore qui aliquip"
+    }
+  ]
+}

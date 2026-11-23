@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "amet -ut \"rsitametconsec\\|ad \\* ex\\|duis\\|officia(id)\" --pretium=*.lacus Reprehenderit/Eiusmod Non | iste -i \"^.*///\" | quae -do; ut vitae odit --ipsam ea | non -id | do '\\u' ' '",
+    "description": "Amet nostrud ullamco quis est tincidunt fugiat"
+  },
+  "tool_response": {
+    "stdout": "(amet):u: et laboris minim: --commodo=*.velit\nreprehenderit qui reprehenderit consequat accusantium unde natus error quae veniam officia accumsan pretium sapien fugit",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01HrPJgeNyFQ4wgX1eBbzb17",
+  "duration_ms": 669
+}

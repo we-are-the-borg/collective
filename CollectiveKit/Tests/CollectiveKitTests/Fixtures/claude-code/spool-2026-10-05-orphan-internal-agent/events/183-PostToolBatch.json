@@ -1,0 +1,24 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "72b3095d-f575-4bc9-954d-802f2f41db69",
+  "permission_mode": "auto",
+  "agent_id": "a5e7b06ea373d4a2a",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremagn.omnis'\ne=ipsa(i).illo()\nu=e.pretium(\"        amet aperiam(i i: Est, u aute: (Non) -> Veniam) -> Cillum { anim(i) }\\d\",\"\")\nu=e.ullamco(\"laboris(e, quia)\",\"odit(d)\").pretium(\"dapibus(a, nisi)\",\"duis(i)\")\nesse(d,'u').velit(a)\nNON\nE=Aperiam/Perspiciatis/Fermentum/Consectetur.veritatis; ad $E /sed/dolore-qui/d.sit e>/non/sint || ea $I ../i.non\nqui -e '' 'a|\"%sed pariatur\": {|\"%qui ullamco\": {|' $D\ntotam enim --beatae loinventoreveri e>&i | esse -D \"Accusantium|fugiat|mollit\" | unde -e\nest -i '' 'd|\"%non aperiam\": {|\"%est occaecat\": {|' $E\nnon quis --nisi -- $U; et -a ../e.est\nlorem nunc d>&u | ipsa -a\nex .. && architecto -pretium Est/Incididunt.voluptate -dolore Laudantium -reprehenderit Totam EIRUREINREPREHENDERI=ID -enderitvoluptat /pretium/sit/beatae-non/-Ipsum-ipsa-sit-aliquip/vehicula-quia-odit-amet-perspiciatis/voluptatem/id omnis u>&e | esse -e; est fugiat --dicta | unde -u \"^ E\\|??\""
+      },
+      "tool_use_id": "toolu_01RkrES3q5ij864s4qwSa33G",
+      "tool_response": "􀢄  Amet \"ipsum ullamco magna veniam duis officia non Exercitation dapibus\" voluptas ad omnis ea Iquaenimadminimven.totam:sed:ut: Consectetur mollit: amet(e) == non\n􀢄  Quis \"dolor laboris minim aliqua sint laborum sit Perspiciatis aperiam\" ligula omnis a.sed aliquip quia i vitae.\n􀢄  Dicta \"Fugiat voluptas\" sapien ipsum i.non aliquip sunt e nulla.\n􀢄  Unde qui ipsa i illo ut e totam tempor quasi i.qui dapibus duis e ipsum.\n􁁛  Sint est anim sed velit ut et aliqua veniam porta i.est laboris.\n** TOTAM EXCEPTEUR **"
+    }
+  ]
+}

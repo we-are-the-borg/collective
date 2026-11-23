@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i qui,sunt Neque/Laboreetdoloremagn/Tdoloremagnaaliquaen.natus; est -i illo,quasi Vitae/Rcitationullamcola/Onullamcolaborisnisi.fugit; enim -i \"est\\|sit\" Aliquip/Reprehenderit/Velit/Laborum.culpa",
+    "description": "Amet ipsum dolor qui aliquip irure aute"
+  },
+  "tool_use_id": "toolu_01G6uFXwdexXiAEpHRTGdyQE"
+}

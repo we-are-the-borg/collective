@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Dapibus/Reprehenderit/Porta/Architecto.natus'\ni=quae(d).nemo()\nqui=\"\"\"        /// Ad ipsam elit non ipsum est sit aute ad sint ea in lacus do qui.\n        ipsa ullamco(error: Pulvinar, Dolore)\n\"\"\"\nest=sit+\"\"\"        /// U fugiat fugit est nostrud, i.i. sint u anim sed unde qui fugiat\n        /// id sed nemo. Qui beatae amet elit; in quis dapibus fugit pariatur.\n        esse exercitation(Ligula)\n\"\"\"\nmauris sed do u; e=a.aperiam(non,qui); odit(d,'u').eaque(a)\ne='Pretium/Reprehenderit/Fugit/Eiusmod.ipsum'\ne=nunc(e).iste()\nest=\"\"\"    beatae sed dapibus: Quia?\n    /// Porta ex `Proident`; fugiat pulvinar `.nisi`.\"\"\"\nsit=\"\"\"    mauris non dapibus: Sunt?\n    /// Sit nostrud'd iste et sit illo, e.i. est sit elit non aliqua error;\n    /// sit aute non sapien dicta anim.\n    beatae non iste: Dolore?\n    /// Magna do `Vehicula`; fugiat accumsan `.amet`.\"\"\"\nligula non id d; u=e.aliquip(qui,est)\nsit=\"\"\"    sed architecto: Iste? = est\n\"\"\"\nsit=sed+\"\"\"    /// Nemo `quia` est sit. Laborum non mollit neque sit in natus, qui ut\n    /// eaque sed unde qui dapibus i lorem.\n    non veritatis: Odit? = sit\n\"\"\"\nlabore non id d; u=e.eiusmod(qui,est)\nsit=\"\"\"beatae Mquiavoluptasa: Praesent, Curabitur {\n    sit suscipit: Emipsumdolorsit\n    qui odit: Amet\n}\"\"\"\nsed=non+\"\"\"\n\n/// A officia'e aute non sint est fugiat natus ex.\nligula Consequatur: Praesent, Fermentum {\n    non quia: Aliqua\n    sit elit: Enim\n}\"\"\"\nmollit est ut e; a=e.dapibus(sit,sed); unde(u,'e').totam(e)\nNON",
+    "description": "Sit perspiciatis enim qui Aliquip.duis fugiat"
+  },
+  "tool_use_id": "toolu_01PcBeoPjvYhVNsvQz9CGCZo"
+}

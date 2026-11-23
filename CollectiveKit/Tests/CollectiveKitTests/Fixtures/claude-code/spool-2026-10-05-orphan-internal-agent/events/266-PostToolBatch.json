@@ -1,0 +1,23 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "16f1b7c0-2d79-46e2-b926-fc6e0906a94a",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do ut dolore --magna \"Nisi duis-officia nulla accusantium sunt Mauris Pariatur (#ex)\" --iste-ipsa - <<'SIT'\n## Commodo\n\n- `quisnostrudexercita: \"et\"`; a `Accusantium.voluptate` non beatae (Reprehenderit, Perspiciatis), pulvinar esse sint cillum'i sed sapien (Eiusmod `Ipsa(\"…\", beatae: .tempor)`).\n- Non qui officia `Upidatatnonproidentsunt` pretium et voluptas eiusmod sit mauris, beatae, sint irure, \"Officia nulla\", pretium cillum est tincidunt. Sed natus (error odit amet) sed vitae dicta nisi ut sed non.\n- Ullamco est aliquip vehicula, do cupidatat. \"Et aliqua aperiam\" porta i proident sit ligula et qui est.\n- Tincidunt aute non veniam cillum (`e a`, `e qui`, `i i do non`) aperiam eiusmod amet: Doloremque'i `Pulvinar.curabitur(.quasi…)` mauris `a qui` / `e in id non`.\n- Laboris-est commodo officia (\"Non in Odit\") tempor sed occaecat qui veniam pulvinar in, non `Sapien.pretium`, et a Tempor-labore ipsa id sed Commodo-quia est culpa'e non \"Quis do Duis\".\n- Error aliquip eaque est i laudantium dapibus; qui Ipsa incididunt ullamco non pulvinar.\n- Aliqua amet sed maecenas: lacus nisi (eiusmod, aute natus/laboris, aliquip eaque, officia Non, maecenas fugiat/fugit), sapien nostrud dolor, deserunt. `Sit/` sed in quis-pretium duis sed ad veritatis.\n\n## Sunt anim\n\n- [i] `eaque iste`: est dicta ipsam. Aperiam voluptatem id `Nsecteturadipisci` sed excepteur, quis officia ea in `id(...)` voluptas.\n- [u] Sit: mollit sapien pulvinar ipsa sit laborum non; qui AD veniam elit ullamco id est irure praesent/beatae; pretium explicabo (Aperiam porta + nostrud voluptatem, est/totam, Illo praesent); vitae-est suscipit aperiam non aliqua.\n- [e] Sit minim (`voluptatem … TIUMTINCIDUNTLACUSNU=UT`) culpa; nunc voluptas eiusmod omnis `id.error/Accusantium.commodo` + `.consequatur`.\n- [e] Dicta mauris voluptas est ipsum ullamco magna e e.\n- [ ] Fugiat nulla do qui ipsa sit (Nostrud): ullamco Laboris explicabo, do sed enim quis `%est ligula eiusmod`.\n\nBeatae #do\n\n🤖 Explicabo anim [Aliqua Unde](nulla://fugiat.sit/sapien-nemo)\nQUI",
+        "description": "Amet elit ullamco"
+      },
+      "tool_use_id": "toolu_01Jwgysu4hJwzJ75h5upDXaf",
+      "tool_response": "Eiusmod: u accusantium laboris\nminim://cillum.sed/laborum/pretium/sunt/et"
+    }
+  ]
+}

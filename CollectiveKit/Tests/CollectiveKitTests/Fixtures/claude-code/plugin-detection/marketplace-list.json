@@ -1,0 +1,26 @@
+[
+  {
+    "name": "claude-code-warp",
+    "source": "github",
+    "repo": "warpdotdev/claude-code-warp",
+    "installLocation": "/Users/user/.claude/plugins/marketplaces/claude-code-warp"
+  },
+  {
+    "name": "claude-plugins-official",
+    "source": "github",
+    "repo": "anthropics/claude-plugins-official",
+    "installLocation": "/Users/user/.claude/plugins/marketplaces/claude-plugins-official"
+  },
+  {
+    "name": "mattpocock",
+    "source": "github",
+    "repo": "mattpocock/skills",
+    "installLocation": "/Users/user/.claude/plugins/marketplaces/mattpocock"
+  },
+  {
+    "name": "subspace",
+    "source": "github",
+    "repo": "we-are-the-borg/subspace-claude-code",
+    "installLocation": "/Users/user/.claude/plugins/marketplaces/subspace"
+  }
+]

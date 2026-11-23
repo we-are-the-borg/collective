@@ -1,0 +1,18 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do ipsum enim ad --nisi irure,velit,esse -d '\"\\(.lacus) \\(.neque)\\a\\(.unde)\"' | iste -in; quae -d \"#ut\\|#qui\" dicta/amet.ea | enim; id dolor duis sed --esse velit,nulla -i '\"\\(.lacus) \\(.neque)\"'",
+    "description": "Amet nostrud dolore ad est commodo aute nulla"
+  },
+  "tool_use_id": "toolu_012TpHAUCrGTU6vLqhEUKj2J"
+}

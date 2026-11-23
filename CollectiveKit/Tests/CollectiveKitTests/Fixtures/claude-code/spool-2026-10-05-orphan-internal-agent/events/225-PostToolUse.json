@@ -1,0 +1,28 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "adipiscing -nostrud Non/Doloremque.curabitur -cillum Aspernatur -reprehenderit Culpa ORINCIDIDUNTUTLABORE=ET -laboreetdolorem /nostrud/qui/dolore-sit/-Eaque-nemo-qui-pretium/suscipit-elit-enim-quis-exercitation/laudantium/et-aliqua velit e>&i | nunc -D \"eiusmod:|omnis:|NATUS\" | illo -e | quia -id",
+    "timeout": 600000
+  },
+  "tool_response": {
+    "stdout": "** LOREM VOLUPTATE **\nenim-ad-ex ea:in:id.qui orincididuntutlaboreetdolor[neque:pariatur] nostrud: Proident adipiscing aliquip, do Doloremque.veritatis architecto ipsam",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01VMYvAc5ReQMeLhuSHVsXzj",
+  "duration_ms": 4973
+}

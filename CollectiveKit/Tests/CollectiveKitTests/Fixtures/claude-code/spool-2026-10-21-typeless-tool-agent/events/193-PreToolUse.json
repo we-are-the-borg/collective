@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/QUI/est/cillum/praesent/accumsan/sapien-sunt/e.a.non && qui i id d-inventore-qui-odit/sapien/*.elit; in nostrud -d \"labore aute,non;e=sunt.anim(nunc('$d'));porta('$e',a.sed('inventore'),i.est('amet'),u.non('cupidatat'),e.sit('fermentum'),i.qui('labore'),e.sed('tinciduntlacusn'))\"; iste; est i do u-deserunt/beatae/*.amet; ea laborum -i \"veniam duis,sed;a=sint.sunt(anim('$i'));velit('$u',e.sit('fermentum'),e.qui('odit'),d.sed('excepteur'),a.est('labore'))\"; aute; esse -d '\"sunt\"' */fugiat/*.nunc | ex -e; in */beatae/*.illo | ut -e; eiusmod -e \"\ncillum enim,quis\nest u et beatae(sint.sunt('*/dolore/*.nunc')):\n    d=iste.ipsa(quae(e))\n    ea 'quia' est do u et 'cupidatat' est ea i: quasi(d, u.sit('nunc'), e.qui('curabitur'))\"",
+    "description": "Eiusmod elit non cupidatat veniam duis praesent"
+  },
+  "tool_use_id": "toolu_018gfvEqD4NrLMcorxj9uwTY"
+}

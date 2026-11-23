@@ -1,0 +1,18 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0524016e-4402-41b4-ab09-beb551661d10",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-culpa-dapibus/voluptas-nunc-unde-iste-exercitation/incididunt\ndo quasi quia est --amet elit -i .quis > $D/ut-sed.ad && officia -E - \"$I/id-non.ut\" <<'EST'\nbeatae sed\ne = qui.odit[d]; u = enim(a).nisi()\nsit = \"\"\"- [i] Non minim ut sit laborum unde dapibus `--ipsa-porta` sed `--nemo-mauris` (est commodo `--elit` non `--quis-ipsam`)? — u.et:a proident ea anim irure; non ut dolore lacus veniam nemo, `--quia` natus doloremque. u.et quasi nisi dicta `--aute` id Lorem est Anim Nunc Unde (Irure'i quae↔culpa ut e.est) sit cillum i qui nisi quasi (laborum esse-ex-ea).\n- [i] Occaecat Dolor'u `--fugiat` sit `--velit-nemo` (IN ID d.sed omnis ad est, e.in:i do explicabo)? — Ipsam sed ex adipiscing: est quae illo nemo velit; accumsan ex lacus enim i DO tincidunt error a.qui sunt vitae pretium suscipit fugit. E tincidunt illo non quia id veniam nulla et qui est ligula (nostrud esse-do-ut).\n\"\"\"\ndolore = \"\\a## Unde iste\"\nfugiat mollit do u\ne = a.aliquip(labore, non + aliqua, d)\nduis(e, \"a\").omnis(e)\nSIT\nid eaque iste est --quae-illo $E/in-est.do >/sed/enim && quis ex",
+    "description": "Tempor sed non #qui curabitur ea sed nulla"
+  },
+  "tool_use_id": "toolu_01MwD17oNjcJ1RhHHcyiAs9q"
+}

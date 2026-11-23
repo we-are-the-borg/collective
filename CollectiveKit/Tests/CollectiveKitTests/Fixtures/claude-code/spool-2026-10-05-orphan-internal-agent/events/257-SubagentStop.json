@@ -1,0 +1,26 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "16f1b7c0-2d79-46e2-b926-fc6e0906a94a",
+  "permission_mode": "auto",
+  "agent_id": "a057bec6d7d6745bc",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/subagents/agent-a057bec6d7d6745bc.jsonl",
+  "background_tasks": [
+    {
+      "id": "a057bec6d7d6745bc",
+      "type": "subagent",
+      "status": "running",
+      "description": "Update the notes",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

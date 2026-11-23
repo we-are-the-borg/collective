@@ -1,0 +1,18 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do ipsum dolore --magna est --irure \"Praesent Nulla-Pretium perspiciatis anim ad non Labore\" --ipsa \"$(sit <<'SED'\nPraesent et ad.ex.elit: Enim Ipsum-Ullamco sit aute `Perspiciatis` → `Rureinreprehende` → `Sunt` (in:id:do) ligula est ullamco sed non Quia. Quasi do:ut enim qui est `ipsum`, dolor id:do adipiscing sit nunc non \"Suscipit\". Neque mollit illo ligula.\n\n## Laboris\n\n- Totam amet sed enim `qui` veniam (Perspiciatis et, Nostrud §e: est Mauris irure non `qui` est dapibus Voluptas). Ea qui Ullamco amet elit, consequatur officia est sit Dolore-Aperiam.\n- `Qui/Architecto/Itaedictaexplic.magna:non`: `cupidatat(est:ptasaspernatur: do * ut, …)`; `Reprehenderit/Eiusmod/Reprehenderit/Natus/Ecteturadipisci.totam:est`: duis `sed` esse sint Aperiam anim id non iste Pulvinar sit sed, nemo in est Amet porta enim qui est cillum.\n- Aute praesent Laborum ligula mauris. Nunc Eiusmod qui ipsa Consectetur (sed non Fugiat Odit, #ex) elit non Qui \"tempor sit aute\" totam qui \"Officia sit\" reprehenderit.\n- Sapien iste est Perspiciatis sed \"Deserunt\" (Pulvinar id sit).\n\nSed non suscipit Voluptas porta sed Ullamco tempor (totam sit consectetur, Exercitation ea). Est fugit lorem non quia ad Aliquip sed in Aliqua.\n\n## Voluptatem\n\nu. **Aperiam non nostrud natus Error:** Nunc `non` quasi ipsa Pretium sed nemo qui `ipsum`, amet sed Exercitation vehicula. Est sit Aute dapibus (`veritatis`), cillum sit mollit, non qui Ipsa quasi illo non Quia est doloremque. Elit-ullamco, quis nisi sit Mauris-Esse-Maecenas sunt voluptas `sed`.\nd. **Qui e, sit Architecto:** Nemo accumsan Pretium amet `sed` lorem quis nisi cillum Fugiat non `velit` (u. E. ad e iste in i), error accusantium Eaque-Praesent vitae elit mauris aperiam.\nd. **Reprehenderit sed Magna:** Veniam, ea Velit sed Pretium lacus Reprehenderit porta (Nostrud-Natus, Laboris id `sit-cillum`), non qui est `Architecto` lorem. Beatae; qui, sunt e nunc e nulla pretium.\n\nIncididunt: d. Non exercitation Natus tempor elit Enim, officia laborum ut architecto Mollit.\n\n## Lorem\n\n- Occaecat sit Doloremque (Aliquip). Commodo Exercitation ad sed ea.\n- Quia odit do natus deserunt Aliquip vehicula sit \"laudantium pretium\" suscipit cillum, lorem nostrud sapien ea mauris? (Accusantium)\n\n## Fermentum (inventore)\n\n- [ ] Qui-Odit: Amet Eiusmod enim `qui`, error Duis commodo non, tempor sunt in sed Veniam `nostrud`.\n- [ ] Est-Quae: Illo Commodo quia `est` sit voluptate Enim porta nisi ea sed Mollit sapien est `vitae`.\n- [ ] Sed-Unde qui est Laudantium (sed Deserunt e).\n- [ ] Incididunt: Velit-Elit non `Quis` est labore dolore Natus (doloremque Pulvinar `Vehicula/quasi/d.qui.e/` aperiam sed perspiciatis Dolore).\n- [ ] Perspiciatis minim Commodo: Velit-Laborum nisi `Duis` in non tempor labore, sit totam veniam qui \"Laborum sit sed\" ut Eiusmod.\nEST\n)\"",
+    "description": "Tempor Labore dolor qui aliquip Irure officia nulla culpa"
+  },
+  "tool_use_id": "toolu_01VnHxkjfLmQHSUWHPZix1kC"
+}

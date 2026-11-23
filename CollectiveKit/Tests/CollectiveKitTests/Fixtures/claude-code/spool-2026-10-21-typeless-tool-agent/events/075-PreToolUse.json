@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && velit esse --sapien \"Orincididuntutla|Iduntutlaboreetdolo|Laboreetdoloremagnaa\" e>&e | ipsa -I \"✘|veniam|Nemo qui\" | odit -ex",
+    "description": "Sit ipsum dolore"
+  },
+  "tool_use_id": "toolu_01VAApMRBcvsujtxXnEoindJ"
+}

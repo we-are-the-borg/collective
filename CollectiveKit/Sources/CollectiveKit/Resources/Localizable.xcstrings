@@ -1,0 +1,4569 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " · Default" : {
+      "comment" : "Settings window, Appearance pane: marker after the scheme family (e.g. \"Catppuccin\") in the list row of the scheme used when the user picked none. Keep the leading space and dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " · Default"
+          }
+        }
+      }
+    },
+    " · in use" : {
+      "comment" : "Settings window, Appearance pane: marker after the slot's name (\"Light Mode\" or \"Dark Mode\") that macOS shows right now. Keep the leading space and dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " · in use"
+          }
+        }
+      }
+    },
+    "%@ can’t be read. Using %@." : {
+      "comment" : "Settings window, Appearance pane: notice under a scheme slot whose chosen custom theme file is there but no longer reads as a theme, e.g. \"Embers Light can’t be read. Using Catppuccin Latte.\" The first argument is the custom theme's name as its file writes it (or its file name), never translated; the second the full name of the default scheme shown instead, e.g. \"Catppuccin Latte\", never translated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ can’t be read. Using %@."
+          }
+        }
+      }
+    },
+    "%@ is gone. Using %@." : {
+      "comment" : "Settings window, Appearance pane: notice under a scheme slot whose chosen custom theme file was deleted or moved, e.g. \"Horizon Dark is gone. Using Catppuccin Macchiato.\" The first argument is the custom theme's name as its file wrote it (or its file stem), never translated; the second the full name of the default scheme shown instead, e.g. \"Catppuccin Macchiato\", never translated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is gone. Using %@."
+          }
+        }
+      }
+    },
+    "%@ is not a color" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The argument is the palette key as written in base16/base24 files, e.g. \"base0A\"; keep it as it is. Its value is no #rrggbb color.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is not a color"
+          }
+        }
+      }
+    },
+    "(default)" : {
+      "comment" : "Settings window, pane of one coding tool: marker after the event folder path while the default folder is used.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(default)"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "comment" : "Title of a row in a session row's subagent list in the popover: the kind of subagent as the coding tool names it, e.g. \"Explore\", or its task. The argument is the tool's own word; keep it as it is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ · not on this Mac" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name when its command-line program was not found. The argument is the program's name, e.g. \"claude\"; shown in a monospaced font.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · not on this Mac"
+          }
+        }
+      }
+    },
+    "%@ · user scope" : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"subspace installed\": the installed subspace version, e.g. \"0.4.0\", installed for the whole user account rather than one project.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · user scope"
+          }
+        }
+      }
+    },
+    "%@ %@" : {
+      "comment" : "VoiceOver, row of a session asking a question without options: the question with its label, e.g. \"Mapping, choose one: Which revision?\", then where to answer, e.g. \"Answer in Terminal.\" Keep the order unless your language needs another.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %@"
+          }
+        }
+      }
+    },
+    "%@ ago" : {
+      "comment" : "Popover, row in the Finished tab, right side: how long ago the session ended, next to its status word (\"done\", \"no clean exit\"). The argument is a duration such as \"2 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ago"
+          }
+        }
+      }
+    },
+    "%@ archived" : {
+      "comment" : "Undo row in place of a session or a subagent the user just archived, followed by an Undo button. The argument is the session's project name, or the coding tool's name when the session has no project, e.g. \"collective archived\"; for a subagent, its type or task as the coding tool names it, e.g. \"Explore archived\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ archived"
+          }
+        }
+      }
+    },
+    "%@ found" : {
+      "comment" : "Setup window, card of one coding tool, check step: the tool's command-line program was found. The argument is the tool's name, e.g. \"Claude Code\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ found"
+          }
+        }
+      }
+    },
+    "%@ has a question for you: %@" : {
+      "comment" : "First line of a macOS notification that a subagent asks the user a question. The first argument is the subagent's type, e.g. \"Explore\"; the second the question, e.g. \"Which color do you like?\". The options follow on the next line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ has a question for you: %@"
+          }
+        }
+      }
+    },
+    "%@ needs your permission: %@" : {
+      "comment" : "Body of a macOS notification that a subagent asks the user to allow a tool call. The first argument is the subagent's type, e.g. \"Explore\"; the second the tool's name, e.g. \"Bash\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ needs your permission: %@"
+          }
+        }
+      }
+    },
+    "%@ needs your permission: %@ · %@" : {
+      "comment" : "Body of a macOS notification that a subagent asks the user to allow a tool call. The first argument is the subagent's type, e.g. \"Explore\"; then the tool's name, e.g. \"Bash\", and what the call works on, e.g. a command or file path.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ needs your permission: %@ · %@"
+          }
+        }
+      }
+    },
+    "%@ Options: %@; %lld %@. %@" : {
+      "comment" : "VoiceOver, row of a session asking a question: the question with its label, e.g. \"Mapping, choose one: Which revision?\"; then the agent's options numbered as Terminal numbers them, each followed by its description if it has one, e.g. \"1 Revision 5, Bundled today; 2 Revision 6\"; then the number of the last choice and its name, e.g. \"3\" and \"Other\"; then where to answer, e.g. \"Answer in Terminal.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Options: %@; %lld %@. %@"
+          }
+        }
+      }
+    },
+    "%@ Options: %@. %@" : {
+      "comment" : "VoiceOver, row of a session asking a question whose tool takes no answer of the user's own: the question with its label, e.g. \"Mapping, choose one: Which revision?\"; then the agent's options numbered as Terminal numbers them, each followed by its description if it has one, e.g. \"1 Revision 5, Bundled today; 2 Revision 6\"; then where to answer, e.g. \"Answer in Terminal.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Options: %@. %@"
+          }
+        }
+      }
+    },
+    "%@ website" : {
+      "comment" : "VoiceOver label of the arrow link next to an acknowledged library, font or scheme in the About pane. The argument is its name, e.g. \"GRDB.swift\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ website"
+          }
+        }
+      }
+    },
+    "%@, %@" : {
+      "comment" : "VoiceOver: joins two parts of a label, e.g. for one row of the popover a subagent's \"Explore\" and \"Haiku 5.5\", or in the Appearance pane the list's name and how many schemes it shows, \"Dark Mode schemes\" and \"26 schemes\". Keep the comma unless the language separates such lists differently.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %@"
+          }
+        }
+      }
+    },
+    "%@, %@, update available" : {
+      "comment" : "Settings window, sidebar, row of one coding tool: VoiceOver label while a newer subspace version is published. The first argument is the tool's name, e.g. \"Claude Code\", the second its status, e.g. \"Connected · 1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %@, update available"
+          }
+        }
+      }
+    },
+    "%@, %lld sessions" : {
+      "comment" : "VoiceOver label of a tab in the popover's title bar without a tooltip: the Active tab while no session needs the user, the Idle tab while sessions never move there. The first argument is the tab's name (\"Active\" or \"Idle\"), the second the number of sessions the tab lists, e.g. \"Active, 2 sessions\". VoiceOver adds whether the tab is selected.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %#@sessions@"
+          },
+          "substitutions" : {
+            "sessions" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg session"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg sessions"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@, %lld sessions, %@" : {
+      "comment" : "VoiceOver label of the Idle or Finished tab in the popover's title bar. The first argument is the tab's name (\"Idle\" or \"Finished\"), the second the number of sessions the tab lists, the third the tab's tooltip, which sessions it holds, e.g. \"Idle, 2 sessions, Waiting over 5 min\" or \"Finished, 1 session, Cleared after 10 min\". VoiceOver adds whether the tab is selected.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %#@sessions@, %3$@"
+          },
+          "substitutions" : {
+            "sessions" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg session"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg sessions"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@, %lld sessions, %lld need you" : {
+      "comment" : "VoiceOver label of the Active tab in the popover's title bar while sessions need the user. The first argument is the tab's name (\"Active\"), the second the number of sessions the tab lists, the third the number of those in which anyone waits for the user, e.g. \"Active, 4 sessions, 2 need you\". VoiceOver adds whether the tab is selected.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %#@sessions@, %#@needYou@"
+          },
+          "substitutions" : {
+            "needYou" : {
+              "argNum" : 3,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg needs you"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg need you"
+                    }
+                  }
+                }
+              }
+            },
+            "sessions" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg session"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg sessions"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@, %lld sessions, unread, %@" : {
+      "comment" : "VoiceOver label of the Idle or Finished tab in the popover's title bar while one of its sessions has a reply the user hasn't seen; the tab shows a dot after the count. The first argument is the tab's name (\"Idle\" or \"Finished\"), the second the number of sessions the tab lists, the third the tab's tooltip, which sessions it holds, e.g. \"Idle, 2 sessions, unread, Waiting over 5 min\" or \"Finished, 1 session, unread, Cleared after 10 min\". VoiceOver adds whether the tab is selected.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %#@sessions@, unread, %3$@"
+          },
+          "substitutions" : {
+            "sessions" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg session"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg sessions"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@, choose any: %@" : {
+      "comment" : "VoiceOver, row of a session asking a question: the question's short label, e.g. \"Mapping\", then the question. The user may pick several options.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, choose any: %@"
+          }
+        }
+      }
+    },
+    "%@, choose one: %@" : {
+      "comment" : "VoiceOver, row of a session asking a question: the question's short label, e.g. \"Mapping\", then the question. The user picks one option.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, choose one: %@"
+          }
+        }
+      }
+    },
+    "%@, Default" : {
+      "comment" : "VoiceOver, Appearance pane: a list row of the scheme used when the user picked none, or the value of its slot. The argument is the scheme's full name, e.g. \"Catppuccin Latte\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Default"
+          }
+        }
+      }
+    },
+    "A file with the same name already exists in the Themes folder. Replacing it will overwrite its current contents." : {
+      "comment" : "Informative text of the alert that asks whether to replace a custom theme file of the same name in the Themes folder.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A file with the same name already exists in the Themes folder. Replacing it will overwrite its current contents."
+          }
+        }
+      }
+    },
+    "Couldn’t import “%@”." : {
+      "comment" : "Alert when a custom theme file could not be copied into the Themes folder. The argument is the file name, e.g. \"ocean.yaml\"; the system's reason follows below it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t import “%@”."
+          }
+        }
+      }
+    },
+    "Custom" : {
+      "comment" : "Settings window, Appearance pane: heading of the section of the user's own color schemes (custom themes from files) in the list under an open slot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom"
+          }
+        }
+      }
+    },
+    "Built-in" : {
+      "comment" : "Settings window, Appearance pane: heading of the section of the color schemes that ship with the app, in the list under an open slot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in"
+          }
+        }
+      }
+    },
+    "Custom themes are base16 or base24 YAML files, like those from %@." : {
+      "comment" : "Settings window, Appearance pane: footnote under the list of color schemes. base16 and base24 are file formats, never translated. The argument is the link \"tinted-theming ↗\" to the project's scheme collection.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom themes are base16 or base24 YAML files, like those from %@."
+          }
+        }
+      }
+    },
+    "Import Theme…" : {
+      "comment" : "Settings window, Appearance pane: button under the list of color schemes that opens the system's open panel to copy base16/base24 YAML theme files into the app's Themes folder.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import Theme…"
+          }
+        }
+      }
+    },
+    "Light" : {
+      "comment" : "Settings window, Appearance pane: header above the light color schemes in the list while one scheme is always used; light as opposed to dark.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light"
+          }
+        }
+      }
+    },
+    "Dark" : {
+      "comment" : "Settings window, Appearance pane: header above the dark color schemes in the list while one scheme is always used; dark as opposed to light.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark"
+          }
+        }
+      }
+    },
+    "Light Mode schemes" : {
+      "comment" : "VoiceOver name of the area and list of color schemes under the slot \"Light Mode\" in the Appearance pane.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light Mode schemes"
+          }
+        }
+      }
+    },
+    "Dark Mode schemes" : {
+      "comment" : "VoiceOver name of the area and list of color schemes under the slot \"Dark Mode\" in the Appearance pane.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Mode schemes"
+          }
+        }
+      }
+    },
+    "All schemes" : {
+      "comment" : "VoiceOver name of the area and list of all color schemes under the slot \"Scheme\" in the Appearance pane, while one scheme is always used.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All schemes"
+          }
+        }
+      }
+    },
+    "%@, custom themes" : {
+      "comment" : "VoiceOver name of the section of the user's own color schemes in the Appearance pane's list. The argument is the slot's name, e.g. \"Dark Mode\" or \"Scheme\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, custom themes"
+          }
+        }
+      }
+    },
+    "%@, built-in schemes" : {
+      "comment" : "VoiceOver name of the section of the color schemes that ship with the app in the Appearance pane's list. The argument is the slot's name, e.g. \"Dark Mode\" or \"Scheme\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, built-in schemes"
+          }
+        }
+      }
+    },
+    "Move to Trash" : {
+      "comment" : "Settings window, Appearance pane: context menu item of a custom theme row that moves its file to the Trash without asking. Use macOS's own wording.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move to Trash"
+          }
+        }
+      }
+    },
+    "No light schemes match “%@”." : {
+      "comment" : "Settings window, Appearance pane: shown in place of the list of light color schemes when the search finds none. The argument is the search text as typed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No light schemes match “%@”."
+          }
+        }
+      }
+    },
+    "No dark schemes match “%@”." : {
+      "comment" : "Settings window, Appearance pane: shown in place of the list of dark color schemes when the search finds none. The argument is the search text as typed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No dark schemes match “%@”."
+          }
+        }
+      }
+    },
+    "No schemes match “%@”." : {
+      "comment" : "Settings window, Appearance pane: shown in place of the list of all color schemes, while one scheme is always used, when the search finds none. The argument is the search text as typed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No schemes match “%@”."
+          }
+        }
+      }
+    },
+    "%@, Default, in use" : {
+      "comment" : "VoiceOver value of a slot (\"Light Mode\" or \"Dark Mode\") in the Appearance pane: its scheme is the one used when the user picked none, and macOS shows this mode right now. The argument is the scheme's full name, e.g. \"Catppuccin Latte\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Default, in use"
+          }
+        }
+      }
+    },
+    "%@, collapsed" : {
+      "comment" : "VoiceOver value of a slot (\"Light Mode\", \"Dark Mode\" or \"Scheme\") in the Appearance pane while its list of color schemes is closed. The argument is the rest of the value, e.g. \"Catppuccin Latte, Default, in use\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, collapsed"
+          }
+        }
+      }
+    },
+    "%@, expanded" : {
+      "comment" : "VoiceOver value of a slot (\"Light Mode\", \"Dark Mode\" or \"Scheme\") in the Appearance pane while its list of color schemes is open under it. The argument is the rest of the value, e.g. \"Catppuccin Latte, Default, in use\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, expanded"
+          }
+        }
+      }
+    },
+    "%@, in use" : {
+      "comment" : "VoiceOver value of a slot (\"Light Mode\" or \"Dark Mode\") in the Appearance pane that macOS shows right now. The argument is the scheme's full name, e.g. \"Gruvbox Dark\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, in use"
+          }
+        }
+      }
+    },
+    "%@, Light" : {
+      "comment" : "VoiceOver label of a row in the Appearance pane's list of all color schemes, while one scheme is always used: the scheme is light. The argument is its name, e.g. \"Catppuccin Latte\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Light"
+          }
+        }
+      }
+    },
+    "%@, Dark" : {
+      "comment" : "VoiceOver label of a row in the Appearance pane's list of all color schemes, while one scheme is always used: the scheme is dark. The argument is its name, e.g. \"Catppuccin Macchiato\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, Dark"
+          }
+        }
+      }
+    },
+    "%@, custom, %@" : {
+      "comment" : "VoiceOver label of a row for one of the user's own color schemes in the Appearance pane. The first argument is the scheme's name from its file, e.g. \"Horizon Dark\", the second its file name, e.g. \"horizon-dark.yaml\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, custom, %@"
+          }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "comment" : "Settings window, Appearance pane: tooltip of an error row in the Custom section, with its whole file name and why it does not read, e.g. \"ocean.yml · same file name as ocean.yaml\". Keep the dot unless your language separates them differently.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        }
+      }
+    },
+    "Error, %@, %@" : {
+      "comment" : "VoiceOver text of an error row in the Appearance pane's Custom section, a file that does not read as a color scheme. The first argument is the file name, e.g. \"ocean.yml\", the second why, e.g. \"same file name as ocean.yaml\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error, %@, %@"
+          }
+        }
+      }
+    },
+    "Replace" : {
+      "comment" : "Button of the alert that asks whether to replace a custom theme file of the same name: replaces the file in the Themes folder. Use macOS's own wording.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Replace"
+          }
+        }
+      }
+    },
+    "Search schemes" : {
+      "comment" : "Settings window, Appearance pane: placeholder and VoiceOver label of the search field above the list of color schemes.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search schemes"
+          }
+        }
+      }
+    },
+    "Clear search" : {
+      "comment" : "Settings window, Appearance pane: button in the search field above the list of color schemes that empties it (an x).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear search"
+          }
+        }
+      }
+    },
+    "%@, effort %@" : {
+      "comment" : "VoiceOver label of a model name in the popover together with the gauge next to it, e.g. \"Opus 5.5, effort high\". The first argument is a model name, never translated; the second the effort level as the coding tool writes it, e.g. \"high\"; never translated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, effort %@"
+          }
+        }
+      }
+    },
+    "%@. Answer in %@." : {
+      "comment" : "VoiceOver, end of the value of a row asking a question: how many more questions wait, e.g. \"+1 more question\", then where to answer, the terminal app the session runs in, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@. Answer in %@."
+          }
+        }
+      }
+    },
+    "%@. Answer in Terminal." : {
+      "comment" : "VoiceOver, end of the value of a row asking a question: how many more questions wait, e.g. \"+1 more question\", then where to answer.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@. Answer in Terminal."
+          }
+        }
+      }
+    },
+    "%lld agents working" : {
+      "comment" : "Accessibility value of the menu bar icon: number of coding agents (sessions and their subagents) currently working.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld agent working"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld agents working"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld archived" : {
+      "comment" : "Part of the footer of an idle session's preview in the popover: number of subagents the user archived by hand. Joined with the other parts by a separator the view draws, e.g. \"13 done | 1 archived\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld archived"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld archived"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld done" : {
+      "comment" : "Number of a session's subagents that finished normally, after other counts, at any depth. On the subagent toggle line under a session's row in the popover, e.g. \"Subagents 2 working · 1 needs you · 3 done\"; on the fold row in the subagent list, e.g. \"33 done\"; in an idle session's preview footer, e.g. \"14 subagents · 13 done · 1 archived\"; and read by VoiceOver as part of a session row's label, e.g. \"2 subagents working, 14 done\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld done"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld done"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld earlier sessions" : {
+      "comment" : "Popover, heading under the warning block while subspace is missing or disabled: number of known sessions folded beneath it, e.g. \"3 earlier sessions\". The heading toggles the list of those sessions.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld earlier session"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld earlier sessions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld finished sessions archived" : {
+      "comment" : "Undo row in place of the Finished list after \"Archive All Finished\", followed by an Undo button.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld finished session archived"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld finished sessions archived"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld h" : {
+      "comment" : "Elapsed time in whole hours, abbreviated, e.g. \"2 h\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld h"
+          }
+        }
+      }
+    },
+    "%lld h %lld min" : {
+      "comment" : "Elapsed time in hours and minutes, abbreviated, e.g. \"1 h 12 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld h %lld min"
+          }
+        }
+      }
+    },
+    "%lld lost contact" : {
+      "comment" : "Part of the footer of an idle session's preview in the popover: number of subagents whose end was never reported. Joined with the other parts by a separator the view draws, e.g. \"13 done | 2 lost contact\". Also on the button that opens a session row's subagent list, e.g. \"Subagents 1 working · 3 done · 2 lost contact\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld lost contact"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld lost contact"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld min" : {
+      "comment" : "Elapsed time in whole minutes under one hour, abbreviated, e.g. \"4 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        }
+      }
+    },
+    "%lld need you" : {
+      "comment" : "Number of a session's subagents waiting for the user to allow a tool call or to answer a question, at any depth. On the line under a session's row in the popover that opens its subagent list, after the working ones, e.g. \"Subagents 2 working · 1 needs you\"; also in an idle session's preview footer, e.g. \"3 subagents · 1 needs you · 2 done\". Also counts sessions, not subagents, where the English text leaves \"sessions\" out as the context says it: in the tooltip of \"◆ n\" on the popover's Active tab, the number of sessions in which anyone waits for the user.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld needs you"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld need you"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld of %lld" : {
+      "comment" : "VoiceOver, part of a row in a session row's subagent list in the popover once the subagent is done or lost: its place among all of the session's subagents by start, then their number, e.g. \"5 of 6\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld of %lld"
+          }
+        }
+      }
+    },
+    "%lld Questions for you" : {
+      "comment" : "VoiceOver, part of a row in a session's subagent list in the popover: the subagent waits for the user to answer this many questions.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Question for you"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Questions for you"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld s" : {
+      "comment" : "Elapsed time under one minute, abbreviated, e.g. \"5 s\". Used for runtimes and inside \"… ago\" texts.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld s"
+          }
+        }
+      }
+    },
+    "%lld schemes" : {
+      "comment" : "Settings window: how many color schemes. About pane, Acknowledgements: the version column of a color scheme family, how many of its schemes the app ships, e.g. \"4 schemes\". Appearance pane: what VoiceOver reads for the list of color schemes, how many match the search.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld scheme"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld schemes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld subagents" : {
+      "comment" : "Footer of an idle session's preview in the popover: the session had this many subagents, followed by how many are done, archived and so on, then their models, e.g. \"4 subagents | 3 done | 1 archived\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagent"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagents"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld subagents done" : {
+      "comment" : "VoiceOver label of a session's row in the popover, after its time: this many of its subagents finished normally, e.g. \"14 subagents done\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagent done"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagents done"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld subagents working" : {
+      "comment" : "VoiceOver label of a session's row in the popover, after its time: this many of its subagents are at work, at any depth, e.g. \"2 subagents working\". In the row's subagent list, VoiceOver for a subagent's row: the subagent waits on its own subagents, this many of which are working.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagent working"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagents working"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld subagents, all done" : {
+      "comment" : "Footer of an idle session's preview in the popover: the session had this many subagents and every one of them is done. Followed by their models, e.g. \"4 subagents, all done · Sonnet 5, Haiku 5.5\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagent, done"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld subagents, all done"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld waiting for a type" : {
+      "comment" : "Part of the footer of an idle session's preview in the popover: number of a session's subagents that work but have not been named by the coding tool yet (shown as \"Awaiting designation…\"), e.g. \"3 subagents | 1 working | 1 waiting for a type\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld waiting for a type"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld waiting for a type"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld working" : {
+      "comment" : "Part of the footer of an idle session's preview in the popover: number of a session's subagents still working, at any depth. Joined with the other parts by a separator the view draws, e.g. \"4 subagents | 1 working | 3 done\". Also on the button that opens a session row's subagent list, e.g. \"Subagents 2 working · 1 needs you\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld working"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld working"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "+%lld more" : {
+      "comment" : "Popover, the question box of a session's row: this many more open questions follow the one shown.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld more"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld more"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "+%lld more questions" : {
+      "comment" : "VoiceOver only: read at the end of a question row's value, how many more questions the agents wait to have answered. The box on screen draws \"+%lld more\".",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld more question"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "+%lld more questions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "author is not text" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The file's \"author\" is no text.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "author is not text"
+          }
+        }
+      }
+    },
+    "can’t be read" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The app may not read the file, or it is not UTF-8 text.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "can’t be read"
+          }
+        }
+      }
+    },
+    "missing name" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The file has no \"name\", or an empty one.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "missing name"
+          }
+        }
+      }
+    },
+    "missing palette" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The file has no \"palette\" with the colors.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "missing palette"
+          }
+        }
+      }
+    },
+    "missing palette key %@" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The argument is the palette key as written in base16/base24 files, e.g. \"base0D\"; keep it as it is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "missing palette key %@"
+          }
+        }
+      }
+    },
+    "not a base16 or base24 scheme" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The file is no valid YAML or declares no known system; base16 and base24 are format names, keep them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "not a base16 or base24 scheme"
+          }
+        }
+      }
+    },
+    "same file name as %@" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. Two files differ only in the extension (.yaml and .yml); the argument is the file name that counts, e.g. \"ocean.yaml\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "same file name as %@"
+          }
+        }
+      }
+    },
+    "Show in Finder" : {
+      "comment" : "Settings window, Appearance pane: button under the list of color schemes that opens the Themes folder in Finder; also the context menu item of a custom theme row that shows its file in Finder. Use macOS's own wording.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show in Finder"
+          }
+        }
+      }
+    },
+    "tinted-theming ↗" : {
+      "comment" : "Settings window, Appearance pane: link in the footnote under the list of color schemes to the tinted-theming schemes repository on GitHub. \"tinted-theming\" is a project name, never translated; keep the arrow.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tinted-theming ↗"
+          }
+        }
+      }
+    },
+    "variant is not light or dark" : {
+      "comment" : "Settings window, Appearance pane: reason after a custom theme file name in an error row of the Custom section (\"ocean.yaml · <reason>\"); short, lowercase, no period. The file's \"variant\" is neither \"light\" nor \"dark\"; keep those two words as they are.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "variant is not light or dark"
+          }
+        }
+      }
+    },
+    "“%@” already exists. Do you want to replace it?" : {
+      "comment" : "Alert when importing a custom theme whose file name the Themes folder already has; macOS's own wording for replacing a file. The argument is the file name, e.g. \"ocean.yaml\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@” already exists. Do you want to replace it?"
+          }
+        }
+      }
+    },
+    "⌘Q" : {
+      "comment" : "Settings window, tooltip of the button \"Quit The Collective\" at the bottom of the sidebar: its keyboard shortcut. Keep it as it is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘Q"
+          }
+        }
+      }
+    },
+    "1 day" : {
+      "comment" : "Settings window, Sessions: entry of the event retention popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 day"
+          }
+        }
+      }
+    },
+    "1 hour" : {
+      "comment" : "Settings window, Sessions: entry of the retention popup and of the popup for moving sessions to Idle. Also read out by the Idle heading's VoiceOver label, e.g. \"waiting over 5 minutes\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 hour"
+          }
+        }
+      }
+    },
+    "1 week" : {
+      "comment" : "Settings window, Sessions: entry of the event retention popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 week"
+          }
+        }
+      }
+    },
+    "3 days" : {
+      "comment" : "Settings window, Sessions: entry of the event retention popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 days"
+          }
+        }
+      }
+    },
+    "5 minutes" : {
+      "comment" : "Settings window, Sessions: entry of the retention popup and of the popup for moving sessions to Idle. Also read out by the Idle heading's VoiceOver label, e.g. \"waiting over 5 minutes\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 minutes"
+          }
+        }
+      }
+    },
+    "10 minutes" : {
+      "comment" : "Settings window, Sessions: entry of the retention popup and of the popup for moving sessions to Idle. Also read out by the Idle heading's VoiceOver label, e.g. \"waiting over 5 minutes\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 minutes"
+          }
+        }
+      }
+    },
+    "30 minutes" : {
+      "comment" : "Settings window, Sessions: entry of the retention popup and of the popup for moving sessions to Idle. Also read out by the Idle heading's VoiceOver label, e.g. \"waiting over 5 minutes\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 minutes"
+          }
+        }
+      }
+    },
+    "A background shell is running" : {
+      "comment" : "VoiceOver value of the menu bar icon while no agent works but a shell an agent started still runs in the background.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A background shell is running"
+          }
+        }
+      }
+    },
+    "A little less fluid, with about two thirds of the CPU." : {
+      "comment" : "Settings window, Menu Bar pane: hint under \"Frame rate\" while \"Balanced (8 fps)\" is chosen.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A little less fluid, with about two thirds of the CPU."
+          }
+        }
+      }
+    },
+    "A session goes idle when it has waited this long for your next prompt and nothing runs in the background. Sessions waiting for permission or an answer never go idle. Never keeps every session at the top." : {
+      "comment" : "Settings window, Sessions: footnote under the idle popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A session goes idle when it has waited this long for your next prompt and nothing runs in the background. Sessions waiting for permission or an answer never go idle. Never keeps every session at the top."
+          }
+        }
+      }
+    },
+    "A subagent has a question for you: %@" : {
+      "comment" : "First line of a macOS notification that a subagent of unknown type asks the user a question. The argument is the question, e.g. \"Which color do you like?\". The options follow on the next line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A subagent has a question for you: %@"
+          }
+        }
+      }
+    },
+    "A subagent needs your permission: %@" : {
+      "comment" : "Body of a macOS notification that a subagent of unknown type asks the user to allow a tool call. The argument is the tool's name, e.g. \"Bash\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A subagent needs your permission: %@"
+          }
+        }
+      }
+    },
+    "A subagent needs your permission: %@ · %@" : {
+      "comment" : "Body of a macOS notification that a subagent of unknown type asks the user to allow a tool call. The arguments are the tool's name, e.g. \"Bash\", and what the call works on, e.g. a command or file path.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A subagent needs your permission: %@ · %@"
+          }
+        }
+      }
+    },
+    "A turn finishes" : {
+      "comment" : "Settings window, Notifications: label of the popup that chooses after how long a finished turn of a coding agent notifies.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A turn finishes"
+          }
+        }
+      }
+    },
+    "About" : {
+      "comment" : "Settings window, sidebar entry and window title: app name and version.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "About The Collective" : {
+      "comment" : "App menu (the menu bar the app has while one of its windows is open): first item, opens the settings window on its About pane. The Collective is the app’s name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About The Collective"
+          }
+        }
+      }
+    },
+    "Acknowledgements" : {
+      "comment" : "Settings window, About pane: heading of the group that lists the libraries, fonts, icons and color schemes the app uses, with their licenses; also the title of the sheet with the full license texts.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acknowledgements"
+          }
+        }
+      }
+    },
+    "Active" : {
+      "comment" : "Popover title bar: the tab with the sessions that work or wait for the user.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        }
+      }
+    },
+    "Adding the marketplace…" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer next to a spinner while the command that adds the plugin marketplace runs.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adding the marketplace…"
+          }
+        }
+      }
+    },
+    "After 1 minute" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After 1 minute"
+          }
+        }
+      }
+    },
+    "After 3 minutes" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After 3 minutes"
+          }
+        }
+      }
+    },
+    "After 5 minutes" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After 5 minutes"
+          }
+        }
+      }
+    },
+    "After 10 minutes" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After 10 minutes"
+          }
+        }
+      }
+    },
+    "After 30 minutes" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After 30 minutes"
+          }
+        }
+      }
+    },
+    "All levels in gray, like the model name." : {
+      "comment" : "Settings window, General pane: hint under the switch \"Color effort levels\" while it is off.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All levels in gray, like the model name."
+          }
+        }
+      }
+    },
+    "All quiet" : {
+      "comment" : "Popover, Active tab without sessions while some rest on the Idle tab: the heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All quiet"
+          }
+        }
+      }
+    },
+    "All releases on GitHub ↗" : {
+      "comment" : "Settings window, About pane, Release Notes sheet: link at the bottom that opens the list of all releases of The Collective on GitHub, each with its notes and full list of changes.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All releases on GitHub ↗"
+          }
+        }
+      }
+    },
+    "Allow or deny in the terminal." : {
+      "comment" : "Popover, a row that needs permission when the app can't show the session's terminal, so the row has no jump button: the user allows or denies the tool call in the terminal the session runs in.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow or deny in the terminal."
+          }
+        }
+      }
+    },
+    "Allow or deny there." : {
+      "comment" : "Popover, on a row that needs permission whose jump button below shows the session's terminal: the user allows or denies the tool call in the terminal.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow or deny there."
+          }
+        }
+      }
+    },
+    "Already added" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, tag after the command that adds the plugin marketplace: the tool already knows the marketplace, so the command is skipped.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already added"
+          }
+        }
+      }
+    },
+    "Always" : {
+      "comment" : "Settings window, Notifications: entry of the popup next to \"A turn finishes\" that sets how long a coding agent's turn must have lasted, counted from the user's last prompt or answer, for its end to notify; every turn's end notifies. Also the Menu Bar pane: radio button of \"Animate the icon\" that animates the menu bar icon in every state that moves, as the app always did.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Always"
+          }
+        }
+      }
+    },
+    "Always use one scheme" : {
+      "comment" : "Settings window, Appearance pane: option for how the color scheme is chosen. One scheme, light or dark, is used whatever macOS's light or dark mode.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Always use one scheme"
+          }
+        }
+      }
+    },
+    "An agent asks a question" : {
+      "comment" : "Settings window, Notifications: switch for a notification when a coding agent asks the user a question and waits for the answer.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An agent asks a question"
+          }
+        }
+      }
+    },
+    "An agent asks you a question" : {
+      "comment" : "VoiceOver value of the menu bar icon while an agent waits for the user to answer its questions and none waits for a permission.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An agent asks you a question"
+          }
+        }
+      }
+    },
+    "An agent needs permission" : {
+      "comment" : "Settings window, Notifications: switch for a notification when a coding agent asks the user to allow a tool call.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An agent needs permission"
+          }
+        }
+      }
+    },
+    "An agent needs your permission" : {
+      "comment" : "Accessibility value of the menu bar icon while an agent waits for the user to allow a tool call; the icon shows an amber cube with \"?\". VoiceOver reads it after the label \"The Collective\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An agent needs your permission"
+          }
+        }
+      }
+    },
+    "Animate the icon" : {
+      "comment" : "Settings window, Menu Bar pane: header of the radio group that sets when the menu bar icon moves.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animate the icon"
+          }
+        }
+      }
+    },
+    "Another copy of The Collective is using them. Quit it and try again." : {
+      "comment" : "Settings window, Sessions: message of the alert when clearing the stored events failed because another copy of the app uses them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Another copy of The Collective is using them. Quit it and try again."
+          }
+        }
+      }
+    },
+    "Answer in %@: type a number or your own answer." : {
+      "comment" : "Last line of the question box of a session's row: The Collective can show the question but not answer it. The argument is the terminal app the session runs in, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in %@: type a number or your own answer."
+          }
+        }
+      }
+    },
+    "Answer in %@: type a number." : {
+      "comment" : "Last line of the question box of a session's row whose tool takes no answer of the user's own, only one of the numbered options. The argument is the terminal app the session runs in, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in %@: type a number."
+          }
+        }
+      }
+    },
+    "Answer in %@." : {
+      "comment" : "Last line of the question box of a session's row without options, and the end of what VoiceOver reads for it: where to answer it. The argument is the terminal app the session runs in, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in %@."
+          }
+        }
+      }
+    },
+    "Answer in Terminal: type a number or your own answer." : {
+      "comment" : "Last line of the question box of a session's row: The Collective can show the question but not answer it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in Terminal: type a number or your own answer."
+          }
+        }
+      }
+    },
+    "Answer in Terminal: type a number." : {
+      "comment" : "Last line of the question box of a session's row whose tool takes no answer of the user's own, only one of the numbered options: The Collective can show the question but not answer it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in Terminal: type a number."
+          }
+        }
+      }
+    },
+    "Answer in Terminal." : {
+      "comment" : "VoiceOver, end of the value of a row asking a question: where to answer it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer in Terminal."
+          }
+        }
+      }
+    },
+    "Answer there." : {
+      "comment" : "Popover, on a row with a question whose jump button below shows the session's terminal: the user answers in the terminal.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer there."
+          }
+        }
+      }
+    },
+    "Appearance" : {
+      "comment" : "Settings window, sidebar entry and heading of the pane where the user picks the color scheme for light and for dark mode.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
+          }
+        }
+      }
+    },
+    "Applies to done and stale sessions. Working sessions always stay." : {
+      "comment" : "Settings window, Sessions: footnote under the retention popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applies to done and stale sessions. Working sessions always stay."
+          }
+        }
+      }
+    },
+    "archived" : {
+      "comment" : "Popover, status word of a row in a session's subagent list, also read by VoiceOver: the user archived the subagent.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "archived"
+          }
+        }
+      }
+    },
+    "As of last turn end · %@" : {
+      "comment" : "Popover, first line of the tooltip of the \"Shell\" line on a session's row whose turn is over while a shell command the agent started in the background still runs; also read by VoiceOver as the hint of any session row while such a shell runs. The lines under it name the shells listed at the agent's last turn end. The argument is the time of day of that turn end, e.g. \"14:05\" or \"2:05 PM\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As of last turn end · %@"
+          }
+        }
+      }
+    },
+    "awaiting designation" : {
+      "comment" : "VoiceOver, state of a row in a session row's subagent list in the popover: the subagent works but has no name or type yet. Alludes to the Borg in Star Trek, as \"Awaiting designation…\" does; keep that tone.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "awaiting designation"
+          }
+        }
+      }
+    },
+    "Awaiting designation…" : {
+      "comment" : "Title and status word of a row in a session row's subagent list in the popover, for a subagent that has been announced but has no name or type yet. Alludes to the Borg in Star Trek, who receive a designation (\"Seven of Nine\") after assimilation; keep that tone.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Awaiting designation…"
+          }
+        }
+      }
+    },
+    "background" : {
+      "comment" : "VoiceOver, part of a row in a session row's subagent list in the popover: the subagent runs in the background, e.g. \"Explore, Haiku 5.5, background, working, 40 s\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "background"
+          }
+        }
+      }
+    },
+    "Balanced (8 fps)" : {
+      "comment" : "Settings window, Menu Bar pane: entry of the \"Frame rate\" popup; the menu bar icon is drawn 8 times a second while it moves.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balanced (8 fps)"
+          }
+        }
+      }
+    },
+    "Banner style and Focus are set in System Settings." : {
+      "comment" : "Settings window, Notifications: last row, next to the \"Open System Settings\" button. Banner style and Focus are the system's notification options; use their names in System Settings.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Banner style and Focus are set in System Settings."
+          }
+        }
+      }
+    },
+    "Brings %@ to the front. It can’t select the session’s tab." : {
+      "comment" : "Tooltip of a session row's jump button that brings the session's terminal app to the front when the app can't be told which tab the session runs in. The argument is the app's name, e.g. \"iTerm2\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brings %@ to the front. It can’t select the session’s tab."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "comment" : "Settings window, Sessions: button that dismisses the confirmation without deleting; also the default button of the alert that asks whether to replace a custom theme file of the same name, which keeps the file in the Themes folder.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Check for subspace updates" : {
+      "comment" : "Settings window, General pane, section Updates: label of the switch that lets the app ask GitHub for new subspace versions. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for subspace updates"
+          }
+        }
+      }
+    },
+    "Checking…" : {
+      "comment" : "Gray status pill in the settings pane of one coding tool and on the setup window card: shown before the first check of the integration finished, and after a failed check when no state is known yet.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Checking…"
+          }
+        }
+      }
+    },
+    "Choose any" : {
+      "comment" : "Popover, a question: the user may pick several of the options. A small line under the question in the row's question box.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose any"
+          }
+        }
+      }
+    },
+    "Choose any: %@" : {
+      "comment" : "VoiceOver, row of a session asking a question without a short label: the question. The user may pick several options.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose any: %@"
+          }
+        }
+      }
+    },
+    "Choose one: %@" : {
+      "comment" : "VoiceOver, row of a session asking a question without a short label: the question. The user picks one option.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose one: %@"
+          }
+        }
+      }
+    },
+    "Choose…" : {
+      "comment" : "Settings window, pane of one coding tool: button that opens a folder picker for the event folder.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose…"
+          }
+        }
+      }
+    },
+    "Clear" : {
+      "comment" : "Settings window, Sessions: destructive button of the confirmation that deletes the stored events.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        }
+      }
+    },
+    "Clear stored events?" : {
+      "comment" : "Settings window, Sessions: title of the confirmation before the stored events are deleted.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear stored events?"
+          }
+        }
+      }
+    },
+    "Clear…" : {
+      "comment" : "Settings window, Sessions: button that asks to delete the stored events.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear…"
+          }
+        }
+      }
+    },
+    "Cleared after %@" : {
+      "comment" : "Tooltip of the Finished tab in the popover's title bar, also read by VoiceOver after the tab's name and count: how long finished sessions stay listed. The argument is a duration such as \"10 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cleared after %@"
+          }
+        }
+      }
+    },
+    "CLI path %@" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name: where the tool's command-line program was found, e.g. \"~/.local/bin/claude\", when its version is unknown. Shown in a monospaced font.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "CLI path %@ · version %@" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name: where the tool's command-line program was found and its version, e.g. \"~/.local/bin/claude · 2.1.285\". Shown in a monospaced font; keep the arguments as they are.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        }
+      }
+    },
+    "Color effort levels" : {
+      "comment" : "Settings window, General pane, group \"Popover\": switch that gives each level of the effort gauge next to a model name its own color; off, all levels are gray.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color effort levels"
+          }
+        }
+      }
+    },
+    "Color schemes" : {
+      "comment" : "Settings window, About pane, group \"Acknowledgements\": heading of the list of color schemes the app ships.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color schemes"
+          }
+        }
+      }
+    },
+    "Colors for the popover, settings and setup." : {
+      "comment" : "Settings window, Appearance pane: the line under the pane's heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colors for the popover, settings and setup."
+          }
+        }
+      }
+    },
+    "Connected" : {
+      "comment" : "Setup window, card of one coding tool, status pill: subspace has seen a session of this tool start.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected"
+          }
+        }
+      }
+    },
+    "Connected · %@" : {
+      "comment" : "Settings window, pane of one coding tool, status next to \"subspace\": subspace is installed and has seen a session of this tool start or delivered an event. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected · %@"
+          }
+        }
+      }
+    },
+    "Dark Mode" : {
+      "comment" : "Settings window, Appearance pane: the slot for the color scheme used while macOS shows dark mode; also part of VoiceOver names such as \"Dark Mode, custom themes\". Use the term macOS uses.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Mode"
+          }
+        }
+      }
+    },
+    "Data" : {
+      "comment" : "Settings window, pane of one coding tool: heading of the group with the event folder.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        }
+      }
+    },
+    "Disabled" : {
+      "comment" : "Setup window, card of one coding tool, status pill: subspace is installed but switched off in this tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disabled"
+          }
+        }
+      }
+    },
+    "Disabled · %@" : {
+      "comment" : "Settings window, pane of one coding tool, status next to \"subspace\": subspace is installed but switched off in the tool. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disabled · %@"
+          }
+        }
+      }
+    },
+    "done" : {
+      "comment" : "Popover, status word of a finished session's row and of a finished subagent's row in its subagent list; also read by VoiceOver for a subagent's row.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "done"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "comment" : "Settings window: button that closes the sheet with the full license texts and the Release Notes sheet (About pane), and the button next to the search field that closes the list of color schemes (Appearance pane).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "Done %@ ago" : {
+      "comment" : "Finished session: how long ago it ended. The argument is a duration such as \"2 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done %@ ago"
+          }
+        }
+      }
+    },
+    "Each level has its own color, from green for low to purple for max." : {
+      "comment" : "Settings window, General pane: hint under the switch \"Color effort levels\" while it is on. \"low\" and \"max\" are the lowest and highest effort levels, as in the preview labels.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Each level has its own color, from green for low to purple for max."
+          }
+        }
+      }
+    },
+    "Effort changed from %@ at %@" : {
+      "comment" : "Tooltip on the orchestrator's model in a session header or idle row, after the line \"Effort: …\": the effort before the last change and when it changed, e.g. \"Effort changed from high at 14:20\". The first argument is the effort level as the coding tool writes it, e.g. \"high\"; never translated; the second a time of day.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effort changed from %@ at %@"
+          }
+        }
+      }
+    },
+    "Effort: %@" : {
+      "comment" : "Tooltip on a model name in the popover (session header, idle rows, subagent rows), the line after the model's id and its switch: the agent's current effort, e.g. \"Effort: high\". The argument is the effort level as the coding tool writes it, e.g. \"high\"; never translated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effort: %@"
+          }
+        }
+      }
+    },
+    "Enable" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, button: runs the command that switches subspace on.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable"
+          }
+        }
+      }
+    },
+    "Enable subspace: runs %@" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Enable button. The argument is the command it runs, kept as is. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable subspace: runs %@"
+          }
+        }
+      }
+    },
+    "Enable subspace: runs %@, then %@" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Enable button, for a tool with several enable commands. The arguments are the commands it runs in order, kept as is. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable subspace: runs %@, then %@"
+          }
+        }
+      }
+    },
+    "Enable, running" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Enable button while its command runs and it cannot be pressed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable, running"
+          }
+        }
+      }
+    },
+    "Enabled at %@." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer after the enable command succeeded. The argument is the time of day, e.g. \"3:46 PM\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enabled at %@."
+          }
+        }
+      }
+    },
+    "Enabling failed. Check the output, then try again." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer in red after the enable command failed; its output is shown above.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enabling failed. Check the output, then try again."
+          }
+        }
+      }
+    },
+    "Enabling subspace…" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer next to a spinner while the command that switches subspace on runs. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enabling subspace…"
+          }
+        }
+      }
+    },
+    "Event folder" : {
+      "comment" : "Settings window, pane of one coding tool: label of the folder subspace writes this tool's events to.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event folder"
+          }
+        }
+      }
+    },
+    "Every state shows a still icon in its color. The icon uses no CPU." : {
+      "comment" : "Settings window, Menu Bar pane: explanation under the radio button \"Never\" of \"Animate the icon\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every state shows a still icon in its color. The icon uses no CPU."
+          }
+        }
+      }
+    },
+    "Failed" : {
+      "comment" : "Setup window, card of one coding tool, status pill: running the setup commands failed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed"
+          }
+        }
+      }
+    },
+    "Finished" : {
+      "comment" : "Popover title bar: the tab with the sessions that ended a short while ago.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finished"
+          }
+        }
+      }
+    },
+    "Finished its turn" : {
+      "comment" : "Body of a macOS notification that a coding agent finished its turn and waits for the user, when it gave no reply text. The notification's title names the session.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finished its turn"
+          }
+        }
+      }
+    },
+    "First session seen" : {
+      "comment" : "Setup window, card of one coding tool, check step: subspace has seen a session of this tool start.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First session seen"
+          }
+        }
+      }
+    },
+    "folded" : {
+      "comment" : "VoiceOver, end of the row that folds a session's finished subagents together in a session row's subagent list in the popover, while its members are hidden, e.g. \"33 done, folded\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "folded"
+          }
+        }
+      }
+    },
+    "Fonts and icons" : {
+      "comment" : "Settings window, About pane, group \"Acknowledgements\": heading of the list of fonts and icon sets the app uses.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fonts and icons"
+          }
+        }
+      }
+    },
+    "Frame rate" : {
+      "comment" : "Settings window, Menu Bar pane: label of the popup that sets how many frames a second the moving menu bar icon is drawn at.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frame rate"
+          }
+        }
+      }
+    },
+    "General" : {
+      "comment" : "Settings window, sidebar entry and window title: app-wide options.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "has %lld questions" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: agents of the session wait for the user to answer this many questions; also the status word of a subagent's row in the session's subagent list. The singular names no number.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "has a question"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "has %lld questions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "high" : {
+      "comment" : "Settings window, General pane: label under the third of the five effort gauges in the preview of the switch \"Color effort levels\". The popover itself names levels as the coding tool writes them, so keep these short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "high"
+          }
+        }
+      }
+    },
+    "How long finished sessions stay, when sessions go idle and what is kept on this Mac." : {
+      "comment" : "Settings window, Sessions pane: the line under the pane's heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How long finished sessions stay, when sessions go idle and what is kept on this Mac."
+          }
+        }
+      }
+    },
+    "How The Collective sees your %@ sessions through subspace." : {
+      "comment" : "Settings window, pane of one coding tool: the line under the pane's heading. The argument is the tool's name, e.g. \"Codex\". subspace is the plugin's name; keep it lowercase and untranslated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How The Collective sees your %@ sessions through subspace."
+          }
+        }
+      }
+    },
+    "How The Collective starts, what the popover shows and when it looks for updates." : {
+      "comment" : "Settings window, General pane: the line under the pane's heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How The Collective starts, what the popover shows and when it looks for updates."
+          }
+        }
+      }
+    },
+    "idle" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape in the Idle tab: the session has rested for a while.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "idle"
+          }
+        }
+      }
+    },
+    "Idle" : {
+      "comment" : "Popover title bar: the tab with the sessions that have waited a while for the user's next prompt with nothing running.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idle"
+          }
+        }
+      }
+    },
+    "idle for %@" : {
+      "comment" : "VoiceOver label of a row in the Idle group, last part after the session's name, model and tool: how long the session has waited for the user's next prompt. The argument is a duration such as \"48 min\". Lowercase because it continues the label.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "idle for %@"
+          }
+        }
+      }
+    },
+    "Inherited" : {
+      "comment" : "Tooltip on a subagent's model, second line: the subagent did not choose a model and runs with the one it inherited.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inherited"
+          }
+        }
+      }
+    },
+    "Install" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, button: runs the commands that install subspace.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install"
+          }
+        }
+      }
+    },
+    "Install subspace for %@: runs %@" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Install button. The first argument is the tool's name, e.g. \"Claude Code\", the second the command it runs, kept as is. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install subspace for %@: runs %@"
+          }
+        }
+      }
+    },
+    "Install subspace for %@: runs %@, then %@" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Install button. The first argument is the tool's name, e.g. \"Claude Code\", the second and third the commands it runs in order, kept as is. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install subspace for %@: runs %@, then %@"
+          }
+        }
+      }
+    },
+    "Install, running" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Install button while its commands run and it cannot be pressed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install, running"
+          }
+        }
+      }
+    },
+    "Installation failed. subspace is downloaded from GitHub; check your connection, then try again." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer in red after an install command failed; its output is shown above. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installation failed. subspace is downloaded from GitHub; check your connection, then try again."
+          }
+        }
+      }
+    },
+    "Installed" : {
+      "comment" : "Settings window, About pane, Release Notes sheet: small label after the version number of the release that is running on this Mac.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed"
+          }
+        }
+      }
+    },
+    "Installed at %@." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer after the install commands succeeded. The argument is the time of day, e.g. \"3:46 PM\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed at %@."
+          }
+        }
+      }
+    },
+    "Installing subspace…" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer next to a spinner while the command that installs subspace runs. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installing subspace…"
+          }
+        }
+      }
+    },
+    "Keep events for" : {
+      "comment" : "Settings window, Sessions: label of the popup for how long the app keeps the events it stored.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep events for"
+          }
+        }
+      }
+    },
+    "Keep finished sessions visible" : {
+      "comment" : "Settings window, Sessions: label of the popup that sets how long finished sessions stay in the popover.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep finished sessions visible"
+          }
+        }
+      }
+    },
+    "last event %@ ago" : {
+      "comment" : "Popover footer, after \"Linked to subspace\": how long ago the last event arrived. The argument is a duration such as \"4 min\". Lowercase because it continues the line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "last event %@ ago"
+          }
+        }
+      }
+    },
+    "Last event %@ ago" : {
+      "comment" : "Disabled first item of a session's or subagent's context menu: how long ago its last event arrived, so the user can tell a hanging one from a quiet one. The argument is a duration such as \"4 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last event %@ ago"
+          }
+        }
+      }
+    },
+    "Last reply, %@ ago" : {
+      "comment" : "Head of the preview of an idle session's last reply, shown on hover. The argument is a duration such as \"48 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last reply, %@ ago"
+          }
+        }
+      }
+    },
+    "Last reply: %@" : {
+      "comment" : "VoiceOver value of any session row whose reply is closed: its last reply, read after the row's label. The argument is the reply's text.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last reply: %@"
+          }
+        }
+      }
+    },
+    "Launch at login" : {
+      "comment" : "Settings window, General: switch that starts the app when the user logs in.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at login"
+          }
+        }
+      }
+    },
+    "Learn more ↗" : {
+      "comment" : "Setup window head and Settings window, About pane: link after the sentence that explains subspace, to subspace on GitHub. Keep the arrow, which marks a link that leaves the app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learn more ↗"
+          }
+        }
+      }
+    },
+    "Learn more about subspace on GitHub" : {
+      "comment" : "VoiceOver label of the link \"Learn more ↗\" after the sentence that explains subspace (setup window, About pane).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learn more about subspace on GitHub"
+          }
+        }
+      }
+    },
+    "Libraries" : {
+      "comment" : "Settings window, About pane, group \"Acknowledgements\": heading of the list of software libraries the app uses.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libraries"
+          }
+        }
+      }
+    },
+    "Light Mode" : {
+      "comment" : "Settings window, Appearance pane: the slot for the color scheme used while macOS shows light mode; also part of VoiceOver names such as \"Light Mode, custom themes\". Use the term macOS uses.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light Mode"
+          }
+        }
+      }
+    },
+    "Linked to subspace" : {
+      "comment" : "Popover footer, first part: the app reads its events from subspace. The connection state follows after a separator the view draws. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linked to subspace"
+          }
+        }
+      }
+    },
+    "listening" : {
+      "comment" : "Popover footer, after \"Linked to subspace\": connected and waiting for events. Lowercase because it continues the line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "listening"
+          }
+        }
+      }
+    },
+    "lost contact" : {
+      "comment" : "Popover, status word of a row in a session's subagent list, also read by VoiceOver: the coding tool stopped reporting the subagent.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "lost contact"
+          }
+        }
+      }
+    },
+    "Lost contact %@ ago" : {
+      "comment" : "Session that stopped reporting without ending: how long ago contact was lost. The argument is a duration such as \"6 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lost contact %@ ago"
+          }
+        }
+      }
+    },
+    "low" : {
+      "comment" : "Settings window, General pane: label under the lowest of the five effort gauges in the preview of the switch \"Color effort levels\". The popover itself names levels as the coding tool writes them, so keep these short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "low"
+          }
+        }
+      }
+    },
+    "Low (4 fps)" : {
+      "comment" : "Settings window, Menu Bar pane: entry of the \"Frame rate\" popup; the menu bar icon is drawn 4 times a second while it moves.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low (4 fps)"
+          }
+        }
+      }
+    },
+    "Match the macOS appearance" : {
+      "comment" : "Settings window, Appearance pane: option for how the color scheme is chosen. A light and a dark scheme are chosen, and macOS's light or dark mode picks one. \"Appearance\" is the macOS setting for light or dark mode; use the term macOS uses.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match the macOS appearance"
+          }
+        }
+      }
+    },
+    "max" : {
+      "comment" : "Settings window, General pane: label under the highest of the five effort gauges in the preview of the switch \"Color effort levels\". The popover itself names levels as the coding tool writes them, so keep these short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "max"
+          }
+        }
+      }
+    },
+    "medium" : {
+      "comment" : "Settings window, General pane: label under the second of the five effort gauges in the preview of the switch \"Color effort levels\". The popover itself names levels as the coding tool writes them, so keep these short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "medium"
+          }
+        }
+      }
+    },
+    "Menu Bar" : {
+      "comment" : "Settings window: sidebar entry and title of the pane that sets how the app's menu bar icon animates.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu Bar"
+          }
+        }
+      }
+    },
+    "Move sessions to Idle after" : {
+      "comment" : "Settings window, Sessions: label of the popup that sets how long a session waits for a prompt before the popover moves it to Idle.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move sessions to Idle after"
+          }
+        }
+      }
+    },
+    "Moves while agents work, glows for background shells and pulses when one needs you." : {
+      "comment" : "Settings window, Menu Bar pane: explanation under the radio button \"Always\" of \"Animate the icon\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moves while agents work, glows for background shells and pulses when one needs you."
+          }
+        }
+      }
+    },
+    "needs permission" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: an agent of the session, or a subagent in its list, waits for the user to allow a tool call. Lowercase, as all status words.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "needs permission"
+          }
+        }
+      }
+    },
+    "Needs your permission" : {
+      "comment" : "VoiceOver, part of a row in a session's subagent list in the popover: the subagent waits for the user to allow a tool call. The tool call follows.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Needs your permission"
+          }
+        }
+      }
+    },
+    "Needs your permission: %@" : {
+      "comment" : "Body of a macOS notification that a coding agent asks the user to allow a tool call. The argument is the tool's name, e.g. \"Bash\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Needs your permission: %@"
+          }
+        }
+      }
+    },
+    "Needs your permission: %@ · %@" : {
+      "comment" : "Body of a macOS notification that a coding agent asks the user to allow a tool call. The arguments are the tool's name, e.g. \"Bash\", and what the call works on, e.g. a command or file path.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Needs your permission: %@ · %@"
+          }
+        }
+      }
+    },
+    "Never" : {
+      "comment" : "Settings window, last entry of two popups. Sessions: the popup that sets when a session moves to the Idle group; keeps every session at the top. Notifications: the popup that sets how long a turn must have lasted for its end to notify; no turn's end notifies. Also the Menu Bar pane: radio button of \"Animate the icon\" that keeps the menu bar icon still in every state.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Never"
+          }
+        }
+      }
+    },
+    "No activity for %@" : {
+      "comment" : "Activity line under a working agent that has sent no event for a while and runs no tool, so the user can tell a hanging agent from a thinking one. The argument is a duration such as \"2 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No activity for %@"
+          }
+        }
+      }
+    },
+    "No agents working" : {
+      "comment" : "Accessibility value of the menu bar icon when no coding agent is working.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No agents working"
+          }
+        }
+      }
+    },
+    "no clean exit" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape in the Finished tab: the session's process ended without a clean exit, so no end event arrived.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "no clean exit"
+          }
+        }
+      }
+    },
+    "No session is working or waiting for you." : {
+      "comment" : "Popover, Active tab without sessions while some rest on the Idle tab: the line under \"All quiet\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No session is working or waiting for you."
+          }
+        }
+      }
+    },
+    "Not found" : {
+      "comment" : "Setup window, card of one coding tool, status pill: the tool's command-line program is not on this Mac.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not found"
+          }
+        }
+      }
+    },
+    "Not set up" : {
+      "comment" : "Settings window, pane of one coding tool: state when subspace is not installed for this tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not set up"
+          }
+        }
+      }
+    },
+    "Not used while the icon stands still." : {
+      "comment" : "Settings window, Menu Bar pane: hint under \"Frame rate\" while \"Animate the icon\" is set to \"Never\"; the popup is greyed out.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not used while the icon stands still."
+          }
+        }
+      }
+    },
+    "Nothing finished" : {
+      "comment" : "Popover, Finished tab without sessions.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing finished"
+          }
+        }
+      }
+    },
+    "Nothing idle" : {
+      "comment" : "Popover, Idle tab without sessions.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing idle"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+      "comment" : "Settings window: sidebar entry and title of the pane where the user chooses which macOS notifications the app posts.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        }
+      }
+    },
+    "Notifications for The Collective are turned off in System Settings." : {
+      "comment" : "Settings window, Notifications: last row while the user turned the app's notifications off in System Settings, next to the \"Open System Settings\" button. \"The Collective\" is the app's name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications for The Collective are turned off in System Settings."
+          }
+        }
+      }
+    },
+    "Notify for" : {
+      "comment" : "Settings window, Notifications: header of one switch per coding tool, each labelled with the tool's name, e.g. \"Claude Code\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notify for"
+          }
+        }
+      }
+    },
+    "Notify when" : {
+      "comment" : "Settings window, Notifications: header of the switches for which events post a notification.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notify when"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "comment" : "Settings window, Sessions: button that dismisses the alert about a failed clear.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off." : {
+      "comment" : "Settings window, General pane, section Updates: footnote under the switch for subspace update checks. \"The Collective\" is the app's name; \"Setup\" is the setup window. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off."
+          }
+        }
+      }
+    },
+    "Only when an agent needs me" : {
+      "comment" : "Settings window, Menu Bar pane: radio button that animates the menu bar icon only while a coding agent waits for the user's permission or answer.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only when an agent needs me"
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "comment" : "Settings window, Notifications: button that opens the app's page in System Settings → Notifications. Use the name of System Settings in the user's language.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings"
+          }
+        }
+      }
+    },
+    "Open System Settings…" : {
+      "comment" : "Settings window, Menu Bar pane: button in the Reduce Motion note that opens System Settings › Accessibility › Display. Use the name of System Settings in the user's language.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings…"
+          }
+        }
+      }
+    },
+    "Other" : {
+      "comment" : "Question box of a session's row in the popover and its macOS notification: the last numbered choice after the agent's options, for an answer of the user's own, as Terminal offers it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other"
+          }
+        }
+      }
+    },
+    "Play sound" : {
+      "comment" : "Settings window, Notifications: switch for whether the app's notifications play a sound.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play sound"
+          }
+        }
+      }
+    },
+    "Plugin enabled" : {
+      "comment" : "Setup window, card of one coding tool, check step: the subspace plugin is switched on in this tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plugin enabled"
+          }
+        }
+      }
+    },
+    "Plugin is disabled" : {
+      "comment" : "Setup window, card of one coding tool, check step with a warning symbol: subspace is installed but switched off in this tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plugin is disabled"
+          }
+        }
+      }
+    },
+    "Popover" : {
+      "comment" : "Settings window, General pane: header of the group with the switch for the effort gauge's colors. \"Popover\" is the panel that opens from the menu bar icon.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popover"
+          }
+        }
+      }
+    },
+    "Pulses for permissions and questions. Working and shells show a still icon in their color." : {
+      "comment" : "Settings window, Menu Bar pane: explanation under the radio button \"Only when an agent needs me\" of \"Animate the icon\". \"Shells\" are shell commands a coding agent left running in the background.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulses for permissions and questions. Working and shells show a still icon in their color."
+          }
+        }
+      }
+    },
+    "Question for you: %@" : {
+      "comment" : "First line of a macOS notification that the session's orchestrator asks the user a question. The argument is the question, e.g. \"Which color do you like?\". The options follow on the next line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question for you: %@"
+          }
+        }
+      }
+    },
+    "Quit The Collective" : {
+      "comment" : "Status item menu (right-click on the menu bar icon): item that quits the app. The Collective is the app’s name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit The Collective"
+          }
+        }
+      }
+    },
+    "reading events…" : {
+      "comment" : "Popover footer, after \"Linked to subspace\": the backlog of recorded events is being read. Lowercase because it continues the line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "reading events…"
+          }
+        }
+      }
+    },
+    "Reduce Motion is on" : {
+      "comment" : "Settings window, Menu Bar pane: title of a note shown while the system setting Reduce Motion is on. Use the name of that setting in System Settings › Accessibility › Display in the user's language.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduce Motion is on"
+          }
+        }
+      }
+    },
+    "Release Notes" : {
+      "comment" : "Settings window, About pane: title of the sheet that lists what changed for users in each release, newest first.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release Notes"
+          }
+        }
+      }
+    },
+    "Release Notes…" : {
+      "comment" : "Settings window, About pane: button that opens a sheet with what changed for users in each release up to the installed one.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release Notes…"
+          }
+        }
+      }
+    },
+    "Reset" : {
+      "comment" : "Settings window, pane of one coding tool: button that returns the event folder to its default.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "Restart running sessions afterwards." : {
+      "comment" : "Popover warning block, shown above the session list while subspace is missing or disabled: hint at the bottom, next to the Check Again and Set Up… buttons. Sessions already running only pick up the change after a restart. Also in the settings window, group \"Update\" of one coding tool: after the sentence about the update commands.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart running sessions afterwards."
+          }
+        }
+      }
+    },
+    "Restart sessions to use subspace %@" : {
+      "comment" : "Popover footer, after \"Linked to subspace\", in place of the last event: subspace was updated, and sessions started before still run the old version until they are restarted. The argument is the new version, e.g. \"1.1.0\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart sessions to use subspace %@"
+          }
+        }
+      }
+    },
+    "Runs %lld command in your login shell." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer before the Enable button is pressed, for a tool with several enable commands. The argument is the number of commands.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Runs %lld command in your login shell."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Runs %lld commands in your login shell."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Runs %lld command in your login shell. subspace adds hooks that run in every %@ session." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer before the Install button is pressed, for a tool with other than two install commands. The first argument is the number of commands, the second the tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Runs %lld command in your login shell. subspace adds hooks that run in every %@ session."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Runs %lld commands in your login shell. subspace adds hooks that run in every %@ session."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Runs both commands in your login shell. %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer before the Update button is pressed, for two commands. The argument is what to do afterwards, e.g. \"Restart running sessions afterwards.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs both commands in your login shell. %@"
+          }
+        }
+      }
+    },
+    "Runs both commands in your login shell. subspace adds hooks that run in every %@ session." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer before the Install button is pressed. The argument is the tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs both commands in your login shell. subspace adds hooks that run in every %@ session."
+          }
+        }
+      }
+    },
+    "Runs these %lld commands in your login shell. %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer before the Update button is pressed, for three or more commands. The first argument is the number of commands, the second what to do afterwards, e.g. \"Restart running sessions afterwards.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs these %lld commands in your login shell. %@"
+          }
+        }
+      }
+    },
+    "Runs this command in your login shell." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer before the Enable button is pressed: it runs the one command above.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs this command in your login shell."
+          }
+        }
+      }
+    },
+    "Runs this command in your login shell. %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer before the Update button is pressed, for one command. The argument is what to do afterwards, e.g. \"Restart running sessions afterwards.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runs this command in your login shell. %@"
+          }
+        }
+      }
+    },
+    "Scheme" : {
+      "comment" : "Settings window, Appearance pane: the one slot for the color scheme used while one scheme is always used, light or dark.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scheme"
+          }
+        }
+      }
+    },
+    "Sessions" : {
+      "comment" : "Settings window, sidebar entry and window title: options for the session list.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessions"
+          }
+        }
+      }
+    },
+    "Set at spawn" : {
+      "comment" : "Tooltip on a subagent's model, second line: the call that started the subagent chose this model.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set at spawn"
+          }
+        }
+      }
+    },
+    "Set Up…" : {
+      "comment" : "Settings window, pane of one coding tool: button that opens the setup window. Also the item of the same name in the status item menu (right-click on the menu bar icon), shown while subspace is missing or switched off.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set Up…"
+          }
+        }
+      }
+    },
+    "Settings…" : {
+      "comment" : "Status item menu (right-click on the menu bar icon): item that opens the Settings window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings…"
+          }
+        }
+      }
+    },
+    "Shell" : {
+      "comment" : "Popover, a session's row while only a background shell runs: the label before the shell's command, e.g. \"Shell npm run dev\"; alone when the command is unknown.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shell"
+          }
+        }
+      }
+    },
+    "shell running" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: the agent's turn is over while one shell command it started in the background still runs. Also read by VoiceOver in a session row's label after another status word while such a shell runs, e.g. \"working, shell running\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "shell running"
+          }
+        }
+      }
+    },
+    "shells running" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: the agent's turn is over while several shell commands it started in the background may still run; no number, as some may have ended since. Also read by VoiceOver in a session row's label after another status word while such shells run, e.g. \"working, shells running\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "shells running"
+          }
+        }
+      }
+    },
+    "Show %lld idle" : {
+      "comment" : "Popover, Active tab without sessions: the button that switches to the Idle tab. The argument is the number of sessions there, at least 1.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Show %lld idle"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Show %lld idle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Show in %@" : {
+      "comment" : "VoiceOver label of a session row's jump button, menu item and VoiceOver action that brings the session's terminal to the front. The argument is the terminal app's name, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show in %@"
+          }
+        }
+      }
+    },
+    "Show in %@ ⌘↩" : {
+      "comment" : "Tooltip of a session row's jump button that brings the session's own terminal tab to the front, with its keyboard shortcut. The argument is the terminal app's name, e.g. \"Warp\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show in %@ ⌘↩"
+          }
+        }
+      }
+    },
+    "Show License Texts…" : {
+      "comment" : "Settings window, About pane: link that opens a sheet with the full license texts of everything listed under Acknowledgements.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show License Texts…"
+          }
+        }
+      }
+    },
+    "Show Terminal" : {
+      "comment" : "VoiceOver label of a session row's jump button, menu item and VoiceOver action that brings the session's terminal to the front, when the system knows no name for the terminal app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Terminal"
+          }
+        }
+      }
+    },
+    "Show Terminal ⌘↩" : {
+      "comment" : "Tooltip of a session row's jump button that brings the session's terminal to the front, with its keyboard shortcut, when the system knows no name for the terminal app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Terminal ⌘↩"
+          }
+        }
+      }
+    },
+    "Smooth (12 fps)" : {
+      "comment" : "Settings window, Menu Bar pane: entry of the \"Frame rate\" popup; the menu bar icon is drawn 12 times a second while it moves.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smooth (12 fps)"
+          }
+        }
+      }
+    },
+    "Some files couldn’t be deleted. Try again." : {
+      "comment" : "Settings window, Sessions: message of the alert when some stored event files could not be deleted.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some files couldn’t be deleted. Try again."
+          }
+        }
+      }
+    },
+    "Some may have finished since." : {
+      "comment" : "Popover, last line of the tooltip of the \"Shell\" line on a session's row while several shell commands the agent started in the background may still run, under the shells listed at the last turn end: the list is not live. Also read by VoiceOver as the end of the row's hint.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some may have finished since."
+          }
+        }
+      }
+    },
+    "Sources" : {
+      "comment" : "Settings window, sidebar section heading above the list of coding tools.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sources"
+          }
+        }
+      }
+    },
+    "Start a new %@ session. Sessions that were already running pick up subspace after a restart." : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"Waiting for the first session\". The argument is the tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a new %@ session. Sessions that were already running pick up subspace after a restart."
+          }
+        }
+      }
+    },
+    "Start a new Codex session, then approve subspace’s changed hooks with /hooks." : {
+      "comment" : "Detail after updating subspace for Codex, which holds a plugin's changed hooks back until the user approves them again. \"Codex\" and \"subspace\" are product names, do not translate them; \"/hooks\" is a command typed in Codex, keep it as is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a new Codex session, then approve subspace’s changed hooks with /hooks."
+          }
+        }
+      }
+    },
+    "Start a new Codex session, then approve subspace’s hooks with /hooks." : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"Waiting for the first session\" for Codex, which runs a plugin's hooks only once the user approves them. \"Codex\" and \"subspace\" are product names, do not translate them; \"/hooks\" is a command typed in Codex, keep it as is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a new Codex session, then approve subspace’s hooks with /hooks."
+          }
+        }
+      }
+    },
+    "Stored events" : {
+      "comment" : "Settings window, Sessions: label of the row that shows how much space the app's stored events use.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stored events"
+          }
+        }
+      }
+    },
+    "Stored events couldn’t be cleared" : {
+      "comment" : "Settings window, Sessions: title of the alert when deleting the stored events failed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stored events couldn’t be cleared"
+          }
+        }
+      }
+    },
+    "Stored events let sessions survive a restart. A shorter time uses less space; a session open longer loses its beginning after a restart." : {
+      "comment" : "Settings window, Sessions: footnote under the event retention popup.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stored events let sessions survive a restart. A shorter time uses less space; a session open longer loses its beginning after a restart."
+          }
+        }
+      }
+    },
+    "Subagent archived" : {
+      "comment" : "Undo row in place of a subagent the user just archived from a session row's subagent list, followed by an Undo button. Used when the coding tool has not named the subagent yet.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subagent archived"
+          }
+        }
+      }
+    },
+    "Subagents" : {
+      "comment" : "Popover, a session's row: the button that opens the list of its subagents, followed by their counts, e.g. \"Subagents 2 working · 1 needs you · 3 done\". Also read by VoiceOver.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subagents"
+          }
+        }
+      }
+    },
+    "subspace" : {
+      "comment" : "Settings window, pane of one coding tool: label of the row that shows the state of the subspace integration.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace"
+          }
+        }
+      }
+    },
+    "subspace · last event %@ ago" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name once it is connected, when the newest sign of that is an event the app received rather than a session start and the subspace version is unknown. The argument is a duration such as \"2 min\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace · last event %@ ago"
+          }
+        }
+      }
+    },
+    "subspace · last session started %@ ago" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name once it is connected, when the subspace version is unknown. The argument is a duration such as \"2 min\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace · last session started %@ ago"
+          }
+        }
+      }
+    },
+    "subspace %@ · last event %@ ago" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name once it is connected, when the newest sign of that is an event the app received rather than a session start. The first argument is the subspace version, e.g. \"0.4.0\", the second a duration such as \"2 min\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace %@ · last event %@ ago"
+          }
+        }
+      }
+    },
+    "subspace %@ · last session started %@ ago" : {
+      "comment" : "Setup window, card of one coding tool, line under the tool name once it is connected. The first argument is the subspace version, e.g. \"0.4.0\", the second a duration such as \"2 min\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace %@ · last session started %@ ago"
+          }
+        }
+      }
+    },
+    "subspace %@ is available" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: title while a newer version is published. The argument is the newest version, e.g. \"1.3.0\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace %@ is available"
+          }
+        }
+      }
+    },
+    "subspace %@ is available. You have %@." : {
+      "comment" : "Setup window, card of one coding tool: text under the header while a newer subspace version is published. The first argument is the newest version, e.g. \"1.3.0\", the second the installed one, e.g. \"1.0.1\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace %@ is available. You have %@."
+          }
+        }
+      }
+    },
+    "subspace for %@ ↗" : {
+      "comment" : "Settings window, About pane, group \"subspace\": link per coding tool to its subspace plugin on GitHub. The argument is the tool's name, e.g. \"Claude Code\". Keep the arrow, which marks a link that leaves the app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace for %@ ↗"
+          }
+        }
+      }
+    },
+    "subspace for %@ on GitHub ↗" : {
+      "comment" : "Settings window, pane of one coding tool: link after the info line, to the tool's subspace plugin on GitHub. The argument is the tool's name, e.g. \"Codex\". Keep the arrow, which marks a link that leaves the app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace for %@ on GitHub ↗"
+          }
+        }
+      }
+    },
+    "subspace installed" : {
+      "comment" : "Setup window, card of one coding tool, check step: subspace is installed for this tool. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace installed"
+          }
+        }
+      }
+    },
+    "subspace is disabled" : {
+      "comment" : "Title of the popover warning block and the whole popover footer while subspace is installed but switched off in a coding tool; also the accessibility value of the menu bar icon then. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace is disabled"
+          }
+        }
+      }
+    },
+    "subspace is switched off in %@, so sessions you start from now on won’t report here." : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"Plugin is disabled\". The argument is the tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace is switched off in %@, so sessions you start from now on won’t report here."
+          }
+        }
+      }
+    },
+    "subspace is switched off in %@. Sessions you start from now on won’t appear here; running ones keep reporting until they end." : {
+      "comment" : "Popover warning block, shown at the top while subspace is disabled: explanation under the title, followed by the enable commands to copy. Switching off affects only sessions started afterwards; running ones keep reporting. The argument is the coding tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace is switched off in %@. Sessions you start from now on won’t appear here; running ones keep reporting until they end."
+          }
+        }
+      }
+    },
+    "subspace is the small plugin through which The Collective sees your %@ sessions. It records what they do and never steers them." : {
+      "comment" : "Settings window, pane of one coding tool: info line under the subspace row. The argument is the tool's name, e.g. \"Codex\". subspace is the plugin's name; keep it lowercase and untranslated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace is the small plugin through which The Collective sees your %@ sessions. It records what they do and never steers them."
+          }
+        }
+      }
+    },
+    "subspace isn’t installed" : {
+      "comment" : "Popover warning block, shown above the session list while subspace is not installed for a coding tool: title; also the accessibility value of the menu bar icon then. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace isn’t installed"
+          }
+        }
+      }
+    },
+    "subspace not installed" : {
+      "comment" : "Popover footer while subspace is not installed for a coding tool; replaces the \"Linked to subspace\" line. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace not installed"
+          }
+        }
+      }
+    },
+    "Switched from %@ at %@" : {
+      "comment" : "Tooltip on the orchestrator's model in a session header: its model before the last switch and when it switched, e.g. \"Switched from Opus 5.5 at 14:20\". The first argument is a model name, never translated; the second a time of day.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switched from %@ at %@"
+          }
+        }
+      }
+    },
+    "Terminal" : {
+      "comment" : "Popover, a session row's jump button: where it leads when the system knows no name for the session's terminal app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminal"
+          }
+        }
+      }
+    },
+    "The app draws the cube frame by frame while it moves, which costs some CPU; a still icon costs nothing. Idle and warnings never move, and every state keeps its color." : {
+      "comment" : "Settings window, Menu Bar pane: footnote under the animation settings. \"The cube\" is the app's menu bar icon.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app draws the cube frame by frame while it moves, which costs some CPU; a still icon costs nothing. Idle and warnings never move, and every state keeps its color."
+          }
+        }
+      }
+    },
+    "The Collective" : {
+      "comment" : "Accessibility label of the menu bar icon, followed by its state. \"The Collective\" is the app's name, a Borg allusion; keep it as a name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective"
+          }
+        }
+      }
+    },
+    "The Collective looked in %@ and your login shell’s PATH. If you don’t use %@, you can ignore this." : {
+      "comment" : "Setup window, card of one coding tool, text in place of the check steps when the tool's command-line program was not found and exactly one folder was searched besides the PATH. The first argument is that folder, e.g. \"~/.local/bin\"; the second is the tool's name, e.g. \"Claude Code\". \"The Collective\" is the app name; PATH is the shell variable, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective looked in %@ and your login shell’s PATH. If you don’t use %@, you can ignore this."
+          }
+        }
+      }
+    },
+    "The Collective looked in %@, and your login shell’s PATH. If you don’t use %@, you can ignore this." : {
+      "comment" : "Setup window, card of one coding tool, text in place of the check steps when the tool's command-line program was not found. The first argument lists two or more folders searched, e.g. \"~/.local/bin, /opt/homebrew/bin\"; the second is the tool's name, e.g. \"Claude Code\". \"The Collective\" is the app name; PATH is the shell variable, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective looked in %@, and your login shell’s PATH. If you don’t use %@, you can ignore this."
+          }
+        }
+      }
+    },
+    "The Collective looked in your login shell’s PATH. If you don’t use %@, you can ignore this." : {
+      "comment" : "Setup window, card of one coding tool, text in place of the check steps when the tool's command-line program was not found and no folders besides the PATH were searched. The argument is the tool's name, e.g. \"Claude Code\". \"The Collective\" is the app name; PATH is the shell variable, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective looked in your login shell’s PATH. If you don’t use %@, you can ignore this."
+          }
+        }
+      }
+    },
+    "The Collective needs subspace %@ or later" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: title while the installed version is older than this app needs. \"The Collective\" is the app's name. The argument is the oldest version that works, e.g. \"1.2.0\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective needs subspace %@ or later"
+          }
+        }
+      }
+    },
+    "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here." : {
+      "comment" : "Popover warning block, shown above the session list while subspace is not installed: explanation under the title, followed by the install commands to copy. \"The Collective\" is the app name; \"Claude Code\" and \"Codex\" are coding tools and \"subspace\" a product name, do not translate them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here."
+          }
+        }
+      }
+    },
+    "The Collective sees your agents through subspace, a small plugin that records what they do and never steers them." : {
+      "comment" : "Setup window head and Settings window, About pane, group \"subspace\": what subspace is. subspace is the plugin's name; keep it lowercase and untranslated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective sees your agents through subspace, a small plugin that records what they do and never steers them."
+          }
+        }
+      }
+    },
+    "The commands finished, but %@ doesn’t report the new version." : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer in red after every update command finished but the coding tool still reports no version of the plugin, next to the Try Again button. The argument is the coding tool's name, e.g. \"Codex\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The commands finished, but %@ doesn’t report the new version."
+          }
+        }
+      }
+    },
+    "The commands finished, but %@ still reports %@." : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer in red after every update command finished but the coding tool still reports the old version, next to the Try Again button. The first argument is the coding tool's name, e.g. \"Codex\", the second the version it reports, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The commands finished, but %@ still reports %@."
+          }
+        }
+      }
+    },
+    "The effort gauge sits next to the model name in session rows and in the subagent list. Its fill shows the level either way; the exact level is in the tooltip." : {
+      "comment" : "Settings window, General pane: footnote under the group with the switch \"Color effort levels\". The effort gauge is a small vertical capsule that fills in five steps with how much the model thinks.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The effort gauge sits next to the model name in session rows and in the subagent list. Its fill shows the level either way; the exact level is in the tooltip."
+          }
+        }
+      }
+    },
+    "The full license texts ship with the app." : {
+      "comment" : "Settings window, About pane: note under the acknowledgements, before the link \"Show License Texts…\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The full license texts ship with the app."
+          }
+        }
+      }
+    },
+    "The icon stays still in its color. Your choice below applies again when you turn Reduce Motion off." : {
+      "comment" : "Settings window, Menu Bar pane: text of the note shown while the system setting Reduce Motion is on. Use the name of that setting in the user's language.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The icon stays still in its color. Your choice below applies again when you turn Reduce Motion off."
+          }
+        }
+      }
+    },
+    "The marketplace is already there. Runs %lld command in your login shell. subspace adds hooks that run in every %@ session." : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, footer before the Install button is pressed, when the plugin marketplace was added before. The first argument is the number of commands that will run, the second the tool's name, e.g. \"Claude Code\". \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "The marketplace is already there. Runs %lld command in your login shell. subspace adds hooks that run in every %@ session."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "The marketplace is already there. Runs %lld commands in your login shell. subspace adds hooks that run in every %@ session."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "The process ended without a clean exit." : {
+      "comment" : "Popover, tooltip and VoiceOver hint on the status of a finished session whose status word is \"no clean exit\": its process ended without a clean exit, so no end event arrived.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The process ended without a clean exit."
+          }
+        }
+      }
+    },
+    "Thinking…" : {
+      "comment" : "Popover, the line under a working session's row between tool calls, also while only its background agents work; VoiceOver, part of a row in a session's subagent list: the subagent works between tool calls.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thinking…"
+          }
+        }
+      }
+    },
+    "This deletes the %@ of events The Collective stored on this Mac. Events still in subspace’s folders are read again right away; archived sessions and settings stay." : {
+      "comment" : "Settings window, Sessions: message of the confirmation before the stored events are deleted. The argument is their size such as \"14.6 MB\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This deletes the %@ of events The Collective stored on this Mac. Events still in subspace’s folders are read again right away; archived sessions and settings stay."
+          }
+        }
+      }
+    },
+    "This version of The Collective needs subspace %@ or later. You have %@, so some events from %@ sessions won’t show up." : {
+      "comment" : "Setup window, card of one coding tool: text under the header while the installed subspace plugin is older than this app needs. The first argument is the oldest version that works, e.g. \"1.1.0\", the second the installed one, e.g. \"1.0.1\", the third the tool's name, e.g. \"Claude Code\". \"The Collective\" is the app's name and \"subspace\" a product name, do not translate them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This version of The Collective needs subspace %@ or later. You have %@, so some events from %@ sessions won’t show up."
+          }
+        }
+      }
+    },
+    "Today’s motion. Uses the most CPU while the icon moves." : {
+      "comment" : "Settings window, Menu Bar pane: hint under \"Frame rate\" while \"Smooth (12 fps)\" is chosen; it is the rate the app always used before.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today’s motion. Uses the most CPU while the icon moves."
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, button after a command failed: runs again from the failed command. Also the button of the settings window's update group after an update command failed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Again"
+          }
+        }
+      }
+    },
+    "Try again: runs %@" : {
+      "comment" : "Setup window, card of one coding tool, box of terminal commands the card can run for the user, accessibility label of the Try Again button. The argument is the failed command it runs again, kept as is. Also the label of the settings window's update group's Try Again button, where it reruns a single-line update in full (the argument is then the command it runs).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again: runs %@"
+          }
+        }
+      }
+    },
+    "Try again: runs %@, then %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: accessibility label of the Try Again button after every update command finished but the new version didn't show up, so all of them run again. The arguments are the commands it runs, kept as is: all but the last, then the last.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again: runs %@, then %@"
+          }
+        }
+      }
+    },
+    "unfolded" : {
+      "comment" : "VoiceOver, end of the row that folds a session's finished subagents together in a session row's subagent list in the popover, while its members show below it, e.g. \"33 done, unfolded\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "unfolded"
+          }
+        }
+      }
+    },
+    "Unlimited" : {
+      "comment" : "Settings window, Sessions: entry of the event retention popup; events are never deleted.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlimited"
+          }
+        }
+      }
+    },
+    "unread" : {
+      "comment" : "Popover, VoiceOver: a session's row shows a dot after its name because its last turn ended with a reply the user hasn't seen. Read right after the row's status word, e.g. \"agent-collective, waiting for you, unread, 2 minutes\". Lowercase because it continues the label.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "unread"
+          }
+        }
+      }
+    },
+    "Until you update, some events from %@ sessions won’t show up here." : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: text under the title while the installed version is older than this app needs. The argument is the coding tool's name, e.g. \"Claude Code\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until you update, some events from %@ sessions won’t show up here."
+          }
+        }
+      }
+    },
+    "Update" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: button that runs the update commands in the user's login shell.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        }
+      }
+    },
+    "Update available" : {
+      "comment" : "Settings window, sidebar, row of one coding tool: tooltip of the arrow shown while a newer subspace version is published. Also the status pill on that tool's card in the setup window, and the link in the popover footer, right before the gear, that opens the settings pane of that tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update available"
+          }
+        }
+      }
+    },
+    "Update failed" : {
+      "comment" : "Setup window, card of one coding tool, status pill: updating subspace failed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update failed"
+          }
+        }
+      }
+    },
+    "Update failed. subspace is downloaded from GitHub; check your connection, then try again." : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer in red after an update command failed, next to the Try Again button. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update failed. subspace is downloaded from GitHub; check your connection, then try again."
+          }
+        }
+      }
+    },
+    "Update required" : {
+      "comment" : "Setup window, card of one coding tool, status pill: the installed subspace plugin is older than this version of The Collective needs. Also in the popover footer, right before the gear: orange link that opens the settings pane of that tool.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update required"
+          }
+        }
+      }
+    },
+    "Update required · %@" : {
+      "comment" : "Settings window, pane of one coding tool, status next to \"subspace\": subspace is connected, but the installed version is older than this app needs. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update required · %@"
+          }
+        }
+      }
+    },
+    "Update subspace: runs %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: accessibility label of the Update button. The argument is the command it runs, kept as is. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update subspace: runs %@"
+          }
+        }
+      }
+    },
+    "Update subspace: runs %@, then %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: accessibility label of the Update button. The arguments are the commands it runs, kept as is: all but the last, then the last. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update subspace: runs %@, then %@"
+          }
+        }
+      }
+    },
+    "Update to %@ failed" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: title after an update command failed, or after every command finished but no check confirmed the new version. The argument is the version the update was for, e.g. \"1.3.0\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update to %@ failed"
+          }
+        }
+      }
+    },
+    "Update, running" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: accessibility label of the Update button while its commands run and it cannot be pressed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update, running"
+          }
+        }
+      }
+    },
+    "Updated at %@. %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer after the update commands succeeded, for a coding tool that asks for more than a restart. The first argument is the time of day, e.g. \"3:46 PM\"; the second what the tool asks for, e.g. \"Start a new Codex session, then approve subspace’s changed hooks with /hooks.\"",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated at %@. %@"
+          }
+        }
+      }
+    },
+    "Updated at %@. Restart running sessions to use %@." : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer after the update commands succeeded. The first argument is the time of day, e.g. \"3:46 PM\"; the second the new subspace version, e.g. \"1.3.0\". Running sessions keep the old version until restarted.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated at %@. Restart running sessions to use %@."
+          }
+        }
+      }
+    },
+    "Updated to %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: title after the update commands succeeded. The argument is the new version, e.g. \"1.3.0\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated to %@"
+          }
+        }
+      }
+    },
+    "Updates" : {
+      "comment" : "Settings window, General pane: header of the section with the switch for subspace update checks.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates"
+          }
+        }
+      }
+    },
+    "Updating subspace…" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: footer next to a spinner while the update commands run. \"subspace\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updating subspace…"
+          }
+        }
+      }
+    },
+    "Updating to %@…" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: title while the update commands run. The argument is the version being installed, e.g. \"1.3.0\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updating to %@…"
+          }
+        }
+      }
+    },
+    "Updating…" : {
+      "comment" : "Setup window, card of one coding tool, status pill: the subspace update commands are running, or The Collective is checking that the new version took.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updating…"
+          }
+        }
+      }
+    },
+    "user scope" : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"subspace installed\" when the version is unknown: installed for the whole user account rather than one project.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "user scope"
+          }
+        }
+      }
+    },
+    "View changes on GitHub ↗" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: link at the end of the sentence under its commands; opens GitHub's comparison of the installed and the offered version. Keep the arrow.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View changes on GitHub ↗"
+          }
+        }
+      }
+    },
+    "View source on GitHub ↗" : {
+      "comment" : "Link at the end of the sentence under a box of terminal commands that install subspace; opens the repository subspace is installed from. Keep the arrow.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View source on GitHub ↗"
+          }
+        }
+      }
+    },
+    "Visibly stepped, with about a third of the CPU." : {
+      "comment" : "Settings window, Menu Bar pane: hint under \"Frame rate\" while \"Low (4 fps)\" is chosen.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visibly stepped, with about a third of the CPU."
+          }
+        }
+      }
+    },
+    "Waiting for a session" : {
+      "comment" : "Setup window, card of one coding tool, status pill: subspace is enabled, but no session of this tool has started since.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for a session"
+          }
+        }
+      }
+    },
+    "Waiting for a session · %@" : {
+      "comment" : "Settings window, pane of one coding tool, status next to \"subspace\": subspace is installed and enabled, but no session of this tool has started yet. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for a session · %@"
+          }
+        }
+      }
+    },
+    "Waiting for the first session" : {
+      "comment" : "Setup window, card of one coding tool, check step that is still pending: subspace is enabled, no session of this tool has started yet.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for the first session"
+          }
+        }
+      }
+    },
+    "waiting for you" : {
+      "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: the agent finished its turn and waits for the user's next prompt.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "waiting for you"
+          }
+        }
+      }
+    },
+    "Waiting over %@" : {
+      "comment" : "Tooltip of the Idle tab in the popover's title bar, also read by VoiceOver after the tab's name and count: how long the sessions on the tab have waited for the user's next prompt at least. The argument is a duration such as \"5 min\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting over %@"
+          }
+        }
+      }
+    },
+    "When The Collective notifies you, for which tools and with which sound." : {
+      "comment" : "Settings window, Notifications pane: the line under the pane's heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When The Collective notifies you, for which tools and with which sound."
+          }
+        }
+      }
+    },
+    "When the cube in the menu bar moves and how smoothly." : {
+      "comment" : "Settings window, Menu Bar pane: the line under the pane's heading. The cube is the app's icon in the menu bar.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When the cube in the menu bar moves and how smoothly."
+          }
+        }
+      }
+    },
+    "working" : {
+      "comment" : "Popover, status word of a working session's row and of a working subagent's row in its subagent list; also read by VoiceOver for a subagent's row.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "working"
+          }
+        }
+      }
+    },
+    "xhigh" : {
+      "comment" : "Settings window, General pane: label under the fourth of the five effort gauges in the preview of the switch \"Color effort levels\". The popover itself names levels as the coding tool writes them, so keep these short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xhigh"
+          }
+        }
+      }
+    },
+    "You have %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: right of the title. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have %@"
+          }
+        }
+      }
+    },
+    "You still have %@" : {
+      "comment" : "Settings window, pane of one coding tool, group \"Update\" under the subspace row, shown while the installed subspace plugin should be updated: right of the title after the update failed. The argument is the installed subspace version, e.g. \"1.0.1\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You still have %@"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

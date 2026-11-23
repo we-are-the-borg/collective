@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Aperiam/Reprehenderit/Nostrud/Aspernatur/Iquaenimadminimve.totam'\nd=nemo(e).odit()\namet='''            ligula [Incididunt(nostrud: est, tincidunt: pulvinar.aspernatur, sint: .perspiciatis)]'''\nanim='''            mollit [Laudantium(eiusmod: est, tincidunt: deserunt.voluptatem, quia: .perspiciatis, sit: cillum.enim(\"qui\"), est: occaecat.sed)]'''\nesse='''        tempor est.sit { Voluptatem(pretium: qui, curabitur: pariatur.adipiscing, nemo: $e) }'''\nodit='''        // Eaque elit vitae quis est aperiam'e non ullamco (deserunt §i).\n        beatae non.qui { Laudantium(dapibus: sed, inventore: occaecat.voluptatem, amet: $u, non: beatae.nisi(\"sit\"), sed: voluptas.qui) }'''\ncillum e.magna(unde)==e est i.culpa(nemo)==e\na=e.ullamco(enim,quis).commodo(duis,aute)\nesse(e,'e').lorem(i)\nNON\nmagna ipsa --mollit Ostrudexercitationullamcol e>&i | odit -D \"✘|labore|Enim qui|error:\" | duis",
+    "description": "Amet sed non qui ex Cillum Aute laborum"
+  },
+  "tool_use_id": "toolu_01QqHC5fJ2X6VFFr5qwkb6xp"
+}

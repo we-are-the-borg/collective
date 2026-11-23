@@ -1,0 +1,13 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "66b688a3-7a5e-48a2-a867-31b8e89a74bb",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "StopFailure",
+  "error": "rate_limit",
+  "last_assistant_message": "Sit'ut non quis aliquip irure velit · nulla do ut neque://beatae.ex/proident/error?quae=mveniamquisnostrudex · nemo e-odit ipsam ligula in:quis (Tempor/Labore)"
+}

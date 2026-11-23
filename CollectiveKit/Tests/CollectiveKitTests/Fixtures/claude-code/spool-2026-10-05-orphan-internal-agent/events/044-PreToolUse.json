@@ -1,0 +1,20 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremag.omnis'\ne=ipsa(i).illo()\nu=e.pretium('''        // E aperiam eiusmod ipsum nisi sit dolore aliqua, \"%qui cillum pretium\".''','''        // Dapibus non eiusmod'e beatae deserunt, non eaque odit \"d cillum dapibus\".''')\na=e.nostrud('Runtmollitanimid.deserunt.pulvinar == Labore.dolore.pretiumtinciduntlacusn.culpa','Ntlacusnuncpulvi.voluptas.pariatur == Sapien.reprehenderit.culapraesentdapibusneq.totam')\namet(e,'i').dicta(d)\nSIT",
+    "description": "Sit elit ullamco qui veniam tincidunt"
+  },
+  "tool_use_id": "toolu_01LkPnHZ7vN5VSiQfHUS4DTh"
+}

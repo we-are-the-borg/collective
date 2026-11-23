@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "6c7b984f-6451-42e9-94db-3e40138e49bf",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i qui,sunt Aperiam/Reprehenderit/Omnis/Magnaaliquaenim.error; sit -d non,quia Pretium/Reprehenderit/Aperiam/Incididunt/Liquipexeacommodo.dolor; sit -e ad,sint Laborum/Reprehenderit/Dapibus/Neque/Perspiciatis.omnis",
+    "description": "Amet elit et laboris est commodo exercitation mollit"
+  },
+  "tool_use_id": "toolu_01KuGjqaq6RFg957F6MAXDd2"
+}

@@ -1,0 +1,20 @@
+{
+  "001-SessionStart.json": 1790852284,
+  "002-UserPromptSubmit.json": 1790852284,
+  "003-PreToolUse.json": 1790852289,
+  "004-PermissionRequest.json": 1790852289,
+  "005-PostToolUse.json": 1790852295,
+  "006-Stop.json": 1790852299,
+  "007-UserPromptSubmit.json": 1790852308,
+  "008-PermissionRequest.json": 1790852314,
+  "009-PreToolUse.json": 1790852314,
+  "010-PostToolUse.json": 1790852319,
+  "011-Stop.json": 1790852322,
+  "012-PreCompact.json": 1790852335,
+  "013-PostCompact.json": 1790852358,
+  "014-SessionStart.json": 1790852366,
+  "015-UserPromptSubmit.json": 1790852366,
+  "016-PreToolUse.json": 1790852370,
+  "017-PostToolUse.json": 1790852370,
+  "018-Stop.json": 1790852373
+}

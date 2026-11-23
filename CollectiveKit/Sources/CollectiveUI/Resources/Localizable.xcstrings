@@ -1,0 +1,523 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Archive" : {
+      "comment" : "Menu item and accessibility action that puts a session away by hand (not delete, not dismiss); it leaves the list and can be undone for a few seconds. Also the label of the finished row's menu item.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archive"
+          }
+        }
+      }
+    },
+    "Archive All Finished" : {
+      "comment" : "Context-menu item of a row in the Finished tab: archives every session listed under Finished at once.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archive All Finished"
+          }
+        }
+      }
+    },
+    "Archive Subagent" : {
+      "comment" : "Context-menu item and VoiceOver action on a subagent row in a session row's list: puts that one subagent away by hand (not delete, not stop), so it stops counting as working; it can be undone for a few seconds.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archive Subagent"
+          }
+        }
+      }
+    },
+    "Check Again" : {
+      "comment" : "Button in the popover's warning block and in the setup window's footer: probes the subspace installation again after the user ran the commands.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Again"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "comment" : "The popover's reply card (a row's whole last reply, or a subagent's prompt and result, over the list): tooltip and accessibility label of the × button at its top right that closes the card.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "Step %@" : {
+      "comment" : "Accessibility label of the number in front of a command in the setup card's command box (not shown on screen); the number is the command's place in the run.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Step %@"
+          }
+        }
+      }
+    },
+    "collapsed" : {
+      "comment" : "VoiceOver value of the Show/Hide Output button while the commands' output is hidden, and of a session row's subagent toggle line or fold row while its list is closed.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "collapsed"
+          }
+        }
+      }
+    },
+    "Connect your agents" : {
+      "comment" : "Heading of the setup window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect your agents"
+          }
+        }
+      }
+    },
+    "Copied" : {
+      "comment" : "Label of the Copy button (popover's warning block and setup window) for about a second after it copied the commands; also its accessibility value.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copied"
+          }
+        }
+      }
+    },
+    "Copy" : {
+      "comment" : "Button next to the command box, in the popover's warning block and on the setup window's cards: copies all command lines to the clipboard.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "Copy %@" : {
+      "comment" : "Accessibility label of the Copy button next to a command in the command box, in the popover's warning block and in the setup window. The placeholder is the shell line the button copies, e.g. \"Copy claude plugin install example\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy %@"
+          }
+        }
+      }
+    },
+    "Copy Path" : {
+      "comment" : "Context menu item of a session row in every tab, also a VoiceOver action: copies the session's project folder, quoted for a terminal when needed, e.g. to cd there.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Path"
+          }
+        }
+      }
+    },
+    "Copy Resume Command" : {
+      "comment" : "Context menu item of a session row in every tab, also a VoiceOver action on the row: copies a shell line (e.g. \"cd <folder> && <tool> --resume <id>\") that continues the session when pasted into a terminal. Absent for tools without one.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Resume Command"
+          }
+        }
+      }
+    },
+    "Copy Session ID" : {
+      "comment" : "Context menu item of a session row in every tab, also a VoiceOver action on the row: copies the coding tool's ID of the session, e.g. to resume it in a terminal.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Session ID"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "comment" : "Accessibility label of a finished-command checkmark in front of a command in the setup card's command box (not shown on screen), and the setup window's button that closes it once a tool is connected.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "Events stay on this Mac and are deleted after 3 days." : {
+      "comment" : "Privacy note in the footer of the setup window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Events stay on this Mac and are deleted after 3 days."
+          }
+        }
+      }
+    },
+    "expanded" : {
+      "comment" : "VoiceOver value of the Show/Hide Output button while the commands' output is shown, and of a session row's subagent toggle line or fold row while its list is open.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "expanded"
+          }
+        }
+      }
+    },
+    "Failed" : {
+      "comment" : "Accessibility label of a failed-command cross in front of a command in the setup card's command box (not shown on screen).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed"
+          }
+        }
+      }
+    },
+    "Hide Output" : {
+      "comment" : "Setup window, a tool card after a successful run: link-style button that hides the commands' output again.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide Output"
+          }
+        }
+      }
+    },
+    "Hides the earlier sessions" : {
+      "comment" : "Accessibility hint of the earlier-sessions heading under the subspace warning while its list is open; activating it collapses the list to the heading.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hides the earlier sessions"
+          }
+        }
+      }
+    },
+    "Install it once for each tool you use." : {
+      "comment" : "Setup window head: the sentence after the one that explains subspace, before the link \"Learn more ↗\". \"it\" is subspace, the plugin. It follows the kit's sentence \"The Collective sees your agents through subspace, a small plugin that records what they do and never steers them.\" (CollectiveKit catalog, the same sentence About shows, so it must stay identical there and is not rephrased here); the code fixes this order, so this sentence cannot move before it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install it once for each tool you use."
+          }
+        }
+      }
+    },
+    "Later" : {
+      "comment" : "Button that closes the setup window while no tool is connected yet.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
+        }
+      }
+    },
+    "More" : {
+      "comment" : "Popover session row: tooltip and accessibility label of the \"⋯\" button that takes the time's place under the pointer and opens the row's menu (Show in Terminal, Copy, Archive).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More"
+          }
+        }
+      }
+    },
+    "No agents are running. Sessions appear here as soon as one starts." : {
+      "comment" : "Popover empty state explanation under the title.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No agents are running. Sessions appear here as soon as one starts."
+          }
+        }
+      }
+    },
+    "Not run yet" : {
+      "comment" : "Accessibility label of a not-yet-run empty circle in front of a command in the setup card's command box (not shown on screen).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not run yet"
+          }
+        }
+      }
+    },
+    "Or type this in a session:" : {
+      "comment" : "Line between the terminal commands and the commands typed inside a running agent session, on a setup card.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Or type this in a session:"
+          }
+        }
+      }
+    },
+    "Quit The Collective" : {
+      "comment" : "Plain button at the bottom of the settings window sidebar that quits the app.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit The Collective"
+          }
+        }
+      }
+    },
+    "Read Reply" : {
+      "comment" : "Accessibility action on a popover row whose last reply (an agent's last answer) is cut short: opens the whole reply in a card over the list and moves VoiceOver there to read it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read Reply"
+          }
+        }
+      }
+    },
+    "Reading recent sessions…" : {
+      "comment" : "Loading state title, in the popover, while recent sessions are read at app start.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reading recent sessions…"
+          }
+        }
+      }
+    },
+    "Running" : {
+      "comment" : "Accessibility label of a running-command spinner in front of a command in the setup card's command box (not shown on screen).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running"
+          }
+        }
+      }
+    },
+    "Running sessions appear here as soon as they are found." : {
+      "comment" : "Loading state explanation under the title, in the popover.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running sessions appear here as soon as they are found."
+          }
+        }
+      }
+    },
+    "Sessions" : {
+      "comment" : "Accessibility label of the tab list in the popover's title bar (tabs Active, Idle and Finished, each a group of agent sessions).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessions"
+          }
+        }
+      }
+    },
+    "Set Up The Collective" : {
+      "comment" : "Title bar of the setup window that walks through connecting coding tools via subspace. \"The Collective\" is the app's name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set Up The Collective"
+          }
+        }
+      }
+    },
+    "Set Up…" : {
+      "comment" : "Prominent button in the popover's warning block: opens the setup window that walks through installing subspace.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set Up…"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "comment" : "Accessibility label of the gear button in the popover's title bar that opens the settings window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Settings  ⌘," : {
+      "comment" : "Tooltip of the gear button in the popover's title bar that opens the settings window, with its keyboard shortcut Command-comma after two spaces.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings  ⌘,"
+          }
+        }
+      }
+    },
+    "Show more" : {
+      "comment" : "A popover row's last reply (an agent's last answer): the toggle line under a reply cut short that opens the whole reply in a card over the list, and closes it again.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show more"
+          }
+        }
+      }
+    },
+    "Show Output" : {
+      "comment" : "Setup window, a tool card after a successful run: link-style button that shows what each command printed under its line.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Output"
+          }
+        }
+      }
+    },
+    "Show Reply" : {
+      "comment" : "Context menu and More menu entry on a popover row whose last reply (an agent's last answer) is cut short: opens the whole reply in a card over the list.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Reply"
+          }
+        }
+      }
+    },
+    "Show Result" : {
+      "comment" : "Context menu entry and accessibility action on a subagent row in a popover row: opens a card over the list with the subagent's prompt and its whole result (its final answer).",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Result"
+          }
+        }
+      }
+    },
+    "Shows the earlier sessions" : {
+      "comment" : "Accessibility hint of the earlier-sessions heading under the subspace warning while its list is closed; activating it shows the known sessions below it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows the earlier sessions"
+          }
+        }
+      }
+    },
+    "subspace changes on GitHub" : {
+      "comment" : "VoiceOver name of the action that opens the changes between the installed and the offered subspace version on GitHub (the link at the end of the sentence under the update commands in a tool's settings). subspace is the plugin's name and stays untranslated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace changes on GitHub"
+          }
+        }
+      }
+    },
+    "subspace source code on GitHub" : {
+      "comment" : "VoiceOver name of the action that opens the plugin's source repository on GitHub (the link at the end of the sentence under a tool card's commands). subspace is the plugin's name and stays untranslated.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "subspace source code on GitHub"
+          }
+        }
+      }
+    },
+    "The Collective is dormant." : {
+      "comment" : "Popover empty state title, shown when no agents are running. Alludes to the Borg Collective in Star Trek; keep the cold, collective-hive tone in translation.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective is dormant."
+          }
+        }
+      }
+    },
+    "The Collective Settings" : {
+      "comment" : "Title of the settings window, e.g. in the Window menu. \"The Collective\" is the app's name.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective Settings"
+          }
+        }
+      }
+    },
+    "Undo" : {
+      "comment" : "Button in the row that replaces an item the user just archived; takes the archive back. Keep it short.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undo"
+          }
+        }
+      }
+    },
+    "What if I don’t see any sessions?" : {
+      "comment" : "Link in the footer of the setup window that opens the troubleshooting page.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What if I don’t see any sessions?"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

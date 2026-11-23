@@ -1,0 +1,41 @@
+name: ci
+
+# PRs only: macOS minutes count 10x in this private repo, and the squash-merge
+# of a green PR changes nothing that was not already tested.
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+
+permissions:
+  contents: read
+
+# A new push to a PR supersedes the older run.
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Select the newest installed Xcode
+        # Decides the Swift toolchain for `swift test`. Only plain versioned
+        # bundles (Xcode_26.6.app), no beta/RC suffixes.
+        run: |
+          xcode=$(ls -d /Applications/Xcode_*.app | grep -E '/Xcode_[0-9.]+\.app$' | sort -V | tail -1)
+          if [ -z "$xcode" ]; then
+            echo "::error::No Xcode_<version>.app found on the runner"
+            exit 1
+          fi
+          sudo xcode-select -s "$xcode"
+          xcodebuild -version
+          swift --version
+      - name: Test CollectiveKit
+        working-directory: CollectiveKit
+        run: swift test
+      # The app build (xcodebuild) is left out on purpose: the project is in
+      # Xcode 27 format and the runners have no Xcode 27 yet. It comes back in
+      # a later ticket.

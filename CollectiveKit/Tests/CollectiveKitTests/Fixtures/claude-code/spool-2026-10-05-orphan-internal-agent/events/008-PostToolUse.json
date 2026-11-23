@@ -1,0 +1,28 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed Laborum.culpa && ut -E Eiusmod | unde -ea && est Aliquip/Reprehenderit/Perspiciatis/Exercitation.dicta && sit ligula --lorem",
+    "description": "Eiusmod nostrud non perspiciatis minim"
+  },
+  "tool_response": {
+    "stdout": "// lorem-ipsum-ullamco: a.e\ncillum Gelitseddoeiusmodt\n\nnon pretium = Dapibus(\n    anim: \"Reprehenderit\",\n    excepteur: [.natus(.est)],\n    pulvinar: [\n        .commodo(nemo: \"Reprehenderit\", pretium: [\"Reprehenderit\"]),\n        .aperiam(enim: \"Perspiciatis\", ullamco: [\"Perspiciatis\"]),\n    ],\n    aliquip: [\n        .aliqua(\n            sint: \"Reprehenderit\",\n            pretium: [\"Voluptate/SAPIEN.ut\"],\n            curabitur: [.quae(\"Fermentum/Pulvinar\")]\n        ),\n        // Commodo praesent veniam ut non aperiam. E occaecat mauris magna\n        // Reprehenderit sunt et AD; non lacus ipsa mollit `Exercitation` ligula.\n        .mauris(\n            odit: \"Exercitation\",\n            perspiciatis: [\"Reprehenderit\"]\n        ),\n        .adipiscing(\n            nisi: \"Asfermentumconsequ\",\n            exercitation: [\"Reprehenderit\"],\n            veritatis: [.sunt(\"Pulvinar\")]\n        ),\n    ]\n)\nReprehenderit\nExercitation\n\nLaborum/Reprehenderit:\nSuscipit\nAperiam\nPorta\nExercitation\nExplicabo\nLaboris\nTotam\nEaque\n\nOfficia/Reprehenderit/Maecenas:\nItatisquasiarchi.fugit\n\nEiusmod/Reprehenderit/Ullamco:\nConsequatur.minim\nCupidatat.velit\nPtasaspernaturo.culpa\nOditfugitloremipsu.neque\nReprehenderit.omnis\n\nUllamco/Reprehenderit/Totam:\nAspernatur.quasi\nConsequatur.dicta\nDapibus.fugit\n\nEiusmod/Reprehenderit/Exercitation:\nNimadminimveniam.minim\nPerspiciatis.velit\nXercitationullam.culpa\nAccusantium.neque\nIaliquipexeacomm.omnis\nPerspiciatis.error\n\nAliquip/Reprehenderit/Inventore:\nAccumsan\nLIGULA.et\n\nAperiam/Reprehenderit/Cupidatat/Proident:\naliqua-illo-commodo.quia\nmollit-amet.elit\nneque.quis\n\nNostrud/Reprehenderit/Laboris:\nConsectetur.eaque\nVoluptatem\n\nLaborum/Reprehenderit/Dapibus/Aspernatur:\nSapienligulavehic.ipsum\nHiculapraesentdapibusnequepor.magna\nExercitation.irure\n\nOfficia/Reprehenderit/Culpa:\nEnasfermentumcon.neque\nTincidunt.omnis\nAccusantium.error\nPerspiciatis.eaque\nPerspiciatis.vitae\ncillum Aspernatur\n\n/// Aperiam illo ut qui laboris tempor ea: \"i i\", \"d sit\", \"e a ex est\".\n/// Laboris sed commodo u curabitur, ad ex fugit qui odit do magna mauris qui\n/// officia sit aute id qui eiusmod.\nfugiat nunc Exercitation {\n    /// Ligula ipsa, id d pretium ipsam fugit e elit in quis'd commodo; praesent\n    /// inventore (culpa sunt aperiam porta non qui) ipsa ad \"e e\".\n    mauris beatae amet labore(e occaecat: Exercitation) -> Cillum {\n        sed commodo = qui(u, Sit(suscipit.aperiam(.iste)))\n        in ullamco < do { cillum \"\\(commodo) a\" }\n        sit pretium = dapibus / id\n        do nostrud < et { aliqua \"\\(aliquip) est\" }\n        sit nulla = pretium / ut, ipsa = eiusmod % ex\n        labore quia == i ? \"\\(eaque) u\" : \"\\(vitae) a \\(nisi) sit\"\n    }\n}\n?? ../.lorem/\n?? ../BEATAE.do",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01SbipjEcSVthz3mWB4YxBjM",
+  "duration_ms": 92
+}

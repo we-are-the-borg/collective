@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing/id-veniam/Quasi/Accumsan/Dicta && amet . -elit \"*.mauris*\" -quis \"*.ullamco*\" | duis; aute . -esse \"*.veniam\" -accumsan i"
+  },
+  "tool_response": {
+    "stdout": "./Loremipsumdolorsitametconse.labore/Proident/Cupidatat/ex.irure/Consectetur.laborum\n./Modtemporincididuntutlabore.ligula/Voluptas/Voluptate/ex.natus/Accusantium.consectetur\n./Mveniamquisnostrudexercita.cillum/Accumsan/Explicabo/ex.fugit/Consequatur.nostrud\n./Xeacommodoconsequatduisaut.labore/Pulvinar/Inventore/ex.nulla/Consectetur.consequatur\n./Laudantium.qui/Occaecat/Tincidunt/Riaturexcepteursintoccaeca.labore/Vehicula/Explicabo/do.dicta/Consectetur.aperiam\n./Voluptatem.sit/Proident/Inventore/Idestlaborumcurabiturpreti.labore/Praesent/Voluptate/ex.lacus/Consectetur.consequatur\n./Adipiscing.non/Deserunt/Explicabo/Pibusnequeportamaurisaccums.labore/Accumsan/Cupidatat/do.fugit/Consectetur.nostrud\n./Architecto.est/Pulvinar/Voluptate/Isistenatuserrorvoluptatema.labore/Maecenas/Tincidunt/ex.porta/Consectetur.consequatur\n./Mtotamaperiameaqueipsaquaei.ligula\n./Aqueipsaquaeilloinventorev.beatae\n./Adipiscing.sit/Suscipit/Inventore/Hitectobeataevitaedictaexpl.cillum\n./Aspernatur.sed/Pulvinar/Cupidatat/Uiavoluptasaspernaturoditf.beatae",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01WxnSm9Ntt9QPBXxzXupsW7",
+  "duration_ms": 62
+}

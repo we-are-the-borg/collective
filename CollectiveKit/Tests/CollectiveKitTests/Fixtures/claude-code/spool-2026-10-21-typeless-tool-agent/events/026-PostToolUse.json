@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "d=~/.ipsum/ullamco/quis/pulvinar-vehicula/fugiat; id $d | sunt -e; nunc=$(ex $e | ipsa -i); do -u $e/$odit | amet -e; non i do $(ut -e $a/$sint | sunt -i); id aperiam -U -e \"beatae illo,non,vehicula;i=amet.elit(enim(qui.nisi[e]));i=i['aliquip'];irure(praesent.accumsan.reprehenderit(e['in']).pariatur('%d.%u %E:%A:%E'), e.non('accumsanmaecena'), d.sit('doloremque','')[:a])\" \"$e/$sunt/$i\"; nunc; unde",
+    "description": "Amet sed dolore Magna minim cillum"
+  },
+  "tool_response": {
+    "stdout": "amet-ut-et\ndoloremque-minim-vehicula.aute\nadipiscing-culpa-suscipit.anim\nlaudantium-omnis-proident.ipsa\nid.do ut:et:ad Amet voluptas\nin.id do:ut:et Isauteirureinrep praesent\nea.in id:do:ut Exercitation proident\nSed Non in id:do:ut ENIM quis",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_0194uWcKE2RC9H5dNXBhD9Bo",
+  "duration_ms": 233
+}

@@ -1,0 +1,32 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0524016e-4402-41b4-ab09-beb551661d10",
+  "permission_mode": "auto",
+  "agent_id": "a183282c31caebc12",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/subagents/agent-a183282c31caebc12.jsonl",
+  "background_tasks": [
+    {
+      "id": "str3xjuto",
+      "type": "monitor",
+      "status": "running",
+      "description": "live updates for artifact https://claude.ai/artifact/ExampleArtifact0000001 (re-armed on session resume)"
+    },
+    {
+      "id": "a183282c31caebc12",
+      "type": "subagent",
+      "status": "running",
+      "description": "Part 5: contrast rules",
+      "agent_type": "workflow:implementer"
+    }
+  ],
+  "session_crons": []
+}

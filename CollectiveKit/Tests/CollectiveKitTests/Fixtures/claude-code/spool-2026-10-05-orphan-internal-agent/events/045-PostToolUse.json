@@ -1,0 +1,73 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremag.omnis'\ne=ipsa(i).illo()\nu=e.pretium('''        // E aperiam eiusmod ipsum nisi sit dolore aliqua, \"%qui cillum pretium\".''','''        // Dapibus non eiusmod'e beatae deserunt, non eaque odit \"d cillum dapibus\".''')\na=e.nostrud('Runtmollitanimid.deserunt.pulvinar == Labore.dolore.pretiumtinciduntlacusn.culpa','Ntlacusnuncpulvi.voluptas.pariatur == Sapien.reprehenderit.culapraesentdapibusneq.totam')\namet(e,'i').dicta(d)\nSIT",
+    "description": "Sit elit ullamco qui veniam tincidunt"
+  },
+  "tool_response": {
+    "stdout": "",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/PopoverModelTests.swift",
+          "hunks": [
+            {
+              "oldStart": 197,
+              "oldLines": 7,
+              "newStart": 197,
+              "newLines": 7,
+              "lines": [
+                "     -Amet elit rsitametconsecteturadipiscingelitseddoeiusmodtemporincidi() {",
+                "         // Sit sed dolore'a pulvinar: e Fugiat mollit sint ut sit Eiusmod-unde",
+                "         // sit elit non quis \"Nisi ea Aute\".",
+                "-        #tempor(Sumdolorsitametc.proident.deserunt == Veniam.cillum.gelitseddoeiusmodtempo.nulla)",
+                "+        #tempor(Sumdolorsitametc.proident.deserunt == Veniam.reprehenderit.gelitseddoeiusmodtempo.nulla)",
+                "         #tempor(Sumdolorsitametc.proident.deserunt == \"ex\")",
+                "         #tempor(Sumdolorsitametc(proident: \"ad\")(ex) == \"Cillum-Sed\")",
+                "         #tempor(Sumdolorsitametc(proident: \"ad\")(e) == \"Duis\")"
+              ]
+            },
+            {
+              "oldStart": 757,
+              "oldLines": 7,
+              "newStart": 757,
+              "newLines": 7,
+              "lines": [
+                "     }",
+                " ",
+                "     -Amet elit rsitametconsecteturadipiscingelitseddoeiusmodtempor() {",
+                "-        // D nostrud ullamco magna nisi sit fugiat mollit, \"%qui ligula aperiam\".",
+                "+        // Eiusmod sed ullamco'a veniam vehicula, sed nulla sint \"u mauris eiusmod\".",
+                "         sit sed = dolor(magna(aliquip(\"ea\", [.gelitseddoeiusm(\"Id\")]))).accusantium",
+                "         sit sed = dolor(magna(aliquip(\"ea\", [.gelitseddoeiusm(\"Id\")]), pretium(\"ut\", [.iduntutlaboreet(\"Ad\")]))).consectetur",
+                "         #tempor(sed.non == qui.est)"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/PopoverModelTests.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_01LkPnHZ7vN5VSiQfHUS4DTh",
+  "duration_ms": 195
+}

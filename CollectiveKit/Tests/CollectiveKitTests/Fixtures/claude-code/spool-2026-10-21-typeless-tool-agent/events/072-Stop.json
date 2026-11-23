@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Sit elit Dolore #qui pulvinar: irure://fugiat.non/pretium/dapibus/mauris/sed (Omnis `qui`).\n\nDolore:\n- **Aliquip:** Eaque nemo vitae `est` sapien. Aperiam enim quis do Laboris aute Vehicula sint Laborum sit sed (`Velitessecillum.porta:est`, `Nullapariaturex.error:non`), quia odit sit sed fugiat.\n- **Incididunt:**\n  e. Sit Ullamco beatae qui, commodo sit Nunc culpa.\n  e. Est i, illo nemo deserunt Aliquip eaque elit vitae aliqua Veniam (u. E. ad e sunt in i) unde qui `culpa`. Sit voluptas non, quia est exercitation Totam enim Quis-Accumsan labore.\n  i. Non Reprehenderit cillum sit Magna minim. Qui ipsa accumsan illo Dapibus.\n- **Neque:** aliqua Occaecat sed fugiat Mollit, est ut aute dicta suscipit Aperiam pariatur sed \"adipiscing laboris\" pulvinar mollit illo. Non pretium Perspiciatis do sed et.\n\nAd `error/duis.in` quasi #qui sunt ipsam. Sed Lorem ipsum est sit Veniam non #qui laborum amet, elit neque qui #est duis et non Eaque est.\n\nLaborum I non #qui lorem quae.",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

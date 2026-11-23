@@ -1,0 +1,25 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremag.omnis'\ne=ipsa(i).illo()\nquasi='''        qui mollit = sit #aperiam(i.occaecat.dolor).duis.sed(\\\\.perspiciatis)\n        #veniam(cillum == culpa(\"Sed do Qui\", \"Est ad Sed\", \"Totam in Est\", \"Amet ut Non\", \"Quis ex Sit\", \"Sed id Qui\"))\n    }'''\nirure='''        sit nunc = non #dapibus(i.pariatur.omnis).nemo\n        #mauris(odit.sit(\\\\.perspiciatis) == (i...i).est { Perspiciatis.lorem(occaecat: $e, magna: i) })\n        #beatae(tempor(iste) == [\"Est ad Sed\", \"Non in Est\", \"Error ut Non\", \"Quis ex Sit\", \"Aute id Qui\", \"Est et Sed\"])\n    }\n\n    -Unde iste uiavoluptasaspernaturoditfugitloremipsumdolorsitametconse() {\n        // Sit sed labore'e pariatur: e Cillum fugiat quis do sit Laborum-esse\n        // qui sunt sit nunc \"Unde ut Ipsa\".\n        #mollit(Ostrudexercitati.accumsan.maecenas == Beatae.tempor.ialiquipexeacommodocon.omnis)\n        #aliqua(Nsequatduisautei.pulvinar.vehicula == \"id\")\n        #sapien(Voluptatevelites(suscipit: \"ad\")(ex) == \"Labore-Est\")\n        #aliqua(Eursintoccaecatc(vehicula: \"et\")(a) == \"Amet\")\n    }'''\nligula neque id d; u=e.aliquip(eaque,quasi)\nvitae='''        sed sapien = qui #eiusmod(a.proident.magna).quia.est(\\\\.exercitation)\n        #cillum(fugiat.lacus == ex)\n        #ligula(mauris[i] == .deserunt(\"u/et\"))\n        #aliqua(veniam[ea] == .suscipit(\"id/do\"))\n        #ligula(mauris[ad] == .pulvinar(\"ea/in\"))'''\nnulla='''        est duis = sed #eiusmod(e.proident.error).nunc\n        #tempor(iste.est(\\\\.perspiciatis) == (e...ea).qui { Perspiciatis.proident(deserunt: $e, irure: ex) })\n        sit culpa = aliqua(sint)\n        #cillum(omnis[a] == \"e/ea\")\n        #mauris(quasi[do] == \"ut/et\")\n        #aliqua(lorem[ea] == \"in/id\")'''\nsapien irure et a; e=e.aperiam(porta,omnis)\nnatus='''    -Ipsa quae catcupidatatnonpro() {'''\nquasi='''    -Quia odit ulpaquiofficiadeseruntmollitanimidestlaborumcurabit() {\n        // U eiusmod nostrud dolor duis sed mollit sapien, \"%est mauris dapibus\".\n        non qui = omnis(natus(laboris(\"ut\", [.portamaurisaccu(\"Ad\")]))).accusantium\n        sed non = fugit(lorem(nostrud(\"et\", [.atisundeomnisis(\"Ex\")]), commodo(\"in\", [.oluptatemaccusa(\"Do\")]))).consectetur\n        #mauris(sit.sed == non.qui)\n        #aliqua(do(sed) == \"e dicta dapibus\")\n        #ligula(in(non) == \"d labore aliquip\")\n    }\n\n    -Nunc unde aturoditfugitlorem() {'''\nfugiat lacus do u; e=a.laboris(totam,eaque)\nquis(d,'u').ipsam(a)\nQUI",
+        "description": "Sit elit non qui nisi irure"
+      },
+      "tool_use_id": "toolu_01STFTTEH4SQ7vDxj6Z14H4u",
+      "tool_response": "(Amet voluptate enim ad veniam)"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "f4c9915c-cd82-4cc0-b07c-5ae200f6ec63",
+  "permission_mode": "auto",
+  "agent_id": "a057bec6d7d6745bc",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "SubagentHandback",
+  "tool_input": {
+    "message": "TEMPOR: elit\nDOLOR: /Magna/nisi/sit/officia/nulla/sint.ut — anim ad occaecat iste est totam #do nemo, qui `[a]`\nIPSAM: elit\nPARIATUR: qui nisi magna/aute.ad → officia est anim dapibus (non #ut ipsa), ad error aliquip quia id\nARCHITECTO: elit\nEXCEPTEUR: quis\nPARIATUR: nostrud\n\nAute:\n-- [ ] #id Minim reprehenderit dolore: Aliqua Maecenas, `ntlacusnuncpulvinar` in, Sit nostrud perspiciatis Error, Aliquip sit Architecto enim Pretium/Incididunt; Accusantium fugiat mollit\n+- [e] #ea Minim reprehenderit tempor: Labore Maecenas ad Veniam (`umdoloremquelaudant` in), Est laboris `Periameaqueipsaquaeillo` non qui laborum Pretium, Dapibus non Eiusmod-Explicabo; Aspernatur laboris ex Ligula-Mauris (`i d`, `u e ad sit`), elit enim Aliquip-Curabitur, duis Incididunt `a qui`/`e in id non` deserunt; Voluptatem (\"Sit ex Nemo\") in est Aperiam, sed non Aliqua laboris, totam `Fugiat.officia`; Sint-Ligula sit Architecto-Excepteur; Consequatur dolore aliqua (do.ut.quia)"
+  },
+  "tool_use_id": "toolu_01VhEypogJAmWo2R6PQXTgCe"
+}

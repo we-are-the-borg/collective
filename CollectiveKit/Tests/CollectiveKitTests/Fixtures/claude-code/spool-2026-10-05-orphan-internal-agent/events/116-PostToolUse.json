@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "(do Reprehenderit && dolor quis --veniam Reprehenderit i>&i | sint -u mauris; porta omnis e>&i | quae -d officia | quia); AD=/dapibus/sed/mauris-qui/-Dolor-duis-sed-commodo/praesent-sunt-anim-nunc-exercitation/architecto/et; adipiscing -laboris Non/Doloremque.explicabo -veniam Aspernatur -reprehenderit Fugit QUIOFFICIADESERUNTMO=EA -runtmollitanimi $ID minim u>&e | nunc -e; iste $IN/Porta/Occaecat/Natus/Voluptatem.est -amet '*Perspiciatis.dolore*' -quis 'Consequatur*'; $UT/Lorem/Occaecat/Dolor/Aspernatur.sit/Vehicula/Velit/Doloremque & culpa a; neque -e Incididunt && natus -d Laudantium"
+  },
+  "tool_response": {
+    "stdout": "d\n\n** IPSUM EXCEPTEUR **\n\n/laboris/est/cillum-sed/-Nulla-sint-est-aperiam/pariatur-unde-iste-ipsa-perspiciatis/voluptatem/ut/Vitae/Maecenas/Ipsam/Adipiscing.non/Occaecat/Curabitur/Odoconsequatduisauteirurei.dolore/Vehicula/Veritatis/ea.culpa/Consequatur.aperiam\n/eiusmod/est/beatae-sed/-Totam-quia-est-laborum/maecenas-enim-quis-nisi-perspiciatis/laudantium/id/Minim/Vehicula/Velit/Voluptatem.non/Suscipit/Curabitur/Vinarsapienligulavehiculap.sapien/Proident/Veritatis/ad.eaque/Consequatur.accusantium\ndicta\nipsam",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01U7nenRRZ4V8uU7h4qQNUuc",
+  "duration_ms": 13051
+}

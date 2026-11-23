@@ -1,0 +1,21 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing/totam; do $U\nqui -a '' 'e/\"fugit\":\"%non i\"/\"dolor\":\"%sit SED\"/; a/\"velit\":\"Sunt %- sit\"/\"lacus\":\"UNDE %- qui\"/' Nostrud/A/Fermentum/Consequatur.veritatis\nquasi amet u>&e | quis -E \"E:|dolor\"",
+    "timeout": 300000,
+    "description": "Lorem labore proident deserunt est commodo"
+  },
+  "tool_use_id": "toolu_01R6PwwZZbEM9s8DRgFovNq2"
+}

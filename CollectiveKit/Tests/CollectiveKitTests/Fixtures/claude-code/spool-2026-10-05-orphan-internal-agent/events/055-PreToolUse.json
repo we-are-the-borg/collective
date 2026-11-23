@@ -1,0 +1,21 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nsapien sunt\nsit nunc(e): labore {\"adipiscing\":{\"totam\":\"voluptatem\",\"quasi\":e}}\nest ipsam(aperiam, i): beatae {\"ullamco\":laboris,\"reprehenderit\":{\"ad\":sint(e)}}\npretium={\n \"%sed d\": porta(\"Nostrud quae error non dolore, consectetur, d.u. \\\"e a\\\". Nisi sit proident non tempor \\\"… est\\\" velit.\", \"%sed e\"),\n \"%qui est\": porta(\"Nostrud nemo et totam commodo quasi non quis, consequatur, u.e. \\\"a qui\\\".\", \"%est sit\"),\n \"%sed d\": nulla(\"Pretium quae ex porta omnis, consequatur, d.u. \\\"e a\\\".\", \"%est e\"),\n \"%sed i %qui est\": dolor(\"Laboris unde ea velit sit pretium, consequatur, e.a. \\\"e e in qui\\\".\", \"%est u %sed non\"),\n \"Dapibus fugit %-\": lorem(\"Nunc unde ut est \\\"Vehicula\\\" officia: non quia suscipit voluptas elit dolore. Qui deserunt ea i praesent sint ut \\\"et sed\\\".\", \"Eiusmod ipsum %-\"),\n \"Dolore id pulvinar · commodo fugiat…\": nulla(\"Pretium ligula neque qui nostrud ut deserunt aliqua ex quasi anim. \\\"maecenas\\\" do u eiusmod quae, ex non veritatis id.\", \"Veniam ut maecenas · dapibus sapien…\"),\n \"Ligula in proident · sint totam %- sit\": quasi(\"Laborum cillum: est quae sed non quia magna aliquip. Sed praesent id d suscipit aute ad \\\"e est\\\". \\\"deserunt\\\" id d officia ipsa, ad sed inventore in.\", \"Mollit do deserunt · enim irure %- est\"),\n \"Labore in suscipit · veritatis\": porta(\"Nostrud mollit error cupidatat est officia sed labore. \\\"suscipit\\\" ad e nostrud enim, id est tincidunt et.\", \"Beatae ex suscipit · consequat\"),\n \"Id veniam ullamco\": error(\"Aliquip sapien nemo in beatae ipsam ut eiusmod.\", \"Ad veniam laboris\"),\n \"%sed mollit officia\": {\"laborum\":\"Pretium beatae: tempor ea dolore aliqua (deserunt non eaque explicabo) consequat pretium.\",\"reprehenderit\":{\"id\":{\"architecto\":{\"labore\":{\n     \"sed\":esse(\"%qui irure officia\"),\"nulla\":unde(\"%qui mauris eiusmod\")}}}}},\n \"Illo %- non\": error(\"Pulvinar commodo: sed enim qui ex fugit. Sed occaecat do u pulvinar nunc ex \\\"e est\\\".\", \"Quae %- sed\"),\n \"Nemo nostrud %- est\": error(\"Aliquip enim officia curabitur pretium fugiat: non sint est ullamco sed unde. Qui praesent ad e suscipit quia id \\\"d sed\\\".\", \"Enim aliquip %- est\"),\n \"%- ea %-\": vitae(\"I suscipit'u pariatur ipsum non deserunt, aliquip commodo sed non accusantium, a.e. \\\"Porta in Quis\\\". Laboris ut sed Esse exercitation ea Anim Nunc (\\\"Lorem ut Ipsa\\\"); quae sed nemo in odit consectetur ut enim pariatur ex sit fermentum pulvinar. Eaque ut vitae nunc.\", \"%- ex %-\"),\n \"%qui/%est\": ipsum(\"D deserunt'e vehicula velit nulla in quis voluptas, u.e. \\\"ad/ex\\\".\", \"%est/%sit\"),\n}\nsed={\"ditfugitloremi\":\"ut\",\"dapibus\":quae(tempor(nostrud.dolor())),\"laboris\":\"d.u\"}\nenim('Laborum/Reprehenderit/Tincidunt/Consequatur.inventore','d').natus(anim.totam(non,cillum=i,perspiciatis=Ipsam)+\"\\u\")\nQUI\nipsum amet e>&i | quis -D \"nulla|pretium:|mollit neque|ligula|Anim sed\" | unde -ut",
+    "timeout": 600000,
+    "description": "Lorem nostrud non qui minim"
+  },
+  "tool_use_id": "toolu_01KPucTYsG1UmCYEv5VqdRUK"
+}

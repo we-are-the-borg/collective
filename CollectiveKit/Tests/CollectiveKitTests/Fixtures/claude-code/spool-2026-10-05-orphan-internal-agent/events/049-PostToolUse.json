@@ -1,0 +1,140 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Dapibus.neque'\na=unde(e).ipsa()\ni=d.officia('''    quia: \"Reprehenderit\",\n    consequat''','''    elit: \"Reprehenderit\",\n    liquipexeacommodoco: \"do\",\n    tincidunt''')\ne=a.officia('''explicabo: [.anim(\"Voluptate/Voluptas\")]''','''cupidatat: [.ipsa(\"Tincidunt/Deserunt\"), .aliquip(\"Veritatis/Consectetur.consequat\")]''')\nelit(e,'a').lorem(e)\nSED\nnon > Aliquip/Reprehenderit/Exercitation/Laborum.culpa <<'QUI'\nfugiat Aspernatur\n\nfermentum Ligula {\n    /// Qui est'e sed accumsan aliqua; nisi fugit, `Fugiat.mollit` dolor ligula.\n    mauris sed reprehenderit: Labore { .dolore }\n}\n\ntincidunt Cusantiumdoloremquelaud {\n    /// E quia odit sit sed'e qui laborum. Pretium sed aliqua do ipsum et mollit\n    /// ex ea est sit'd nemo dolore, porta sit ea laboris id est sit.\n    mauris esse qui(e sit: Perspiciatis, exercitation: Cillum.Nimveniamquisnost) -> Amquisnostrudexercitati {\n        Ostrudexercitationullam(non, exercitation: perspiciatis, tempor: .porta(Dolore.reprehenderit.curabitur))\n    }\n}\nSIT\nsed > Officia/Reprehenderit/Perspiciatis/Exercitation.fugit <<'NON'\nlabore Incididunt\n\n/// Laboris illo ut qui laborum sapien ea: \"i i\", \"d sit\", \"e a ex est\".\n/// Anim nunc do u eiusmod sit, ex e accusantium est veniam sed culpa; qui\n/// neque porta sed beatae'd labore anim `Praesent.excepteur`'e \"i id do non\".\nmauris odit Exercitation {\n    /// Labore enim, id d dapibus neque porta e sunt in nunc'd officia; accumsan\n    /// tincidunt (ipsam nemo eiusmod ipsum sit sed) enim ad \"e e\".\n    dolore aliqua sint cillum(e proident: Exercitation) -> Niamquisnostrudexercita {\n        est officia = sed(u, Qui(voluptas.eiusmod(.elit)))\n        in laboris < do { ligula .sed(\"%non e\", perspiciatis: \"\\(aperiam) i\") }\n        non ullamco = laboris / ad\n        ex officia < in { beatae .sit(\"%sed non\", perspiciatis: \"\\(ullamco) sit\") }\n        sed irure = officia / ut, anim = dapibus % ex\n        labore ipsa == i\n            ? .sed(\"%non e\", perspiciatis: \"\\(vitae) e\")\n            : .non(\"%qui d %sit sed\", perspiciatis: \"\\(minim) e \\(anim) sed\")\n    }\n}\nNON",
+    "description": "Eiusmod perspiciatis, dolore, Perspiciatis"
+  },
+  "tool_response": {
+    "stdout": "",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Package.swift",
+          "hunks": [
+            {
+              "oldStart": 3,
+              "oldLines": 6,
+              "newStart": 3,
+              "newLines": 7,
+              "lines": [
+                " ",
+                " sit nostrud = Ullamco(",
+                "     amet: \"Reprehenderit\",",
+                "+    loremipsumdolorsita: \"ut\",",
+                "     consequat: [.ipsum(.non)],",
+                "     pariatur: [",
+                "         .eiusmod(elit: \"Reprehenderit\", laboris: [\"Reprehenderit\"]),"
+              ]
+            },
+            {
+              "oldStart": 12,
+              "oldLines": 7,
+              "newStart": 13,
+              "newLines": 7,
+              "lines": [
+                "         .tempor(",
+                "             amet: \"Reprehenderit\",",
+                "             eiusmod: [\"Voluptate/DOLORE.ad\"],",
+                "-            consequat: [.elit(\"Excepteur/Deserunt\")]",
+                "+            consequat: [.elit(\"Excepteur/Deserunt\"), .aliquip(\"Tincidunt/Consectetur.inventore\")]",
+                "         ),",
+                "         // Eiusmod occaecat dolore ad est commodo. I accumsan sapien lacus",
+                "         // Reprehenderit elit et AD; est irure aute mollit `Exercitation` ligula."
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Presentation/DurationText.swift",
+          "hunks": [
+            {
+              "oldStart": 1,
+              "oldLines": 17,
+              "newStart": 1,
+              "newLines": 19,
+              "lines": [
+                " tempor Incididunt",
+                " ",
+                " /// Eiusmod elit et qui aliquip cillum in: \"i d\", \"u sit\", \"a e ea est\".",
+                "-/// Eiusmod sed ullamco a curabitur, ea in nulla qui sunt et porta tempor qui",
+                "-/// eiusmod sed enim ad est commodo.",
+                "+/// Amet elit et a aliquip sit, in i accusantium est mauris sed omnis; qui",
+                "+/// lorem ipsum non aliqua'e cillum aute `Accumsan.veritatis`'u \"e ad ex qui\".",
+                " tempor elit Exercitation {",
+                "     /// Tempor elit, et a aliquip irure velit i sint ut anim'a nostrud; proident",
+                "     /// consequat (ipsum enim laboris minim sit sed) esse do \"u e\".",
+                "-    tempor labore enim aliqua(e vehicula: Exercitation) -> Mollit {",
+                "+    tempor labore enim aliqua(e vehicula: Exercitation) -> Ddoeiusmodtemporincidid {",
+                "         sit nostrud = non(a, Est(vehicula.officia(.esse)))",
+                "-        do nostrud < et { aliqua \"\\(aliquip) e\" }",
+                "+        do nostrud < et { aliqua .est(\"%sit i\", perspiciatis: \"\\(pretium) u\") }",
+                "         sit nostrud = ullamco / ad",
+                "-        do nostrud < et { aliqua \"\\(aliquip) sit\" }",
+                "+        do nostrud < et { aliqua .est(\"%sit sed\", perspiciatis: \"\\(pretium) est\") }",
+                "         sit ipsum = ullamco / ad, nisi = commodo % in",
+                "-        tempor elit == e ? \"\\(magna) e\" : \"\\(irure) i \\(esse) qui\"",
+                "+        tempor elit == e",
+                "+            ? .sit(\"%sed e\", perspiciatis: \"\\(minim) e\")",
+                "+            : .sit(\"%sed e %qui est\", perspiciatis: \"\\(velit) i \\(sint) est\")",
+                "     }",
+                " }"
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Presentation/KitText.swift",
+          "hunks": [
+            {
+              "oldStart": 0,
+              "oldLines": 0,
+              "newStart": 1,
+              "newLines": 14,
+              "lines": [
+                "+tempor Incididunt",
+                "+",
+                "+consequat Labore {",
+                "+    /// Sit sed'e qui pulvinar cillum; aute nulla, `Sapien.ligula` neque beatae.",
+                "+    tempor sed reprehenderit: Aliqua { .veniam }",
+                "+}",
+                "+",
+                "+consequat Sumdolorsitametconsecte {",
+                "+    /// D elit enim qui est'e sed laborum. Pretium est mauris ad omnis ea dolore",
+                "+    /// do ut non qui'e duis fugiat, nulla qui ut aperiam ad non qui.",
+                "+    tempor elit non(a est: Perspiciatis, exercitation: Mollit.Modtemporincididu) -> Orincididuntutlaboreetd {",
+                "+        Loremipsumdolorsitametc(sed, exercitation: perspiciatis, veniam: .irure(Fugiat.reprehenderit.veritatis))",
+                "+    }",
+                "+}"
+              ]
+            }
+          ],
+          "created": true
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Package.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Presentation/DurationText.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Presentation/KitText.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_014cDqRatdes8WwEK54X6ozx",
+  "duration_ms": 194
+}

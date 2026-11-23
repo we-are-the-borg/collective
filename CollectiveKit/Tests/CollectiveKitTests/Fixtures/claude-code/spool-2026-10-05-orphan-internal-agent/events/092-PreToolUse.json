@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed Laborum.culpa && sunt -et Eiusmod/Reprehenderit/Cupidatat/Accusantium.tincidunt && do Officia/Exercitation && ad && amet -e 'Enim(\\|Beatae(\\|Dolor(\\|\\.duis(\\|reprehenderit\\|== a ?' *.velit | sunt -i '^Consequatur'"
+  },
+  "tool_use_id": "toolu_015Eh4j5KcYjJ9WV9pvc7VKi"
+}

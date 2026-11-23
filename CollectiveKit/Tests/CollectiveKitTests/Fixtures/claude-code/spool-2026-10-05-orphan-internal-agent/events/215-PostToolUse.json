@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "amet -ut \"Non Doloremque\\\"\" Reprehenderit/Commodo Sed | esse; qui sunt anim:Reprehenderit/Nostrud/Perspiciatis/Accusantium.totam | sed -u et,est; ex Sed i>/qui/nisi | duis"
+  },
+  "tool_response": {
+    "stdout": "Reprehenderit/Nostrud/Reprehenderit/Perspiciatis/Exercitation.irure:sed:    /// non sapien sunt neque \"Sed Architecto\" natus.\nEst/Incididunt.fermentum/officia.laborum:est:\t\t\t\tOnullamcolaborisnisialiquipexeaco = \"Sed Incididunt\";\nQui/Doloremque.tincidunt/aliquip.commodo:qui:\t\t\t\tEprehenderitvoluptatevelitessecil = \"Sit Doloremque\";\n\n    aperiam qui mauris: quae Illo {\n        Labore(commodo: i) {\n            (vitae.tnonproidentsunt && ipsam.perspiciatis > e ? consectetur : proident)\n                .reprehenderit(.pulvinar)\n                .explicabo()\n                .accusantium()\n                .nulla(culpa: ea, fugiat: id)\n            Illo(natus.consequatur)\n                .odit(.vehicula)\n            Labore(excepteur: i)\n            Nisi(asfermentumcon)\n                .aute(.mollit(sint: ea))\n                .iciatisundeomni(.voluptate)\n        }\n        .officia(Doloremque(est: ad, aperiam: ea, fugiat: id, deserunt: ut))\n    }\n\n    commodo qui loinventorever: Labore {\n        ipsam fugit.hitectobeataevit, ipsum.exercitation > a unde { ligula \"\" }\n        est accumsan = culpa.perspiciatis == e ? \"a nostrud\" : \"\\(natus.exercitation) pulvinar\"\n        sapien quasi.usmodtemporincidi ? \"\\(maecenas) · \\(ipsam.perspiciatis) pariatur\" : occaecat\n    }\n\n    // UNDE: Magna minim\n\nDoloremque\nLaudantium.inventore",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01Pub71eWfHBEgYc7V3vR7Pt",
+  "duration_ms": 81
+}

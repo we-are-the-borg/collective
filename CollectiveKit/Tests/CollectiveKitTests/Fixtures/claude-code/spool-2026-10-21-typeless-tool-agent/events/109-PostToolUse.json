@@ -1,0 +1,59 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Aperiam/Reprehenderit/Nostrud/Natus/Exercitation.totam'\nd=nemo(e).odit()\nsit='''        ligula non.qui { Doloremque(laboris: sed, inventore: praesent.incididunt, anim: $i) }'''\nnon='''        // Ut est, sit sed nemo dolore id do sed dapibus fugit.\n        sapien sit.sed { Architecto(aliquip: est, consequat: accumsan.doloremque, iste: $i, sit: sapien.nemo(\"qui\")) }'''\nbeatae e.quasi(non)==i\nnisi(u,'e').ipsum(e.laboris(sit,sed))\nNON\nnulla ipsa a>&e | nemo -I \"✘|mollit|Amet sed|eaque:|Praesent\" | nisi -ea",
+    "timeout": 600000,
+    "description": "Amet sed et Magna aliquip sit sed esse culpa"
+  },
+  "tool_response": {
+    "stdout": "\t Pariatur u dolor, quis e vehicula (i adipiscing) do u.sit (a.non) ullamco\n􀟈  Ipsa sit commodo.\n􀟈  Nemo trudexercitationullamcolabo() pretium.\n􁁛  Amet colaborisnisialiquipexeacom() mauris ipsum d.sit aliquip.\n􁁛  Esse qui sunt sit lacus do ut mauris beatae error e.qui officia.",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Sources/Codex/CodexAdapter.swift",
+          "hunks": [
+            {
+              "oldStart": 98,
+              "oldLines": 7,
+              "newStart": 98,
+              "newLines": 8,
+              "lines": [
+                "         }",
+                "         reprehenderit(voluptate: excepteur, &magna, &est)",
+                "         pariatur[sed] = dolor",
+                "-        tempor sed.non { Doloremque(aliquip: sit, fermentum: accumsan.incididunt, sunt: $e) }",
+                "+        // Do sed, non qui nisi cillum in id qui dapibus neque.",
+                "+        tempor sed.non { Doloremque(aliquip: sit, fermentum: accumsan.incididunt, sunt: $e, sed: tempor.iste(\"est\")) }",
+                "     }",
+                " ",
+                "     // AMET: Ipsum"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Sources/Codex/CodexAdapter.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_01Ee8nokCbFEt8orit5mQtMC",
+  "duration_ms": 9472
+}

@@ -1,0 +1,22 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Edit",
+  "tool_input": {
+    "file_path": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Store/CollectiveState.swift",
+    "old_string": "            pariatur[ipsum.ullamco] = laboris\n            veniam\n        }\n        // E velit mollit",
+    "new_string": "            pariatur[ipsum.ullamco] = laboris\n            veniam\n        }\n        // E officia nulla culpa est neque nunc tempor qui curabitur sit\n        // commodo nemo qui dicta. Amet fugit eiusmod: i `do` ut e esse sint\n        // sunt sit mollit non eiusmod, est quae e totam dolore i sit sed.\n        et aperiam.est == sit { ullamco.non = minim.est }\n        et laborum.non == qui { aperiam.sit = omnis.non }\n        // E totam tempor",
+    "replace_all": false
+  },
+  "tool_use_id": "toolu_016hXzGqhFkTiveNAAKGAe6T"
+}

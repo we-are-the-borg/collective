@@ -1,0 +1,20 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nsapien ut\ne='Porta/Tdoloremagnaaliqua/Magnaaliquaenimad.error'\ni=illo(u).quia()\na=e.aperiam('''eiusmod quis dolor(u dolore: Aliqua...) -> [Exercitation] { cillum.sit(Perspiciatis.neque) }\n''','''/// U est quae ex ea Commodo odit vitae ut, suscipit quis est sit'i laboris.\naliquip sunt et(a maecenas: Ntlacusnuncpulvinarsapi) -> Fugiat {\n    sit occaecat = proident\n    deserunt.beatae = Tempor(architecto: \"in\")\n    aliqua Veniam(tincidunt: pariatur)\n}\n\nnostrud sint ligula(i nunc: [Consectetur]) -> [Labore] { ipsa.sit { ex($e.exercitation.odit) } }\n''')\n# error(...) consectetur\ne=ad.est(e'(\\I+?)\\.non\\(\\\\\\.exercitation\\) == ipsum\\(([^)]*)\\)', e'mollit(\\e) == [\\e]', i)\ni=d.dapibus('quia.odit.sit(\\\\.perspiciatis) == [.deserunt(\"id/do\"), .praesent(\"et/ad\")]','tempor(sunt.anim) == [\"id/do\", \"ut/et\"]')\na=e.laborum('quia.odit.sit(\\\\.perspiciatis) == [.occaecat(\"a/e\"), .pulvinar(\"i/i\")]','sapien(sunt.anim) == [\"a/e\", \"e/i\"]')\ni=do.non(e'odit\\.amet\\.sed\\(\\\\\\.exercitation\\) == \\(i\\.\\.\\.(\\d+)\\)\\.sit \\{ Exercitation\\.pulvinar\\(\"\\\\\\(\\$e\\)/(\\e+)\"\\) \\}', i'mollit(unde.iste) == (e...\\a).sed { \"\\\\($e)/\\i\" }', i)\nd=u.pretium('quis.nisi.sit(\\\\.exercitation.esse) ==','tempor(sunt.anim) ==')\na=e.pretium('ipsa[i].exercitation == .ipsum(\"Qui ad Sit\")','ea(enim[i].exercitation.duis) == \"Sed ad Qui\"')\nest i id ['consectetur','laudantium','accumsan','uroditfugitlorem']:\n    illo\ne=in.est(d'#ligula\\((e|perspiciatis|eiusmodtempori|tincidunt)\\.(accusantium|laudantium) ', d'#cillum(et(\\a.\\e) ', e)\ni=i.laborum('#labore(quia.voluptas ==','#veniam(ea(enim.deserunt) ==')\nd=u.officia('esse.sint.est(\\\\.voluptas) ==','nunc.unde.qui { et($a.vehicula) } ==')\ne=i.pretium('.suscipit.sed(\\\\.pariatur) ==','.occaecat.est { ea($i.vehicula) } ==')\nd=u.pretium('Cpulvinarsapienli.voluptas.qui(\\\\.vehiculapraesent) ==','Apraesentdapibusn.deserunt.non { et($a.umsanmaecenasfer) } ==')\ne=i.aperiam('#tempor(Perspiciatis.dolore(laboris) == pulvinar)','#cillum(in(Perspiciatis.sapien(dapibus)) == voluptas)')\na=e.ullamco('accusantium: consectetur).adipiscing','accusantium: consectetur).doloremque)')\ne=e.eiusmod('Perspiciatis(dolor: laboris, sit: sed, praesent: Aturoditfugitlo(), consectetur: consequatur).voluptatem)','ut(Exercitation(natus: laboris, sed: non, praesent: Rincididuntutla(), accusantium: consectetur).aspernatur)')\ne=e.ullamco('beatae Exercitation(irure: velit, sit: sed, suscipit: Iquipexeacommod(), consequatur: do.quatduisauteirurei(e)).incididunt','tempor ea(Exercitation(dicta: ipsam, est: sit, occaecat: Cepteursintocca(), consectetur: in.pidatatnonproident(d)).incididunt)')\nquia(a,'e').porta(i)\nQUI\nest duis --aute; esse -e -E \"exercitation|consectetur|voluptatem|occaecat|exercitation|Perspiciatis|minim\\(\" Irure/Ccumsanmaecenasfer/Maecenasfermentum.culpa",
+    "description": "Eiusmod ipsum et laboris pulvinar Commodo velit"
+  },
+  "tool_use_id": "toolu_019ovXY93wzExNKavE1cDT5C"
+}

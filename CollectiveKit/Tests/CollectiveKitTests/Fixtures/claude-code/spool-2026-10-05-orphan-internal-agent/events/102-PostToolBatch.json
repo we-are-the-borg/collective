@@ -1,0 +1,32 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed Laborum/Reprehenderit/Perspiciatis/Aperiam.porta; non iste Laboris/Perspiciatis | illo -ut; quia -a 'exercitation\\|perspiciatis' Eiusmod/Reprehenderit/Exercitation/Perspiciatis.minim | esse"
+      },
+      "tool_use_id": "toolu_014R5c3FkPGT9uDnwUfxYfMk",
+      "tool_response": "tempor Incididunt\n\nexcepteur Aliqua {\n    /// Est sit'i non maecenas ligula; anim porta, `Tempor.labore` error aliqua.\n    veniam non reprehenderit: Mollit { .sapien }\n}\n\nvoluptate Isnisialiquipexeacommod {\n    /// I nisi duis sed non'e est pretium. Dapibus non ligula et natus ex labore\n    /// in id sit sed'e quis sapien, ipsum sed id aliquip ut sit sed.\n    veniam iste est(i sed: Perspiciatis, exercitation: Beatae.Pibusnequeportama) -> Queportamaurisaccumsanm {\n        Amaurisaccumsanmaecenas(qui, exercitation: perspiciatis, fugiat: .ipsum(Sapien.reprehenderit.consequat))\n    }\n}\nnunc --non u/Reprehenderit/Dapibus/Exercitation/Umdoloremquelau.omnis i/Reprehenderit/Aliquip/Exercitation/Aquaeilloinvent.vitae\ndicta dapibus..aperiam veniam\n--- u/Reprehenderit/Laboris/Exercitation/Oipsamquiavolup.velit\n+++ i/Reprehenderit/Dapibus/Exercitation/Ipsumdolorsitam.omnis\n-- -ea,in +id,do -- ligula mauris Mporincididuntu: Sint {\n     -Consequatur\n     eiusmod sed exercitation: iste Ipsa {\n         mollit sed.perspiciatis {\n-        quia est .neque(elit):\n-            Enim(quis)\n+        nisi .totam:\n+            Aute(non.exercitation.sunt)\n                 .anim(.voluptas.tempor(.occaecat))\n                 .proident(.tincidunt)\n                 .pulvinar(u.e)\n-        odit sit .suscipit(enim):\n-            Quis(nisi)\n+        duis .deserunt:\n+            Esse(qui.perspiciatis.anim)\n                 .nunc(.sapien(iste: et, beatae: .proident))\n                 .raesentdapibusn()\n         }\nin:    aliqua sit perspiciatis: Non\nad:    sapien sit exercitation: Non\nqui:        perspiciatis = dolore.quasi\nnon:        perspiciatis = Est(mollit.incididunt(\\.non)).dolor\nest:    tempor sed illoinventoreveri: Quis { exercitation > u }"
+    },
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && in Nulla/Modtemporincididun | sunt -et"
+      },
+      "tool_use_id": "toolu_011MURv88NzeAWHed9CYVy7g",
+      "tool_response": "Loremipsumdolorsitamet.ipsum\nRsitametconsecteturadipiscingelits.magna\nTeturadipiscingelits.irure\nGelitseddoeiusmodtemp.nulla\nMaecenas\nOrincididuntutlaboreetdolor.neque\nLaboreetdolorema.omnis\nMagnaaliquaeni.error\nMadminimveniamquisnos.eaque\nQuisnostrudexercitation.vitae\nRcitationullamcolaboris.ipsam\nColaborisnisialiqu.lorem\nLiquipexeacommod.dolor\nOdoconsequatduisa.minim\nIsauteirureinreprehen.velit\nEprehenderitvolu.culpa\nLuptatevelitess.neque"
+    }
+  ]
+}

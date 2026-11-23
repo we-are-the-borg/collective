@@ -1,0 +1,28 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i 'sint;sunt;anim;nunc' Omnis/Magnaaliquaenimadm/Iquaenimadminimve.totam",
+    "description": "Amet nostrud enim magna"
+  },
+  "tool_response": {
+    "stdout": "        tempor(#labore(enim.quis) == [\"Est ea Aute\", \"Non do Sunt\", \"Neque ad Unde\", \"Iste in Quae\", \"Illo ut Quia\"])\n        mollit(#sapien(elit.enim) == [\"Qui do Sit\", \"Sed ad Qui\", \"Est in Sed\", \"Non ut Est\"])\n        beatae(#tempor(nemo.quia) == [\"Est do Sed\", \"Non ad Est\", \"Ipsum in Non\", \"Sint ut Sit\", \"Nunc ex Qui\", \"Est id Sed\"])\n        ligula(#mauris(odit.amet) == [\"Sed in Qui\", \"Est ut Sed\"])",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_017EveX4LSV2tDUX3mAtjLhi",
+  "duration_ms": 48
+}

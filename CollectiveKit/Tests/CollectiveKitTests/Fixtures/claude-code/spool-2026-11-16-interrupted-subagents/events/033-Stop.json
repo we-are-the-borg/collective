@@ -1,0 +1,37 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "29b4b250-1801-4578-873b-3caaa6b46f02",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "DO (labore Dolore) qui EX (Vehicula sed Accumsan) sapien est neque SED-Omnis perspiciatis est aliqua eaque nemo fugiat, ad sit voluptate lorem. Beatae tempor sit Dolore-Irure, qui Cillum sit sed Velitessecillum qui est natus Error.",
+  "background_tasks": [
+    {
+      "id": "sqme5q7ti",
+      "type": "monitor",
+      "status": "running",
+      "description": "live updates for artifact https://claude.ai/artifact/ExampleArtifact0000002 (re-armed on session resume)"
+    },
+    {
+      "id": "af1b90fb83b036cd8",
+      "type": "subagent",
+      "status": "running",
+      "description": "Part 2: custom themes",
+      "agent_type": "workflow:implementer"
+    },
+    {
+      "id": "a7cf9b083293ed775",
+      "type": "subagent",
+      "status": "running",
+      "description": "Part 3: states and keyboard",
+      "agent_type": "workflow:implementer"
+    }
+  ],
+  "session_crons": []
+}

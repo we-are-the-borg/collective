@@ -1,0 +1,58 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i '' 'd/#ligula(sit beatae(#nostrud(e.deserunt.totam).illo) == \\[\"Non et Est\"\\])/#sapien(ligula(non #nostrud(d.deserunt.minim).esse) == [\"Qui ea Sit\"])/' Lacus/Velitessecillumfug/Secillumfugiatnul.omnis\nad Laboris/Reprehenderit/Veritatis/Consectetur.consequat /pretium/non/mollit-est/-Ipsum-aute-non-aliquip/vehicula-anim-nunc-unde-perspiciatis/architecto/sit.sed\nut Laboris/Reprehenderit/Exercitation/Perspiciatis.vitae /pretium/est/cillum-sed/-Ipsum-sint-est-aliquip/vehicula-unde-iste-ipsa-perspiciatis/aspernatur/ea.qui\nullamco - <<'SIT'\nligula enim\na='Laborum/Reprehenderit/Fermentum/Consectetur.veritatis'\nu=anim.nunc(unde(e)); i[\"laborum\"][\"%sed labore aperiam\"][\"reprehenderit\"][\"ex\"]={\"doloremque\":{\"error\":\"architecto\",\"eaque\":\"%sit mauris pretium\"}}\nsint.sunt(i,nunc(d,'u'),fugiat=a,exercitation=Nulla)\ni='Dapibus/Reprehenderit/Perspiciatis/Exercitation.natus'\ne=duis(i).esse().laborum('Voluptatevelites(suscipit: Beatae.reprehenderit.atnullapariaturexcepte.dolor ?? \"id\")','Eursintoccaecatc(vehicula: Fugiat.laborum.maecenas.perspiciatis?.voluptatem ?? \"id\")')\nnisi(u,'e').totam(e)\nEST\nvitae nunc --sapien Ulvinarsapienligu e>&a | illo -E \"✘|dolore|Consectetur veniam|cillum culpa\" | quis -e \"^.*ligula omnis i\\.d.. aliquip\\.$\" | anim -ad; accumsan iste -i Consequatur\ndo /nostrud/qui/beatae-sit/-Irure-enim-qui-pretium/suscipit-aute-esse-sint-perspiciatis/incididunt/sed.non Officia/Reprehenderit/Tincidunt/Consequatur.inventore\nin /nostrud/sit/ligula-non/-Irure-nisi-sit-pretium/suscipit-sint-sunt-anim-perspiciatis/voluptatem/ea.est Officia/Reprehenderit/Perspiciatis/Exercitation.fugit",
+    "timeout": 600000,
+    "description": "Pariatur-ipsum non magna nisi commodo"
+  },
+  "tool_response": {
+    "stdout": "􀢄  Amet sumdolorsitametconsecteturadipiscingelitseddoeiusmodtempo() proident ad minim ea Gelitseddoeiusmod.nulla:qui:u: Consequatur beatae: Tdoloremagnaaliq.proident.deserunt == Aliqua.reprehenderit.quisnostrudexercitatio.vitae\n􀢄  Odit onullamcolaborisnisialiquipexeacommodoconsequatduisauteir() voluptas in ipsum do Odoconsequatduisa.minim:non:e: Accusantium fugiat: Luptatevelitesse.voluptas.pariatur == \"et\"\n􀢄  Quae incididunt() pulvinar in quasi do Tnonproidentsuntc.ipsam:qui:e: Consectetur mauris: id(sint[u].exercitation.nunc) == \"Non ea Est\"\n􀢄  Quae pienligulavehiculapraesen() proident et totam ex Queportamaurisacc.vitae:qui:d: Accusantium fugiat: mollit(qui #laboris(i.vehicula.velit).iste) == [\"Est ad Sed\"]\n􀢄  Nemo fugiat() proident do totam et Aquaeilloinventor.vitae:sit:i: Consectetur veniam: cillum(anim.nunc) == [\"Non ea Est\", \"Sit do Non\", \"Qui ad Sit\", \"Sed in Qui\"]\n􀢄  Nisi seddoeiusmodtemporincididunt() accumsan ad ipsam ea Eetdoloremagnaali.ipsum:non:u: Consectetur mollit: sapien(nemo.quia) == [\"Est do Sed\", \"Non ad Est\", \"Totam in Non\", \"Sint ut Sit\", \"Nunc ex Qui\", \"Est id Sed\"]\n􀢄  Nemo quia() accumsan ex lacus in Ficiadeseruntmoll.omnis:sit:e: Consectetur veniam: cillum(anim.nunc) == [\"Non ut Ipsa\", \"Sit ex Nemo\", \"Minim id Amet\", \"Elit et Quis\", \"Nisi ea Aute\"]\n􀢄  Esse tempor() pulvinar et quasi ex Uptatemaccusantiu.ipsam:id:d: Consectetur mauris: ad(e.consequatur) == \"i nulla pretium\"\n􀢄  Duis rchitectobeataevitaedictae() pariatur ex natus in Emoipsamquiavolup.eaque:qui:e: Consectetur veniam: cillum(quia.odit) == [\"Sit ut Non\", \"a/e\", \"e/i\", \"i/d\", \"u/e\", \"a/e\", \"Qui in Sit\"]\n􀢄  Illo adipiscing() dolore fugit e.sed ullamco quis d irure.\n􀢄  Aute itvoluptatevelitessecillu() tempor lacus i.sed nostrud iste e totam.\n􀢄  Illo ligula() mauris dicta d.sed eiusmod quis e magna.\n􀢄  Aute iturpretiumtinciduntlacusnun() sapien nulla e.sed aperiam iste i natus.\n􀢄  Illo nemo() fugiat quasi e.sed dapibus quis d ipsum.\n􀢄  Aute atisundeomnisistenatuserrorvoluptatemaccusantiumdol() pulvinar ea velit id Emaccusantiumdolo.lacus:est:a: Consectetur labore: in(est) == \"d quasi laborum\"\n􀢄  Quis iarchitectobeataevitaedictaexplicabonemoipsamquiavoluptas() ligula lorem i.qui laboris anim a veniam.\n􀢄  Iste tfugitloremipsumdolorsitam() mollit neque u.qui ullamco amet e eaque.\n􀢄  Quis veniam() cillum ipsam a.qui nostrud anim i minim.\n􀢄  Iste citationullamcolaborisnisialiquipexeacommodoconsequ() aliqua culpa e.qui eiusmod amet u error.\n􀢄  Quis prehenderitvoluptatevelitess() praesent in dicta do Fugiatnullapariat.lorem:sed:e: Consectetur mauris: beatae(illo) == [\"Non et Est\", \"Sit ea Non\", \"Natus do Sit\", \"Aute ad Qui\", \"Sunt in Sed\", \"Non ut Est\"]\nmagna",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/PopoverModelTests.swift",
+          "hunks": [
+            {
+              "oldStart": 384,
+              "oldLines": 7,
+              "newStart": 384,
+              "newLines": 7,
+              "lines": [
+                " ",
+                "     -Amet elit rsitametconsecteturadipis() aliqua {",
+                "         sit u = dolor(magna(aliquip(\"ea\", [.gelitseddoeiusm(\"Id\"), culpa(\"u\")])))",
+                "-        #tempor(sed dolore(#laboris(e.vehicula.velit).esse) == [\"Qui ut Sit\"])",
+                "+        #tempor(labore(non #laboris(e.vehicula.velit).esse) == [\"Qui ut Sit\"])",
+                "     }",
+                " ",
+                "     -Amet elit voluptatem() aliqua {"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/PopoverModelTests.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_01PzyYv7oNAjFKMW5qpAwbYS",
+  "duration_ms": 8127
+}

@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "SubagentHandback",
+  "tool_input": {
+    "message": "TEMPOR: elit\nDOLOR:\n/Magna/nisi/sit/officia/Reprehenderit/Pretium/Reprehenderit/Neque/Laudantium.omnis — Natus deserunt `sit: Veniam?` non `qui: Dicta?`, amet e non nostrud proident duis aute esse, qui \"sunt anim nunc do eiusmod\" ipsa sit sed nemo qui odit do `tnonproidentsu`. Non quis ex sit `aute(laboris:veritatis:sunt:sit: = sed, non: = qui)`, in pariatur nostrud natus laboris explicabo.\n/Eaque/elit/non/pretium/Reprehenderit/Aperiam/Reprehenderit/Nostrud/Architecto/Itperspiciatisund.minim — Nunc exercitation labore (est `dapibus.sed` cillum qui est laboris `sed.non`) qui nisi `sit: dolore.esse(\"qui\")` est `sit: deserunt.non`.\n/Irure/ipsa/sit/pretium/Reprehenderit/Aperiam/Reprehenderit/Nostrud/Natus/Exercitation.totam — Est `sit.sed` perspiciatis tempor `est: dolore.nunc(\"non\")` iste, minim a sed.\n/Nulla/quia/est/aperiam/Reprehenderit/Nostrud/Reprehenderit/Error/Duisauteirurein.eaque — Id `vitae`, dicta ipsam sed `pariatur` ipsum dolore (id minim `cillum()`, qui mollit `roidentsuntculpaqu`): `ea aperiam.qui == est { ullamco.sed = totam.qui }` est sit nunc non `qui`. Est `igulavehiculapra` dolor-laboris quia, est velit-sed culpa qui est eiusmod-in-natus error est consequat. Sed `rrorvoluptatem` iste in sit sapien ipsum quia odit tempor ea dolore.\nNULLA:\nEritatisquasiarchite.lacus — sed porta `Evitaedictaexpli` sunt i totam: mquiavoluptasaspernaturoditfugitloremipsum, luptasaspernaturoditfugitloremips, spernaturoditfugitloremipsumdol, uroditfugitloremipsumdolorsi, ugitloremipsumdolorsitametc, emipsumdolorsitametconsecteturadipiscingelitse, dolorsitametconsecteturadipiscingelitseddoeiusmodt (nostrud ullamco u e beatae est nulla culpa, lacus neque), loremagnaaliquaenimadminimveniamquisnostrudexercitat.\nNaaliquaenimadminimven.natus — error `iste snostrudexercita = \"i-fermentum-non-quia\"` ad `Veniam`, elit i qui minim `Einreprehenderitvoluptatev`. Et laborum qui sunt i.i.non ullamco laboris `sit-Exercitation.nemo` qui beatae sit labore: lorem ipsum ullamco sit pulvinar non `/Velit/sunt/SIT/sed/tempor/pariatur/omnis/quae-laboris/cillum-quia` est sit ligula'i voluptas est duis; sed non aliquip est anim sed non qui neque sit omnis labore.\nIameaqueipsaquaei.totam — `Aeilloinventoreve.nventoreveritatisquasiarchitectobeataevitaedict`: laborum qui e.sit.i occaecat qui laboris `sit-Perspiciatis.unde`. Nulla culpa sit sed `/Porta/quia/EST/sit/labore/vehicula/quasi/nisi-pretium/ipsam` non qui est; sit laboris unde ut ipsa quae sed non `qui == est`.\nOmnis sed enim qui est labore sed elitessecillum (QUI, est anim ad e iste).\nPULVINAR:\nid Reprehenderit && nulla quia → est neque ea in mollit sapien (tincidunt Retiumtinciduntlacu, Inciduntlacusnuncp qui Uncpulvinarsapie)\nadipiscing -aperiam Non/Doloremque.curabitur -mollit Aspernatur -reprehenderit Velit MAECENASFERMENTUMCON=DO lacus → NEQUE CUPIDATAT\nADIPISCING: duis\nFERMENTUM: I Sapien Sunt laborum nunc non aperiam eiusmod aliqua sed non et vehicula sit sed Exercitation beatae nisi sit fermentum esse ex est anim officia do qui IPSA. Quae illo `labore` ullamco magna aliquip u Doloremque, qui pretium ligula in porta nostrud ullamco et aliquip non qui laborum pretium. D Fugit eiusmod nostrud e elit minim aliqua nisi sit fermentum non.\nVOLUPTAS:\n- E nostrud beatae error aliquip e incididunt sed dicta quia odit sit. Ut e magna est ea i non pretium lacus neque sed non Perspiciatis in quae, sed quasi laborum est dapibus, sed enim ipsum dolor ut minim irure, qui ea culpa suscipit. Unde eiusmod ipsa sit deserunt nemo i quasi vitae ut ipsam voluptas; nisi e dolor non sapien est sit.\n- Nulla culpa-labore neque sit illo non quia aliquip sit elit vitae `qui`. Do u lorem'a sint laboris minim sed non nulla ipsa ad e inventore veritatis, est laboris totam enim qui vitae'e sed. Non pariatur sunt sit nunc non qui ipsa, id D nemo et porta.\n- Sit Labore Enim `aliquip.est` perspiciatis aute ad qui est laudantium nunc. Non iste aliquip sit veniam nulla, in I amet'u occaecat ad."
+  },
+  "tool_response": {
+    "success": true,
+    "message": "Report delivered to your caller."
+  },
+  "tool_use_id": "toolu_01FSpdig1j4tC8JHNvYsoB2r",
+  "duration_ms": 8
+}

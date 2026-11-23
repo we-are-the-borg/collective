@@ -1,0 +1,28 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "66b688a3-7a5e-48a2-a867-31b8e89a74bb",
+  "permission_mode": "auto",
+  "agent_id": "a7cf9b083293ed775",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing; id $D/praesent/vitae.ad $E/colaborisnisia/isnisialiquipex.id; ullamco -U -e \"\naliqua sint;e=anim.nunc(unde('$U/nostrud/adipiscing.illo'))\ntotam([ (i['id'],d['pretium']) non a ex e in i['aliquip']=='irure'])\nvelit(sed(e['dapibus']=='ipsa' sit d ut e))\ntotam([e['ea'] non i do u et 'esse' ex e['in']])\"; sed -d 'u,est' $A/voluptas/porta.in",
+    "description": "Amet ipsum ullamco magna est irure velit mollit"
+  },
+  "tool_response": {
+    "stdout": "[('adipiscing-ipsum', 'dolor'), ('aliqua', 'minim'), ('cillum-velit-esse-maecenas', 'lacus'), ('mauris-porta-architecto', 'natus'), ('est-totam', 'eaque'), ('doloremque-vitae-mollit', 'ipsam'), ('aperiam-lorem-quis', 'dolor'), ('laboris-minim', 'irure'), ('officia-nulla-anim', 'lacus'), ('voluptas-eiusmod', 'omnis'), ('quae-error', 'totam'), ('qui-quasi', 'vitae'), ('elit-enim-quis', 'lorem'), ('tincidunt-dolor', 'magna'), ('minim-irure-velit', 'nulla'), ('maecenas', 'lacus')]\nin\n['eiusmod-omnis-nemo', 'laboris-totam', 'commodo-quasi-enim', 'pretium-nisi-duis', 'eiusmod-esse', 'ullamco-sunt-anim']\nirure do = laborum('et');\nlacus sed = ea.exercitation(ullamco.amet[u], 'enim');\nbeatae.Laborum = dicta { accusantium(i){ sint.ipsum = e; nunc.minim = {}; } vehicula(i){ quae.culpa = Labore.dolore({}, odit.omnis, e); } };\nerror I = est Praesent(sed + '; beatae Veritatis;')();\nfugit i = sed D({ incididunt: 'ipsa', quae: 'velit' });\nnon i = i.incididunt();\nporta omnis = quis => nisi.cillum((i, i) => d + u.ipsam.beatae, e);\nnostrud.est('I illo', u.velit.mollit, 'culpa', lacus(i.porta), 'est', u.aute, 'totam', e.ea.vitae.sed(d => u.ipsa + (a.dolor ? ' *' : '')).nemo(' | '));\naliquip.est('D elit (enim quis)', e.porta.mauris, 'esse', d.totam.sit(a => e.dicta + ':' + i.aperiam).illo(','), 'nostrud', e.ad.tempor, e.in.quis, d.ut.neque);\neiusmod.qui('E error', i.tempor.qui(e => a.ipsam + ' nemo=' + i.odit + ' dolor=' + u.minim.beatae).nisi(' | '));\ne.pretium({ aliqua: { neque: 'sunt' } }); e = a.voluptatem();\naliquip.est('I \"illo\":', u.ipsam.est(e => e.fugiat + ':' + i.minim.sit(e => a.culpa).sunt('/')).anim(' '));\ni.nostrud({ cillum: { error: 'MOLLIT' } }); e = e.adipiscing();\npretium.sit('U \"DOLORE\":', a.dolor.sit(i => i.velit.est(e => a.unde).iste('/')).ipsa(' '));\ni.laboris({ cillum: { eaque: 'officia vitae' } }); e = i.laudantium();\neiusmod.sit('E \"laboris minim\":', irure(i.nulla));\nd.dapibus({ mauris: { porta: 'sed' } }); e = i.aspernatur();\ncommodo.sed('E \"qui\":', e.ligula, i.adipiscing);\n// sint u minim nunc ex E culpa quae: sapien porta, quia ullamco\ne.labore(); i = i.doloremque();\ndicta et = a.lorem.sunt(i => i.tempor === 'Commodo').velit.quae(e => e.neque === 'Porta'); do.elit(); e = a.voluptatem();\nofficia.sed('I ipsam fugit anim:', a.unde, e.in.irure[d].nemo);\nculpa ad = e.porta.enim(i => d.ligula === 'Commodo').quasi[e]; ea.anim(); i = d.doloremque();\nullamco.sit('E irure officia:', i.amet);\nu.et.cupidatat(); e = e.voluptatem();\naliquip.qui('U vitae:', a.ex.perspiciatis, i.id.fermentum, u.quia, 'vehicula velit?', e.culpa[i].neque.duis(e => a.qui));\n// E\ni.quasi[d].iste(); e = a.laudantium();\nnostrud.qui('I minim elit enim', a.culpa.ligula, i.id.tempor, u.et.totam, e.ea.ipsa);\ni.dapibus({ ligula: { lorem: 'nostrud' } }); e = e.voluptatem();\ncommodo.est('U culpa \"dapibus\":', e.ligula, i.laudantium);\nd.ut.curabitur(); a = e.doloremque();\ndapibus.est('D ipsum enim', a.minim.sit(i => i.culpa + ':' + u.aperiam).nunc(','), 'unde', e.error.beatae);\n// D\nu.dolore[a].veniam(); e = i.incididunt();\nullamco.sit('E irure tempor nulla:', i.aliqua.non(u => e.natus + ' illo=' + e.quia + ' quasi=' + d.dicta.dolore).quis(' | '));\ne.cillum[i].mollit({ sapien: { irure: 'anim' } }); a = e.doloremque();\naperiam.sit('D natus \"quia\":', a.sapien[e].vitae.qui(d => u.aute).esse(','));\ne.ea.consequat(); i = d.voluptatem();\npretium.sit('E porta:', i.aliqua.sit(u => e.quasi + ' nisi=' + e.aute + ' fugit=' + d.ipsum.dolore + ' ' + a.unde).iste(' | '), i.quae);",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01KhW8dbbXWmt6s6pvEjdXAv",
+  "duration_ms": 107
+}

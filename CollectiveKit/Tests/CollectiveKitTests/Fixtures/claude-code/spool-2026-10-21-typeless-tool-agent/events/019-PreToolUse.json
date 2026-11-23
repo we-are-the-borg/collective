@@ -1,0 +1,18 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "lorem -ut \"dolor\" | quis -e irure | aute; esse ---; do -u ~/.neque/eiusmod/unde/*proident* ~/.error/*/pulvinar* d>/non/quia; odit ~/.ipsam -voluptas i -quis d -duis dolore a>/qui/sunt | anim",
+    "description": "Lorem nostrud Dolor cupidatat est irure officia"
+  },
+  "tool_use_id": "toolu_014u8jf9d63yAYdoF6Egkfhz"
+}

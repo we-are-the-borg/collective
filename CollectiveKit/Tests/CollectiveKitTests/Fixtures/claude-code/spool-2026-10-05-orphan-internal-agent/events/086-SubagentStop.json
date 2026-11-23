@@ -1,0 +1,26 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/subagents/agent-a80d1cef23c24d600.jsonl",
+  "background_tasks": [
+    {
+      "id": "a80d1cef23c24d600",
+      "type": "subagent",
+      "status": "running",
+      "description": "Task A: kit texts",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

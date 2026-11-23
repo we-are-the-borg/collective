@@ -1,0 +1,27 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "ad0c274961290221d",
+  "agent_type": "",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/subagents/agent-ad0c274961290221d.jsonl",
+  "last_assistant_message": "Pariatur Labore Enim qui Minim vehicula",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

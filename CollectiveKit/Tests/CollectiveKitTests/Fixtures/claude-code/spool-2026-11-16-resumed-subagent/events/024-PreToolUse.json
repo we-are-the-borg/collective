@@ -1,0 +1,23 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0524016e-4402-41b4-ab09-beb551661d10",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "SendMessage",
+  "tool_input": {
+    "to": "a183282c31caebc12",
+    "summary": "DO: voluptate dolore A, Pulvinar irure",
+    "message": "Consequat sed enim a (est vehicula in #non `## Sint`): ligula E. Voluptate ex qui dolore sit illo.\n- Non laborum odit ex e.in:i, do u minim vehicula. Ex ea sit suscipit aperiam `--iste-omnis` sit `--illo-labore`, qui est amet pretium dapibus aperiam `--nisi` sit `--aute-magna`.\n- Sint ut anim ad veniam lacus fugiat quae. `--illo` natus veritatis ad eaque labore. In qui est u aute ipsum.\n- Sint magna pulvinar nunc non qui dolore lacus. Neque cillum fugiat odit sit ut enim qui est dicta (ipsam, aliqua, sint explicabo, fugiat), magna ex iste officia id illo lacus quia odit sit ullamco. Fugiat quis.\n- Eaque duis `usmodtemporinc()` esse qui aperiam i.id non magna↔fugiat sit illo↔nulla.\n- Quia: lacus sit elit et `quis/error-cillum.in` non qui u.et sed non ipsum (in magna illo `--nemo` et Nulla sit Elit Enim Quis; Omnis'u aute↔totam ex e.sit).\n- Maecenas Ipsam ligula et ipsum illo magna in est aspernatur. U excepteur quis neque ea sed non tempor; est et ad \"Accumsan dicta\" in id sed'u ullamco magna.\n- `minim/elit.in`: quis #est sit (`- [e] … Esse: …`), sint est laboris i.do.\n- Iste est sit ipsam aperiam in `tametconsecteturadipiscingelitsedd` do voluptate.et (\"Ad officia labore culpa aliqua\"); do ut sit natus non Totam Eaque Quae sed Nemo Quia/Odit.\nAmet laudantium `dolor.quis`, est sit aute nulla, qui labore in aliqua: non natus laboris sit sapien, non mauris/dicta dapibus, sed pariatur quis ullamco ea `minim.esse` sapien sunt anim beatae.",
+    "type": "message",
+    "recipient": "a183282c31caebc12",
+    "recipient_kind": "agent",
+    "content": "Consequat sed enim a (est vehicula in #non `## Do…"
+  },
+  "tool_use_id": "toolu_014KqaQXQYu6kn73R2WcY7zy"
+}

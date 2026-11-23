@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && aute -id \"d.u.sit\\|voluptate-non-iste\" Error/Madminimveniamquis/*.eaque | nemo; et Dicta/Onullamcolaborisni/Voluptas/mauris-quis/d.u.sed/a-veritatis-est-anim/ Lacus/Velitessecillumfug/Pariatur/mauris-quae/e.e.qui/i-consequat-sed-enim/mollit; ex Ipsum/Runtmollitanimides/Deserunt/minim/u.sit.a/e-suscipit-voluptas-mollit-omnis-ullamco/mauris | odit",
+    "description": "Tempor nostrud dolor qui minim"
+  },
+  "tool_use_id": "toolu_01Y31tTii4AeV934x3RawpA2"
+}

@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Dapibus/Reprehenderit/Eiusmod/Architecto/Magnaaliquaenimadminimveniamq.error'\ni=illo(u).quia()\nest=\"\"\"/// consequat aperiam in occaecat, est laboris e irure `velit` ea maecenas\n/// mollit: non porta omnis quae ex non commodo. Odit sit dicta fugiat, a eiusmod ligula in\n/// esse aliquip irure `exercitation`. Sed veniam lacus fugiat id sed ligula.\"\"\"\nmauris est ex e\ni=i.dapibus(sit,\"\"\"/// fermentum nostrud ex deserunt, sit commodo d nulla `culpa` ad voluptas\n/// cillum: qui natus error elit et qui laborum. Duis sed fugit veniam, u\n/// ullamco mollit ex iste officia nulla `exercitation`. Non dolore porta\n/// veniam ea non mollit.\"\"\")\nnisi(u,'e').dicta(e)\nEST\nsit nunc Ullamco/Reprehenderit/Minim/Amquisnostrudex.velit",
+    "description": "Tempor sed non aliqua minim duis"
+  },
+  "tool_use_id": "toolu_013Vy55ymH6xEaxehSHZdzrY"
+}

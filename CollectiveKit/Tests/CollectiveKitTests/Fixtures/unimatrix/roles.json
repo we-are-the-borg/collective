@@ -1,0 +1,3576 @@
+{
+  "schemes": [
+    {
+      "file": "ayu-dark.yaml",
+      "name": "Ayu Dark",
+      "family": "Ayu",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f07178",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ff8f40",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffb454",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#aad94c",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#95e6cb",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#59c2ff",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#d2a6ff",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#020306",
+        "surface-sunken": "#05070c",
+        "surface-panel": "#05070c",
+        "surface": "#0b0e14",
+        "surface-raised": "#202227",
+        "surface-hover": "#2f3134",
+        "surface-active": "#434445",
+        "text": "#e6e1cf",
+        "text-muted": "#c0bdaf",
+        "text-subtle": "#9c9a91",
+        "text-disabled": "#6e6e6a",
+        "border": "#393b3d",
+        "border-strong": "#585957",
+        "border-control": "#6c6d6b",
+        "focus-ring": "#59c2ff",
+        "accent": "#d2a6ff",
+        "accent-on": "#0b0e14",
+        "accent-hover": "#d8b4ff",
+        "accent-active": "#e0c4ff",
+        "diff-added-fg": "#aad94c",
+        "diff-removed-fg": "#f07178",
+        "diff-added-bg": "#aad94c1f",
+        "diff-removed-bg": "#f071781f",
+        "diff-word-added": "#aad94c4d",
+        "diff-word-removed": "#f071784d",
+        "diff-gutter": "#05070c",
+        "agent-working": "#59c2ff",
+        "agent-waiting": "#ff8f40",
+        "agent-done": "#aad94c",
+        "agent-idle": "#9c9a91",
+        "agent-error": "#f07178",
+        "class-code": "#59c2ff",
+        "class-test": "#95e6cb",
+        "class-docs": "#ffb454",
+        "class-config": "#ff8f40",
+        "class-generated": "#6e6e6a",
+        "unseen": "#ffb454",
+        "warning": "#ffb454",
+        "warning-bg": "#ffb4541a",
+        "danger": "#f07178",
+        "success": "#aad94c",
+        "info": "#95e6cb",
+        "scrim": "#02030699",
+        "syntax-comment": "#9aa9b9",
+        "syntax-variable": "#ff8389",
+        "syntax-constant": "#ff8f40",
+        "syntax-type": "#ffb454",
+        "syntax-string": "#aad94c",
+        "syntax-special": "#95e6cb",
+        "syntax-function": "#59c2ff",
+        "syntax-keyword": "#d2a6ff",
+        "syntax-embedded": "#e6b450"
+      }
+    },
+    {
+      "file": "ayu-light.yaml",
+      "name": "Ayu Light",
+      "family": "Ayu",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#f07171",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#fa8d3e",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#f2ae49",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#6cbf49",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#4cbf99",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#399ee6",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#a37acc",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#c6c7c8",
+        "surface-sunken": "#eff0f1",
+        "surface-panel": "#ecedee",
+        "surface": "#f8f9fa",
+        "surface-raised": "#e4e5e7",
+        "surface-hover": "#d7d9db",
+        "surface-active": "#c6c9cb",
+        "text": "#4e5358",
+        "text-muted": "#5a5f62",
+        "text-subtle": "#63676a",
+        "text-disabled": "#84878a",
+        "border": "#cfd1d3",
+        "border-strong": "#b6b9bc",
+        "border-control": "#7f8285",
+        "focus-ring": "#047fc5",
+        "accent": "#734b99",
+        "accent-on": "#f8f9fa",
+        "accent-hover": "#6a4290",
+        "accent-active": "#613987",
+        "diff-added-fg": "#327b00",
+        "diff-removed-fg": "#b83e43",
+        "diff-added-bg": "#6cbf491f",
+        "diff-removed-bg": "#f071711f",
+        "diff-word-added": "#6cbf494d",
+        "diff-word-removed": "#f071714d",
+        "diff-gutter": "#eff0f1",
+        "agent-working": "#0070ae",
+        "agent-waiting": "#a14e00",
+        "agent-done": "#327b00",
+        "agent-idle": "#63676a",
+        "agent-error": "#bb4245",
+        "class-code": "#0076b7",
+        "class-test": "#008262",
+        "class-docs": "#9c6700",
+        "class-config": "#b25700",
+        "class-generated": "#84878a",
+        "unseen": "#9c6700",
+        "warning": "#9c6700",
+        "warning-bg": "#f2ae491a",
+        "danger": "#aa3137",
+        "success": "#358200",
+        "info": "#008262",
+        "scrim": "#4e535859",
+        "syntax-comment": "#656a70",
+        "syntax-variable": "#b83e43",
+        "syntax-constant": "#a95300",
+        "syntax-type": "#915f00",
+        "syntax-string": "#317800",
+        "syntax-special": "#00785a",
+        "syntax-function": "#006daa",
+        "syntax-keyword": "#7f56a5",
+        "syntax-embedded": "#896225"
+      }
+    },
+    {
+      "file": "ayu-mirage.yaml",
+      "name": "Ayu Mirage",
+      "family": "Ayu",
+      "short_name": "Mirage",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f28779",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ffad66",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffd173",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#87d963",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#5ccfe6",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#80b0ff",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#d4bfff",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#101520",
+        "surface-sunken": "#171c27",
+        "surface-panel": "#171c27",
+        "surface": "#1f2430",
+        "surface-raised": "#292d39",
+        "surface-hover": "#3d414b",
+        "surface-active": "#4d5159",
+        "text": "#cccac2",
+        "text-muted": "#afafaa",
+        "text-subtle": "#939493",
+        "text-disabled": "#6f7275",
+        "border": "#454952",
+        "border-strong": "#5e6167",
+        "border-control": "#75787e",
+        "focus-ring": "#80b0ff",
+        "accent": "#d4bfff",
+        "accent-on": "#1f2430",
+        "accent-hover": "#dcccff",
+        "accent-active": "#e6daff",
+        "diff-added-fg": "#87d963",
+        "diff-removed-fg": "#f28779",
+        "diff-added-bg": "#87d9631f",
+        "diff-removed-bg": "#f287791f",
+        "diff-word-added": "#87d96336",
+        "diff-word-removed": "#f287794d",
+        "diff-gutter": "#171c27",
+        "agent-working": "#80b0ff",
+        "agent-waiting": "#ffad66",
+        "agent-done": "#87d963",
+        "agent-idle": "#939493",
+        "agent-error": "#f28779",
+        "class-code": "#80b0ff",
+        "class-test": "#5ccfe6",
+        "class-docs": "#ffd173",
+        "class-config": "#ffad66",
+        "class-generated": "#6f7275",
+        "unseen": "#ffd173",
+        "warning": "#ffd173",
+        "warning-bg": "#ffd1731a",
+        "danger": "#fc9082",
+        "success": "#87d963",
+        "info": "#5ccfe6",
+        "scrim": "#10152099",
+        "syntax-comment": "#9ea5af",
+        "syntax-variable": "#f28779",
+        "syntax-constant": "#ffad66",
+        "syntax-type": "#ffd173",
+        "syntax-string": "#d5ff80",
+        "syntax-special": "#95e6cb",
+        "syntax-function": "#73d0ff",
+        "syntax-keyword": "#d4bfff",
+        "syntax-embedded": "#fd828c"
+      }
+    },
+    {
+      "file": "catppuccin-frappe.yaml",
+      "name": "Catppuccin Frappe",
+      "family": "Catppuccin",
+      "short_name": "Frappé",
+      "high_contrast": false,
+      "author": "https://github.com/catppuccin/catppuccin",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#e78284",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ef9f76",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#e5c890",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#a6d189",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#81c8be",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#8caaee",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#ca9ee6",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#212335",
+        "surface-sunken": "#292c3e",
+        "surface-panel": "#292c3e",
+        "surface": "#303446",
+        "surface-raised": "#3e4357",
+        "surface-hover": "#484d62",
+        "surface-active": "#545970",
+        "text": "#c6d0f5",
+        "text-muted": "#b6c0e3",
+        "text-subtle": "#a7b1d0",
+        "text-disabled": "#777e99",
+        "border": "#52576e",
+        "border-strong": "#686e87",
+        "border-control": "#888fa9",
+        "focus-ring": "#8caaee",
+        "accent": "#daaef7",
+        "accent-on": "#303446",
+        "accent-hover": "#e3b9ff",
+        "accent-active": "#e9c9ff",
+        "diff-added-fg": "#a6d189",
+        "diff-removed-fg": "#f89293",
+        "diff-added-bg": "#a6d1891f",
+        "diff-removed-bg": "#e782841f",
+        "diff-word-added": "#a6d18929",
+        "diff-word-removed": "#e7828447",
+        "diff-gutter": "#292c3e",
+        "agent-working": "#8caaee",
+        "agent-waiting": "#ef9f76",
+        "agent-done": "#a6d189",
+        "agent-idle": "#a7b1d0",
+        "agent-error": "#e78284",
+        "class-code": "#8caaee",
+        "class-test": "#81c8be",
+        "class-docs": "#e5c890",
+        "class-config": "#ef9f76",
+        "class-generated": "#777e99",
+        "unseen": "#e5c890",
+        "warning": "#e5c890",
+        "warning-bg": "#e5c8901a",
+        "danger": "#ffa8a8",
+        "success": "#a6d189",
+        "info": "#81c8be",
+        "scrim": "#21233599",
+        "syntax-comment": "#acb3cc",
+        "syntax-variable": "#ff9899",
+        "syntax-constant": "#f2a279",
+        "syntax-type": "#e5c890",
+        "syntax-string": "#a6d189",
+        "syntax-special": "#81c8be",
+        "syntax-function": "#95b4f8",
+        "syntax-keyword": "#d0a4ed",
+        "syntax-embedded": "#eebebe"
+      }
+    },
+    {
+      "file": "catppuccin-latte.yaml",
+      "name": "Catppuccin Latte",
+      "family": "Catppuccin",
+      "short_name": "Latte",
+      "high_contrast": false,
+      "author": "https://github.com/catppuccin/catppuccin",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#d20f39",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#fe640b",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#df8e1d",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#40a02b",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#179299",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#1e66f5",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#8839ef",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#c4c6ca",
+        "surface-sunken": "#edeff3",
+        "surface-panel": "#dbdde1",
+        "surface": "#eff1f5",
+        "surface-raised": "#e2e5eb",
+        "surface-hover": "#cfd2db",
+        "surface-active": "#c0c2ce",
+        "text": "#4c4f69",
+        "text-muted": "#54576e",
+        "text-subtle": "#5d6073",
+        "text-disabled": "#787b8b",
+        "border": "#c3c6d0",
+        "border-strong": "#aaadbb",
+        "border-control": "#7a7c8a",
+        "focus-ring": "#1e66f5",
+        "accent": "#771dda",
+        "accent-on": "#eff1f5",
+        "accent-hover": "#6d00ce",
+        "accent-active": "#6300bc",
+        "diff-added-fg": "#1d7600",
+        "diff-removed-fg": "#c00031",
+        "diff-added-bg": "#40a02b1f",
+        "diff-removed-bg": "#d20f391f",
+        "diff-word-added": "#40a02b4d",
+        "diff-word-removed": "#d20f3929",
+        "diff-gutter": "#edeff3",
+        "agent-working": "#0652df",
+        "agent-waiting": "#a63d00",
+        "agent-done": "#1b7000",
+        "agent-idle": "#5d6073",
+        "agent-error": "#c50033",
+        "class-code": "#1b63f1",
+        "class-test": "#00787f",
+        "class-docs": "#9d6000",
+        "class-config": "#bd4700",
+        "class-generated": "#787b8b",
+        "unseen": "#9d6000",
+        "warning": "#9d6000",
+        "warning-bg": "#df8e1d1a",
+        "danger": "#b6002e",
+        "success": "#1f7d00",
+        "info": "#00787f",
+        "scrim": "#4c4f6959",
+        "syntax-comment": "#5c606a",
+        "syntax-variable": "#c00031",
+        "syntax-constant": "#a63d00",
+        "syntax-type": "#895300",
+        "syntax-string": "#1b6f00",
+        "syntax-special": "#00696e",
+        "syntax-function": "#0652e0",
+        "syntax-keyword": "#7d27e1",
+        "syntax-embedded": "#a04245"
+      }
+    },
+    {
+      "file": "catppuccin-macchiato.yaml",
+      "name": "Catppuccin Macchiato",
+      "family": "Catppuccin",
+      "short_name": "Macchiato",
+      "high_contrast": false,
+      "author": "https://github.com/catppuccin/catppuccin",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ed8796",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f5a97f",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#eed49f",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#a6da95",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#8bd5ca",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#8aadf4",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c6a0f6",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#151829",
+        "surface-sunken": "#1c1f31",
+        "surface-panel": "#1c1f31",
+        "surface": "#24273a",
+        "surface-raised": "#303348",
+        "surface-hover": "#41455c",
+        "surface-active": "#51566d",
+        "text": "#cad3f5",
+        "text-muted": "#aeb7d6",
+        "text-subtle": "#949bb8",
+        "text-disabled": "#717792",
+        "border": "#494d64",
+        "border-strong": "#61667f",
+        "border-control": "#787d97",
+        "focus-ring": "#8aadf4",
+        "accent": "#c9a3f9",
+        "accent-on": "#24273a",
+        "accent-hover": "#d3b0ff",
+        "accent-active": "#dbbfff",
+        "diff-added-fg": "#a6da95",
+        "diff-removed-fg": "#ed8796",
+        "diff-added-bg": "#a6da951f",
+        "diff-removed-bg": "#ed87961f",
+        "diff-word-added": "#a6da9538",
+        "diff-word-removed": "#ed87964d",
+        "diff-gutter": "#1c1f31",
+        "agent-working": "#8aadf4",
+        "agent-waiting": "#f5a97f",
+        "agent-done": "#a6da95",
+        "agent-idle": "#949bb8",
+        "agent-error": "#ed8796",
+        "class-code": "#8aadf4",
+        "class-test": "#8bd5ca",
+        "class-docs": "#eed49f",
+        "class-config": "#f5a97f",
+        "class-generated": "#717792",
+        "unseen": "#eed49f",
+        "warning": "#eed49f",
+        "warning-bg": "#eed49f1a",
+        "danger": "#fe97a5",
+        "success": "#a6da95",
+        "info": "#8bd5ca",
+        "scrim": "#15182999",
+        "syntax-comment": "#a9aec9",
+        "syntax-variable": "#f7909f",
+        "syntax-constant": "#f5a97f",
+        "syntax-type": "#eed49f",
+        "syntax-string": "#a6da95",
+        "syntax-special": "#8bd5ca",
+        "syntax-function": "#8aadf4",
+        "syntax-keyword": "#c6a0f6",
+        "syntax-embedded": "#f0c6c6"
+      }
+    },
+    {
+      "file": "catppuccin-mocha.yaml",
+      "name": "Catppuccin Mocha",
+      "family": "Catppuccin",
+      "short_name": "Mocha",
+      "high_contrast": false,
+      "author": "https://github.com/catppuccin/catppuccin",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f38ba8",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#fab387",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#f9e2af",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#a6e3a1",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#94e2d5",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#89b4fa",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#cba6f7",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#0f0f1e",
+        "surface-sunken": "#161625",
+        "surface-panel": "#161625",
+        "surface": "#1e1e2e",
+        "surface-raised": "#303143",
+        "surface-hover": "#3c3e51",
+        "surface-active": "#4d4f64",
+        "text": "#cdd6f4",
+        "text-muted": "#b0b7d3",
+        "text-subtle": "#9399b3",
+        "text-disabled": "#6f738a",
+        "border": "#44465a",
+        "border-strong": "#5d6177",
+        "border-control": "#777b92",
+        "focus-ring": "#89b4fa",
+        "accent": "#cba6f7",
+        "accent-on": "#1e1e2e",
+        "accent-hover": "#d5b3ff",
+        "accent-active": "#ddc2ff",
+        "diff-added-fg": "#a6e3a1",
+        "diff-removed-fg": "#f38ba8",
+        "diff-added-bg": "#a6e3a11f",
+        "diff-removed-bg": "#f38ba81f",
+        "diff-word-added": "#a6e3a140",
+        "diff-word-removed": "#f38ba84d",
+        "diff-gutter": "#161625",
+        "agent-working": "#89b4fa",
+        "agent-waiting": "#fab387",
+        "agent-done": "#a6e3a1",
+        "agent-idle": "#9399b3",
+        "agent-error": "#f38ba8",
+        "class-code": "#89b4fa",
+        "class-test": "#94e2d5",
+        "class-docs": "#f9e2af",
+        "class-config": "#fab387",
+        "class-generated": "#6f738a",
+        "unseen": "#f9e2af",
+        "warning": "#f9e2af",
+        "warning-bg": "#f9e2af1a",
+        "danger": "#f38ba8",
+        "success": "#a6e3a1",
+        "info": "#94e2d5",
+        "scrim": "#0f0f1e99",
+        "syntax-comment": "#abadc4",
+        "syntax-variable": "#fa91ae",
+        "syntax-constant": "#fab387",
+        "syntax-type": "#f9e2af",
+        "syntax-string": "#a6e3a1",
+        "syntax-special": "#94e2d5",
+        "syntax-function": "#89b4fa",
+        "syntax-keyword": "#cba6f7",
+        "syntax-embedded": "#f2cdcd"
+      }
+    },
+    {
+      "file": "dracula.yaml",
+      "name": "Dracula",
+      "family": "Dracula",
+      "short_name": "Dracula",
+      "high_contrast": false,
+      "author": "clach04 (https://github.com/clach04)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff5555",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ffb86c",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffffa5",
+          "source": "base13"
+        },
+        "green": {
+          "color": "#50fa7b",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#8be9fd",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#bd93f9",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#d6acff",
+          "source": "base16"
+        }
+      },
+      "roles": {
+        "surface-deep": "#181a24",
+        "surface-sunken": "#20222d",
+        "surface-panel": "#20222d",
+        "surface": "#282a36",
+        "surface-raised": "#3d3f4a",
+        "surface-hover": "#4c4e58",
+        "surface-active": "#606169",
+        "text": "#f8f8f2",
+        "text-muted": "#d5d6d3",
+        "text-subtle": "#b3b4b5",
+        "text-disabled": "#888a8e",
+        "border": "#565861",
+        "border-strong": "#74757c",
+        "border-control": "#898a91",
+        "focus-ring": "#bd93f9",
+        "accent": "#d8b1ff",
+        "accent-on": "#282a36",
+        "accent-hover": "#debfff",
+        "accent-active": "#e6ceff",
+        "diff-added-fg": "#50fa7b",
+        "diff-removed-fg": "#ff736e",
+        "diff-added-bg": "#50fa7b1f",
+        "diff-removed-bg": "#ff55551f",
+        "diff-word-added": "#50fa7b4d",
+        "diff-word-removed": "#ff55554d",
+        "diff-gutter": "#20222d",
+        "agent-working": "#bd93f9",
+        "agent-waiting": "#ffb86c",
+        "agent-done": "#50fa7b",
+        "agent-idle": "#b3b4b5",
+        "agent-error": "#ff5555",
+        "class-code": "#bd93f9",
+        "class-test": "#8be9fd",
+        "class-docs": "#ffffa5",
+        "class-config": "#ffb86c",
+        "class-generated": "#888a8e",
+        "unseen": "#ffffa5",
+        "warning": "#ffffa5",
+        "warning-bg": "#ffffa51a",
+        "danger": "#ffaca5",
+        "success": "#50fa7b",
+        "info": "#8be9fd",
+        "scrim": "#181a2499",
+        "syntax-comment": "#b3c5fc",
+        "syntax-variable": "#ffb6af",
+        "syntax-constant": "#ffb86c",
+        "syntax-type": "#f1fa8c",
+        "syntax-string": "#50fa7b",
+        "syntax-special": "#8be9fd",
+        "syntax-function": "#d6bdff",
+        "syntax-keyword": "#ffb0da",
+        "syntax-embedded": "#ffb5af"
+      }
+    },
+    {
+      "file": "everforest-dark-medium.yaml",
+      "name": "Everforest Dark Medium",
+      "family": "Everforest",
+      "short_name": "Dark Medium",
+      "high_contrast": false,
+      "author": "Sainnhe Park (https://github.com/sainnhe)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#e67e80",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#e69875",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#dbbc7f",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#a7c080",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#7fbbb3",
+          "source": "base0D"
+        },
+        "blue": {
+          "color": "#7fbbb3",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#d699b6",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#1e242a",
+        "surface-sunken": "#262d33",
+        "surface-panel": "#262d33",
+        "surface": "#2d353b",
+        "surface-raised": "#373f44",
+        "surface-hover": "#3d464a",
+        "surface-active": "#464f51",
+        "text": "#bccac0",
+        "text-muted": "#a8b5ae",
+        "text-subtle": "#a0aca8",
+        "text-disabled": "#768180",
+        "border": "#414b4e",
+        "border-strong": "#4e5859",
+        "border-control": "#818c8d",
+        "focus-ring": "#7fbbb3",
+        "accent": "#e0a2c0",
+        "accent-on": "#2d353b",
+        "accent-hover": "#ecadcb",
+        "accent-active": "#f6b7d5",
+        "diff-added-fg": "#a7c080",
+        "diff-removed-fg": "#f78e8f",
+        "diff-added-bg": "#a7c0801f",
+        "diff-removed-bg": "#e67e801f",
+        "diff-word-added": "#a7c08021",
+        "diff-word-removed": "#e67e8038",
+        "diff-gutter": "#262d33",
+        "agent-working": "#7fbbb3",
+        "agent-waiting": "#e69875",
+        "agent-done": "#a7c080",
+        "agent-idle": "#a0aca8",
+        "agent-error": "#e67e80",
+        "class-code": "#7fbbb3",
+        "class-test": "#7fbbb3",
+        "class-docs": "#dbbc7f",
+        "class-config": "#e69875",
+        "class-generated": "#768180",
+        "unseen": "#dbbc7f",
+        "warning": "#dbbc7f",
+        "warning-bg": "#dbbc7f1a",
+        "danger": "#fe9495",
+        "success": "#a7c080",
+        "info": "#7fbbb3",
+        "scrim": "#1e242a99",
+        "syntax-comment": "#a7b4bb",
+        "syntax-variable": "#fe9495",
+        "syntax-constant": "#ed9e7b",
+        "syntax-type": "#dbbc7f",
+        "syntax-string": "#a7c080",
+        "syntax-special": "#83c092",
+        "syntax-function": "#82beb6",
+        "syntax-keyword": "#dd9fbc",
+        "syntax-embedded": "#c0abb1"
+      }
+    },
+    {
+      "file": "everforest-light-medium.yaml",
+      "name": "Everforest Light (Medium)",
+      "family": "Everforest",
+      "short_name": "Light Medium",
+      "high_contrast": false,
+      "author": "Márcio Sobel (https://github.com/marciosobel)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#f85552",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f57d26",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#dfa000",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#35a77c",
+          "source": "base0C"
+        },
+        "cyan": {
+          "color": "#35a77c",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#3a94c5",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#df69ba",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#ccc5b2",
+        "surface-sunken": "#f5eedb",
+        "surface-panel": "#f3ecd9",
+        "surface": "#fdf6e3",
+        "surface-raised": "#e8e4d5",
+        "surface-hover": "#dbd8cc",
+        "surface-active": "#cacac0",
+        "text": "#49565e",
+        "text-muted": "#566065",
+        "text-subtle": "#5f6667",
+        "text-disabled": "#848783",
+        "border": "#d2d1c6",
+        "border-strong": "#b9bcb4",
+        "border-control": "#7f827a",
+        "focus-ring": "#1e7fae",
+        "accent": "#a22f82",
+        "accent-on": "#fdf6e3",
+        "accent-hover": "#982479",
+        "accent-active": "#8e1870",
+        "diff-added-fg": "#007754",
+        "diff-removed-fg": "#c9232b",
+        "diff-added-bg": "#35a77c1f",
+        "diff-removed-bg": "#f855521f",
+        "diff-word-added": "#35a77c4d",
+        "diff-word-removed": "#f855524a",
+        "diff-gutter": "#f5eedb",
+        "agent-working": "#0672a2",
+        "agent-waiting": "#a24b00",
+        "agent-done": "#007a56",
+        "agent-idle": "#5f6667",
+        "agent-error": "#cd272e",
+        "class-code": "#0e75a5",
+        "class-test": "#00815b",
+        "class-docs": "#926800",
+        "class-config": "#b35400",
+        "class-generated": "#848783",
+        "unseen": "#926800",
+        "warning": "#926800",
+        "warning-bg": "#dfa0001a",
+        "danger": "#bb081e",
+        "success": "#00815b",
+        "info": "#007754",
+        "scrim": "#49565e59",
+        "syntax-comment": "#5e695c",
+        "syntax-variable": "#c9232b",
+        "syntax-constant": "#a64d00",
+        "syntax-type": "#886000",
+        "syntax-string": "#606e00",
+        "syntax-special": "#007753",
+        "syntax-function": "#006c9a",
+        "syntax-keyword": "#ac398b",
+        "syntax-embedded": "#5c6b5b"
+      }
+    },
+    {
+      "file": "github.yaml",
+      "name": "Github Light",
+      "family": "GitHub",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#ff8182",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#953800",
+          "source": "base08"
+        },
+        "yellow": {
+          "color": "#bf8700",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#4ac26b",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#49bcb7",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#54aeff",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#c297ff",
+          "source": "base17"
+        }
+      },
+      "roles": {
+        "surface-deep": "#c8c8c8",
+        "surface-sunken": "#f3f3f3",
+        "surface-panel": "#f3f3f3",
+        "surface": "#ffffff",
+        "surface-raised": "#e6e7e9",
+        "surface-hover": "#d9dbdd",
+        "surface-active": "#c2c5c8",
+        "text": "#424a53",
+        "text-muted": "#5a616a",
+        "text-subtle": "#62686e",
+        "text-disabled": "#868b90",
+        "border": "#ccced1",
+        "border-strong": "#aeb2b6",
+        "border-control": "#808488",
+        "focus-ring": "#1c7fcc",
+        "accent": "#7448a8",
+        "accent-on": "#ffffff",
+        "accent-hover": "#6b3f9e",
+        "accent-active": "#613593",
+        "diff-added-fg": "#008037",
+        "diff-removed-fg": "#bc464a",
+        "diff-added-bg": "#4ac26b1f",
+        "diff-removed-bg": "#ff81821f",
+        "diff-word-added": "#4ac26b4d",
+        "diff-word-removed": "#ff81824d",
+        "diff-gutter": "#f3f3f3",
+        "agent-working": "#0173be",
+        "agent-waiting": "#953800",
+        "agent-done": "#008037",
+        "agent-idle": "#62686e",
+        "agent-error": "#bc464a",
+        "class-code": "#1179c5",
+        "class-test": "#00837f",
+        "class-docs": "#9d6e00",
+        "class-config": "#953800",
+        "class-generated": "#868b90",
+        "unseen": "#9d6e00",
+        "warning": "#9d6e00",
+        "warning-bg": "#bf87001a",
+        "danger": "#ab363d",
+        "success": "#00873a",
+        "info": "#00837f",
+        "scrim": "#424a5359",
+        "syntax-comment": "#666e78",
+        "syntax-variable": "#953800",
+        "syntax-constant": "#0550ae",
+        "syntax-type": "#926600",
+        "syntax-string": "#0a3069",
+        "syntax-special": "#116329",
+        "syntax-function": "#8250df",
+        "syntax-keyword": "#cf222e",
+        "syntax-embedded": "#82071e"
+      }
+    },
+    {
+      "file": "github-dark.yaml",
+      "name": "Github Dark",
+      "family": "GitHub",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff7b72",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#ffa657",
+          "source": "base08"
+        },
+        "yellow": {
+          "color": "#bb8009",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#3fb950",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#33b3ae",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#58a6ff",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#bc8cff",
+          "source": "base17"
+        }
+      },
+      "roles": {
+        "surface-deep": "#020408",
+        "surface-sunken": "#060a0f",
+        "surface-panel": "#060a0f",
+        "surface": "#0d1117",
+        "surface-raised": "#1f242a",
+        "surface-hover": "#2c3138",
+        "surface-active": "#3e434a",
+        "text": "#c9d1d9",
+        "text-muted": "#a9b0b8",
+        "text-subtle": "#8a9199",
+        "text-disabled": "#626970",
+        "border": "#353a41",
+        "border-strong": "#50555d",
+        "border-control": "#696e77",
+        "focus-ring": "#58a6ff",
+        "accent": "#bc8cff",
+        "accent-on": "#0d1117",
+        "accent-hover": "#c39aff",
+        "accent-active": "#caa8ff",
+        "diff-added-fg": "#3fb950",
+        "diff-removed-fg": "#ff7b72",
+        "diff-added-bg": "#3fb9501f",
+        "diff-removed-bg": "#ff7b721f",
+        "diff-word-added": "#3fb9504d",
+        "diff-word-removed": "#ff7b724d",
+        "diff-gutter": "#060a0f",
+        "agent-working": "#58a6ff",
+        "agent-waiting": "#ffa657",
+        "agent-done": "#3fb950",
+        "agent-idle": "#8a9199",
+        "agent-error": "#ff7b72",
+        "class-code": "#58a6ff",
+        "class-test": "#33b3ae",
+        "class-docs": "#bb8009",
+        "class-config": "#ffa657",
+        "class-generated": "#626970",
+        "unseen": "#bb8009",
+        "warning": "#bb8009",
+        "warning-bg": "#bb80091a",
+        "danger": "#ff7b72",
+        "success": "#3fb950",
+        "info": "#33b3ae",
+        "scrim": "#02040899",
+        "syntax-comment": "#8e97a2",
+        "syntax-variable": "#ffa657",
+        "syntax-constant": "#79c0ff",
+        "syntax-type": "#c5891e",
+        "syntax-string": "#a5d6ff",
+        "syntax-special": "#7ee787",
+        "syntax-function": "#d2a8ff",
+        "syntax-keyword": "#ff7b72",
+        "syntax-embedded": "#ffa198"
+      }
+    },
+    {
+      "file": "github-dark-dimmed.yaml",
+      "name": "Github Dark Dimmed",
+      "family": "GitHub",
+      "short_name": "Dark Dimmed",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f47067",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#f69d50",
+          "source": "base08"
+        },
+        "yellow": {
+          "color": "#ae7c14",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#57ab5a",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#33b3ae",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#539bf5",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#b083f0",
+          "source": "base17"
+        }
+      },
+      "roles": {
+        "surface-deep": "#13181e",
+        "surface-sunken": "#1a1f25",
+        "surface-panel": "#1a1f25",
+        "surface": "#22272e",
+        "surface-raised": "#2f353c",
+        "surface-hover": "#383e46",
+        "surface-active": "#434a53",
+        "text": "#adbac7",
+        "text-muted": "#9fabb7",
+        "text-subtle": "#959faa",
+        "text-disabled": "#69727c",
+        "border": "#414851",
+        "border-strong": "#555d67",
+        "border-control": "#77808a",
+        "focus-ring": "#539bf5",
+        "accent": "#bf94ff",
+        "accent-on": "#22272e",
+        "accent-hover": "#c6a2ff",
+        "accent-active": "#ceb1ff",
+        "diff-added-fg": "#5aae5d",
+        "diff-removed-fg": "#f8736a",
+        "diff-added-bg": "#57ab5a1f",
+        "diff-removed-bg": "#f470671f",
+        "diff-word-added": "#57ab5a38",
+        "diff-word-removed": "#f4706738",
+        "diff-gutter": "#1a1f25",
+        "agent-working": "#539bf5",
+        "agent-waiting": "#f69d50",
+        "agent-done": "#57ab5a",
+        "agent-idle": "#959faa",
+        "agent-error": "#f47067",
+        "class-code": "#539bf5",
+        "class-test": "#33b3ae",
+        "class-docs": "#b88523",
+        "class-config": "#f69d50",
+        "class-generated": "#69727c",
+        "unseen": "#b88523",
+        "warning": "#b88523",
+        "warning-bg": "#ae7c141a",
+        "danger": "#ff867c",
+        "success": "#57ab5a",
+        "info": "#33b3ae",
+        "scrim": "#13181e99",
+        "syntax-comment": "#929eac",
+        "syntax-variable": "#f69d50",
+        "syntax-constant": "#6cb6ff",
+        "syntax-type": "#c89537",
+        "syntax-string": "#96d0ff",
+        "syntax-special": "#8ddb8c",
+        "syntax-function": "#dcbdfb",
+        "syntax-keyword": "#f8736a",
+        "syntax-embedded": "#ff938a"
+      }
+    },
+    {
+      "file": "github-dark-high-contrast.yaml",
+      "name": "Github Dark High Contrast",
+      "family": "GitHub",
+      "short_name": "Dark High Contrast",
+      "high_contrast": true,
+      "author": "Tinted Theming (https://github.com/tinted-theming)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff9492",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#ffb757",
+          "source": "base08"
+        },
+        "yellow": {
+          "color": "#e09b13",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#26cd4d",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#33b3ae",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#71b7ff",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#cb9eff",
+          "source": "base17"
+        }
+      },
+      "roles": {
+        "surface-deep": "#020204",
+        "surface-sunken": "#05060a",
+        "surface-panel": "#05060a",
+        "surface": "#0a0c10",
+        "surface-raised": "#2b2e32",
+        "surface-hover": "#44474b",
+        "surface-active": "#66686d",
+        "text": "#ffffff",
+        "text-muted": "#d5d5d6",
+        "text-subtle": "#acadae",
+        "text-disabled": "#78797c",
+        "border": "#55575c",
+        "border-strong": "#898c90",
+        "border-control": "#929599",
+        "focus-ring": "#71b7ff",
+        "accent": "#cda3ff",
+        "accent-on": "#0a0c10",
+        "accent-hover": "#d4b1ff",
+        "accent-active": "#dcc0ff",
+        "diff-added-fg": "#26cd4d",
+        "diff-removed-fg": "#ff9492",
+        "diff-added-bg": "#26cd4d1f",
+        "diff-removed-bg": "#ff94921f",
+        "diff-word-added": "#26cd4d4d",
+        "diff-word-removed": "#ff94924d",
+        "diff-gutter": "#05060a",
+        "agent-working": "#71b7ff",
+        "agent-waiting": "#ffb757",
+        "agent-done": "#26cd4d",
+        "agent-idle": "#acadae",
+        "agent-error": "#ff9492",
+        "class-code": "#71b7ff",
+        "class-test": "#33b3ae",
+        "class-docs": "#e09b13",
+        "class-config": "#ffb757",
+        "class-generated": "#78797c",
+        "unseen": "#e09b13",
+        "warning": "#e09b13",
+        "warning-bg": "#e09b131a",
+        "danger": "#ff9997",
+        "success": "#26cd4d",
+        "info": "#33b3ae",
+        "scrim": "#02020499",
+        "syntax-comment": "#9ea7b3",
+        "syntax-variable": "#ffb757",
+        "syntax-constant": "#91cbff",
+        "syntax-type": "#e09b13",
+        "syntax-string": "#addcff",
+        "syntax-special": "#72f088",
+        "syntax-function": "#dbb7ff",
+        "syntax-keyword": "#ff9492",
+        "syntax-embedded": "#ffb1af"
+      }
+    },
+    {
+      "file": "github-light-high-contrast.yaml",
+      "name": "Github Light High Contrast",
+      "family": "GitHub",
+      "short_name": "Light High Contrast",
+      "high_contrast": true,
+      "author": "Tinted Theming (https://github.com/tinted-theming)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#ee5a5d",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#702c00",
+          "source": "base08"
+        },
+        "yellow": {
+          "color": "#956400",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#26a148",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#49bcb7",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#368cf9",
+          "source": "base16"
+        },
+        "violet": {
+          "color": "#a371f7",
+          "source": "base17"
+        }
+      },
+      "roles": {
+        "surface-deep": "#bababa",
+        "surface-sunken": "#f3f3f3",
+        "surface-panel": "#f3f3f3",
+        "surface": "#ffffff",
+        "surface-raised": "#d7d8da",
+        "surface-hover": "#bdbfc2",
+        "surface-active": "#9da1a5",
+        "text": "#0e1116",
+        "text-muted": "#2b2e33",
+        "text-subtle": "#4c4e53",
+        "text-disabled": "#7b7d80",
+        "border": "#adb0b4",
+        "border-strong": "#7f8389",
+        "border-control": "#5a5d63",
+        "focus-ring": "#0063ca",
+        "accent": "#632aac",
+        "accent-on": "#ffffff",
+        "accent-hover": "#5a1ca0",
+        "accent-active": "#520d96",
+        "diff-added-fg": "#007d2f",
+        "diff-removed-fg": "#c6343d",
+        "diff-added-bg": "#26a1481f",
+        "diff-removed-bg": "#ee5a5d1f",
+        "diff-word-added": "#26a1484d",
+        "diff-word-removed": "#ee5a5d4d",
+        "diff-gutter": "#f3f3f3",
+        "agent-working": "#0c6dd6",
+        "agent-waiting": "#702c00",
+        "agent-done": "#008031",
+        "agent-idle": "#4c4e53",
+        "agent-error": "#ca3840",
+        "class-code": "#1773dd",
+        "class-test": "#00837f",
+        "class-docs": "#956400",
+        "class-config": "#702c00",
+        "class-generated": "#7b7d80",
+        "unseen": "#956400",
+        "warning": "#956400",
+        "warning-bg": "#9564001a",
+        "danger": "#9e0020",
+        "success": "#008734",
+        "info": "#00837f",
+        "scrim": "#0e111659",
+        "syntax-comment": "#626c76",
+        "syntax-variable": "#702c00",
+        "syntax-constant": "#023b95",
+        "syntax-type": "#916100",
+        "syntax-string": "#032563",
+        "syntax-special": "#024c1a",
+        "syntax-function": "#622cbc",
+        "syntax-keyword": "#a0111f",
+        "syntax-embedded": "#6e011a"
+      }
+    },
+    {
+      "file": "gruvbox-dark.yaml",
+      "name": "Gruvbox Dark",
+      "family": "Gruvbox",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming), morhetz (https://github.com/morhetz/gruvbox)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#cc241d",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#d65d0e",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#d79921",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#689d6a",
+          "source": "base0C"
+        },
+        "cyan": {
+          "color": "#458588",
+          "source": "base0D"
+        },
+        "blue": {
+          "color": "#458588",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#b16286",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#191919",
+        "surface-sunken": "#202020",
+        "surface-panel": "#202020",
+        "surface": "#282828",
+        "surface-raised": "#3a3835",
+        "surface-hover": "#4a4841",
+        "surface-active": "#5c584e",
+        "text": "#ebdbb2",
+        "text-muted": "#cbbd9b",
+        "text-subtle": "#aba085",
+        "text-disabled": "#837b69",
+        "border": "#535047",
+        "border-strong": "#6f6a5b",
+        "border-control": "#868172",
+        "focus-ring": "#61a0a3",
+        "accent": "#f49fc4",
+        "accent-on": "#282828",
+        "accent-hover": "#ffabcf",
+        "accent-active": "#ffbed9",
+        "diff-added-fg": "#74a976",
+        "diff-removed-fg": "#ff6152",
+        "diff-added-bg": "#689d6a1f",
+        "diff-removed-bg": "#cc241d1f",
+        "diff-word-added": "#689d6a4d",
+        "diff-word-removed": "#cc241d4d",
+        "diff-gutter": "#202020",
+        "agent-working": "#5a9a9d",
+        "agent-waiting": "#fc803f",
+        "agent-done": "#689d6a",
+        "agent-idle": "#aba085",
+        "agent-error": "#fb5648",
+        "class-code": "#5a9a9d",
+        "class-test": "#5a9a9d",
+        "class-docs": "#d79921",
+        "class-config": "#e76d28",
+        "class-generated": "#837b69",
+        "unseen": "#d79921",
+        "warning": "#d79921",
+        "warning-bg": "#d799211a",
+        "danger": "#ff9e91",
+        "success": "#689d6a",
+        "info": "#5a9a9d",
+        "scrim": "#19191999",
+        "syntax-comment": "#a89d94",
+        "syntax-variable": "#ff7666",
+        "syntax-constant": "#f97d3b",
+        "syntax-type": "#d79921",
+        "syntax-string": "#a4a32d",
+        "syntax-special": "#77ad79",
+        "syntax-function": "#6aaaad",
+        "syntax-keyword": "#d986ab",
+        "syntax-embedded": "#ff7768"
+      }
+    },
+    {
+      "file": "gruvbox-light.yaml",
+      "name": "Gruvbox Light",
+      "family": "Gruvbox",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "Tinted Theming (https://github.com/tinted-theming), morhetz (https://github.com/morhetz/gruvbox)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#cc241d",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#d65d0e",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#d79921",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#689d6a",
+          "source": "base0C"
+        },
+        "cyan": {
+          "color": "#458588",
+          "source": "base0D"
+        },
+        "blue": {
+          "color": "#458588",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#b16286",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#c5bb92",
+        "surface-sunken": "#f1e7bd",
+        "surface-panel": "#f1e7bd",
+        "surface": "#fbf1c7",
+        "surface-raised": "#e2d9b4",
+        "surface-hover": "#d1c9a8",
+        "surface-active": "#bdb598",
+        "text": "#3c3836",
+        "text-muted": "#55514a",
+        "text-subtle": "#625d50",
+        "text-disabled": "#8a836f",
+        "border": "#c7bfa0",
+        "border-strong": "#a9a289",
+        "border-control": "#7f7860",
+        "focus-ring": "#39797c",
+        "accent": "#84395d",
+        "accent-on": "#fbf1c7",
+        "accent-hover": "#792f53",
+        "accent-active": "#6e2549",
+        "diff-added-fg": "#3c7040",
+        "diff-removed-fg": "#c11310",
+        "diff-added-bg": "#689d6a1f",
+        "diff-removed-bg": "#cc241d1f",
+        "diff-word-added": "#689d6a4d",
+        "diff-word-removed": "#cc241d4d",
+        "diff-gutter": "#f1e7bd",
+        "agent-working": "#307073",
+        "agent-waiting": "#9d4100",
+        "agent-done": "#3f7342",
+        "agent-idle": "#625d50",
+        "agent-error": "#c81f19",
+        "class-code": "#367679",
+        "class-test": "#367679",
+        "class-docs": "#906300",
+        "class-config": "#b84d00",
+        "class-generated": "#8a836f",
+        "unseen": "#906300",
+        "warning": "#906300",
+        "warning-bg": "#d799211a",
+        "danger": "#ab0004",
+        "success": "#457948",
+        "info": "#367679",
+        "scrim": "#3c383659",
+        "syntax-comment": "#6b5d45",
+        "syntax-variable": "#be0a0b",
+        "syntax-constant": "#a24200",
+        "syntax-type": "#7e5600",
+        "syntax-string": "#626100",
+        "syntax-special": "#366a3a",
+        "syntax-function": "#25686b",
+        "syntax-keyword": "#914569",
+        "syntax-embedded": "#9d0006"
+      }
+    },
+    {
+      "file": "kanagawa.yaml",
+      "name": "Kanagawa",
+      "family": "Kanagawa",
+      "short_name": "Wave",
+      "high_contrast": false,
+      "author": "Tommaso Laurenzi (https://github.com/rebelot)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#c34043",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ffa066",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#c0a36e",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#76946a",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#6a9589",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#7e9cd8",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#957fb8",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#11111a",
+        "surface-sunken": "#181821",
+        "surface-panel": "#181821",
+        "surface": "#1f1f28",
+        "surface-raised": "#323238",
+        "surface-hover": "#403f43",
+        "surface-active": "#515050",
+        "text": "#dcd7ba",
+        "text-muted": "#bcb8a2",
+        "text-subtle": "#9e9a8b",
+        "text-disabled": "#76746d",
+        "border": "#484849",
+        "border-strong": "#63625f",
+        "border-control": "#7d7c79",
+        "focus-ring": "#7e9cd8",
+        "accent": "#b7a1dc",
+        "accent-on": "#1f1f28",
+        "accent-hover": "#c2ace8",
+        "accent-active": "#cdb7f4",
+        "diff-added-fg": "#7f9d73",
+        "diff-removed-fg": "#ea6363",
+        "diff-added-bg": "#76946a1f",
+        "diff-removed-bg": "#c340431f",
+        "diff-word-added": "#76946a4d",
+        "diff-word-removed": "#c340434d",
+        "diff-gutter": "#181821",
+        "agent-working": "#7e9cd8",
+        "agent-waiting": "#ffa066",
+        "agent-done": "#76946a",
+        "agent-idle": "#9e9a8b",
+        "agent-error": "#e35d5d",
+        "class-code": "#7e9cd8",
+        "class-test": "#6a9589",
+        "class-docs": "#c0a36e",
+        "class-config": "#ffa066",
+        "class-generated": "#76746d",
+        "unseen": "#c0a36e",
+        "warning": "#c0a36e",
+        "warning-bg": "#c0a36e1a",
+        "danger": "#ff8986",
+        "success": "#76946a",
+        "info": "#6a9589",
+        "scrim": "#11111a99",
+        "syntax-comment": "#9494b0",
+        "syntax-variable": "#f46d6c",
+        "syntax-constant": "#ffa066",
+        "syntax-type": "#c0a36e",
+        "syntax-string": "#82a076",
+        "syntax-special": "#739e92",
+        "syntax-function": "#7e9cd8",
+        "syntax-keyword": "#a18bc5",
+        "syntax-embedded": "#d27e99"
+      }
+    },
+    {
+      "file": "kanagawa-dragon.yaml",
+      "name": "Kanagawa Dragon",
+      "family": "Kanagawa",
+      "short_name": "Dragon",
+      "high_contrast": false,
+      "author": "Stefan Weigl-Bosker (https://github.com/sweiglbosker), Tommaso Laurenzi (https://github.com/rebelot/kanagawa.nvim)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#c4746e",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#b6927b",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#c4b28a",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#87a987",
+          "source": "base14"
+        },
+        "cyan": {
+          "color": "#7aa89f",
+          "source": "base15"
+        },
+        "blue": {
+          "color": "#8ba4b0",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#a292a3",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#0a0808",
+        "surface-sunken": "#110f0f",
+        "surface-panel": "#110f0f",
+        "surface": "#181616",
+        "surface-raised": "#282726",
+        "surface-hover": "#363534",
+        "surface-active": "#464544",
+        "text": "#c5c9c5",
+        "text-muted": "#a8aba7",
+        "text-subtle": "#8c8e8b",
+        "text-disabled": "#686866",
+        "border": "#3e3d3c",
+        "border-strong": "#565655",
+        "border-control": "#727271",
+        "focus-ring": "#8ba4b0",
+        "accent": "#a898a9",
+        "accent-on": "#181616",
+        "accent-hover": "#b3a3b4",
+        "accent-active": "#beaebf",
+        "diff-added-fg": "#87a987",
+        "diff-removed-fg": "#c77771",
+        "diff-added-bg": "#87a9871f",
+        "diff-removed-bg": "#c4746e1f",
+        "diff-word-added": "#87a9874d",
+        "diff-word-removed": "#c4746e4d",
+        "diff-gutter": "#110f0f",
+        "agent-working": "#8ba4b0",
+        "agent-waiting": "#b6927b",
+        "agent-done": "#87a987",
+        "agent-idle": "#8c8e8b",
+        "agent-error": "#c4746e",
+        "class-code": "#8ba4b0",
+        "class-test": "#7aa89f",
+        "class-docs": "#c4b28a",
+        "class-config": "#b6927b",
+        "class-generated": "#686866",
+        "unseen": "#c4b28a",
+        "warning": "#c4b28a",
+        "warning-bg": "#c4b28a1a",
+        "danger": "#db8983",
+        "success": "#87a987",
+        "info": "#7aa89f",
+        "scrim": "#0a080899",
+        "syntax-comment": "#9d9994",
+        "syntax-variable": "#d5837d",
+        "syntax-constant": "#b6927b",
+        "syntax-type": "#c4b28a",
+        "syntax-string": "#90a081",
+        "syntax-special": "#8ea4a2",
+        "syntax-function": "#8ba4b0",
+        "syntax-keyword": "#a595a6",
+        "syntax-embedded": "#bc907e"
+      }
+    },
+    {
+      "file": "material.yaml",
+      "name": "Material",
+      "family": "Material",
+      "short_name": "Material",
+      "high_contrast": false,
+      "author": "Nate Peterson",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f07178",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f78c6c",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffcb6b",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#c3e88d",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#89ddff",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#82aaff",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c792ea",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#172227",
+        "surface-sunken": "#1f2a30",
+        "surface-panel": "#1f2a30",
+        "surface": "#263238",
+        "surface-raised": "#3b474d",
+        "surface-hover": "#49565b",
+        "surface-active": "#5c696e",
+        "text": "#eeffff",
+        "text-muted": "#cdddde",
+        "text-subtle": "#acbcbe",
+        "text-disabled": "#839295",
+        "border": "#526065",
+        "border-strong": "#6f7d81",
+        "border-control": "#879599",
+        "focus-ring": "#82aaff",
+        "accent": "#e2b8ff",
+        "accent-on": "#263238",
+        "accent-hover": "#e8c8ff",
+        "accent-active": "#eed6ff",
+        "diff-added-fg": "#c3e88d",
+        "diff-removed-fg": "#fe7e84",
+        "diff-added-bg": "#c3e88d1f",
+        "diff-removed-bg": "#f071781f",
+        "diff-word-added": "#c3e88d4d",
+        "diff-word-removed": "#f071784d",
+        "diff-gutter": "#1f2a30",
+        "agent-working": "#82aaff",
+        "agent-waiting": "#ff9778",
+        "agent-done": "#c3e88d",
+        "agent-idle": "#acbcbe",
+        "agent-error": "#f07178",
+        "class-code": "#82aaff",
+        "class-test": "#89ddff",
+        "class-docs": "#ffcb6b",
+        "class-config": "#f78c6c",
+        "class-generated": "#839295",
+        "unseen": "#ffcb6b",
+        "warning": "#ffcb6b",
+        "warning-bg": "#ffcb6b1a",
+        "danger": "#ffb4b5",
+        "success": "#c3e88d",
+        "info": "#89ddff",
+        "scrim": "#17222799",
+        "syntax-comment": "#b7d4e1",
+        "syntax-variable": "#ffbebe",
+        "syntax-constant": "#ffbfac",
+        "syntax-type": "#ffcb6b",
+        "syntax-string": "#c3e88d",
+        "syntax-special": "#89ddff",
+        "syntax-function": "#b8cfff",
+        "syntax-keyword": "#e6c1ff",
+        "syntax-embedded": "#ffbbbf"
+      }
+    },
+    {
+      "file": "material-darker.yaml",
+      "name": "Material Darker",
+      "family": "Material",
+      "short_name": "Darker",
+      "high_contrast": false,
+      "author": "Nate Peterson",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f07178",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f78c6c",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffcb6b",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#c3e88d",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#89ddff",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#82aaff",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c792ea",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#121212",
+        "surface-sunken": "#191919",
+        "surface-panel": "#191919",
+        "surface": "#212121",
+        "surface-raised": "#363737",
+        "surface-hover": "#444747",
+        "surface-active": "#575c5c",
+        "text": "#eeffff",
+        "text-muted": "#ccdada",
+        "text-subtle": "#aab5b5",
+        "text-disabled": "#808787",
+        "border": "#4e5151",
+        "border-strong": "#6b7171",
+        "border-control": "#7c8383",
+        "focus-ring": "#82aaff",
+        "accent": "#d49ff8",
+        "accent-on": "#212121",
+        "accent-hover": "#ddadff",
+        "accent-active": "#e3beff",
+        "diff-added-fg": "#c3e88d",
+        "diff-removed-fg": "#f07178",
+        "diff-added-bg": "#c3e88d1f",
+        "diff-removed-bg": "#f071781f",
+        "diff-word-added": "#c3e88d4d",
+        "diff-word-removed": "#f071784d",
+        "diff-gutter": "#191919",
+        "agent-working": "#82aaff",
+        "agent-waiting": "#f78c6c",
+        "agent-done": "#c3e88d",
+        "agent-idle": "#aab5b5",
+        "agent-error": "#f07178",
+        "class-code": "#82aaff",
+        "class-test": "#89ddff",
+        "class-docs": "#ffcb6b",
+        "class-config": "#f78c6c",
+        "class-generated": "#808787",
+        "unseen": "#ffcb6b",
+        "warning": "#ffcb6b",
+        "warning-bg": "#ffcb6b1a",
+        "danger": "#ff9a9c",
+        "success": "#c3e88d",
+        "info": "#89ddff",
+        "scrim": "#12121299",
+        "syntax-comment": "#c0c0c0",
+        "syntax-variable": "#ffaaab",
+        "syntax-constant": "#ffac93",
+        "syntax-type": "#ffcb6b",
+        "syntax-string": "#c3e88d",
+        "syntax-special": "#89ddff",
+        "syntax-function": "#a4c2ff",
+        "syntax-keyword": "#deaeff",
+        "syntax-embedded": "#ffabb1"
+      }
+    },
+    {
+      "file": "material-lighter.yaml",
+      "name": "Material Lighter",
+      "family": "Material",
+      "short_name": "Lighter",
+      "high_contrast": false,
+      "author": "Nate Peterson",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#ff5370",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f76d47",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffb62c",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#91b859",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#39adb5",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#6182b8",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#7c4dff",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#d4d4d4",
+        "surface-sunken": "#fdfdfd",
+        "surface-panel": "#e4e4e4",
+        "surface": "#fafafa",
+        "surface-raised": "#ecf4f3",
+        "surface-hover": "#dfefed",
+        "surface-active": "#d7ecea",
+        "text": "#0b625d",
+        "text-muted": "#2b6762",
+        "text-subtle": "#3f6d69",
+        "text-disabled": "#668783",
+        "border": "#ddeeec",
+        "border-strong": "#cbe7e4",
+        "border-control": "#6c8583",
+        "focus-ring": "#6182b8",
+        "accent": "#713ef1",
+        "accent-on": "#fafafa",
+        "accent-hover": "#6932e6",
+        "accent-active": "#6124db",
+        "diff-added-fg": "#53770c",
+        "diff-removed-fg": "#cc1848",
+        "diff-added-bg": "#91b8591f",
+        "diff-removed-bg": "#ff53701f",
+        "diff-word-added": "#91b8594d",
+        "diff-word-removed": "#ff537047",
+        "diff-gutter": "#fdfdfd",
+        "agent-working": "#456498",
+        "agent-waiting": "#bb3502",
+        "agent-done": "#4c6e00",
+        "agent-idle": "#3f6d69",
+        "agent-error": "#c91145",
+        "class-code": "#5373a8",
+        "class-test": "#007d84",
+        "class-docs": "#986800",
+        "class-config": "#cc461d",
+        "class-generated": "#668783",
+        "unseen": "#986800",
+        "warning": "#986800",
+        "warning-bg": "#ffb62c1a",
+        "danger": "#c91145",
+        "success": "#597d17",
+        "info": "#007d84",
+        "scrim": "#0b625d59",
+        "syntax-comment": "#626b6e",
+        "syntax-variable": "#cc1848",
+        "syntax-constant": "#be3809",
+        "syntax-type": "#8d6000",
+        "syntax-string": "#517406",
+        "syntax-special": "#00747a",
+        "syntax-function": "#4a6a9f",
+        "syntax-keyword": "#7442f4",
+        "syntax-embedded": "#cf1d21"
+      }
+    },
+    {
+      "file": "material-palenight.yaml",
+      "name": "Material Palenight",
+      "family": "Material",
+      "short_name": "Palenight",
+      "high_contrast": false,
+      "author": "Nate Peterson",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f07178",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f78c6c",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffcb6b",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#c3e88d",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#89ddff",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#82aaff",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c792ea",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#191c2c",
+        "surface-sunken": "#212435",
+        "surface-panel": "#212435",
+        "surface": "#292d3e",
+        "surface-raised": "#35394d",
+        "surface-hover": "#3d4158",
+        "surface-active": "#474c65",
+        "text": "#c1c9f9",
+        "text-muted": "#a8afda",
+        "text-subtle": "#9ca2c9",
+        "text-disabled": "#707696",
+        "border": "#42475e",
+        "border-strong": "#515773",
+        "border-control": "#7c82a0",
+        "focus-ring": "#82aaff",
+        "accent": "#d19bf4",
+        "accent-on": "#292d3e",
+        "accent-hover": "#dca7ff",
+        "accent-active": "#e2b8ff",
+        "diff-added-fg": "#c3e88d",
+        "diff-removed-fg": "#fb7a81",
+        "diff-added-bg": "#c3e88d1f",
+        "diff-removed-bg": "#f071781f",
+        "diff-word-added": "#c3e88d21",
+        "diff-word-removed": "#f071784d",
+        "diff-gutter": "#212435",
+        "agent-working": "#82aaff",
+        "agent-waiting": "#f78c6c",
+        "agent-done": "#c3e88d",
+        "agent-idle": "#9ca2c9",
+        "agent-error": "#f07178",
+        "class-code": "#82aaff",
+        "class-test": "#89ddff",
+        "class-docs": "#ffcb6b",
+        "class-config": "#f78c6c",
+        "class-generated": "#707696",
+        "unseen": "#ffcb6b",
+        "warning": "#ffcb6b",
+        "warning-bg": "#ffcb6b1a",
+        "danger": "#ff8f93",
+        "success": "#c3e88d",
+        "info": "#89ddff",
+        "scrim": "#191c2c99",
+        "syntax-comment": "#a5aed8",
+        "syntax-variable": "#ff8f93",
+        "syntax-constant": "#fe9272",
+        "syntax-type": "#ffcb6b",
+        "syntax-string": "#c3e88d",
+        "syntax-special": "#89ddff",
+        "syntax-function": "#8cb1ff",
+        "syntax-keyword": "#d19bf4",
+        "syntax-embedded": "#ff909b"
+      }
+    },
+    {
+      "file": "nord.yaml",
+      "name": "Nord",
+      "family": "Nord",
+      "short_name": "Nord",
+      "high_contrast": false,
+      "author": "arcticicestudio",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#bf616a",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#d08770",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ebcb8b",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#a3be8c",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#88c0d0",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#81a1c1",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#b48ead",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#1f232f",
+        "surface-sunken": "#272c38",
+        "surface-panel": "#272c38",
+        "surface": "#2e3440",
+        "surface-raised": "#3c424e",
+        "surface-hover": "#4e5460",
+        "surface-active": "#606571",
+        "text": "#e5e9f0",
+        "text-muted": "#c7cbd3",
+        "text-subtle": "#a9aeb7",
+        "text-disabled": "#848993",
+        "border": "#575d68",
+        "border-strong": "#717782",
+        "border-control": "#898f9a",
+        "focus-ring": "#87a7c7",
+        "accent": "#e5bddd",
+        "accent-on": "#2e3440",
+        "accent-hover": "#efc7e7",
+        "accent-active": "#f9d1f1",
+        "diff-added-fg": "#a3be8c",
+        "diff-removed-fg": "#ef8b93",
+        "diff-added-bg": "#a3be8c1f",
+        "diff-removed-bg": "#bf616a1f",
+        "diff-word-added": "#a3be8c4d",
+        "diff-word-removed": "#bf616a4d",
+        "diff-gutter": "#272c38",
+        "agent-working": "#81a1c1",
+        "agent-waiting": "#e79d85",
+        "agent-done": "#a3be8c",
+        "agent-idle": "#a9aeb7",
+        "agent-error": "#e17f87",
+        "class-code": "#81a1c1",
+        "class-test": "#88c0d0",
+        "class-docs": "#ebcb8b",
+        "class-config": "#d38a73",
+        "class-generated": "#848993",
+        "unseen": "#ebcb8b",
+        "warning": "#ebcb8b",
+        "warning-bg": "#ebcb8b1a",
+        "danger": "#ffb6ba",
+        "success": "#a3be8c",
+        "info": "#88c0d0",
+        "scrim": "#1f232f99",
+        "syntax-comment": "#b3bfd6",
+        "syntax-variable": "#ffa7ad",
+        "syntax-constant": "#f9ac94",
+        "syntax-type": "#ebcb8b",
+        "syntax-string": "#a9c492",
+        "syntax-special": "#8ec6d7",
+        "syntax-function": "#a0c1e2",
+        "syntax-keyword": "#d8b0d0",
+        "syntax-embedded": "#9abfed"
+      }
+    },
+    {
+      "file": "one-dark.yaml",
+      "name": "One Dark",
+      "family": "One",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "FredHappyface (https://github.com/fredHappyface)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#e05561",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#d18f52",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#e6b965",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#8cc265",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#42b3c2",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#4aa5f0",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c162de",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#181b22",
+        "surface-sunken": "#20232b",
+        "surface-panel": "#20232b",
+        "surface": "#282c34",
+        "surface-raised": "#343841",
+        "surface-hover": "#3c414a",
+        "surface-active": "#474b55",
+        "text": "#b4bbc9",
+        "text-muted": "#a6adba",
+        "text-subtle": "#9ca2af",
+        "text-disabled": "#707580",
+        "border": "#464a54",
+        "border-strong": "#595e68",
+        "border-control": "#7e848e",
+        "focus-ring": "#4aa5f0",
+        "accent": "#e389ff",
+        "accent-on": "#282c34",
+        "accent-hover": "#e79aff",
+        "accent-active": "#ebaaff",
+        "diff-added-fg": "#8cc265",
+        "diff-removed-fg": "#fd6f79",
+        "diff-added-bg": "#8cc2651f",
+        "diff-removed-bg": "#e055611f",
+        "diff-word-added": "#8cc26521",
+        "diff-word-removed": "#e055614d",
+        "diff-gutter": "#20232b",
+        "agent-working": "#4aa5f0",
+        "agent-waiting": "#d89558",
+        "agent-done": "#8cc265",
+        "agent-idle": "#9ca2af",
+        "agent-error": "#f26570",
+        "class-code": "#4aa5f0",
+        "class-test": "#42b3c2",
+        "class-docs": "#e6b965",
+        "class-config": "#d18f52",
+        "class-generated": "#707580",
+        "unseen": "#e6b965",
+        "warning": "#e6b965",
+        "warning-bg": "#e6b9651a",
+        "danger": "#ff8c91",
+        "success": "#8cc265",
+        "info": "#42b3c2",
+        "scrim": "#181b2299",
+        "syntax-comment": "#a3a8b3",
+        "syntax-variable": "#ff8086",
+        "syntax-constant": "#db985b",
+        "syntax-type": "#e6b965",
+        "syntax-string": "#8cc265",
+        "syntax-special": "#46b6c5",
+        "syntax-function": "#54affa",
+        "syntax-keyword": "#df7ffd",
+        "syntax-embedded": "#ff8575"
+      }
+    },
+    {
+      "file": "one-light.yaml",
+      "name": "One Light",
+      "family": "One",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "FredHappyface (https://github.com/fredHappyface)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#ca1243",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#e77540",
+          "source": "mix(red, yellow)"
+        },
+        "yellow": {
+          "color": "#febb2a",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#50a14f",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#0184bc",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#4078f2",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#a626a4",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#b3b3b5",
+        "surface-sunken": "#dddddf",
+        "surface-panel": "#dddddf",
+        "surface": "#e7e7e9",
+        "surface-raised": "#d0d0d3",
+        "surface-hover": "#c3c3c7",
+        "surface-active": "#aeafb3",
+        "text": "#383a42",
+        "text-muted": "#4f5159",
+        "text-subtle": "#57585f",
+        "text-disabled": "#7b7c82",
+        "border": "#b8b8bc",
+        "border-strong": "#9c9da2",
+        "border-control": "#727378",
+        "focus-ring": "#2c62da",
+        "accent": "#920391",
+        "accent-on": "#e7e7e9",
+        "accent-hover": "#830083",
+        "accent-active": "#760076",
+        "diff-added-fg": "#1a701d",
+        "diff-removed-fg": "#b40038",
+        "diff-added-bg": "#50a14f1f",
+        "diff-removed-bg": "#ca12431f",
+        "diff-word-added": "#50a14f4d",
+        "diff-word-removed": "#ca12434d",
+        "diff-gutter": "#dddddf",
+        "agent-working": "#2358cf",
+        "agent-waiting": "#993a00",
+        "agent-done": "#1a701d",
+        "agent-idle": "#57585f",
+        "agent-error": "#c3003e",
+        "class-code": "#295ed6",
+        "class-test": "#006e9e",
+        "class-docs": "#865f00",
+        "class-config": "#af4400",
+        "class-generated": "#7b7c82",
+        "unseen": "#865f00",
+        "warning": "#865f00",
+        "warning-bg": "#febb2a1a",
+        "danger": "#a50033",
+        "success": "#227624",
+        "info": "#006e9e",
+        "scrim": "#383a4259",
+        "syntax-comment": "#57585d",
+        "syntax-variable": "#af0036",
+        "syntax-constant": "#764f00",
+        "syntax-type": "#745200",
+        "syntax-string": "#04640e",
+        "syntax-special": "#005c85",
+        "syntax-function": "#184bc2",
+        "syntax-keyword": "#991297",
+        "syntax-embedded": "#775000"
+      }
+    },
+    {
+      "file": "rose-pine.yaml",
+      "name": "Rosé Pine",
+      "family": "Rosé Pine",
+      "short_name": "Rosé Pine",
+      "high_contrast": false,
+      "author": "Emilia Dunfelt <edun@dunfelt.se>",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#eb6f92",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f29a88",
+          "source": "mix(red, yellow)"
+        },
+        "yellow": {
+          "color": "#f6c177",
+          "source": "base09"
+        },
+        "green": {
+          "color": "#31748f",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#9ccfd8",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#c4a7e7",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c4a7e7",
+          "source": "base0D"
+        }
+      },
+      "roles": {
+        "surface-deep": "#0b0915",
+        "surface-sunken": "#12101d",
+        "surface-panel": "#12101d",
+        "surface": "#191724",
+        "surface-raised": "#2d2b39",
+        "surface-hover": "#3b3948",
+        "surface-active": "#4d4b5c",
+        "text": "#e0def4",
+        "text-muted": "#bebcd1",
+        "text-subtle": "#9e9caf",
+        "text-disabled": "#747284",
+        "border": "#444252",
+        "border-strong": "#605e70",
+        "border-control": "#777588",
+        "focus-ring": "#cfb2f3",
+        "accent": "#c4a7e7",
+        "accent-on": "#191724",
+        "accent-hover": "#cfb2f3",
+        "accent-active": "#d9bcfd",
+        "diff-added-fg": "#5092ae",
+        "diff-removed-fg": "#eb6f92",
+        "diff-added-bg": "#31748f1f",
+        "diff-removed-bg": "#eb6f921f",
+        "diff-word-added": "#31748f4d",
+        "diff-word-removed": "#eb6f924d",
+        "diff-gutter": "#12101d",
+        "agent-working": "#c4a7e7",
+        "agent-waiting": "#f29a88",
+        "agent-done": "#4789a5",
+        "agent-idle": "#9e9caf",
+        "agent-error": "#eb6f92",
+        "class-code": "#c4a7e7",
+        "class-test": "#9ccfd8",
+        "class-docs": "#f6c177",
+        "class-config": "#f29a88",
+        "class-generated": "#747284",
+        "unseen": "#f6c177",
+        "warning": "#f6c177",
+        "warning-bg": "#f6c1771a",
+        "danger": "#f97c9e",
+        "success": "#4789a5",
+        "info": "#9ccfd8",
+        "scrim": "#0b091599",
+        "syntax-comment": "#9793b1",
+        "syntax-variable": "#eb6f92",
+        "syntax-constant": "#f6c177",
+        "syntax-type": "#ebbcba",
+        "syntax-string": "#5d9ebb",
+        "syntax-special": "#9ccfd8",
+        "syntax-function": "#c4a7e7",
+        "syntax-keyword": "#f6c177",
+        "syntax-embedded": "#9492ac"
+      }
+    },
+    {
+      "file": "rose-pine-dawn.yaml",
+      "name": "Rosé Pine Dawn",
+      "family": "Rosé Pine",
+      "short_name": "Dawn",
+      "high_contrast": false,
+      "author": "Emilia Dunfelt <edun@dunfelt.se>",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#b4637a",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#ea9d34",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#d7827e",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#286983",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#56949f",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#907aa9",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#907aa9",
+          "source": "base0D"
+        }
+      },
+      "roles": {
+        "surface-deep": "#d4cec7",
+        "surface-sunken": "#fff9f2",
+        "surface-panel": "#ebe5de",
+        "surface": "#faf4ed",
+        "surface-raised": "#f3ede8",
+        "surface-hover": "#ddd8da",
+        "surface-active": "#cfcad0",
+        "text": "#575279",
+        "text-muted": "#5f5b7b",
+        "text-subtle": "#67637d",
+        "text-disabled": "#837f90",
+        "border": "#cec9d0",
+        "border-strong": "#b5b0be",
+        "border-control": "#847f8c",
+        "focus-ring": "#8771a0",
+        "accent": "#6a5581",
+        "accent-on": "#faf4ed",
+        "accent-hover": "#604b77",
+        "accent-active": "#56416d",
+        "diff-added-fg": "#286983",
+        "diff-removed-fg": "#9a4b63",
+        "diff-added-bg": "#2869831f",
+        "diff-removed-bg": "#b4637a1f",
+        "diff-word-added": "#2869832b",
+        "diff-word-removed": "#b4637a3b",
+        "diff-gutter": "#fff9f2",
+        "agent-working": "#725d8a",
+        "agent-waiting": "#8f5a00",
+        "agent-done": "#286983",
+        "agent-idle": "#67637d",
+        "agent-error": "#9d4e65",
+        "class-code": "#7b6693",
+        "class-test": "#3b7984",
+        "class-docs": "#a85855",
+        "class-config": "#9b6200",
+        "class-generated": "#837f90",
+        "unseen": "#a85855",
+        "warning": "#a85855",
+        "warning-bg": "#d7827e1a",
+        "danger": "#94465d",
+        "success": "#286983",
+        "info": "#3b7984",
+        "scrim": "#57527959",
+        "syntax-comment": "#666172",
+        "syntax-variable": "#9a4c63",
+        "syntax-constant": "#8c5700",
+        "syntax-type": "#9b4d4a",
+        "syntax-string": "#286983",
+        "syntax-special": "#2e6d78",
+        "syntax-function": "#6f5a87",
+        "syntax-keyword": "#8c5700",
+        "syntax-embedded": "#666365"
+      }
+    },
+    {
+      "file": "rose-pine-moon.yaml",
+      "name": "Rosé Pine Moon",
+      "family": "Rosé Pine",
+      "short_name": "Moon",
+      "high_contrast": false,
+      "author": "Emilia Dunfelt <edun@dunfelt.se>",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#eb6f92",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f29a88",
+          "source": "mix(red, yellow)"
+        },
+        "yellow": {
+          "color": "#f6c177",
+          "source": "base09"
+        },
+        "green": {
+          "color": "#3e8fb0",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#9ccfd8",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#c4a7e7",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c4a7e7",
+          "source": "base0D"
+        }
+      },
+      "roles": {
+        "surface-deep": "#141225",
+        "surface-sunken": "#1b192d",
+        "surface-panel": "#1b192d",
+        "surface": "#232136",
+        "surface-raised": "#36344a",
+        "surface-hover": "#444258",
+        "surface-active": "#55546a",
+        "text": "#e0def4",
+        "text-muted": "#c0bed5",
+        "text-subtle": "#a2a0b6",
+        "text-disabled": "#7a798f",
+        "border": "#4c4b61",
+        "border-strong": "#68667c",
+        "border-control": "#7f7d94",
+        "focus-ring": "#cfb2f3",
+        "accent": "#c4a7e7",
+        "accent-on": "#232136",
+        "accent-hover": "#cfb2f3",
+        "accent-active": "#d9bcfd",
+        "diff-added-fg": "#52a1c3",
+        "diff-removed-fg": "#eb6f92",
+        "diff-added-bg": "#3e8fb01f",
+        "diff-removed-bg": "#eb6f921f",
+        "diff-word-added": "#3e8fb04d",
+        "diff-word-removed": "#eb6f924d",
+        "diff-gutter": "#1b192d",
+        "agent-working": "#c4a7e7",
+        "agent-waiting": "#f29a88",
+        "agent-done": "#4595b6",
+        "agent-idle": "#a2a0b6",
+        "agent-error": "#eb6f92",
+        "class-code": "#c4a7e7",
+        "class-test": "#9ccfd8",
+        "class-docs": "#f6c177",
+        "class-config": "#f29a88",
+        "class-generated": "#7a798f",
+        "unseen": "#f6c177",
+        "warning": "#f6c177",
+        "warning-bg": "#f6c1771a",
+        "danger": "#ff8fac",
+        "success": "#4595b6",
+        "info": "#9ccfd8",
+        "scrim": "#14122599",
+        "syntax-comment": "#9e9ab7",
+        "syntax-variable": "#f27598",
+        "syntax-constant": "#f6c177",
+        "syntax-type": "#ea9a97",
+        "syntax-string": "#58a8ca",
+        "syntax-special": "#9ccfd8",
+        "syntax-function": "#c4a7e7",
+        "syntax-keyword": "#f6c177",
+        "syntax-embedded": "#9f9bba"
+      }
+    },
+    {
+      "file": "solarized-dark.yaml",
+      "name": "Solarized Dark",
+      "family": "Solarized",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "Ethan Schoonover (modified by aramisgithub)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#dc322f",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#cb4b16",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#b58900",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#859900",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#2aa198",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#268bd2",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#6c71c4",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#001b24",
+        "surface-sunken": "#00232d",
+        "surface-panel": "#00232d",
+        "surface": "#002b36",
+        "surface-raised": "#143842",
+        "surface-hover": "#20414a",
+        "surface-active": "#2e4c54",
+        "text": "#acbaba",
+        "text-muted": "#9aacae",
+        "text-subtle": "#8ca1a5",
+        "text-disabled": "#5b757b",
+        "border": "#27464f",
+        "border-strong": "#3c585f",
+        "border-control": "#66838b",
+        "focus-ring": "#2a8ed5",
+        "accent": "#989ff6",
+        "accent-on": "#002b36",
+        "accent-hover": "#a1a9ff",
+        "accent-active": "#aeb6ff",
+        "diff-added-fg": "#8ea219",
+        "diff-removed-fg": "#ff5a50",
+        "diff-added-bg": "#8599001f",
+        "diff-removed-bg": "#dc322f1f",
+        "diff-word-added": "#85990042",
+        "diff-word-removed": "#dc322f4d",
+        "diff-gutter": "#00232d",
+        "agent-working": "#3294dc",
+        "agent-waiting": "#f97546",
+        "agent-done": "#859900",
+        "agent-idle": "#8ca1a5",
+        "agent-error": "#fd544b",
+        "class-code": "#3294dc",
+        "class-test": "#2aa198",
+        "class-docs": "#b58900",
+        "class-config": "#e76535",
+        "class-generated": "#5b757b",
+        "unseen": "#b58900",
+        "warning": "#b58900",
+        "warning-bg": "#b589001a",
+        "danger": "#ff8376",
+        "success": "#859900",
+        "info": "#2aa198",
+        "scrim": "#001b2499",
+        "syntax-comment": "#889fa8",
+        "syntax-variable": "#ff695d",
+        "syntax-constant": "#f57243",
+        "syntax-type": "#bf921a",
+        "syntax-string": "#8ea219",
+        "syntax-special": "#37aaa1",
+        "syntax-function": "#41a1ea",
+        "syntax-keyword": "#8c93e9",
+        "syntax-embedded": "#fe60a6"
+      }
+    },
+    {
+      "file": "solarized-light.yaml",
+      "name": "Solarized Light",
+      "family": "Solarized",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "Ethan Schoonover (modified by aramisgithub)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#dc322f",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#cb4b16",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#b58900",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#859900",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#2aa198",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#268bd2",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#6c71c4",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#ccc5b2",
+        "surface-sunken": "#f6efdc",
+        "surface-panel": "#f3ecd9",
+        "surface": "#fdf6e3",
+        "surface-raised": "#e8e5d5",
+        "surface-hover": "#dad9cc",
+        "surface-active": "#c9cbc1",
+        "text": "#42575e",
+        "text-muted": "#506165",
+        "text-subtle": "#5a6767",
+        "text-disabled": "#808883",
+        "border": "#d1d2c7",
+        "border-strong": "#b8bdb6",
+        "border-control": "#7e837c",
+        "focus-ring": "#117fc5",
+        "accent": "#5456a7",
+        "accent-on": "#fdf6e3",
+        "accent-hover": "#4c4d9d",
+        "accent-active": "#444493",
+        "diff-added-fg": "#617000",
+        "diff-removed-fg": "#c7121a",
+        "diff-added-bg": "#8599001f",
+        "diff-removed-bg": "#dc322f1f",
+        "diff-word-added": "#8599004d",
+        "diff-word-removed": "#dc322f36",
+        "diff-gutter": "#f6efdc",
+        "agent-working": "#006fb1",
+        "agent-waiting": "#b83c00",
+        "agent-done": "#617000",
+        "agent-idle": "#5a6767",
+        "agent-error": "#ce1f21",
+        "class-code": "#0075ba",
+        "class-test": "#007e76",
+        "class-docs": "#8d6a00",
+        "class-config": "#c4440a",
+        "class-generated": "#808883",
+        "unseen": "#8d6a00",
+        "warning": "#8d6a00",
+        "warning-bg": "#b589001a",
+        "danger": "#bf0012",
+        "success": "#667600",
+        "info": "#007e76",
+        "scrim": "#42575e59",
+        "syntax-comment": "#58686a",
+        "syntax-variable": "#c6131a",
+        "syntax-constant": "#b33b00",
+        "syntax-type": "#7f5f00",
+        "syntax-string": "#5c6a00",
+        "syntax-special": "#00716a",
+        "syntax-function": "#006aa7",
+        "syntax-keyword": "#595cad",
+        "syntax-embedded": "#be1c70"
+      }
+    },
+    {
+      "file": "tokyo-night-dark.yaml",
+      "name": "Tokyo Night Dark",
+      "family": "Tokyo Night",
+      "short_name": "Dark",
+      "high_contrast": false,
+      "author": "Michaël Ball, based on Tokyo Night by enkia (https://github.com/enkia/tokyo-night-vscode-theme)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff7a93",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#ff9e64",
+          "source": "base13"
+        },
+        "yellow": {
+          "color": "#0db9d7",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#9ece6a",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#b4f9f8",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#7dcfff",
+          "source": "base15"
+        },
+        "violet": {
+          "color": "#bb9af7",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#0d0d18",
+        "surface-sunken": "#13141f",
+        "surface-panel": "#13141f",
+        "surface": "#1a1b26",
+        "surface-raised": "#292a38",
+        "surface-hover": "#313342",
+        "surface-active": "#404355",
+        "text": "#a9b1d6",
+        "text-muted": "#939abb",
+        "text-subtle": "#8c92af",
+        "text-disabled": "#62677e",
+        "border": "#3a3c4d",
+        "border-strong": "#4e5266",
+        "border-control": "#707489",
+        "focus-ring": "#7dcfff",
+        "accent": "#bb9af7",
+        "accent-on": "#1a1b26",
+        "accent-hover": "#c5a6ff",
+        "accent-active": "#cdb3ff",
+        "diff-added-fg": "#9ece6a",
+        "diff-removed-fg": "#ff7a93",
+        "diff-added-bg": "#9ece6a1f",
+        "diff-removed-bg": "#ff7a931f",
+        "diff-word-added": "#9ece6a26",
+        "diff-word-removed": "#ff7a9338",
+        "diff-gutter": "#13141f",
+        "agent-working": "#7dcfff",
+        "agent-waiting": "#ff9e64",
+        "agent-done": "#9ece6a",
+        "agent-idle": "#8c92af",
+        "agent-error": "#ff7a93",
+        "class-code": "#7dcfff",
+        "class-test": "#b4f9f8",
+        "class-docs": "#0db9d7",
+        "class-config": "#ff9e64",
+        "class-generated": "#62677e",
+        "unseen": "#0db9d7",
+        "warning": "#0db9d7",
+        "warning-bg": "#0db9d71a",
+        "danger": "#ff7a93",
+        "success": "#9ece6a",
+        "info": "#b4f9f8",
+        "scrim": "#0d0d1899",
+        "syntax-comment": "#8e96b9",
+        "syntax-variable": "#c0caf5",
+        "syntax-constant": "#a9b1d6",
+        "syntax-type": "#0db9d7",
+        "syntax-string": "#9ece6a",
+        "syntax-special": "#b4f9f8",
+        "syntax-function": "#2ac3de",
+        "syntax-keyword": "#bb9af7",
+        "syntax-embedded": "#f7768e"
+      }
+    },
+    {
+      "file": "tokyo-night-light.yaml",
+      "name": "Tokyo Night Light",
+      "family": "Tokyo Night",
+      "short_name": "Light",
+      "high_contrast": false,
+      "author": "Michaël Ball, based on Tokyo Night by enkia (https://github.com/enkia/tokyo-night-vscode-theme)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#8c4351",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#965027",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#166775",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#485e30",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#3e6968",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#34548a",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#5a4a78",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#a5a6ab",
+        "surface-sunken": "#cdced3",
+        "surface-panel": "#cbccd1",
+        "surface": "#d5d6db",
+        "surface-raised": "#c1c3cb",
+        "surface-hover": "#b3b6c1",
+        "surface-active": "#a2a6b4",
+        "text": "#343b59",
+        "text-muted": "#3e4560",
+        "text-subtle": "#4a5066",
+        "text-disabled": "#6b7083",
+        "border": "#a9adb9",
+        "border-strong": "#9094a5",
+        "border-control": "#676b7b",
+        "focus-ring": "#34548a",
+        "accent": "#4f3f6c",
+        "accent-on": "#d5d6db",
+        "accent-hover": "#473763",
+        "accent-active": "#3f2f5a",
+        "diff-added-fg": "#43582b",
+        "diff-removed-fg": "#823b49",
+        "diff-added-bg": "#485e301f",
+        "diff-removed-bg": "#8c43511f",
+        "diff-word-added": "#485e304a",
+        "diff-word-removed": "#8c435147",
+        "diff-gutter": "#cdced3",
+        "agent-working": "#34548a",
+        "agent-waiting": "#803c10",
+        "agent-done": "#455b2d",
+        "agent-idle": "#4a5066",
+        "agent-error": "#89404e",
+        "class-code": "#34548a",
+        "class-test": "#386362",
+        "class-docs": "#116472",
+        "class-config": "#904a21",
+        "class-generated": "#6b7083",
+        "unseen": "#116472",
+        "warning": "#116472",
+        "warning-bg": "#1667751a",
+        "danger": "#762f3e",
+        "success": "#485e30",
+        "info": "#386362",
+        "scrim": "#343b5959",
+        "syntax-comment": "#4e5059",
+        "syntax-variable": "#343b59",
+        "syntax-constant": "#833f13",
+        "syntax-type": "#005c69",
+        "syntax-string": "#43582b",
+        "syntax-special": "#2d5857",
+        "syntax-function": "#315187",
+        "syntax-keyword": "#5a4a78",
+        "syntax-embedded": "#823b49"
+      }
+    },
+    {
+      "file": "tokyo-night-moon.yaml",
+      "name": "Tokyo Night Moon",
+      "family": "Tokyo Night",
+      "short_name": "Moon",
+      "high_contrast": false,
+      "author": "Michaël Ball, based on Tokyo Night by enkia (https://github.com/enkia/tokyo-night-vscode-theme)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff757f",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#ffa07c",
+          "source": "mix(red, yellow)"
+        },
+        "yellow": {
+          "color": "#ffc777",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#c3e88d",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#86e1fc",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#82aaff",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#c099ff",
+          "source": "base08"
+        }
+      },
+      "roles": {
+        "surface-deep": "#131526",
+        "surface-sunken": "#1a1c2d",
+        "surface-panel": "#1a1c2d",
+        "surface": "#222436",
+        "surface-raised": "#303246",
+        "surface-hover": "#3f4358",
+        "surface-active": "#4f536a",
+        "text": "#c8d3f5",
+        "text-muted": "#acb6d6",
+        "text-subtle": "#929ab7",
+        "text-disabled": "#6f7590",
+        "border": "#474b61",
+        "border-strong": "#5f647d",
+        "border-control": "#767b95",
+        "focus-ring": "#82aaff",
+        "accent": "#c5a2ff",
+        "accent-on": "#222436",
+        "accent-hover": "#ceb1ff",
+        "accent-active": "#d7c0ff",
+        "diff-added-fg": "#c3e88d",
+        "diff-removed-fg": "#ff757f",
+        "diff-added-bg": "#c3e88d1f",
+        "diff-removed-bg": "#ff757f1f",
+        "diff-word-added": "#c3e88d33",
+        "diff-word-removed": "#ff757f4d",
+        "diff-gutter": "#1a1c2d",
+        "agent-working": "#82aaff",
+        "agent-waiting": "#ffa07c",
+        "agent-done": "#c3e88d",
+        "agent-idle": "#929ab7",
+        "agent-error": "#ff757f",
+        "class-code": "#82aaff",
+        "class-test": "#86e1fc",
+        "class-docs": "#ffc777",
+        "class-config": "#ffa07c",
+        "class-generated": "#6f7590",
+        "unseen": "#ffc777",
+        "warning": "#ffc777",
+        "warning-bg": "#ffc7771a",
+        "danger": "#ff9398",
+        "success": "#c3e88d",
+        "info": "#86e1fc",
+        "scrim": "#13152699",
+        "syntax-comment": "#a3abdb",
+        "syntax-variable": "#c099ff",
+        "syntax-constant": "#ffc777",
+        "syntax-type": "#ffc777",
+        "syntax-string": "#c3e88d",
+        "syntax-special": "#86e1fc",
+        "syntax-function": "#87adff",
+        "syntax-keyword": "#fca7ea",
+        "syntax-embedded": "#ff8e98"
+      }
+    },
+    {
+      "file": "tokyo-night-storm.yaml",
+      "name": "Tokyo Night Storm",
+      "family": "Tokyo Night",
+      "short_name": "Storm",
+      "high_contrast": false,
+      "author": "Michaël Ball, based on Tokyo Night by enkia (https://github.com/enkia/tokyo-night-vscode-theme)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#ff7a93",
+          "source": "base12"
+        },
+        "orange": {
+          "color": "#ff9e64",
+          "source": "base13"
+        },
+        "yellow": {
+          "color": "#0db9d7",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#9ece6a",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#b4f9f8",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#7dcfff",
+          "source": "base15"
+        },
+        "violet": {
+          "color": "#bb9af7",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#15182a",
+        "surface-sunken": "#1c1f32",
+        "surface-panel": "#1c1f32",
+        "surface": "#24283b",
+        "surface-raised": "#31354a",
+        "surface-hover": "#3a3f55",
+        "surface-active": "#454a62",
+        "text": "#b2bae0",
+        "text-muted": "#a4abcf",
+        "text-subtle": "#969dbe",
+        "text-disabled": "#6c738f",
+        "border": "#42475e",
+        "border-strong": "#555b75",
+        "border-control": "#777e99",
+        "focus-ring": "#7dcfff",
+        "accent": "#be9dfa",
+        "accent-on": "#24283b",
+        "accent-hover": "#c8abff",
+        "accent-active": "#d0b8ff",
+        "diff-added-fg": "#9ece6a",
+        "diff-removed-fg": "#ff7a93",
+        "diff-added-bg": "#9ece6a1f",
+        "diff-removed-bg": "#ff7a931f",
+        "diff-word-added": "#9ece6a21",
+        "diff-word-removed": "#ff7a9333",
+        "diff-gutter": "#1c1f32",
+        "agent-working": "#7dcfff",
+        "agent-waiting": "#ff9e64",
+        "agent-done": "#9ece6a",
+        "agent-idle": "#969dbe",
+        "agent-error": "#ff7a93",
+        "class-code": "#7dcfff",
+        "class-test": "#b4f9f8",
+        "class-docs": "#0db9d7",
+        "class-config": "#ff9e64",
+        "class-generated": "#6c738f",
+        "unseen": "#0db9d7",
+        "warning": "#0db9d7",
+        "warning-bg": "#0db9d71a",
+        "danger": "#ff869b",
+        "success": "#9ece6a",
+        "info": "#b4f9f8",
+        "scrim": "#15182a99",
+        "syntax-comment": "#9aa3c6",
+        "syntax-variable": "#c0caf5",
+        "syntax-constant": "#a9b1d6",
+        "syntax-type": "#0db9d7",
+        "syntax-string": "#9ece6a",
+        "syntax-special": "#b4f9f8",
+        "syntax-function": "#2ac3de",
+        "syntax-keyword": "#bb9af7",
+        "syntax-embedded": "#fe7c94"
+      }
+    },
+    {
+      "file": "tomorrow.yaml",
+      "name": "Tomorrow",
+      "family": "Tomorrow",
+      "short_name": "Tomorrow",
+      "high_contrast": false,
+      "author": "Chris Kempson (http://chriskempson.com)",
+      "variant": "light",
+      "appearance": "light",
+      "hues": {
+        "red": {
+          "color": "#c82829",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f5871f",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#eab700",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#718c00",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#3e999f",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#4271ae",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#8959a8",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#c7c7c7",
+        "surface-sunken": "#f3f3f3",
+        "surface-panel": "#f3f3f3",
+        "surface": "#ffffff",
+        "surface-raised": "#e5e5e6",
+        "surface-hover": "#d3d4d6",
+        "surface-active": "#bebfc2",
+        "text": "#373b41",
+        "text-muted": "#51555a",
+        "text-subtle": "#64676c",
+        "text-disabled": "#898b8f",
+        "border": "#c8cacc",
+        "border-strong": "#a9abae",
+        "border-control": "#818386",
+        "focus-ring": "#4271ae",
+        "accent": "#774895",
+        "accent-on": "#ffffff",
+        "accent-hover": "#6e3f8c",
+        "accent-active": "#653683",
+        "diff-added-fg": "#5c7200",
+        "diff-removed-fg": "#c82829",
+        "diff-added-bg": "#718c001f",
+        "diff-removed-bg": "#c828291f",
+        "diff-word-added": "#718c004d",
+        "diff-word-removed": "#c828294d",
+        "diff-gutter": "#f3f3f3",
+        "agent-working": "#4271ae",
+        "agent-waiting": "#9e5200",
+        "agent-done": "#5e7600",
+        "agent-idle": "#64676c",
+        "agent-error": "#c82829",
+        "class-code": "#4271ae",
+        "class-test": "#1f8187",
+        "class-docs": "#917000",
+        "class-config": "#b35e00",
+        "class-generated": "#898b8f",
+        "unseen": "#917000",
+        "warning": "#917000",
+        "warning-bg": "#eab7001a",
+        "danger": "#b60b18",
+        "success": "#667f00",
+        "info": "#1f8187",
+        "scrim": "#373b4159",
+        "syntax-comment": "#636663",
+        "syntax-variable": "#c42326",
+        "syntax-constant": "#9e5200",
+        "syntax-type": "#806200",
+        "syntax-string": "#576c00",
+        "syntax-special": "#006f74",
+        "syntax-function": "#3765a1",
+        "syntax-keyword": "#80509e",
+        "syntax-embedded": "#905749"
+      }
+    },
+    {
+      "file": "tomorrow-night.yaml",
+      "name": "Tomorrow Night",
+      "family": "Tomorrow",
+      "short_name": "Night",
+      "high_contrast": false,
+      "author": "Chris Kempson (http://chriskempson.com)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#cc6666",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#de935f",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#f0c674",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#b5bd68",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#8abeb7",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#81a2be",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#b294bb",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#0f1113",
+        "surface-sunken": "#16181a",
+        "surface-panel": "#16181a",
+        "surface": "#1d1f21",
+        "surface-raised": "#27292b",
+        "surface-hover": "#3a3c3e",
+        "surface-active": "#4a4c4d",
+        "text": "#c5c8c6",
+        "text-muted": "#a9acab",
+        "text-subtle": "#8e9090",
+        "text-disabled": "#6b6d6e",
+        "border": "#424446",
+        "border-strong": "#5a5d5d",
+        "border-control": "#717474",
+        "focus-ring": "#81a2be",
+        "accent": "#bc9dc5",
+        "accent-on": "#1d1f21",
+        "accent-hover": "#c7a8d0",
+        "accent-active": "#d2b3db",
+        "diff-added-fg": "#b5bd68",
+        "diff-removed-fg": "#dd7575",
+        "diff-added-bg": "#b5bd681f",
+        "diff-removed-bg": "#cc66661f",
+        "diff-word-added": "#b5bd6842",
+        "diff-word-removed": "#cc66664d",
+        "diff-gutter": "#16181a",
+        "agent-working": "#81a2be",
+        "agent-waiting": "#de935f",
+        "agent-done": "#b5bd68",
+        "agent-idle": "#8e9090",
+        "agent-error": "#cf6969",
+        "class-code": "#81a2be",
+        "class-test": "#8abeb7",
+        "class-docs": "#f0c674",
+        "class-config": "#de935f",
+        "class-generated": "#6b6d6e",
+        "unseen": "#f0c674",
+        "warning": "#f0c674",
+        "warning-bg": "#f0c6741a",
+        "danger": "#f28887",
+        "success": "#b5bd68",
+        "info": "#8abeb7",
+        "scrim": "#0f111399",
+        "syntax-comment": "#a2a4a2",
+        "syntax-variable": "#ee8584",
+        "syntax-constant": "#de935f",
+        "syntax-type": "#f0c674",
+        "syntax-string": "#b5bd68",
+        "syntax-special": "#8abeb7",
+        "syntax-function": "#87a8c4",
+        "syntax-keyword": "#b89ac1",
+        "syntax-embedded": "#d49586"
+      }
+    },
+    {
+      "file": "tomorrow-night-eighties.yaml",
+      "name": "Tomorrow Night Eighties",
+      "family": "Tomorrow",
+      "short_name": "Night Eighties",
+      "high_contrast": false,
+      "author": "Chris Kempson (http://chriskempson.com)",
+      "variant": "dark",
+      "appearance": "dark",
+      "hues": {
+        "red": {
+          "color": "#f2777a",
+          "source": "base08"
+        },
+        "orange": {
+          "color": "#f99157",
+          "source": "base09"
+        },
+        "yellow": {
+          "color": "#ffcc66",
+          "source": "base0A"
+        },
+        "green": {
+          "color": "#99cc99",
+          "source": "base0B"
+        },
+        "cyan": {
+          "color": "#66cccc",
+          "source": "base0C"
+        },
+        "blue": {
+          "color": "#6699cc",
+          "source": "base0D"
+        },
+        "violet": {
+          "color": "#cc99cc",
+          "source": "base0E"
+        }
+      },
+      "roles": {
+        "surface-deep": "#1c1c1c",
+        "surface-sunken": "#242424",
+        "surface-panel": "#242424",
+        "surface": "#2d2d2d",
+        "surface-raised": "#3d3d3d",
+        "surface-hover": "#454545",
+        "surface-active": "#565656",
+        "text": "#cccccc",
+        "text-muted": "#b2b2b2",
+        "text-subtle": "#a7a7a7",
+        "text-disabled": "#787878",
+        "border": "#515151",
+        "border-strong": "#686868",
+        "border-control": "#888888",
+        "focus-ring": "#6699cc",
+        "accent": "#d6a2d6",
+        "accent-on": "#2d2d2d",
+        "accent-hover": "#e2ade2",
+        "accent-active": "#ecb7ec",
+        "diff-added-fg": "#99cc99",
+        "diff-removed-fg": "#f97d80",
+        "diff-added-bg": "#99cc991f",
+        "diff-removed-bg": "#f2777a1f",
+        "diff-word-added": "#99cc9930",
+        "diff-word-removed": "#f2777a4d",
+        "diff-gutter": "#242424",
+        "agent-working": "#6699cc",
+        "agent-waiting": "#f99157",
+        "agent-done": "#99cc99",
+        "agent-idle": "#a7a7a7",
+        "agent-error": "#f2777a",
+        "class-code": "#6699cc",
+        "class-test": "#66cccc",
+        "class-docs": "#ffcc66",
+        "class-config": "#f99157",
+        "class-generated": "#787878",
+        "unseen": "#ffcc66",
+        "warning": "#ffcc66",
+        "warning-bg": "#ffcc661a",
+        "danger": "#ff9696",
+        "success": "#99cc99",
+        "info": "#66cccc",
+        "scrim": "#1c1c1c99",
+        "syntax-comment": "#acacac",
+        "syntax-variable": "#ff8587",
+        "syntax-constant": "#f99157",
+        "syntax-type": "#ffcc66",
+        "syntax-string": "#99cc99",
+        "syntax-special": "#66cccc",
+        "syntax-function": "#7bafe3",
+        "syntax-keyword": "#cc99cc",
+        "syntax-embedded": "#da9b8c"
+      }
+    }
+  ]
+}

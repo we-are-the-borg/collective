@@ -1,0 +1,29 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && velit Laborum/Reprehenderit/Lacus/Iduntutlaboreet.porta Nostrud/Reprehenderit/Laboris/Incididunt/Mveniamquisnostrudexercitatio.quasi && vitae dicta --ipsam-fugit i>&i | nisi -u \"aliquip\" | esse -E \"Eprehenderitvol|Reprehenderit|Dapibus.neque|Architecto\" | ipsa; sit tempor --totam",
+    "timeout": 600000,
+    "description": "Lorem sed proident ad aliquip irure"
+  },
+  "tool_response": {
+    "stdout": " D Nostrud/Reprehenderit/Magna/Laudantium.irure\n I Laborum/Reprehenderit/Lacus/Aperiam.porta\n E Ullamco/Reprehenderit/Aliquip/Voluptatem/Quisnostrudexerci.vitae\n A Dapibus/Reprehenderit/Eiusmod/Voluptatem/Xeacommodoconsequatduisauteir.magna\n E Commodo/Reprehenderit/Laborum/Culpa/Perspiciatis.neque\n U Nostrud/Reprehenderit/Error/Xcepteursintocc.eaque\n I Vitae/Tnonproidentsuntcu/Identsuntculpaquioffic.fugit\n E Ipsum/Runtmollitanimides/Litanimidestlaborumcurabiturpretiu.minim\n U Velit/Pretiumtinciduntla/Tinciduntlacusnun.lacus\n I Porta/Pienligulavehicula/Ulavehiculapraesentd.error",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01QL21dmKDNp5CbFv9vVC4Vb",
+  "duration_ms": 2890
+}

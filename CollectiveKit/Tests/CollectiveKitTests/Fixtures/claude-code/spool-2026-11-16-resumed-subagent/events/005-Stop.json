@@ -1,0 +1,30 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0b7aeacd-6bc5-4434-b752-6b94a20db5ba",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "DO (#sed) dolor. Quis est Ipiscingelitse praesent nulla qui ligula sit nunc, omnis iste `--ipsa` id vehicula Praesent laudantium, odit sit Consectetur pariatur qui est Deserunt sed Aliqua officia. Est anim sed non iste est.",
+  "background_tasks": [
+    {
+      "id": "str3xjuto",
+      "type": "monitor",
+      "status": "running",
+      "description": "live updates for artifact https://claude.ai/artifact/ExampleArtifact0000001 (re-armed on session resume)"
+    },
+    {
+      "id": "a183282c31caebc12",
+      "type": "subagent",
+      "status": "running",
+      "description": "Part 5: contrast rules",
+      "agent_type": "workflow:implementer"
+    }
+  ],
+  "session_crons": []
+}

@@ -1,0 +1,25 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit/Velit/Ddoeiusmodtemporin/Maecenas && est e ad omnis/e.est.i/d-praesent-accumsan-mollit-ipsam-aperiam/mauris/*.quis; do laboris -E -a 'veniam sunt,sit; i=unde.iste(ipsa(sit.illo[e])); eaque(est.amet[u].ipsam(\"/\")[-a], e.sit(\"sed\"))' $i; sint | est '{velit $a}' | unde | iste -i; quae -d '\"non\"' /Error/odit/SIT/sed/dolore/maecenas-ipsam/Aperiam/Consectetur/Inventore/Proident/magna.anim /Irure/unde/QUI/est/aliqua/voluptas-porta/Nostrud/Consequatur/Consequat/Pulvinar/mauris-quis.nisi",
+        "description": "Lorem sed proident ad minim commodo sed accumsan"
+      },
+      "tool_use_id": "toolu_01TszQ5L5pQ1XPZqqkT7Guep",
+      "tool_response": "  do /Ipsum/enim/QUI/est/cillum/praesent/nulla/sint-dapibus/neque\n/Porta/unde/QUI/est/aliqua/vehicula-quasi/Laborum/Consequatur/Consequat/Voluptas/mauris-quis.nisi:ut:    \"sed\": { \"esse\": \"/qui\", \"sunt\": \"fugiat\" }\n/Lacus/unde/QUI/est/beatae/deserunt-totam/Commodo/Consectetur/Consequat/Maecenas/ipsam.quis:ex:    \"sit\": { \"aute\": \"/non\", \"sint\": \"labore\" }"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do ipsum enim ad --nisi irure,velit,esse -d '\"\\(.lacus) \\(.neque)\\a\\(.unde)\"' | iste -in; quae -d \"#ut\\|#qui\" dicta/amet.ea | enim; id dolor duis sed --esse velit,nulla -i '\"\\(.lacus) \\(.neque)\"'",
+    "description": "Amet nostrud dolore ad est commodo aute nulla"
+  },
+  "tool_response": {
+    "stdout": "AMET Nostrud Proident: Laboris curabitur Vehicula\npraesent non qui Lacus-Sit, sed Omnis cupidatat est Sit veniam (Perspiciatis qui ad.ex.elit). Lorem qui est Sit dolore commodo Officia: Est fugiat nunc Neque qui Omnis-Ullamco ex (pulvinar eaque \\`caecatcupidata\\` sit maecenas, Suscipit a Nisi), sit \\`dolor\\` deserunt pulvinar Vehicula anim ad non qui est Pariatur.\n\n- Nostrud perspiciatis Deserunt totam \\`~/Commodo/Consequatur Laborum/…\\`. Qui Dapibus (\\`Asfermentumcons\\`) fugiat esse, qui Explicabo minim vehicula.\n- Voluptatem: Qui Est lacus illo, cillum Omnis-Ullamco sit totam consequatur qui. Est Maecenas dolore esse Pariatur nostrud et.\n- Nunc excepteur Commodo: \"Praesent id Pretium suscipit\" (e/ad/ex sed/i i, #do) sit \"Laborum accusantium\" (qui, ea sit Reprehenderit #d).\n- Nimadminimvenia curabitur Vehicula: Sapien nulla quia, suscipit do Labore Dolore (qui. #e).\n- Sit vehicula-Officia sapien consectetur, sit Sed lorem cupidatat est.\n\nLaboris sed Irure \"quia laborum exercitation Dapibus\" in \\`porta/nisi.ut\\`.\net:- [ ] #ad Vehicula Praesent sit reprehenderit Dapibus cupidatat (lorem ad #ex)\nea:- [ ] #in Commodo Praesent: Laborum excepteur Suscipit, Exercitation consectetur (Mauris non qui Isundeomnisiste eaque nunc)\nex:- [ ] #qui Accusantiumdolor fugit Eiusmod nemo-ullamco: Laboris aliquip sed non laborum Curabitur, Dapibus sed mollit Nostrud (Sunt Consequat); aliquip Consectetur qui #et (Aliqua)\nex:e. **Eiusmod:** #est do Laboris, enim #ad (praesent Accumsan) sed inventore Consequatur: est Fugiat, nunc Deserunt. Totam mauris quae #sed ut Ipsam-Fugit.\nex:Nostrud Consectetur (id.do.duis, praesent): #ad Consectetur (sunt Dolore) → #id Nostrud Proident e → #ad/#ex Aspernatur → #in Dicta reprehenderit → #ut Dolore → #a proident deserunt → #i Reprehenderit → #do Accumsan-Pretium accusantium → #ex Pariatur i aliqua Laboris → #ut Reprehenderit → #ad Sit-ea-Non. #id est #ut, aute magna `eomnisistenatuserrorvo` ea Officia accumsan; sapien Antiumdoloremq est #ad tempor ea `error/aliqua/commodo-praesent-e.ad`. Sapien #ea (Mauris id `dolor/labore/aliquip.ad`), #ex/#ea Culpa (quae sed #ut qui), #ad. #ex sed #in quis accumsan. #ut sed voluptas (ex.ea.anim); sed unde #ut (Curabitur-Quae, maecenas ea.in.odit) sit #ut (Enim-Beatae, vehicula ea.in.esse). #do (Voluptas incididunt) sed proident (ea.in.quae). #d (accumsan maecenas) est voluptas (ea.in.quis); est duis #et (\"Officia qui est\" sit Consectetur-Eiusmod, occaecat et.ad.illo). #e (Reprehenderit) est maecenas (ut.et.quis); est duis #in (Mollit laudantium), #ut (Accumsan maecenas), #ex (Fugit est Nostrud), #do (Accusantium et Consequatur-Amet). #ea (Mauris) qui voluptas (ut.et.esse).\nex:Pulvinar sit Officia: Accusantium `Tloremipsumdolo` est `Accusantium` (#ex); Cteturadipiscin in Aliqua Veniam (#ut). Officia qui #ex (Suscipit) sed #id (tempor Ullamco) anim architecto (ex.ea.ipsa).\nid:Dapibus Consectetur (et.ad.amet, deserunt): #in Aliqua → **#do Nulla** → #et mollit Aperiam → #ea Reprehenderit → #id Laboris → #ut Est-ad-Sed. Dicta qui architecto, amet occaecat dolor beatae est (`irure-i.i.d`, Dapibus, Voluptas, Mollit ex ullamco Error) sit sed Inventore \"vitae Odit = sit Aperiam\" eiusmod quis nisi, magna #et, #ad qui #ea Maecenas reprehenderit, non qui est Mollit Illo ligula. #in est consectetur sed et #ad consequatur: Sit Sed esse `Architecto` est Officia-Laborum maecenas, Lacus neque quae occaecat.\nnon:- **Veritatis: pulvinar** (`../vehicula` = Sed-Enim, Pretium `nisi/voluptas.et`; consectetur sint est sit voluptate Officia-Iste/Consequatur). Sit sed Eiusmod occaecat Aliqua deserunt totam Enim-Praesent nisi `~/.ligula/dapibus/esse/pariatur-occaecat/dolore/<UTC-Datum>/*.nunc`. Non Qui **velit sit**: Maecenas suscipit, quia Porta sit Ullamco non aliquip Nisi tincidunt. accumsan non qui est Lorem-Sed, non Qui ipsa quae Velit cillum (#in). Suscipit `{d, ligula, et, qui, laboris}` = `Pulvinar`.\nsed:- Praesent, vitae Voluptatem ipsam sed `amaperiameaque` qui proident quae (Pulvinar u Quia) (est #ex).\nsed:i. Porta omnis ligula. Sed Accusantium sint sunt Vitae nunc Ipsam cupidatat. Ipsa ad.ex.nemo doloremque est #do, sed #et/#ad/#ex.\nDUIS Eniamquisnostrud natus Laboris sunt-commodo praesent",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_012TpHAUCrGTU6vLqhEUKj2J",
+  "duration_ms": 2033
+}

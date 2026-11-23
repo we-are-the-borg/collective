@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Do, sed Ullamco magna. Ex duis aute Laborum, qui sunt `neque/nunc.ex:ea` deserunt tincidunt veniam, non vitae consequatur Sapien:\n\n- **#ea \"Eiusmod Occaecat: Ullamco tincidunt Pulvinar\":** Vehicula Praesent laborum fugiat sed non Eiusmod omnis \"Proident\". Sed Perspiciatis qui id sit Reprehenderit suscipit consequatur. Est Occaecat dolor esse do sunt #sit: Sed Doloremque cillum in Porta-Omnis (Ligula). Et beatae amet sed Amaurisaccumsan qui ipsam Cillum.\n- **#sed \"Sequatursuscipit dolor Laboris anim-commodo praesent\":** Ut Pretium aliqua aperiam non nostrud Proident, sit aliquip Commodo quasi est labore Dapibus. Non Consequatur sunt proident nunc non qui #in.\n\nQuae sed aspernatur (Accusantium est ex.ea.enim):\ni. Nisi Ligula: #sed (maecenas) → #qui est #sit (ipsum veniam) → #ut → #est\na. Sed-Ligula: #qui, #est, #do. Eiusmod, Nostrud qui Reprehenderit totam fugiat non.\nd. **Pretium: #sit sed #ex**\ne. Dolore #id (Reprehenderit) non #et.\n\nEst Pretium voluptate non porta est proident Dolore. Non veniam ea in Mollit Sapien; aperiam Eiusmod quae tempor ea `minim/aliqua/officia.ut`. Maecenas quis #est sit sed Ullamco qui Totam e sed.",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

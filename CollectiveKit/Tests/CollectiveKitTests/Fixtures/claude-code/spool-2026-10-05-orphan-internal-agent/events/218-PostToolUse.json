@@ -1,0 +1,28 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && velit esse d>&u | anim -A \"nostrud:|natus:|Ipsa sit|veniam quasi|fugiat\" | odit -e \"^.*Elit .* mauris\" | quis -do",
+    "timeout": 600000
+  },
+  "tool_response": {
+    "stdout": "􁁛  Lorem Sumdolorsitametc dolore magna e.sit officia.\n􁁛  Nulla Modtemporincid ligula neque a.non ullamco.\n􁁛  Error Madminimveniamquisn veniam quasi e.est dapibus.\n􁁛  Fugit Isnisialiquipe beatae dolor u.sed commodo.\n􁁛  Velit Eprehenderitvolupta fugiat lacus d.qui nostrud.\n􁁛  Natus Riaturexcepteursintoccaecat labore eaque i.sit pretium.\n􁁛  Ipsam Ntculpaquioffi sapien ipsum i.non aliquip.\n􁁛  Irure Rabiturpretiumtincidu aliqua culpa e.est eiusmod.\n􁁛  Omnis \"Ligula deserunt\" beatae eaque e.non pretium.\n􁁛  Ipsam Asfermentumconsequatu fugiat ipsum e.est aliquip.\n􁁛  Irure Isistenatuserrorvoluptatema labore culpa a.sed eiusmod.\n􁁛  Omnis Udantiumtotamaper sapien totam e.qui laborum.\n􁁛  Dicta Itatisquasiarchitectob aliqua lorem u.sit laboris.\n􁁛  Minim Oipsamquiavoluptasas mauris nulla d.non aperiam.\n􁁛  Porta Lorsitametconsectetu cillum error i.est officia.\n􁁛  Vitae Mporincididuntutlabore tempor fugit i.sed ullamco.\n􁁛  Magna Nimveniamquisnostrudexercita mollit velit e.qui dapibus.\n􁁛  Neque Ialiquipexeacommodoconseq dolore natus e.sit commodo.\n􁁛  Quasi Enderitvoluptatevelites ligula ipsam a.non nostrud.\n􁁛  Dolor Rexcepteursintoccaecatcupid veniam irure e.est pretium.\n􁁛  Lacus Paquiofficiadeseruntm beatae omnis u.sed aliquip.\n􁁛  Eaque Urpretiumtincidunt fugiat dicta d.qui eiusmod.\n􁁛  Ipsum Hiculapraesentdapibusn labore minim i.sit laborum.\n􁁛  Culpa Enasfermentumconsequatursusci sapien porta i.non laboris.\n􁁛  Totam Mnisistenatuserro aliqua vitae e.est aperiam.\n􁁛  Lorem Laudantiumtotama mauris magna e.sed officia.\n􁁛  Nulla Eritatisquasiarchitecto cillum neque a.qui ullamco.\n􁁛  Error Emoipsamquiavoluptasas tempor quasi e.sit dapibus.\n􁁛  Fugit Dolorsitametcons mollit dolor u.non commodo.\n􁁛  Velit Temporincididuntutlabore dolore lacus d.est nostrud.",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01NxipjZq7m3QMU7Pb39qpDp",
+  "duration_ms": 2268
+}

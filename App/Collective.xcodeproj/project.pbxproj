@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		973D7F3CC3BE4504417DC1E8 /* SubspaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 416F0103FB24A02F672E7E70 /* SubspaceKit */; };
+		E116B2EF306ED1DA00CF74E7 /* CollectiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = E116B2EE306ED1DA00CF74E7 /* CollectiveKit */; };
+		E116B2F1306ED1DA00CF74E7 /* CollectiveUI in Frameworks */ = {isa = PBXBuildFile; productRef = E116B2F0306ED1DA00CF74E7 /* CollectiveUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E1F6E589306ED09A0010AFF7 /* The Collective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Collective.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F6E5A0306ED0C00010AFF7 /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E1F6E58B306ED09A0010AFF7 /* Collective */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Collective;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1F6E586306ED09A0010AFF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				E116B2EF306ED1DA00CF74E7 /* CollectiveKit in Frameworks */,
+				E116B2F1306ED1DA00CF74E7 /* CollectiveUI in Frameworks */,
+				973D7F3CC3BE4504417DC1E8 /* SubspaceKit in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1F6E580306ED09A0010AFF7 = {
+			isa = PBXGroup;
+			children = (
+				E1F6E5A0306ED0C00010AFF7 /* Version.xcconfig */,
+				E1F6E58B306ED09A0010AFF7 /* Collective */,
+				E1F6E58A306ED09A0010AFF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1F6E58A306ED09A0010AFF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6E589306ED09A0010AFF7 /* The Collective.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1F6E588306ED09A0010AFF7 /* Collective */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1F6E599306ED09B0010AFF7 /* Build configuration list for PBXNativeTarget "Collective" */;
+			buildPhases = (
+				E1F6E585306ED09A0010AFF7 /* Sources */,
+				E1F6E586306ED09A0010AFF7 /* Frameworks */,
+				E1F6E587306ED09A0010AFF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				E1F6E58B306ED09A0010AFF7 /* Collective */,
+			);
+			name = Collective;
+			packageProductDependencies = (
+				E116B2EE306ED1DA00CF74E7 /* CollectiveKit */,
+				E116B2F0306ED1DA00CF74E7 /* CollectiveUI */,
+				416F0103FB24A02F672E7E70 /* SubspaceKit */,
+			);
+			productName = Collective;
+			productReference = E1F6E589306ED09A0010AFF7 /* The Collective.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1F6E581306ED09A0010AFF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					E1F6E588306ED09A0010AFF7 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = E1F6E584306ED09A0010AFF7 /* Build configuration list for PBXProject "Collective" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1F6E580306ED09A0010AFF7;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E116B2ED306ED1DA00CF74E7 /* XCLocalSwiftPackageReference "../CollectiveKit" */,
+				A20607966B088B6E56BC2065 /* XCLocalSwiftPackageReference "../SubspaceKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E1F6E58A306ED09A0010AFF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1F6E588306ED09A0010AFF7 /* Collective */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1F6E587306ED09A0010AFF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1F6E585306ED09A0010AFF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E1F6E597306ED09B0010AFF7 /* Debug configuration for PBXProject "Collective" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7WMWDJM5YK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1F6E598306ED09B0010AFF7 /* Release configuration for PBXProject "Collective" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7WMWDJM5YK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E1F6E59A306ED09B0010AFF7 /* Debug configuration for PBXNativeTarget "Collective" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F6E5A0306ED0C00010AFF7 /* Version.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7WMWDJM5YK;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Collective";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.grmlin.Collective;
+				PRODUCT_MODULE_NAME = Collective;
+				PRODUCT_NAME = "The Collective";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E1F6E59B306ED09B0010AFF7 /* Release configuration for PBXNativeTarget "Collective" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F6E5A0306ED0C00010AFF7 /* Version.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 7WMWDJM5YK;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Collective";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.grmlin.Collective;
+				PRODUCT_MODULE_NAME = Collective;
+				PRODUCT_NAME = "The Collective";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1F6E584306ED09A0010AFF7 /* Build configuration list for PBXProject "Collective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F6E597306ED09B0010AFF7 /* Debug configuration for PBXProject "Collective" */,
+				E1F6E598306ED09B0010AFF7 /* Release configuration for PBXProject "Collective" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		E1F6E599306ED09B0010AFF7 /* Build configuration list for PBXNativeTarget "Collective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F6E59A306ED09B0010AFF7 /* Debug configuration for PBXNativeTarget "Collective" */,
+				E1F6E59B306ED09B0010AFF7 /* Release configuration for PBXNativeTarget "Collective" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A20607966B088B6E56BC2065 /* XCLocalSwiftPackageReference "../SubspaceKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SubspaceKit;
+		};
+		E116B2ED306ED1DA00CF74E7 /* XCLocalSwiftPackageReference "../CollectiveKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../CollectiveKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		416F0103FB24A02F672E7E70 /* SubspaceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SubspaceKit;
+		};
+		E116B2EE306ED1DA00CF74E7 /* CollectiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CollectiveKit;
+		};
+		E116B2F0306ED1DA00CF74E7 /* CollectiveUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CollectiveUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E1F6E581306ED09A0010AFF7 /* Project object */;
+	validationLevel = 1;
+}

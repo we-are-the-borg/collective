@@ -1,0 +1,11 @@
+{
+  "session_id": "92f09628-0235-4c9c-b054-9e7a01a56f32",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/92f09628-0235-4c9c-b054-9e7a01a56f32.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/92f09628-0235-4c9c-b054-9e7a01a56f32/scratchpad",
+  "agent_type": "claude",
+  "hook_event_name": "InstructionsLoaded",
+  "file_path": "/Users/user/dev/project/CLAUDE.md",
+  "memory_type": "Project",
+  "load_reason": "session_start"
+}

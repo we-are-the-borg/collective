@@ -1,0 +1,31 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "6bc7618a-b0ff-41bf-9473-a652a4c99048",
+  "permission_mode": "auto",
+  "agent_id": "a0d14a7fef7966135",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "(do Reprehenderit && dolor quis e>&e | aute -id) ",
+    "timeout": 600000,
+    "run_in_background": true
+  },
+  "tool_response": {
+    "stdout": "",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "backgroundTaskId": "bvgmf5or7",
+    "backgroundCwdHint": "Session cwd remains /Users/user/dev/project; directory changes made by the backgrounded command do not apply to subsequent commands."
+  },
+  "tool_use_id": "toolu_0199qex4SzexyNNAcDyoqqoE",
+  "duration_ms": 16
+}

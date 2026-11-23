@@ -1,0 +1,27 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "ad023eb63eb7eb685",
+  "agent_type": "",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/subagents/agent-ad023eb63eb7eb685.jsonl",
+  "last_assistant_message": "Tempor sed/non ad Laudantium.irure",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

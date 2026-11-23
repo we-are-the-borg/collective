@@ -1,0 +1,18 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "16f1b7c0-2d79-46e2-b926-fc6e0906a94a",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/.aliqua/pulvinar/-Irure-aute-non-pretium/ligula && sit -a '' 'e/#ea+#in aliqua (DO #ut);/#et+#ad sapien (EA #in); #id DO #ut aute;/' ALIQUA.ex && sunt -i 'ID #do' LIGULA.et",
+    "description": "Amet UT et ad veniam irure"
+  },
+  "tool_use_id": "toolu_01Koz8Pkqm9NdDP3Xf4NhenP"
+}

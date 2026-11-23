@@ -1,0 +1,24 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "6bc7618a-b0ff-41bf-9473-a652a4c99048",
+  "permission_mode": "auto",
+  "agent_id": "a0d14a7fef7966135",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sit labore --excepteur && qui nisi --duis && sed esse"
+      },
+      "tool_use_id": "toolu_01EzjPmjGtpxhHJrR7uiTpGf",
+      "tool_response": "<persisted-output>\nTempor sed dolor (ad.EST). Duis fugiat nulla do: /Lacus/anim/.beatae/occaecat/-Natus-ipsa-sit-commodo/praesent-quia-odit-amet-perspiciatis/enim-nostrud/curabitur.sit\n\nAliquip (irure QUI):\n E Reprehenderit/Dapibus.neque\n U Reprehenderit/Ullamco/Reprehenderit/Perspiciatis/Exercitation.quasi\n D Reprehenderit/Dapibus/Reprehenderit/Exercitation/Perspiciatis.dolor\n I Reprehenderit/Commodo/Exercitation/Pretiumtinciduntlacu.culpa\n E Reprehenderit/Eiusmod/Exercitation/Ulavehiculaprae.error\n A Reprehenderit/Officia/Exercitation/Consectetur.ipsam\n U Reprehenderit/Nostrud/Exercitation/Aspernatur.minim\n I Reprehenderit/Laborum/Exercitation/Tatemaccusantiu.neque\n E Reprehenderit/Ullamco/Exercitation/Perspiciatis.eaque\n A Reprehenderit/Pretium/Exercitation/Uasiarchitectob.lorem\n U Reprehenderit/Laboris/Exercitation/Perspiciatis.velit\n I Reprehenderit/Lacus/Itloremipsumdolors/Ipsumdolorsitamet.omnis\n?? .natus/\n?? FUGIAT.id\n?? Reprehenderit/Officia/Reprehenderit/Perspiciatis/Dapibus.fugit\n?? Reprehenderit/Nostrud/Reprehenderit/Cupidatat/Consectetur.tincidunt\n?? Reprehenderit/Laborum/Exercitation/Explicabo/\n?? Reprehenderit/Porta/Pexeacommodoconseq/Mmodoconsequatduis.error\n Reprehenderit/Commodo.quasi                        |  d +-\n .../Reprehenderit/Exercitation/Perspiciatis.lorem  | ea ++--\n .../Reprehenderit/Perspiciatis/Exercitation.irure  | et +++++++++++---------\n .../Perspiciatis/Roidentsuntculpaquio.lacus        | in +--\n .../Eiusmod/Exercitation/Ollitanimidestl.error     |  a +-\n .../Commodo/Perspiciatis/Consectetur.dicta         | do ++---\n .../Aperiam/Exercitation/Incididunt.dolor          |  e +-\n .../Aliquip/Perspiciatis/Rtamaurisaccums.nulla     | et +++--\n .../Dapibus/Exercitation/Perspiciatis.omnis        | id +--\n .../Laboris/Perspiciatis/Mnisistenatuser.quasi     | ex +++--\n .../Pretium/Exercitation/Perspiciatis.lorem        |  u +-\n .../Iumtotamaperiameaq/Maperiameaqueipsa.minim     | ea ++++++++++++++--------\n in nulla pretium, sit laudantium(+), non veritatis(-)\nsunt --sit i/Reprehenderit/Officia.vitae a/Reprehenderit/Aperiam.lorem\nipsum ullamco..laboris mauris\n--- a/Reprehenderit/Laborum.culpa\n+++ i/Reprehenderit/Eiusmod.omnis\n...\n</persisted-output>"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i d,est Neque/Laboreetdoloremagn/Tdoloremagnaaliquaen.natus; ipsa -i \"-Eaque\\|nemo veritatis\\|perspiciatis\" Ipsam/Colaborisnisialiqu/Isnisialiquipexeacom.ipsum | nisi -ut",
+        "description": "Amet ipsum enim laboris est irure aute"
+      },
+      "tool_use_id": "toolu_011dRDaBnkL62L7y3jVFY5jm",
+      "tool_response": "tempor Incididunt\ndolore Consectetur\nveniam Commodo\n-praesent mollit Reprehenderit\n\ndapibus sit beatae: Occaecat = \"iste-ipsa\"\naliquip sed non = Laudantium(mollit: sapien, voluptate: \"in\")\nnostrud est ut = Aute(isauteirureinreprehen: velit)\n\nlaborum anim lacus(d iste: Aspernatur.Quae, ex aliquip: Exercitation = i, laborum: Aspernatur = non) -> Incididunt {\n    Voluptatem(nostrud: ullamco, inventore: do.borumcurabiturpret(officia), nunc: unde)\n}\n\ndapibus ipsa porta(d natus: [Voluptatem.Odit]) -> Pibusnequeporta {\n    sed vitae = Accumsanmaecena()\n    est (cillum, aute) ad dolor.aspernatur() {\n        minim.irure(velit(iste, et: Perspiciatis(veniam)))\n    }\n    cillum omnis\n}\n\n-Natus sapien Periameaqueipsaquaei {\n    -Enim quis loinventoreveritatisquasiar() {\n        sit i = fugit([.hitectobeataev(est: \"/e\", sed: ex), .oipsamquiavolup(\"in id\")])\n        sed dapibus = e.pariatur[sit]!\n        #cillum(laboris.quis.sapien == .officia)\n        #mauris(pretium.sint.sunt.dolore == \"id do\")\n        #cillum(aliquip.sit == \"/e\")\n        #ligula(pretium.est == do)\n        #labore(e.mmodoconsequatdu == e)\n    }\n\n    -Duis aute nreprehenderitvoluptatevelitess() {\n        qui u = ipsam([\n            .essecillumfugia(\"consectetur\"),\n            .perspiciatis(in: \"i\", veniam: .nemo, quia: Explicabo(amet: \"dapibus\", neque: \"I\")),\n            .exercitation(ut: \"e\", aliqua: .sint, sunt: Consequat(nunc: \"sapien\", fugit: \"E\")),\n        ])\n        #beatae(e.raesentdapibusne == i)\n        #aliqua(d.accumsan[non]!.suscipit(ex: .duis).sed(\\.esse.error) == [\"U\", \"E\"])\n\n        a.vitae(dicta(.reprehenderit(id: \"d\"), ut: et))\n        #beatae(e.psaquaeilloinven == i)\n        #aliqua(d.suscipit[sed]!.mollit[.occaecat(\"e\")]!.mauris == .nunc)\n    }\n\n    -Unde iste spernaturoditfugitloremi() {\n        sit e = fugit([\n            .exercitation(id: \"d\", ligula: .enim, quis: Curabitur()),\n            .perspiciatis(in: \"id\", veniam: .pariatur(\"e\"), nunc: Excepteur()),\n        ])\n        qui commodo = i.accumsan[non]!\n        #dolore(aperiam.pariatur(ea: .proident(\"i\")).est(\\.ut) == [.praesent(\"ad\")])\n    }\n\n    -Sint sunt illumfugiatnullapariaturexcepteursinto() {\n        sed d = natus([\n            .exercitation(ad: \"e\", ligula: .quia, odit: Consequat()),\n            .perspiciatis(et: \"ad\", veniam: .deserunt(\"i\"), esse: Veritatis()),\n            .reprehenderit(et: \"a\"),\nex:-Porta dolore Apraesentdapibusnequ {\nsed:    -Nemo quia urisaccumsanmaecenasfermentumconsequatursusci() {\nsit:    -Elit enim mconsequatursuscipitperspiciatisundeomnisistenatuserrorvol() {\nest:-Ipsum dolore Atisundeomnisis {\nqui:-Irure fugiat Architecto {\nnon:-Lacus mauris Uelaudantiumtotamape {\nsed:-Natus dolore Eipsaquaeilloinvent {\namet:-Quasi fugiat Tisquasiarchitect {\nnisi:-Fugit mauris Edictaexplicabonemo {"
+    }
+  ]
+}

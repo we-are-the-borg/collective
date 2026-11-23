@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "6bc7618a-b0ff-41bf-9473-a652a4c99048",
+  "permission_mode": "auto",
+  "agent_id": "a0d14a7fef7966135",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing/id-veniam/Quasi/Accumsan/Dicta && amet Adipiscing.non -quis '*Exercitation*' -u -aute '*Isauteirureinreprehenderitv*' | sint -e culpa | nunc; unde . -iste '*.consequatur' | quae"
+  },
+  "tool_use_id": "toolu_01XeFDhUKUxv7RwW9VtJYPbi"
+}

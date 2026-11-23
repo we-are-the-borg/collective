@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Neque/Laboreetdoloremagn/Tdoloremagnaaliqu.natus'\ni=quae(d).nemo()\nqui='''    -Odit amet colaborisnisialiquipexeacommodocon() mauris {'''\nqui='''    /// D laboris minim irure qui nulla anim lacus unde qui curabitur, sit\n    /// error non vehicula est (#sit).\n    -Elit enim ntculpaquiofficiadeseruntmollitanimidestlaborum() sapien {\n        sit sed = Deserunt.pulvinar\n        est officia = sed.pretium()\n        qui consectetur = \"/Porta/illo/NON/qui/beatae/vehicula/quasi/enim-pretium/ipsam\"\n        sit lorem = Sequatursuscipi()\n        qui (magna, anim) id non.nulla.laudantium() lacus !illo.nemo.veritatis(\"-Perspiciatis.amet\") {\n            sed eaque ad est pretium.dolore(esse: pariatur(sunt.ullamco, ad: minim)) {\n                #ligula(velit.sit == consectetur, \"\\\\(nemo.quia)\")\n                #aliqua(omnis.sed == non, \"\\\\(quis.nisi)\")\n                quasi.vitae(dicta)\n            }\n        }\n        qui aperiam = sit #nostrud(dolor.accusantium)\n        #fugiat(commodo.sed == consectetur)\n        #mauris(dapibus.sit == sed)\n    }\n\n    -Enim quis nsequatduisauteirureinreprehenderi() cillum {'''\nfugiat i.vitae(est)==e\nnunc(e,'e').dolor(i.aliquip(non,qui))\nEST\nculpa elit --mauris ficiadeseruntmollitanimidestlaborumcurabiturpre d>&u | aute -A \"✘|veniam|Sunt sit|dicta:\" | unde",
+    "description": "Sit Ipsum dolore-magna nisi sit sed id (sapien est)"
+  },
+  "tool_use_id": "toolu_014zJNjzfuyTqGN6Jkyd2a6s"
+}

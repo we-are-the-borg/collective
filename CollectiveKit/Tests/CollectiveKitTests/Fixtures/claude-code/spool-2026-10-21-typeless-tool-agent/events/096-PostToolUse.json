@@ -1,0 +1,59 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Neque/Laboreetdoloremagn/Tdoloremagnaaliquaenim.natus'\ni=quae(d).nemo()\nqui='''        // Ad ex sed lorem beatae, tempor sit aliquip esse.\n        qui accumsan = Culpa(luptatevelitessecill.sapien { u et quae }.tempor(e))\n'''\nqui='''        // Est `Upidatatnonproiden`, elit non fugit sapien; sit ullamco esse minim.\n        est praesent = Nulla(tinciduntlacusnuncpu.cillum(i))\n'''\nmollit sed ut e\nodit(e,'e').vitae(i.dapibus(sit,sed))\nNON\ndolor sunt --mauris Undeomnisistenatuserrorvol d>&u | ipsa -A \"✘|veniam|cillum|omnis:\" | odit -do",
+    "description": "Sit Labore Enim aliqua-minim irure (fugiat non)"
+  },
+  "tool_response": {
+    "stdout": "􀢄  Amet sumdolorsitametconsecteturadipiscingelitseddoeiusmodtem() proident ad minim ea Gelitseddoeiusmodtempo.nulla:qui:u: Consequatur beatae: nostrud.qui == accusantium\n􀢄  Quae mveniamquisnostrudexercitationullamcolaborisnisialiquip() praesent et dicta ex Colaborisnisialiquipex.lorem:qui:d: Consequatur dolore: commodo.qui == sunt\n􀢄  Anim luptatevelitessecillumfugiatnullapariaturexcepteursinto() sapien porta e.sit laboris nemo i aliqua.\n􀢄  Amet tnonproidentsuntculpaquiofficiadeseruntmollita() suscipit ad lorem ea Runtmollitanimidestlab.magna:qui:ut: Accusantium aliqua: culpa.qui == consectetur\n􀢄  Quae pienligulavehiculapraesentdapibusnequeportamau() proident et totam ex Queportamaurisaccumsan.vitae:qui:do: Accusantium fugiat: ipsum.qui == sunt\n􀢄  Anim undeomnisistenatuserrorvoluptatemaccusantiumdo() praesent ut culpa ad Cusantiumdoloremquelau.porta:qui:id: Accusantium ligula: eaque.qui == consectetur\n􀢄  Duis itatisquasiarchitectobeataevitaedictaexplicabo() voluptas do ipsum et Taexplicabonemoipsamqu.minim:qui:in: Accusantium tempor: lacus.qui == odit\n􀢄  Amet metconsecteturadipiscingelitseddoeiusmodtempor() deserunt id eaque ut Usmodtemporincididuntu.dicta:qui:ea: Accusantium aliqua: dolor.qui == consectetur\n􀢄  Quae ostrudexercitationullamcolaborisnisialiquipexe() accumsan in lacus do Ialiquipexeacommodocon.omnis:qui:ex: Accusantium fugiat: quasi.qui == sunt\n􀢄  Anim essecillumfugiatnullapariaturexcepteursintocca() tempor ipsum i.sit aliquip nemo e mollit.\n􀢄  Culpa Suntculpaquiofficiadeserun mauris porta d.sit laboris esse e cillum.\n􀢄  Anim sed unde u lorem ad e magna dolore irure d.sed pretium quis e ligula.",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/ClaudeCodeAdapterTests.swift",
+          "hunks": [
+            {
+              "oldStart": 702,
+              "oldLines": 8,
+              "newStart": 702,
+              "newLines": 8,
+              "lines": [
+                "     }",
+                " ",
+                "     -Amet elit rsitametconsecteturadipiscingelitseddoeiusmodtemporinci() aliqua {",
+                "-        // Do ut non magna veniam, cillum sed laborum sint.",
+                "-        sit occaecat = Dolor(tconsecteturadipisci.veniam { e in esse }.sapien(u))",
+                "+        // Sit `Sumdolorsitametcon`, enim qui minim cillum; sed laborum sint lacus.",
+                "+        sit occaecat = Dolor(tconsecteturadipisci.veniam(e))",
+                "         sit ipsum = non aliqua(pulvinar, duis: sed.laborum())",
+                "         sit nostrud = non #laboris(minim.accusantium)",
+                "         #tempor(nostrud.enim.quis.veniam != sit)"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Tests/CollectiveKitTests/ClaudeCodeAdapterTests.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_01JY6MUPcZnnoif6GPgZtKpb",
+  "duration_ms": 18767
+}

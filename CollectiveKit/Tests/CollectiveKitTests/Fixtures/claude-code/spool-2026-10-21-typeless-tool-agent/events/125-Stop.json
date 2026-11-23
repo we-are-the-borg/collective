@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "D sed dolore: Deserunt nisi `Perspiciatis` praesent nulla `qui` est `sit` (Porta non `qui`). `error quae` eaque praesent vitae (est Ipsam), sed Non-Ipsum nisi. U (Aute non qui Accusantium) culpa lacus.\n\nUnde Architecto est A error non in est Laborum sed:\n- **Dapibus voluptas `lorem` sit proident:** Magna sint Commodo anim nunc reprehenderit `qui` est `porta` sed nemo mauris ad eaque quasi Laborum consectetur, veniam `Perspiciatis` pariatur esse, proident est pulvinar `irure` non accumsan est sit sed. Porta: Quia proident `sit` aliquip non qui `Exercitation`.\n- **Dicta-Exercitation aliqua:** Lorem est Anim magna Minim-Perspiciatis est sit sed Perspiciatis et est omnis sed in totam commodo Ligula, fermentum non Dapibus labore Dolore. Id non Perspiciatis est ad praesent Ligula.",
+  "background_tasks": [
+    {
+      "id": "a4e7313b0f002387e",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step B: session name from the status file",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

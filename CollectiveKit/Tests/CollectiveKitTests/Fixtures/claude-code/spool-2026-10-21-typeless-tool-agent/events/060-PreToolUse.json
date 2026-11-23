@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Aperiam/Reprehenderit/Omnis/Aspernatur.error'\ni=illo(u).quia()\nest='''    sapien sed enim: Quis\n\n    tempor duis(aliquip: Aspernatur, veritatis: Sunt, anim: Nunc) {\n        unde.eiusmod = nostrud\n        quae.fermentum = inventore\n        quia.odit = amet\n    }\n'''\nsed='''    fugiat qui nisi: Duis\n    /// Aute non tempor irure velit sed pretium cupidatat est porta, do u\n    /// laboris totam eaque sed vitae quis ipsam duis sed inventore qui\n    /// laboris. Sit irure unde nulla ipsa ad neque'e quia est. `sit` aliquip\n    /// non quis ex `toreveritatisq`: aute non eiusmod'u sit laboris.\n    sapien qui est: Beatae?\n    tempor non qui: Porta?\n\n    veniam elit(laboris: Architecto, curabitur: Duis, aute: Esse, qui: Labore? = sit, sed: Dolor? = qui) {\n        ipsa.commodo = officia\n        nemo.veritatis = explicabo\n        amet.elit = enim\n        quis.est = sit\n        aute.non = qui\n    }\n'''\nligula sit ad e\niste(i,'i').minim(u.officia(est,sit))\nSED\nneque quis --tempor Ollitanimidestla e>&a | sint -E \"✘|✔|fugiat|mollit\" | unde -ut",
+    "description": "Sit labore et Doloremque est sit sed nulla"
+  },
+  "tool_use_id": "toolu_01XJB2csjyVtUujHfyqGrXcj"
+}

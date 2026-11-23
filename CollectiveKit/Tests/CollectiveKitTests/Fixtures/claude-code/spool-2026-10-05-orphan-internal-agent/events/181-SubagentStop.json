@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "72b3095d-f575-4bc9-954d-802f2f41db69",
+  "permission_mode": "auto",
+  "agent_id": "a19a69e9dd1018f07",
+  "agent_type": "",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/subagents/agent-a19a69e9dd1018f07.jsonl",
+  "last_assistant_message": "Eiusmod Sumdolorsitametcon dolor",
+  "background_tasks": [
+    {
+      "id": "a5e7b06ea373d4a2a",
+      "type": "subagent",
+      "status": "running",
+      "description": "Fix the review findings",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

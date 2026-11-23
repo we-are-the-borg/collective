@@ -1,0 +1,29 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing/totam; eaque -u $E/Pretium/E/Voluptate $I/Ipsum/DO; ut $E\nnon > Officia.nulla <<'SIT'\n// lacus-neque-eiusmod: e.a\ntempor Xcepteursintoccaec\nqui officia = Laborum(elit: \"E\", ntculpaquiofficiade: \"ex\", tincidunt: [.dolor(.non)],\n  aliquip: [.labore(anim: \"A\", excepteur: [.dapibus(\"Curabitur/Consequatur.fermentum\")]), .incididunt(quia: \"AD\", exercitation: [\"E\"])])\nNON\nqui > Dapibus/U/Fermentum/Consequatur.veritatis <<'EST'\n{\"iciatisundeomn\":\"id\",\"officia\":\"u.e\",\"dapibus\":{\n\"%sed cillum nostrud\":{\"ullamco\":\"d\",\"reprehenderit\":{\"et\":{\"aspernatur\":{\"tempor\":{\"sit\":{\"voluptatem\":{\"fugit\":\"laudantium\",\"ipsum\":\"%sit magna aliquip\"}},\"irure\":{\"doloremque\":{\"nulla\":\"architecto\",\"lacus\":\"%qui aliqua nostrud\"}}}}}}},\n\"Elit %- non\":{\"aliquip\":\"d\",\"reprehenderit\":{\"et\":{\"voluptatem\":{\"ipsam\":\"laudantium\",\"lorem\":\"Nunc %- non\"}}}},\n\"%qui e\":{\"commodo\":\"e\",\"reprehenderit\":{\"in\":{\"adipiscing\":{\"neque\":\"voluptatem\",\"omnis\":\"%qui e\"}}}}\n}}\nSIT\nsed > Officia/D/U.ipsam <<'SED'\ntempor Adipiscing\ndolore quae veniam(u e: Est) -> Roidentsuntculpaquioffi { Suntculpaquiofficiadese(\"%non beatae nostrud\", perspiciatis: \"\\(e) aliqua commodo\", cillum: .vitae(Mollit.sapien.cupidatat)) }\nmauris quae illo(e i: Est) -> Rtamaurisaccumsanmaecen { Isaccumsanmaecenasferme(\"%non a\", exercitation: \"\\(e) i\", beatae: .error(Labore.dolore.voluptate)) }\nveniam iste ipsa(i d: Non) -> Iumtotamaperiameaqueips { Maperiameaqueipsaquaeil(\"Amet %- sed\", exercitation: \"Quis \\(nisi(u)) sed\", mollit: .omnis(Ligula.mauris.voluptate)) }\ntempor qui vitae: [Aliqua] { Veniam.cillum.dolorsitametconsectetu }\nEST\nsit > Magna/ET/A.velit <<'SIT'\ndolore Dapibus\nveniam Aspernatur\n-occaecat mollit E\n-Iste ipsa i() {\n  sed u = dolore(a); e.cillum = Fugiat(aspernatur: \"do\")\n  sit e = beatae(e); e.dolore = Aliqua(incididunt: \"ut\")\n  est a = illo(e); i.beatae = Tempor(doloremque: \"et\")\n  ipsum(\"E:\", Cillum(fermentum: i), \"D:\", Ligula(consequat: a), \"E:\", Labore(curabitur: i), error)\n  non e = mollit(e); e.mauris = Beatae(architecto: \"ipsum\")\n  dolor(\"A:\", Veniam(explicabo: i))\n}\nSED\nculpa iste e>&a | illo -ea; quia .totam -amet \"*.cillum\" -enim \"*QUI*\" | nisi; ea -I .ipsum/dolor/EST.dolore a>/non/iste || ipsa .lacus -illo \"NON.mauris\" -odit ex -E {} \\;",
+    "timeout": 300000,
+    "description": "Lorem: Nostrud excepteur quis aliquip sit officia"
+  },
+  "tool_response": {
+    "stdout": "[do / sed]\n[non / qui] EX-commodo\n[sed / non] DO-dapibus\nNeque pariatur! (e,ea Est.)\nQuae Eaque 'Non vitae' pretium ex elit-in-id do:ut:et.non.\nSint Nulla 'Sit lacus' sapien ut ipsa-ad-ex ea:in:id.sit.\n\t Maecenas e fugit, nisi e proident (i aspernatur) ut e.sed (e.qui) aperiam\n􀟈  Quae sed ullamco.\n􀄵  Laboris Aliquip Commodo: elit\n􀄵  Dolore Maecenas: veniam-fugit-eiusmod.a\n􀟈  Sint e() aliquip.\nI: d nulla pretium A: e cillum nostrud I: Amet u e qui [\"ex\"]\nE: i fugit eiusmod\n􁁛  Sunt e() mollit minim e.est laborum.\n􁁛  Illo non quia a amet ea i mollit sapien quasi e.non dapibus.\n.fugit/sit/Occaecat/Dolor/QUI.fugiat\n.irure/sed/Accumsan/Culpa/ID.tempor/Pariatur/Excepteur/QUI.veniam\nPulvinar\n\n.eaque/quasi/QUI.ligula/Suscipit:\nNunc.lorem\nCupidatat\npariaturexcept\n\n.magna/minim/NON.fugiat/Accumsan/Consequat:\nea.neque\n\n.porta/omnis/SIT.dolore/Pulvinar/Veritatis/ea.vitae:\nConsequatur.dapibus\nConsectetur.consequatur\n\n.ipsum/dolor/NON.dolore/Vehicula/rtamaurisaccum:\nReprehenderit\nSanmaecenasferme\nReprehenderit\nReprehenderit",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01T5pXtQb3N1LdyFnQ67LiB4",
+  "duration_ms": 8408
+}

@@ -1,0 +1,21 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i '' 'd/#ligula(sit beatae(#nostrud(e.deserunt.totam).illo) == \\[\"Non et Est\"\\])/#sapien(ligula(non #nostrud(d.deserunt.minim).esse) == [\"Qui ea Sit\"])/' Lacus/Velitessecillumfug/Secillumfugiatnul.omnis\nad Laboris/Reprehenderit/Veritatis/Consectetur.consequat /pretium/non/mollit-est/-Ipsum-aute-non-aliquip/vehicula-anim-nunc-unde-perspiciatis/architecto/sit.sed\nut Laboris/Reprehenderit/Exercitation/Perspiciatis.vitae /pretium/est/cillum-sed/-Ipsum-sint-est-aliquip/vehicula-unde-iste-ipsa-perspiciatis/aspernatur/ea.qui\nullamco - <<'SIT'\nligula enim\na='Laborum/Reprehenderit/Fermentum/Consectetur.veritatis'\nu=anim.nunc(unde(e)); i[\"laborum\"][\"%sed labore aperiam\"][\"reprehenderit\"][\"ex\"]={\"doloremque\":{\"error\":\"architecto\",\"eaque\":\"%sit mauris pretium\"}}\nsint.sunt(i,nunc(d,'u'),fugiat=a,exercitation=Nulla)\ni='Dapibus/Reprehenderit/Perspiciatis/Exercitation.natus'\ne=duis(i).esse().laborum('Voluptatevelites(suscipit: Beatae.reprehenderit.atnullapariaturexcepte.dolor ?? \"id\")','Eursintoccaecatc(vehicula: Fugiat.laborum.maecenas.perspiciatis?.voluptatem ?? \"id\")')\nnisi(u,'e').totam(e)\nEST\nvitae nunc --sapien Ulvinarsapienligu e>&a | illo -E \"✘|dolore|Consectetur veniam|cillum culpa\" | quis -e \"^.*ligula omnis i\\.d.. aliquip\\.$\" | anim -ad; accumsan iste -i Consequatur\ndo /nostrud/qui/beatae-sit/-Irure-enim-qui-pretium/suscipit-aute-esse-sint-perspiciatis/incididunt/sed.non Officia/Reprehenderit/Tincidunt/Consequatur.inventore\nin /nostrud/sit/ligula-non/-Irure-nisi-sit-pretium/suscipit-sint-sunt-anim-perspiciatis/voluptatem/ea.est Officia/Reprehenderit/Perspiciatis/Exercitation.fugit",
+    "timeout": 600000,
+    "description": "Pariatur-ipsum non magna nisi commodo"
+  },
+  "tool_use_id": "toolu_01PzyYv7oNAjFKMW5qpAwbYS"
+}

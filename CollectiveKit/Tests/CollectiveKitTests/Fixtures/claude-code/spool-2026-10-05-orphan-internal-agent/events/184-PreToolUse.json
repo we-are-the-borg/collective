@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "72b3095d-f575-4bc9-954d-802f2f41db69",
+  "permission_mode": "auto",
+  "agent_id": "a5e7b06ea373d4a2a",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "SubagentHandback",
+  "tool_input": {
+    "message": "TEMPOR: elit\nDOLOR:\n/Magna/nisi/sit/officia/Reprehenderit/Pretium/Perspiciatis/Iduntutlaboreet.porta — unde qui est `Quae(vehicula: \"\\(officia.reprehenderit)\")`. Ad sit sed enim `beatae: .tempor` ut Exercitation.\n/Irure/sint/est/pretium/Reprehenderit/Aperiam/Perspiciatis/Exercitation.natus — sed, pulvinar `Dolore.perspiciatis`, vitae pretium `.fugiat`.\n/Fugit/nisi/sit/ullamco/Reprehenderit/Aliquip.irure — `Rabiturpretiumtinc` sed pretium ea `[\"Reprehenderit\", \"Perspiciatis\"]`.\n/Omnis/nemo/qui/aliquip/Reprehenderit/Quasi/Amaurisaccumsanmae/Accumsanmaecenasfe.ipsam — fugit `-pariatur mollit Exercitation` est sit sed unde.\nNULLA: `orvoluptatemacc` ad Cusantiumdoloremqu.porta. In proident d elit enim qui nisi reprehenderit sed fugit qui, ut fugiat ad, non e=i sit d=u:\n- voluptas\n- pariatur\n- consequat\n- doloremque excepteur totam commodo\n- tincidunt laborum\n- esse\n- \" · E sunt eiusmod\"\n- \"I unde laboris\"\nEt commodo sed Laborum maecenas est tempor elit non quis.\nDESERUNT:\n- Sit eaque: I laborum est dapibus sed `%non occaecat` in `%sit aliquip`. `irure quia --mollit roidentsuntculp` ligula enim \"Accusantium tempor: duis(e) == non\". Sint est i=i accusantium ligula; ipsa a ullamco non, i=i velit elit et qui exercitation eiusmod aute, natus laboris ut eaque. A accumsan qui est.\n- `id Reprehenderit && ipsum quia` → est minim ea in aliqua veniam.\n- `doloremque ... -rchitectobeatae <scratchpad>/ad omnis` → NATUS CONSEQUAT.\nVOLUPTATEM: unde. U est sit suscipit ea qui est amet, `Perspiciatis.minim`, beatae nisi labore in suscipit sint sunt.\nCONSEQUAT: nunc\nDESERUNT: aliquip"
+  },
+  "tool_use_id": "toolu_01D94VpcNCkLqLmjvKavbFRB"
+}

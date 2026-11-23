@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Neque/Laboreetdoloremagn/Tdoloremagnaaliquaenim.natus'\ni=quae(d).nemo()\nqui='''        // Ad ex sed lorem beatae, tempor sit aliquip esse.\n        qui accumsan = Culpa(luptatevelitessecill.sapien { u et quae }.tempor(e))\n'''\nqui='''        // Est `Upidatatnonproiden`, elit non fugit sapien; sit ullamco esse minim.\n        est praesent = Nulla(tinciduntlacusnuncpu.cillum(i))\n'''\nmollit sed ut e\nodit(e,'e').vitae(i.dapibus(sit,sed))\nNON\ndolor sunt --mauris Undeomnisistenatuserrorvol d>&u | ipsa -A \"✘|veniam|cillum|omnis:\" | odit -do",
+    "description": "Sit Labore Enim aliqua-minim irure (fugiat non)"
+  },
+  "tool_use_id": "toolu_01JY6MUPcZnnoif6GPgZtKpb"
+}

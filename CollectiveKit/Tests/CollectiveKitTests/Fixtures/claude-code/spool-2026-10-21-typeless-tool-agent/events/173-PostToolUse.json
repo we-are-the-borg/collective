@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && aute -i \"-Culpa\\|sunt .*[Et]porta.*()\\|architecto\\|Labore\" Error/Madminimveniamquis/Mveniamquisnostrudex.quasi | quia -ad",
+    "description": "Tempor ipsum enim aliqua"
+  },
+  "tool_response": {
+    "stdout": "do:-Ipsum dolore Tconsecteturadipisci {\nest:-Irure fugiat Ddoeiusmodtempo {\nqui:-Lacus mauris Laudantium {\nnon:    -Iste ipsa madminimveniamquisnostrudexercitationull() {\nsed:-Quasi fugiat Rcitationullamcolabo {\nsit:-Fugit mauris Liquipexeacommodoco {\nest:    -Duis aute isauteirureinreprehenderitvoluptatevelitesse() {\nqui:    -Sunt anim luptatevelitessecillumfugiatnullapariaturex() {\nnon:    -Iste ipsa nullapariaturexcepteursintocca() {\nsed:    -Nemo quia caecatcupidatatnonproidentsuntcul() {\nsit:    -Elit enim ntculpaquiofficiadeseruntmollitan() {\nest:    -Duis aute litanimidestlaborumcurabiturpretiumtincidun() {\nqui:    -Sunt anim pretiumtinciduntlacusnuncpulvinars() {\nnon:    -Iste ipsa vinarsapienligulavehiculapraesentdapibusneq() {\nsed:    -Nemo quia esentdapibusnequeportamaurisac() {\nsit:    -Elit enim accumsanmaecenasfermentumconse() {\nest:    -Duis aute sequatursuscipitperspiciat() {\nqui:    -Sunt anim undeomnisistenatuserrorvoluptatemaccusantiumdo() {\nnon:    -Iste ipsa tatemaccusantiumdoloremquelaudanti() {\nsed:    -Nemo quia udantiumtotamaperiameaqueipsa() {\nsit:    -Elit enim aquaeilloinventoreveritat() {\nest:    -Duis aute uasiarchitectobeataevitaedic() {\nqui:    -Sunt anim taexplicabonemoipsamquiavoluptasaspernaturodi() {\nnon:    -Iste ipsa ptasaspernaturoditfugitloremipsumdolorsita() {\nsed:    -Nemo quia ipsumdolorsitametconsecteturadipiscing() {\nsit:    -Elit enim adipiscingelitseddoeiusmodtemporincididuntutlaboreet() {\nnisi:    -Duis aute mporincididuntutlaboreetdoloremagnaaliquaeni() {\nsint:-Fugit dolore Remagnaaliquaenim {\nunde:    -Iste ipsa amquisnostrudexercitationullamcola() {\nillo:// NEMO: Pretium suscipit\namet:-Porta dolore Mmodoconsequatduisa {\nnisi:    -Duis aute nreprehenderitvoluptatevelitessecillumfugiatnul() {\nsint:    -Sunt anim essecillumfugiatnullapariature() {\nunde:    -Iste ipsa rexcepteursintoccaecatcupidatatnonproide() {\nillo:    -Nemo quia tatnonproidentsuntculpaquiofficiadeseruntm() {\namet:    -Elit enim ficiadeseruntmollitanimidestlaborumcurabiturpretiumtinc() {\nnisi:    -Duis aute laborumcurabiturpretiumtinciduntlacusnuncpulvina() {\nsint:    -Sunt anim duntlacusnuncpulvinarsapienligulavehiculaprae() {\nunde:-Fugit mauris Igulavehiculapra {",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_016DdKBBGdpKTZ2v9BTDZkPM",
+  "duration_ms": 40
+}

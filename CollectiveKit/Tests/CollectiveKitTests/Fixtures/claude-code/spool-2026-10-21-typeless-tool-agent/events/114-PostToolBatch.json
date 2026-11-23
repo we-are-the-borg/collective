@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "adipiscing -nostrud Non/Doloremque.curabitur -cillum Aspernatur -reprehenderit Culpa ORINCIDIDUNTUTLABORE=ET porta e>&e | ipsa -i; sed cillum --vitae; est amet --elit",
+        "description": "Lorem sed non qui nisi duis aute",
+        "timeout": 600000
+      },
+      "tool_use_id": "toolu_011Wjc86NMupTNTCqbiNHJei",
+      "tool_response": "** LOREM VOLUPTATE **\n\n E Reprehenderit/Aliquip/Reprehenderit/Velit/Adipiscing.culpa\n U Reprehenderit/Eiusmod/Reprehenderit/Ullamco/Adipiscing/Madminimveniamqui.eaque\n U Reprehenderit/Pretium/Reprehenderit/Aperiam/Lorem/Perspiciatis.dolor\n U Reprehenderit/Commodo/Reprehenderit/Nulla/Deritvoluptatev.lacus\n D Reprehenderit/Omnis/Nullapariaturexcep/Riaturexcepteursintocc.totam\n I Reprehenderit/Vitae/Tnonproidentsuntcu/Identsuntculpaqui.fugit\n E Reprehenderit/Dolor/Litanimidestlaboru/Idestlaborumcurabitu.irure\n .../Officia/Reprehenderit/Culpa/Laudantium.neque   | id ++-\n .../Nostrud/Incididunt/Culapraesentdapib.totam     |  e +-\n .../Reprehenderit/Laborum/Dicta/Exercitation.fugit |  e +-\n .../Reprehenderit/Dolor/Itperspiciatisu.minim      |  i ++\n .../Isistenatuserrorvolupt.nulla                   | et ++++++++++\n .../Tatemaccusantiumdo/Cusantiumdoloremq.porta     | in +++++\n .../Udantiumtotamaperi/Mtotamaperiameaqueip.totam  | et ++++++++++++++++++++++\n a vitae pretium, sed doloremque(+), d explicabo(-)"
+    }
+  ]
+}

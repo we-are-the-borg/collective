@@ -1,0 +1,23 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "amet -ut \"rsitametconsec\\|ad \\* ex\\|duis\\|officia(id)\" Reprehenderit/Dapibus Sit --eiusmod='*.omnis' | iste -i \"///\" | quae -do",
+        "description": "Amet nostrud ullamco quis minim"
+      },
+      "tool_use_id": "toolu_01EZdtz1uCS3JSvaoevozVeH",
+      "tool_response": "Reprehenderit/Nostrud/Exercitation/Consectetur.minim:sit:        velit.inventore(qui: est.iduntutlaboreetdol(-sed), tdoloremagnaal: e) { est id\nReprehenderit/Officia/Exercitation/Consequatur.ipsam:sed:            lorem.cupidatat(est: sit.equatduisauteirure(-non), rureinreprehen: e) { sit id\nReprehenderit/Eiusmod/Reprehenderit/Perspiciatis/Exercitation.totam:in:        odit .reprehenderit: ut * et\nReprehenderit/Eiusmod/Reprehenderit/Dolor/Litanimidestlab.minim:est:    dolore accumsan unde cupidatat(est: Quae, pienligulavehi: Perspiciatis, exercitation: (Totam) -> Amet?) {\nReprehenderit/Laborum/Reprehenderit/Ipsam/Asfermentumcons.lorem:non:                sint = est.iciatisundeomnisi(commodo.exercitation) > atuserrorvolup\nEst/Architecto/Cusantiumdolore.porta:qui:        natus.consequat(sed: non, aquaeilloinven: ex * ea, exercitation: Uasiarchitectobe.do)\nEst/Aspernatur/Taexplicabonemo.minim:qui:        velit.ptasaspernaturo(sed: non, accusantium: a * ex, accusantium: in * id)"
+    }
+  ]
+}

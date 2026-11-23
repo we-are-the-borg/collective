@@ -1,0 +1,24 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "D sed dolore: Qui laudantium, sit Velit esse, Qui-Lacus anim. A (Omnis) natus.",
+  "background_tasks": [
+    {
+      "id": "ab88253cd3480cf7e",
+      "type": "subagent",
+      "status": "running",
+      "description": "Task B: view texts",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

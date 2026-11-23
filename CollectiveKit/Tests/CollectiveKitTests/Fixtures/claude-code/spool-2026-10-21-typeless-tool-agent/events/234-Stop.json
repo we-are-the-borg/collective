@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "a0e932c7-1a95-4074-882a-5e5afde9d6fc",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "D sed dolore: Qui Nisi sit sed Consequatur sapien lacus et Porta. `omnis iste` error pulvinar eaque (non Vitae), est Sit-Fugit enim. I (Ullamco sit sed Esse qui Sunt) culpa lacus.\n\nUnde Perspiciatis est A laboris ea qui Officia sit:\n- **Cillum Enim quis `curabitur`:** Sit dolor Laboris qui Consequatur sit `nunc`, unde iste ipsa `tincidunt`. Sed Consectetur error odit `laudantium`. Sed dolore `cupidatat` est fugit eiusmod; non sapien ea in vehicula non Accumsan maecenas.\n- **a Voluptas Pariatur quia Voluptatem:** Sit Elit, non qui ex e i non qui Ipsum dolor magna Minim consectetur velit, nulla sed lacus Quia. Porta: Ex Doloremque `i-pulvinar` vehicula Ligula Aute non Ipsam Reprehenderit sit sed `Exercitation`, qui Ipsa-Mollit illo nulla Maecenas. Odit Voluptas porta non Quis est totam Eaque praesent.",
+  "background_tasks": [
+    {
+      "id": "adf12bbce1aab5633",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step C: card name and docs",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

@@ -1,0 +1,29 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "6bc7618a-b0ff-41bf-9473-a652a4c99048",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Agent",
+      "tool_input": {
+        "description": "Review the diff",
+        "subagent_type": "change-reviewer",
+        "prompt": "Amet: /Ipsum/enim/qui/aliquip, cillum `fugiat/id-accusantium-dapibus`, consequatur nunc (unde cupidatat est totam: sed `Accusantium.veritatis`, `Pretium.ipsam`, `Colaborisnisialiqu.lorem`; beatae curabitur `.magna/` sed `ALIQUA.ex`). Cillum #in (`id neque iste et`).\n\nAdipiscing deserunt:\ne. `Reprehenderit/Officia.vitae` sed `identsuntculpaquiof: \"ad\"`; Reprehenderit sit Exercitation esse sint u Dolore Laborum (`.excepteur`) ea i pariatur, illo nemo error est tempor labore.\ni. Qui Est voluptas exercitation mollit (`Rsuscipitperspiciatisun` sunt sit Sed officia) laborum et suscipit Aperiam non fugiat natus, sapien, elit eaque, \"Officia vitae …\", pretium dolore non veritatis; est dolor (magna unde iste) est nulla culpa nemo et est Sit.\ne. In quis-commodo duis laborum ad e fugit Dolore nostrud ullamco qui pulvinar ad `Reprehenderit/Laborum/Exercitation/` est `Reprehenderit/Eiusmod/Reprehenderit/Perspiciatis/`. Laboris aspernatur: `#Commodo` mollit, `Accusantium.dicta`, ipsam nunc (eiusmod, iste dolor/laboris, aliquip irure, officia Est, sapien dapibus neque quis \"Tempor Duis\", deserunt aliqua/eaque), quasi/vitae dicta. `Non/` qui et quae-ullamco nemo qui id consequat. Laborum `Enim(\"…\")` ad e eiusmod aute esse `tempor: .labore`, consequat ad vitae ea est sit'd nemo mauris.\na. Aliquip sed officia aliqua maecenas (sit/neque), non veritatis, ea error sed Non. \"Ut dolore pretium\" sed e in i proident sed mauris ad e Sit aute.\ni. Veritatis sunt sit mollit sapien `e i`, `i sed`, `u e`, `a e ea non` (magna nisi, vehicula → `e a`) qui dapibus anim.\ni. Nostrud-qui laboris aliquip (\"Sed ea Quia\") est sit voluptas non aliqua proident ea (`umcurabiturpretiumtinc`), non `Sapien.laborum`; Pretium beatae excepteur. Nligulavehicula est ullamco sed nemo.\ne. Quasi laborum dicta non id Eiusmod ipsum sed a voluptatem commodo; sit Nunc aspernatur (\"Qui Incididunt ad nostrud.\", \"Proident accusantium…\", \"Aliquip amet sed Voluptatem…\", \"Qui ex Duis\") aute occaecat incididunt est pulvinar.\na. Officia cillum ipsa-tincidunt do ligula: occaecat natus ex `Elitseddoeiusmodt.eaque` aliqua est duis Dapibus fugit ex ea `anim` (laboris unde `qui ipsa quae`), illo suscipit. Qui porta, nostrud sed et qui Commodo officia in pretium qui sunt (e.a. \"e deserunt · i vehicula\", \"d inventore · e dapibus\", \"e elit · i quis laboris\", \"u doloremque praesent vitae pretium\").\ni. I unde cillum dolor quae illo non officia (i.d. labore architecto quis est sit); i esse sapien est accumsan' voluptate.\nex. `ea Reprehenderit && ipsum illo` magna; `adipiscing -commodo Sit/Doloremque.excepteur -beatae Aspernatur -reprehenderit Omnis ABONEMOIPSAMQUIAVOLU=EX -iavoluptasasper /commodo/sed/sapien-qui/-Ipsam-quae-sed-nostrud/proident-odit-amet-elit-exercitation/laudantium/ex-ligula neque` porta. Do EST dolore ad unde qui Incididunt pretium (sed nemo qui odit sit laboris).\n\nAliquip irure: nisi/accumsan Pretium, lacus accusantium porta."
+      },
+      "tool_use_id": "toolu_01J8kTS7C71ZvzaYNoYo7pfZ",
+      "tool_response": [
+        {
+          "type": "text",
+          "text": "Async agent launched successfully. (This tool result is internal metadata — never quote or paste any part of it, including the agentId below, into a user-facing reply.)\nagentId: a0d14a7fef7966135 (internal ID - do not mention to user. Use SendMessage with to: 'a0d14a7fef7966135', summary: '<5-10 word recap>' to continue this agent.)\nThe agent is working in the background. You will be notified automatically when it completes. You know nothing about its results until that notification arrives — do not report, assume, or predict them; continue other work or respond to the user in the meantime.\nDo not duplicate this agent's work — avoid working with the same files or topics it is using.\noutput_file: /private/tmp/claude-501/-Users-user-dev-project/a16709aa-4d86-4e5c-acb9-8a95fe7c20df/tasks/a0d14a7fef7966135.output\nDo NOT Read or tail this file via the shell tool — it is the full subagent JSONL transcript and reading it will overflow your context. If the user asks for progress, say the agent is still running; you'll get a completion notification."
+        }
+      ]
+    }
+  ]
+}

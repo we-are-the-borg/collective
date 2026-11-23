@@ -1,0 +1,27 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "af08459d41c1350f9",
+  "agent_type": "",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/subagents/agent-af08459d41c1350f9.jsonl",
+  "last_assistant_message": "Exercitation elit proident ad Teturadipiscing.irure",
+  "background_tasks": [
+    {
+      "id": "a4e7313b0f002387e",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step B: session name from the status file",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

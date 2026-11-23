@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && in Nulla/Modtemporincididun | sunt -et"
+  },
+  "tool_response": {
+    "stdout": "Loremipsumdolorsitamet.ipsum\nRsitametconsecteturadipiscingelits.magna\nTeturadipiscingelits.irure\nGelitseddoeiusmodtemp.nulla\nMaecenas\nOrincididuntutlaboreetdolor.neque\nLaboreetdolorema.omnis\nMagnaaliquaeni.error\nMadminimveniamquisnos.eaque\nQuisnostrudexercitation.vitae\nRcitationullamcolaboris.ipsam\nColaborisnisialiqu.lorem\nLiquipexeacommod.dolor\nOdoconsequatduisa.minim\nIsauteirureinreprehen.velit\nEprehenderitvolu.culpa\nLuptatevelitess.neque",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_011MURv88NzeAWHed9CYVy7g",
+  "duration_ms": 17
+}

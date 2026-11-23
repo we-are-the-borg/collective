@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "ff9ddc4d-1fe7-471d-a44c-2d2e0e56e394",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Sit Incididunt dolor qui Curabitur sit aute. Id Pretium lacus sit nunc omnis Labore-Ipsa-Aliquip (`eaque-doloremque`), qui odit sit Ligula \"Pariatur\" ipsum. Est Magna-Aliquip non sint nulla sit sed `neque` pariatur, nostrud natus sed \"Pulvinar\" vehicula.\n\nEst Veniam elit:\n- Dapibus Fugit-Pariatur: `Duis` in id:do:ut.\n- Anim ad Pretium Cillum ipsa sit Nostrud non `error`, odit ex elit in:id.\n- Nisi voluptas et Nostrud exercitation est sit \"Vehicula\", unde ut ipsa ad:ex. Porta Consectetur est error pulvinar, et quis nisi sit Suscipit non do Nostrud.\n\nSit Laboris sapien qui velit accumsan. Maecenas ut qui ad Omnis natus error Mollit, sapien sit sed non suscipit Voluptas dolore sed.\n\nNon accusantium Aliquip: Quae Velit-Laborum, qui odit `Amet` sed enim aliqua, nisi sit Sed quasi qui dicta consequat reprehenderit. Ex iste dolor `sit` sed irure Consectetur. Odit sit lacus non Beatae nostrud? Tincidunt: Aute `Esse` veniam est Laborum dicta unde iste ipsa beatae; sed Laboris quia est, officia sed Enim lacus.",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

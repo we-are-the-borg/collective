@@ -1,0 +1,29 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "amet -ut \"rsitametconsecte\" --laboris=*.minim Reprehenderit/Officia Non | sint -u \"^.*//\" ; anim -ad \"unde .perspiciatis\\|ipsa sit .exercitation\" --officia=*.vitae Reprehenderit/Dapibus Sed",
+    "description": "Amet occaecat enim Doloremque.Nisi"
+  },
+  "tool_response": {
+    "stdout": "(amet):u: et laboris minim: --commodo=*.velit\n(esse):d: ut aperiam porta: --nostrud=*.natus",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "returnCodeInterpretation": "No matches found",
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01X3VohkZXGUvF99xfBoctiU",
+  "duration_ms": 38
+}

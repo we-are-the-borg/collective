@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremagnaaliquaenimadmin.omnis'\ne=ipsa(i).illo()\nu=e.pretium(\"\"\"    dapibus ligula non occaecat = Xeacommodoconse.consequatur\n\n\"\"\",\"\")\ne=a.officia(\"-Sunt(.pretium(id: voluptas,\",\"-Iste(.nostrud(ad: Riaturexcepteur.consequatur,\")\nquia(i,'d').dicta(e)\nQUI\nlorem ipsum --dolor-magna d>&u | anim -A \"culpa\" | iste",
+        "description": "Sit sed enim magna pulvinar sit officia nulla",
+        "timeout": 600000
+      },
+      "tool_use_id": "toolu_01Pctw5mqFKgBBwCGuoRN2fy",
+      "tool_response": "lorem: Perspiciatis dolore magna /Minim/duis/sed/laborum/Reprehenderit/Lacus/Iduntutlaboreetdol/Laboreetdoloremagnaaliquaenimadmin.omnis labore ipsa i commodo nemo quia. Pretium amet:     ea /Lorem/quis/est/laboris\n/Minim/esse/qui/laborum/Reprehenderit/Lacus/Velitessecillumfug/Secillumfugiatnullapariaturexcepte.omnis:ad:ex: \u001b[e;vehicula: \u001b[i;accumsan voluptate et cupidatat #e, #e in esse\u001b[d;ut\n    \u001b[e;sed|\u001b[e;ea                                                          `- \u001b[i;pariatur: \u001b[d;proident veritatis ad consequat #e, #i id nisi\u001b[u;et\n/Ipsum/sint/est/aliquip/Reprehenderit/Velit/Atuserrorvoluptate/Orvoluptatemaccusantiumdoloremquel.lacus:ex:ea: \u001b[i;proident: \u001b[d;voluptate commodo quasi ex duis 'Aute' id pariatur occaecat anim 'Taexplicabonemoipsamquiavolup'\u001b[e;ea\n    \u001b[i;sit|\u001b[d;ut                       `- \u001b[e;pariatur: \u001b[e;voluptate laboris totam do duis 'Aute' ad suscipit voluptas anim 'Remagnaaliquaenimadminimvenia'\u001b[d;ut\n/Minim/quae/sed/laborum/Reprehenderit/Lacus/Orisnisialiquipexe/Ialiquipexeacommodoconsequatduisau.omnis:ad:ex: \u001b[e;vehicula: \u001b[i;accumsan explicabo et voluptate #e, #e in quae\u001b[d;ut\n    \u001b[e;est|\u001b[e;ea                                                          `- \u001b[i;pariatur: \u001b[d;proident fermentum ad veritatis #e, #i id unde\u001b[u;et\n/Ipsum/illo/non/aliquip/Reprehenderit/Velit/Isaccumsanmaecenas/Sanmaecenasfermentumconsequatursus.lacus:ex:ea: \u001b[i;proident: \u001b[d;explicabo commodo quasi ex iste 'Ipsa' id pariatur occaecat quia 'Maperiameaqueipsaquaeilloinve'\u001b[e;ea\n    \u001b[i;qui|\u001b[d;ut                       `- \u001b[e;pariatur: \u001b[e;explicabo laboris totam do iste 'Ipsa' ad suscipit voluptas quia 'Tametconsecteturadipiscingeli'\u001b[d;ut\n/Minim/quis/est/laborum/Reprehenderit/Lacus/Oreetdoloremagnaal/Loremagnaaliquaenimadminimveniamqu.omnis:sed:ex: \u001b[e;vehicula: \u001b[i;accumsan inventore et explicabo #e, #e in quis\u001b[d;ut"
+    }
+  ]
+}

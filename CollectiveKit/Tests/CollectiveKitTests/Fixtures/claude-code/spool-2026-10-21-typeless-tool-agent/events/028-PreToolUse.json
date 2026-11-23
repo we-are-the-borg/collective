@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i qui,sunt Neque/Laboreetdoloremagn/Tdoloremagnaaliquaenim.natus; I=Totam/Mveniamquisnostrud/Praesent; qui a ex $E/mauris-quis/d.u.sed/a-veritatis-est-anim/mollit/*.unde; ut ipsa $a; laboris -E -i 'aliqua amet,sed; e=quis.nisi(duis(sed.esse[d])); irure(e.sed(\"non\"), e.est(\"aspernatur\"))' $d; nemo; qui a ex $E/vitae/i.est.u/e-occaecat-proident-ligula-minim-commodo/tempor/ut[e-a]*.illo; ea nostrud -I -d 'ligula enim,qui; e=duis.aute(esse(qui.sunt[e])); magna(non.iste[i][-id:], d.non(\"qui\"), a.sit(\"doloremque\"))' $i; quis",
+    "description": "Amet u.e.qui veniam sit officia non sapien"
+  },
+  "tool_use_id": "toolu_019xZyLGWkC9mMZd1vZq9f8u"
+}

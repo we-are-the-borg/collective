@@ -1,0 +1,28 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "448d80b7-3f0f-49b2-889b-a3367ad1cad7",
+  "permission_mode": "auto",
+  "agent_id": "af1b90fb83b036cd8",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing; totam -d $U/trudexercitati && ad $E/voluptas/non.quis $D/deserunt/minim.ad $E/eprehenderitvo/ && sit -i 'd,qui' $E/proident/deserunt.nemo >/qui/odit; amet -u 'suscipit-fugit\\|sapien-e' -i $I/veritatis/commodo/Rabiturpretium.ad.unde | iste -i; id $D/ulavehiculapra",
+    "description": "Tempor sed excepteur aliqua nisi cillum officia"
+  },
+  "tool_response": {
+    "stdout": "lorem.ut\nnon.quis",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01MrgYa4roGFYiSYTfEzyiyf",
+  "duration_ms": 92
+}

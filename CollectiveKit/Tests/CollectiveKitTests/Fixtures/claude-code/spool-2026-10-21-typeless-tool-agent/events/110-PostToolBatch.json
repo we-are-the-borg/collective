@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "4bc0aaad-948f-491d-8582-e5a81512a387",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Aperiam/Reprehenderit/Nostrud/Natus/Exercitation.totam'\nd=nemo(e).odit()\nsit='''        ligula non.qui { Doloremque(laboris: sed, inventore: praesent.incididunt, anim: $i) }'''\nnon='''        // Ut est, sit sed nemo dolore id do sed dapibus fugit.\n        sapien sit.sed { Architecto(aliquip: est, consequat: accumsan.doloremque, iste: $i, sit: sapien.nemo(\"qui\")) }'''\nbeatae e.quasi(non)==i\nnisi(u,'e').ipsum(e.laboris(sit,sed))\nNON\nnulla ipsa a>&e | nemo -I \"✘|mollit|Amet sed|eaque:|Praesent\" | nisi -ea",
+        "description": "Amet sed et Magna aliquip sit sed esse culpa",
+        "timeout": 600000
+      },
+      "tool_use_id": "toolu_01Ee8nokCbFEt8orit5mQtMC",
+      "tool_response": "\t Pariatur u dolor, quis e vehicula (i adipiscing) do u.sit (a.non) ullamco\n􀟈  Ipsa sit commodo.\n􀟈  Nemo trudexercitationullamcolabo() pretium.\n􁁛  Amet colaborisnisialiquipexeacom() mauris ipsum d.sit aliquip.\n􁁛  Esse qui sunt sit lacus do ut mauris beatae error e.qui officia."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "licenses": {
+    "Apache-2.0": "Apache License 2.0",
+    "BSD-2-Clause": "BSD 2-Clause License",
+    "ISC": "ISC License",
+    "MIT": "MIT License",
+    "OFL-1.1": "SIL Open Font License 1.1"
+  },
+  "sections": [
+    {
+      "id": "libraries",
+      "entries": [
+        { "package": "grdb.swift", "name": "GRDB.swift", "spdx": "MIT", "url": "https://github.com/groue/GRDB.swift" },
+        { "package": "yyjson", "name": "yyjson", "spdx": "MIT", "url": "https://github.com/ibireme/yyjson" },
+        { "package": "swift-markdown", "name": "Swift Markdown", "spdx": "Apache-2.0", "url": "https://github.com/swiftlang/swift-markdown" },
+        { "package": "swift-cmark", "name": "swift-cmark", "spdx": "BSD-2-Clause", "url": "https://github.com/swiftlang/swift-cmark" },
+        { "package": "yams", "name": "Yams", "spdx": "MIT", "url": "https://github.com/jpsim/Yams" },
+        { "bundledIn": "yams", "name": "libyaml", "spdx": "MIT", "url": "https://github.com/yaml/libyaml", "files": ["CollectiveKit/Acknowledgements/texts/libyaml-License"] }
+      ]
+    },
+    {
+      "id": "fontsAndIcons",
+      "entries": [
+        { "name": "Lucide", "version": "1.72.0", "spdx": "ISC", "url": "https://lucide.dev", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Lucide/LICENSE"] },
+        { "name": "Lobe Icons", "version": "1.104.0", "spdx": "MIT", "url": "https://github.com/lobehub/lobe-icons", "note": "The MIT license covers the SVG files. The logos themselves are trademarks of Anthropic (Claude) and OpenAI (Codex); they are used only to show which tool a session runs in and do not imply endorsement.", "files": ["CollectiveKit/Acknowledgements/texts/lobe-icons-LICENSE"] },
+        { "name": "IBM Plex Sans", "version": "1.1.0", "spdx": "OFL-1.1", "url": "https://github.com/IBM/plex", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Fonts/ibm-plex-sans/license.txt"] },
+        { "name": "IBM Plex Mono", "version": "2.5.0", "spdx": "OFL-1.1", "url": "https://github.com/IBM/plex", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Fonts/ibm-plex-mono/license.txt"] }
+      ]
+    },
+    {
+      "id": "colorSchemes",
+      "entries": [
+        { "name": "Ayu", "schemeIDPrefix": "ayu-", "spdx": "MIT", "url": "https://github.com/ayu-theme/ayu-colors", "files": ["CollectiveKit/Acknowledgements/texts/ayu-LICENSE"] },
+        { "name": "Catppuccin", "schemeIDPrefix": "catppuccin-", "spdx": "MIT", "url": "https://github.com/catppuccin/catppuccin", "files": ["CollectiveKit/Acknowledgements/texts/catppuccin-LICENSE"] },
+        { "name": "Dracula", "schemeIDPrefix": "dracula", "spdx": "MIT", "url": "https://github.com/dracula/dracula-theme", "files": ["CollectiveKit/Acknowledgements/texts/dracula-LICENSE"] },
+        { "name": "Everforest", "schemeIDPrefix": "everforest-", "spdx": "MIT", "url": "https://github.com/sainnhe/everforest", "files": ["CollectiveKit/Acknowledgements/texts/everforest-LICENSE"] },
+        { "name": "GitHub", "schemeIDPrefix": "github", "spdx": "MIT", "url": "https://github.com/primer/primitives", "files": ["CollectiveKit/Acknowledgements/texts/primer-primitives-LICENSE"] },
+        { "name": "Gruvbox", "schemeIDPrefix": "gruvbox-", "spdx": "MIT", "url": "https://github.com/morhetz/gruvbox", "files": ["CollectiveKit/Acknowledgements/texts/gruvbox-LICENSE"] },
+        { "name": "Kanagawa", "schemeIDPrefix": "kanagawa", "spdx": "MIT", "url": "https://github.com/rebelot/kanagawa.nvim", "files": ["CollectiveKit/Acknowledgements/texts/kanagawa-LICENSE"] },
+        { "name": "Material", "schemeIDPrefix": "material", "spdx": "MIT", "url": "https://github.com/ntpeters/base16-materialtheme-scheme", "files": ["CollectiveKit/Acknowledgements/texts/material-LICENSE"] },
+        { "name": "Nord", "schemeIDPrefix": "nord", "spdx": "MIT", "url": "https://github.com/nordtheme/nord", "files": ["CollectiveKit/Acknowledgements/texts/nord-LICENSE"] },
+        { "name": "One", "schemeIDPrefix": "one-", "spdx": "MIT", "url": "https://github.com/atom/one-dark-syntax", "files": ["CollectiveKit/Acknowledgements/texts/one-dark-syntax-LICENSE", "CollectiveKit/Acknowledgements/texts/one-light-syntax-LICENSE"] },
+        { "name": "Rosé Pine", "schemeIDPrefix": "rose-pine", "spdx": "MIT", "url": "https://github.com/rose-pine/rose-pine-theme", "files": ["CollectiveKit/Acknowledgements/texts/rose-pine-LICENSE"] },
+        { "name": "Solarized", "schemeIDPrefix": "solarized-", "spdx": "MIT", "url": "https://github.com/altercation/solarized", "files": ["CollectiveKit/Acknowledgements/texts/solarized-LICENSE"] },
+        { "name": "Tokyo Night", "schemeIDPrefix": "tokyo-night-", "spdx": "MIT", "url": "https://github.com/tokyo-night/tokyo-night-vscode-theme", "files": ["CollectiveKit/Acknowledgements/texts/tokyo-night-LICENSE"] },
+        { "name": "Tomorrow", "schemeIDPrefix": "tomorrow", "spdx": "MIT", "url": "https://github.com/chriskempson/tomorrow-theme", "files": ["CollectiveKit/Acknowledgements/texts/tomorrow-LICENSE"] },
+        { "name": "Tinted Theming schemes", "version": "spec-0.11", "spdx": "MIT", "url": "https://github.com/tinted-theming/schemes", "files": ["CollectiveKit/Acknowledgements/texts/tinted-theming-schemes-LICENSE"] }
+      ]
+    }
+  ]
+}

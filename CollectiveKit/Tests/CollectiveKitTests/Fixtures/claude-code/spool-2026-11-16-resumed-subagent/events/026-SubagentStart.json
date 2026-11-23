@@ -1,0 +1,10 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0524016e-4402-41b4-ab09-beb551661d10",
+  "agent_id": "a183282c31caebc12",
+  "agent_type": "workflow:implementer",
+  "hook_event_name": "SubagentStart"
+}

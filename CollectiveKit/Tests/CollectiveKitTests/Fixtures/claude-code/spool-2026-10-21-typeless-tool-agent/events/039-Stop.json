@@ -1,0 +1,24 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Sit Ipsum-Ullamco qui nisi ipiscingelitse sed Laborum exercitation, lacus neque sed occaecat Labore in #sit. Sed Doloremque fugiat odit sit fugit lorem, quis est Labore et Irure-Velit cillum culpa nunc:\n\n| Unde | Pariatur | Nostrud |\n|---|---|---|\n| ad:ex:ea | `Exercitation` | `praesent` |\n| do:ut:et | `Ntculpaquioffici` | `pariatur` |\n| ea:in:id | `Sint` (est Anim sed veniam, qui fugiat sit illo) | `proident` |\n\nLaboris est tempor elit, non dicta est ut et:ad. Ex magna sit sed non Laborum:\n\ne. **Quae Aperiam, non qui Est sapien ligula:** Eaque quis est duis `sed` aliqua (Exercitation ut, sit Mollit minim iste est `sit` sed dapibus Voluptas). Est Omnis elit enim totam curabitur, ut sed Pretium sint sunt.\ni. **Aliqua-Ullamco qui et Commodo:** Illo nulla Maecenas odit sit elit non `natus`, nisi ea aute id:do. Ut et fugit non ipsum \"Proident\".\ni. **Exercitation irure \"Praesent\":** Accumsan amet ea Aperiam, quis est sit et esse ex:ea anim sed. Ipsam ut lorem nostrud Illo consequatur quia, architecto amet sed.\n\nNon Dapibus voluptas: Duis Omnis-Ullamco, qui est sit nunc veniam, dicta est sit Sed nostrud qui est amet vehicula. Velit Nulla-Pretium sit Aperiam esse ex natus (sit `sed-tempor` qui est Aliqua). Illo Accusantium qui est Sapien Elit non Irure nisi nulla.\n\nReprehenderit:\n- **Aliqua veniam:** Explicabo et sed Laboris ligula, eaque sit tempor. Dicta quia Voluptas amet elit `dolor`-Laboris sapien.\n- **Tincidunt Velit-Accumsan sint Sunt neque:** Sed Nostrud cillum est, aliquip sed Nemo vitae. Odit ipsam `Elit` dolore qui Ullamco cillum aute esse sapien, est et sed consectetur. Qui dolore Perspiciatis do non quia est laborum Ligula.\n\nEnim qui est Labore sed non veniam Vehicula officia? #sed culpa adipiscing neque beatae.",
+  "background_tasks": [
+    {
+      "id": "a04fa4778180bb7b5",
+      "type": "subagent",
+      "status": "running",
+      "description": "Step A: cwd and pid from every event",
+      "agent_type": "implementer"
+    }
+  ],
+  "session_crons": []
+}

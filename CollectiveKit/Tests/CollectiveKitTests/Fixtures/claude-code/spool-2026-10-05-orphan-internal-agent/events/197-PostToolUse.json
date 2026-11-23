@@ -1,0 +1,27 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "23f3f830-9ec4-4e74-8dda-b7484eb5e1b7",
+  "permission_mode": "auto",
+  "agent_id": "a4a30a463628f63c2",
+  "agent_type": "change-reviewer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do ipsum enim ad | nisi -ea"
+  },
+  "tool_response": {
+    "stdout": "lorem:\tIpsum reprehenderit aliqua (Veniam Vehicula, officia non Maecenas)\nlacus:\tANIM\nbeatae:\ttempor (Ullamco)\ndolore:\tconsectetur\nvehicula:\tu\nveritatis:\t\nmaecenas:\t\nconsequat:\t\nfugit-enim:\t\nbeatae:\t\nest-labore:\t\nsed-aliqua-veritatis:\t\nlaborum-in:\t\nsuscipit:\t\nsapien:\tut\n--\nIpsa Natus sed Voluptatem dolore quasi amet ut Enim qui nisi ipsum consequatur. Esse Consectetur sunt dolore laborum unde; cillum fugiat sit #d, #u, #et est #ex elit vitae quis Ipsam duis. Eiusmod ipsum qui Explicabo pulvinar, sed Praesent qui maecenas Dapibus.\n\n## Neque (nemo #i)\n\n- **Est** (`Reprehenderit/Aliquip/Reprehenderit/Perspiciatis/Exercitation.dicta`, `Exercitation.fugit`) lorem nostrud consequat `Mollit`e vehicula: Ipsa (`i tempor dapibus`), Qui (`Aliqua ex proident · …`), Deserunt-Mollit (`Nisi u sed non`, `Sint aperiam … sit`), Aspernatur, Consequatur-Cillum (`Est ad Illo`, Accumsan quia est `neque`). Eiusmod non Quis.\n- **Error** (`Reprehenderit/Commodo/Perspiciatis/`): sint ut Suscipit sed `Unde(\"Nostrud est sit\")`, Veniam-Nemo qui Odit (`culpa == e ? \"voluptas\" : \"cupidatat\"`). Nostrud natus sed ad Veniam est Sit perspiciatis, ipsam ut Eiusmod.\n- `Nostrud.dolor` non quia `nequeportamaurisacc`, do elit fugiat Mollit Aperiam.\n\n## Ligula\n\n- `tursuscipitperspici: \"id\"` do `Reprehenderit/Commodo.quasi`; Veniam Pretium(i) (`.tincidunt`) sed `Perspiciatis` qui est sit Irure non qui Est, sit Fermentum non `sapien: .ligula`.\n- Sit aliquip exercitation Quasi vitae maecenas Dapibus (`Emipsumdolorsitametcons` qui `.mollit`, amet reprehenderit Minim, qui est Duis doloremque). Non Veniam (sunt nostrud Nunc) non iste Eaque officia do Non. Exercitation est sit Nostrud.\n- Ullamco quis Sapien-Tincidunt et Laborum culpa Dapibus.\n- Aspernatur nunc Incididunt-Perspiciatis (`Deserunt.tincidunt(.eaque(...))` e. i.), Incididunt sit Consequatur-Dolore qui est tincidunt Aliquip. Non veritatis Accumsan anim sed Tempor consequatur (`i i`, `d non`, `e a ex sed`, `Non id Nisi`); ut Adipiscing deserunt, consequatur est Fugiat.\n- Architecto do Dapibus est sit Illo-Labore (`Qui Aspernatur do officia.`, `Accumsan consequatur…`, `Dapibus duis sed Adipiscing…`, `Qui ut Anim`), irure unde Accusantium est mollit.\n- Sed Non mauris (`Est/`) sit elit dolore Quasi; vitae duis, suscipit Non.\n\n## Veritatis\n\n- Sunt sit Beatae laudantium Iste ipsa sit veniam `Cillum`-Aperiam explicabo sit Proident (Excepteur cupidatat, e. E. Vitae non qui Reprehenderit sit Nunc-Dolor qui Aliquip).\n- Tincidunt Officia consequatur: voluptatem Lacus ex `Untmollitanimides.omnis` quis est. sit sed quasi Vitae aspernatur, sit voluptate voluptatem Cillum.\n- Ipsa quae Aliquip non velit Beatae-Pretium sed. `.accusantium(\\.aliqua, …)`, est natus, aute Totam qui est Laborum beatae.\n- `ipsam iste` est Sit-Dolor nemo, Qui mollit consequat (`nulla/pretium.id`).\n\n## Neque tincidunt\n\nSed consectetur Consequatur (e. I. Officia).",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01CnSPZxoA2eHPoQspEuFGjc",
+  "duration_ms": 1102
+}

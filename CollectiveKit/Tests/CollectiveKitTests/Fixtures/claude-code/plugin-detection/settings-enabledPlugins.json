@@ -1,0 +1,9 @@
+{
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": false,
+    "mattpocock-skills@mattpocock": true,
+    "swift-lsp@claude-plugins-official": false,
+    "warp@claude-code-warp": true,
+    "subspace@subspace": true
+  }
+}

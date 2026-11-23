@@ -1,0 +1,24 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "6bc7618a-b0ff-41bf-9473-a652a4c99048",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "D (Ipsum) non aliqua: est Irure aute, Nulla sint. Est Mauris porta tempor.\n\nUllamco: Est Consectetur sed non laudantium Est sit `fugit -i Voluptatem` ullamco. Magna dolore esse Praesent. Nulla sit sed unde Architecto-Nostrud quae, sed non eaque caecatcupidata laborum, dicta non aperiam. Est Occaecat aute non pulvinar, Vehicula et laborum unde ea aperiam.",
+  "background_tasks": [
+    {
+      "id": "a0d14a7fef7966135",
+      "type": "subagent",
+      "status": "running",
+      "description": "Review the diff",
+      "agent_type": "change-reviewer"
+    }
+  ],
+  "session_crons": []
+}

@@ -1,0 +1,31 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "72b3095d-f575-4bc9-954d-802f2f41db69",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Agent",
+  "tool_input": {
+    "description": "Fix the review findings",
+    "prompt": "Amet: /Ipsum/enim/qui/aliquip, cillum `fugiat/id-accusantium-dapibus`, consequatur nunc nostrud — iste in, id sed cillum, et est sapien. Ligula #in (Beatae Proident, Laboris aute). Esse/praesent Laborum, culpa lacus. Do QUI mauris ad illo non `Doloremque` officia.\n\nSit dicta ipsam:\na. `Reprehenderit/Nostrud/Exercitation/Litanimidestlab.minim:est`: `Anim(laborum.reprehenderit, cillum: .fugiat)` quae omnis proident (\"e,est\"); vehicula labore non qui ipsam cillum. Fugiat ad `Sint(deserunt: \"\\(aliquip.reprehenderit)\")` (do doloremque pretium suscipit). Neque non qui natus `sapien: .ligula` architecto ad Exercitation sit ipsam id qui sunt.\ne. Sed e iste ipsa sit Exercitation dapibus voluptas pariatur sit cillum enim qui eaque sit (e maecenas dapibus e anim'i non qui est commodo sed nulla veritatis odit amet ut non ullamco est, e.i. \"i accumsan\"). Est `\"Exercitation\"` ad non perspiciatis in sit `Eursintoccaecatcup` nemo fugiat ad `Reprehenderit/Dapibus.neque`. Perspiciatis'd `Labore.dolore` ad vehicula; est i pretium suscipit voluptas et Perspiciatis (tempor `Reprehenderit/Aliquip/Reprehenderit/Exercitation/Laborum.culpa`, lacus est `Ligula.reprehenderit`) i.d. `Labore.exercitation`, sed non `-maecenas fugiat Perspiciatis` do non quia. Ad `Reprehenderit/Irure/Illoinventoreverit/Entoreveritatisqua.culpa` sit e esse sint proident, anim `Beatae(excepteur: \"\\(u) …\", dolore: .perspiciatis, veniam: Cillum(voluptatem: \"id\"))` do `Uradipiscingelitseddoei` enim beatae ex, nulla dolore non sint ut sit natus, error ALIQUIP est quae reprehenderit non quia odit (amet sed dolor: Consequatur pulvinar/vehicula, Ehenderitvolupt doloremque veritatis / explicabo / aperiam, Perspiciatis excepteur ullamco, Pteursintoccaecatcup quae / illo officia), qui i = d sed e = a, curabitur sit Aliquip esse (d.u. \"e dapibus\"/\"e pariatur\", \"i ullamco\"/\"d pulvinar\", \"e praesent\"/\"e voluptate\", \"i laudantium pariatur ipsum ullamco\"/\"a voluptatem explicabo velit laborum\", \"d suscipit aperiam\"/\"a fermentum ullamco\", \"i odit\", \" · d elit laborum\", \"a nisi aperiam\"). Mauris id dolor sunt et a non iste (consectetur lacus sed eiusmod qui, est sit, labore).\n\nIncididunt: `id Reprehenderit && dicta aute` fugit; `adipiscing -nostrud Sit/Doloremque.excepteur -labore Aspernatur -reprehenderit Culpa SNISIALIQUIPEXEACOMM=IN -eacommodoconseq /nostrud/sed/mauris-qui/-Eaque-duis-sed-pretium/suscipit-sunt-anim-nunc-exercitation/laudantium/in irure` velit. Labore culpa dapibus sit eiusmod.",
+    "subagent_type": "implementer",
+    "model": "sonnet"
+  },
+  "tool_response": {
+    "isAsync": true,
+    "status": "async_launched",
+    "agentId": "a5e7b06ea373d4a2a",
+    "description": "Fix the review findings",
+    "resolvedModel": "claude-sonnet-5-5",
+    "prompt": "Amet: /Ipsum/enim/qui/aliquip, cillum `fugiat/id-accusantium-dapibus`, consequatur nunc nostrud — iste in, id sed cillum, et est sapien. Ligula #in (Beatae Proident, Laboris aute). Esse/praesent Laborum, culpa lacus. Do QUI mauris ad illo non `Doloremque` officia.\n\nSit dicta ipsam:\na. `Reprehenderit/Nostrud/Exercitation/Litanimidestlab.minim:est`: `Anim(laborum.reprehenderit, cillum: .fugiat)` quae omnis proident (\"e,est\"); vehicula labore non qui ipsam cillum. Fugiat ad `Sint(deserunt: \"\\(aliquip.reprehenderit)\")` (do doloremque pretium suscipit). Neque non qui natus `sapien: .ligula` architecto ad Exercitation sit ipsam id qui sunt.\ne. Sed e iste ipsa sit Exercitation dapibus voluptas pariatur sit cillum enim qui eaque sit (e maecenas dapibus e anim'i non qui est commodo sed nulla veritatis odit amet ut non ullamco est, e.i. \"i accumsan\"). Est `\"Exercitation\"` ad non perspiciatis in sit `Eursintoccaecatcup` nemo fugiat ad `Reprehenderit/Dapibus.neque`. Perspiciatis'd `Labore.dolore` ad vehicula; est i pretium suscipit voluptas et Perspiciatis (tempor `Reprehenderit/Aliquip/Reprehenderit/Exercitation/Laborum.culpa`, lacus est `Ligula.reprehenderit`) i.d. `Labore.exercitation`, sed non `-maecenas fugiat Perspiciatis` do non quia. Ad `Reprehenderit/Irure/Illoinventoreverit/Entoreveritatisqua.culpa` sit e esse sint proident, anim `Beatae(excepteur: \"\\(u) …\", dolore: .perspiciatis, veniam: Cillum(voluptatem: \"id\"))` do `Uradipiscingelitseddoei` enim beatae ex, nulla dolore non sint ut sit natus, error ALIQUIP est quae reprehenderit non quia odit (amet sed dolor: Consequatur pulvinar/vehicula, Ehenderitvolupt doloremque veritatis / explicabo / aperiam, Perspiciatis excepteur ullamco, Pteursintoccaecatcup quae / illo officia), qui i = d sed e = a, curabitur sit Aliquip esse (d.u. \"e dapibus\"/\"e pariatur\", \"i ullamco\"/\"d pulvinar\", \"e praesent\"/\"e voluptate\", \"i laudantium pariatur ipsum ullamco\"/\"a voluptatem explicabo velit laborum\", \"d suscipit aperiam\"/\"a fermentum ullamco\", \"i odit\", \" · d elit laborum\", \"a nisi aperiam\"). Mauris id dolor sunt et a non iste (consectetur lacus sed eiusmod qui, est sit, labore).\n\nIncididunt: `id Reprehenderit && dicta aute` fugit; `adipiscing -nostrud Sit/Doloremque.excepteur -labore Aspernatur -reprehenderit Culpa SNISIALIQUIPEXEACOMM=IN -eacommodoconseq /nostrud/sed/mauris-qui/-Eaque-duis-sed-pretium/suscipit-sunt-anim-nunc-exercitation/laudantium/in irure` velit. Labore culpa dapibus sit eiusmod.",
+    "outputFile": "/private/tmp/claude-501/-Users-user-dev-project/a16709aa-4d86-4e5c-acb9-8a95fe7c20df/tasks/a5e7b06ea373d4a2a.output",
+    "canReadOutputFile": true
+  },
+  "tool_use_id": "toolu_0178DyAkZJ3DnTxnx8QR2kQH",
+  "duration_ms": 10
+}

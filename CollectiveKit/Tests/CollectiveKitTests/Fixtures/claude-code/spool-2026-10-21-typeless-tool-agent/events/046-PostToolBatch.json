@@ -1,0 +1,25 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "ff9ddc4d-1fe7-471d-a44c-2d2e0e56e394",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && aute -id \"Incididunt(\" Dapibus/ | anim -a \"^.*///\"; unde -ea \"Laboris\" Aliquip/Reprehenderit/Quasi/",
+        "description": "Amet sed Voluptatem perspiciatis minim"
+      },
+      "tool_use_id": "toolu_01EsxmNwQnLqKsTMKgz1mrr8",
+      "tool_response": "Eiusmod/Perspiciatis/Accusantium.magna:est:            irure.velit(Adipiscing(pretium: est, consequat: Accusantium.non.magnaaliquaenimadm(Exercitation(aliqua - do)), nemo: quia))\nPretium/Exercitation/Consectetur.lorem:id:            Doloremque(laboris: Architecto(aliqua: veniam, explicabo: in), voluptate: non.secillumfugiatnull(-$e.sit), illo: $e.quia)\nOfficia/Reprehenderit/Pretium/Adipiscing/Ntculpaquiofficiadeseruntmoll.lorem:sit:        mauris Architecto(\nAliquip/Reprehenderit/Officia/Nulla/Exercitation.lacus:est:        mollit sed.non { Voluptatem(aliquip: sit, voluptate: accumsan.adipiscing, nisi: $u) }\nEiusmod/Reprehenderit/Ullamco/Aspernatur/Iciatisundeomnisi.irure:non:            labore [Laudantium(dapibus: sed, inventore: occaecat.voluptatem, amet: .perspiciatis)]\nCommodo/Reprehenderit/Laborum/Incididunt/Itatisquasiarchit.fugit:qui:        cillum sit.sed { Incididunt(commodo: est, tincidunt: maecenas.aspernatur, quia: $a) }\nNostrud/Reprehenderit/Error/Consequatur.eaque:u:mauris beatae Doloremque: Voluptas, Pariatur, Nostrud {\nUllamco/Reprehenderit/Minim/Consequatur.velit:ea:mauris odit Voluptas: Pariatur, Occaecat, Ullamco {\nLaboris/Reprehenderit/Eaque/Consequatur.vitae:ut:/// Anim sed unde occaecat: i magna aliquip ut qui nulla ex ea. Aperiam id est\nUllamco/Reprehenderit/Totam/Consequatur.quasi:in:mollit unde Reprehenderit: Pariatur, Occaecat, Ullamco {"
+    }
+  ]
+}

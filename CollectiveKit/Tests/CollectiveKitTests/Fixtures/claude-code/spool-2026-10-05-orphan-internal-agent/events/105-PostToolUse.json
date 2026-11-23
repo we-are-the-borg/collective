@@ -1,0 +1,380 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b4c8a226-892a-4409-8f8a-7602ecff4bf9",
+  "permission_mode": "auto",
+  "agent_id": "ab88253cd3480cf7e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit/Officia/Perspiciatis && pretium - <<'EST'\nmauris ad\nnon qui(i, sit, sed):\n    u=quia(a).amet()\n    ligula non id d,(u,sed)\n    esse(e,'e').culpa(i.aperiam(qui,est,a))\nE=', labore: .dolore'\nest('Consequatur.dicta','''    dapibus qui quiofficiadese: Ligula {\n        dolor magna.idestlaborumcura, irure.exercitation > a unde { cillum \"\" }\n        est pariatur = omnis.perspiciatis == e ? \"a commodo\" : \"\\\\(quasi.exercitation) maecenas\"\n        veniam fugit.ntumconsequatursu ? \"\\\\(occaecat) · \\\\(dolor.perspiciatis) pulvinar\" : vehicula\n    }''','''    officia qui orvoluptatemac: Aliqua {\n        neque porta.emquelaudantiumt, natus.exercitation > u enim { beatae \"\" }\n        est maecenas = Dolore(inventore: \"\\\\(lorem.perspiciatis) proident\", mollit: .sapien)\n        irure velit.ptasaspernaturodi illo { labore voluptas }\n        est occaecat = Cillum(excepteur: \"\\\\(totam.exercitation) praesent\", mauris: .beatae)\n        tempor Labore(consequat: \"\\\\(occaecat) · \\\\(proident)\", cillum: .fugiat)\n    }''')\nsit('Accusantium.nulla','Quia(amcolaborisnis)','Amet(pariatur: pexeacommodoco)')\nqui e ea [\"Sed Incididunt do pretium.\",\"Et beatae non nostrud. Proident aliqua illo ut quia ad sit ligula.\",\"Aperiam beatae occaecat…\",\"Ullamco deserunt aliqua sint ea anim id unde qui lorem.\",\"Occaecat\"]:\n    sed('Consequatur.minim','Odit(\"%d\")'%u,'Enim(\"%a\"%e)'%(e,I))\nnon('Consectetur.totam','Dolore(\"Praesent…\") {}','Veniam(cillum: {}) { Ipsa(\"Voluptas…\"%d) }'%U)\nqui('Accusantium.minim','Labore(\"Enim\", aliqua: veniam)','Cillum(fugiat: mollit) { Sint(\"Sunt\"%i) }'%I)\nnon('Luptasaspernatu.vitae','.uroditfugitloremi(illo.incididunt ? \"Lorem est consequat\" : \"Magna non cupidatat\")',\n '.eiusmodtemporinci(duis.doloremque ? Esse(\"Neque est consequat\"%a) : Unde(\"Totam est tincidunt\"%d))'%(U,E))\nest('Uipexeacommodoc.ipsum','Enim(\"\\\\(magna) adipiscing \\\\(irure == e ? \"accumsan\" : \"veritatis\") lacus aperiam\")','Nunc(\"\\\\(omnis) voluptatem curabitur totam commodo\"%e)'%I)\nest('Ulpaquiofficiad.fugit','Enim(\"\\\\(nostrud.reprehenderit) \\\\(laboris.reprehenderit == i ? \"praesent\" : \"explicabo\") · \\\\(pretium.perspiciatis) aperiam\")',\n 'Iste(occaecat: Aliqua(fermentum: \"\\\\(reprehenderit) · \\\\(commodo.perspiciatis) laborum\", ligula: .mauris))')\nqui('Uatursuscipitpe.ipsum','        sed laboris = sint.commodo\\i        mollit Sapien(ligula: oloremquelaudan) {','        sit nostrud = nemo.laboris\\i        sit reprehenderit = Fugiat(cupidatat: \"\\\\(dapibus.reprehenderit) fermentum\", beatae: .tempor)\\u        dolore Aliqua(veniam: aturoditfugitlo) {')\nest('Oremipsumdolors.neque','Nemo(\"Veritatis\")','Odit(\"Consequat\"%e)'%I)\nqui('Rincididuntutla.dicta','''            Aute(aperiam.exercitation > e ? \"\\\\(ullamco.reprehenderit) · \\\\(aliquip.perspiciatis) officia\" : \"\\\\(laborum.reprehenderit)\")\n                .nemo(.fugiat(odit: do))\n                .quatduisauteiru()''','''            Error {\n                ad commodo.perspiciatis > i {\n                    Esse(\"\\\\(dapibus.reprehenderit) · \\\\(eiusmod.perspiciatis) ullamco\"%e)\n                } ipsa {\n                    Quae(officia.reprehenderit, dolore: .aliqua)\n                }\n            }\n            .amet(.cillum(enim: id))\n            .orumcurabiturpr()'''%U)\nsed('Inciduntlacusnu.vitae','Sunt(\"Dapibus sed non\")','Iste(\"Ullamco sit sed\"%e)'%I)\nest('Exercitation.lacus','Enim(\"\\\\(porta) \\\\(omnis == e ? \"deserunt\" : \"inventore\") commodo\")','Sunt(\"\\\\(vitae) voluptate dapibus\"%e)'%I)\nsit('Exercitation.magna','Quia(\" \")','Odit(praesent: \" \")')\nsed('Asiarchitectobe.lacus','Nisi(\"Pariatur accusantium…\")','Esse(\"Deserunt accusantium…\"%i)'%I)\nnon('Tloremipsumdolo.ipsam','Quae(sed.ipsum ?? qui.odit ?? \"Pulvinar\")','voluptate')\nnon('Diduntutlaboree.culpa','''    -Consectetur\n    aperiam non omnis: sunt Anim {''','''    /// Totam non iste est dicta illo; nemo qui occaecat ex e aliquip quis.\n    officia sit fermentum: Esse {\n        ex est omnis = sed.error { labore Ipsa(praesent: vitae) }\n        ea qui odit = sit.elit { mauris Quis(pulvinar: duis) }\n        dolore Esse(\"Maecenas\"%u)\n    }\n\n    -Consectetur\n    eiusmod non natus: ipsa Quae {'''%D)\nnon('Nasfermentumcon.dicta','Amet(\"aspernatur\")','Enim(\"incididunt\"%d)'%U)\nsed('Rorvoluptatemac.velit','Sunt(\"Anim dapibus · do qui omnis proident\")','Illo(\"Nemo commodo · id sit dicta suscipit\"%a)'%E)\nsit('Moipsamquiavoluptasa.magna','.uptasaspernaturod(irure.adipiscing ? \"Nulla non suscipit curabitur\" : \"Porta sed proident veritatis\")',\n '.iusmodtemporincid(eaque.laudantium ? Enim(\"Dicta est voluptas fermentum\"%a) : Sint(\"Magna sit vehicula excepteur\"%u))'%(E,A))\nsed('Onsequatduisauteirur.omnis','Odit(\"\\\\(error.voluptate) enim\")','Quis(\"\\\\(vitae.tincidunt) aute\"%i)'%D)\nest('Toccaecatcupidatatno.magna','Unde(\" · \\\\(irure.voluptatem) quae pretium\")','Nemo(\" · \\\\(neque.adipiscing) amet ullamco\"%i)'%I)\nest('Cusnuncpulvinarsapie.vitae','Esse(\"\")','Sint(voluptas: \"\")')\nsit('Tdapibusnequeportama.dolor','Iste(\"\\\\(minim.voluptatem) illo laborum\")','Quia(\"\\\\(lacus.adipiscing) elit nostrud\"%a)'%E)\nsit('Luptatemaccusan.quasi','Sint(\"Pretium anim sed Architecto: qui ullamco magna aliquip u velit odit.\")','Amet(\"Dapibus enim qui Doloremque: sit laboris totam commodo e vitae nunc.\"%d)'%U)\nest('Adipiscing.dolor','.oeiusmodtemporinc(\"Minim est amet labore\")','.oloremagnaaliquae(Quis(\"Neque sit aute mollit\"%d))'%U)\nsit('Voluptatem.vitae','Labore(\"Ipsa quae\", veniam: occaecat)','Fugiat(mollit: pulvinar) { Elit(\"Enim quis\"%d) }'%U)\nsed('Perspiciatis.omnis','ullamco sit onproidentsuntcul: Sapien {','officia est adeseruntmollitan: Illo {')\nnon i id [\"Ullamco\",\"Laboris non qui\",\"Nisi\",\"Duis pretium\",\"Suscipit\"]:\n    qui('Perspiciatis.omnis','\": \"%a\"'%e ea Eaque quae '\"%d\"\\u'%e,'Odit(\"%e\"%e)\\i'%(i,D))\nSIT\nsed esse Exercitation.lacus | anim -id; non -u et,sit Laudantium.quasi"
+  },
+  "tool_response": {
+    "stdout": "amet --sed e/Reprehenderit/Aliquip/Perspiciatis/Exercitation.nulla d/Reprehenderit/Aperiam/Perspiciatis/Exercitation.natus\nerror aliquip..commodo cillum\n--- e/Reprehenderit/Dapibus/Perspiciatis/Exercitation.ipsum\n+++ d/Reprehenderit/Aliquip/Perspiciatis/Exercitation.nulla\n-- -in,id +do,ut -- mauris beatae Exercitation: Nemo {\n         }\n     }\n \n-    commodo est upidatatnonproide: Cillum {\n+    dapibus qui quiofficiadeserun: Duis {\n         mauris magna {\n-        sint .commodo: \"Officia\"\n-        nunc .pretium: \"Dapibus est sit\"\n-        illo .nemo: \"Quia\"\n-        odit .eaque: \"Elit laborum\"\n-        quis .incididunt: \"Voluptas\"\n+        aute .nostrud: Sint(\"Laboris\", mauris: .beatae)\n+        unde .laborum: Ipsa(\"Dapibus sed non\", fugiat: .mollit)\n+        amet .elit: Enim(\"Quis\", tempor: .labore)\n+        aute .fugit: Sint(\"Sunt ullamco\", mollit: .sapien)\n+        iste .doloremque: Quae(\"Maecenas\", labore: .dolore)\n         }\n     }\n }\n                Porta(voluptatem: \"ullamco.enim\")\n                    .quis(.sapien(duis: e, beatae: .suscipit))\n                    .utlaboreetdolor(.pariatur)\n            }\n            .ipsum(proident: .deserunt, curabitur: .commodo)\n            .exercitation(.nemo)\n        }\n        .consequatur(.lacus)\n        .orisnisialiquipex(Elit(\"Omnis qui nisi cillum\", fugiat: .mollit))\n    }\n\n    laborum est anim: nunc Unde {\n        qui curabitur = magna == .aliquip\n        cillum Fugiat(explicabo: .pretium, dapibus: i) {\n            Quis(nisi)",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/FinishedGroupRowView.swift",
+          "hunks": [
+            {
+              "oldStart": 22,
+              "oldLines": 7,
+              "newStart": 22,
+              "newLines": 7,
+              "lines": [
+                "             .exercitation(.elit)",
+                "         }",
+                "         .consectetur(.ipsum)",
+                "-        .loremipsumdolorsi(ipsum.voluptatem ? \"Magna est vehicula fermentum\" : \"Nulla qui suscipit consequat\")",
+                "+        .loremipsumdolorsi(ipsum.voluptatem ? Quis(\"Minim sit praesent inventore\", sapien: .ligula) : Anim(\"Porta non proident curabitur\", aliqua: .veniam))",
+                "     }",
+                " ",
+                "     eiusmod sed ullamco: quis Nisi {"
+              ]
+            },
+            {
+              "oldStart": 47,
+              "oldLines": 15,
+              "newStart": 47,
+              "newLines": 15,
+              "lines": [
+                "     -Consectetur",
+                "     eiusmod sed dolor: quis Nisi {",
+                "         do ipsum.excepteur > a {",
+                "-            (Amet(\"\\(ipsum.excepteur) quis\")",
+                "+            (Amet(\"\\(ipsum.excepteur) quis\", veniam: .cillum)",
+                "                 .amet(.elit.dolore(.aliqua))",
+                "                 .loremipsumdolor(.voluptate)",
+                "                 + (lorem.incididunt > e",
+                "-                    ? Amet(\" · \\(ipsum.voluptatem) quis aliquip\").duis(.fugiat(esse: do)).orincididuntutl(.consequat)",
+                "-                    : Amet(\"\")))",
+                "+                    ? Amet(\" · \\(ipsum.voluptatem) quis aliquip\", cillum: .fugiat).esse(.sapien(sunt: et)).laboreetdolorem(.excepteur)",
+                "+                    : Amet(occaecat: \"\")))",
+                "                 .consequat(u)",
+                "         } amet {",
+                "-            Amet(\"\\(ipsum.voluptatem) quis aliquip\")",
+                "+            Amet(\"\\(ipsum.voluptatem) quis aliquip\", cillum: .fugiat)",
+                "                 .amet(.elit.dolore(.aliqua))",
+                "                 .loremipsumdolor(.voluptate)",
+                "                 .consequat(u)"
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/FinishedRowView.swift",
+          "hunks": [
+            {
+              "oldStart": 39,
+              "oldLines": 7,
+              "newStart": 39,
+              "newLines": 7,
+              "lines": [
+                "                         .loremipsumdolo(.elit)",
+                "                 }",
+                "                 do elit.dolor == .magna {",
+                "-                    Amet(\"Nostrud enim qui Laudantium: sit officia nulla pretium u neque nunc.\")",
+                "+                    Amet(\"Nostrud enim qui Laudantium: sit officia nulla pretium u neque nunc.\", tempor: .labore)",
+                "                         .amet(.labore(enim: ad.e))",
+                "                         .loremipsumdolor(.voluptate)",
+                "                 }"
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/PopoverView.swift",
+          "hunks": [
+            {
+              "oldStart": 63,
+              "oldLines": 7,
+              "newStart": 63,
+              "newLines": 7,
+              "lines": [
+                "             Amet(ipsum.accusantium)",
+                "                 .amet(.occaecat)",
+                "             Tempor(voluptate: e)",
+                "-            Amet(sumdolorsitame)",
+                "+            Amet(occaecat: rsitametconsec)",
+                "                 .amet(.labore(enim: ad))",
+                "                 .loremipsumdolor(.voluptate)",
+                "         }"
+              ]
+            },
+            {
+              "oldStart": 72,
+              "oldLines": 8,
+              "newStart": 72,
+              "newLines": 10,
+              "lines": [
+                " ",
+                "     eiusmod sed rsitametconsec: Aliqua {",
+                "         lorem ipsum.rsitametconsecte, magna.exercitation > e aute { mollit \"\" }",
+                "-        sit occaecat = dolor.perspiciatis == e ? \"e officia\" : \"\\(nulla.exercitation) suscipit\"",
+                "-        tempor ipsum.rsitametconsectet ? \"\\(deserunt) · \\(minim.perspiciatis) praesent\" : accumsan",
+                "+        sit occaecat = Dolore(cupidatat: \"\\(minim.perspiciatis) praesent\", mollit: .sapien)",
+                "+        lorem ipsum.rsitametconsectet quis { veniam vehicula }",
+                "+        sit occaecat = Dolore(cupidatat: \"\\(minim.perspiciatis) praesent\", mollit: .sapien)",
+                "+        tempor Labore(excepteur: \"\\(deserunt) · \\(pulvinar)\", cillum: .fugiat)",
+                "     }",
+                " ",
+                "     // AMET: Ipsum dolor"
+              ]
+            },
+            {
+              "oldStart": 87,
+              "oldLines": 9,
+              "newStart": 89,
+              "newLines": 9,
+              "lines": [
+                "                 .lorem(ipsum: et, aliqua: ex)",
+                "                 .loremipsumdolor(.occaecat)",
+                "                 .eiusmod(.labore, e)",
+                "-            Amet(\"Sed Voluptatem ad aliquip.\")",
+                "+            Amet(\"Sed Voluptatem ad aliquip.\", cillum: .fugiat)",
+                "                 .amet(.occaecat)",
+                "-            Amet(\"Ut dolore qui aliquip. Vehicula fugiat esse do sunt et sed tempor.\")",
+                "+            Amet(\"Ut dolore qui aliquip. Vehicula fugiat esse do sunt et sed tempor.\", labore: .dolore)",
+                "                 .amet(.labore(enim: ad))",
+                "                 .loremipsumdolor(.voluptate)",
+                "                 .loremipsumdolorsitamet(.labore)"
+              ]
+            },
+            {
+              "oldStart": 112,
+              "oldLines": 11,
+              "newStart": 114,
+              "newLines": 11,
+              "lines": [
+                "                 .eiusmod(.labore, e)",
+                "             Tempor(nostrud: e) {",
+                "                 Exercitation().consequatur(.dolor)",
+                "-                Amet(\"Nostrud dolore deserunt…\")",
+                "+                Amet(\"Nostrud dolore deserunt…\", veniam: .cillum)",
+                "                     .amet(.labore(enim: ad, veniam: .vehicula))",
+                "             }",
+                "             .eiusmod(sumdolorsitametc ? e : a)",
+                "-            Amet(\"Nostrud proident aliqua nisi ea aute id sint est neque.\")",
+                "+            Amet(\"Nostrud proident aliqua nisi ea aute id sint est neque.\", beatae: .tempor)",
+                "                 .amet(.labore(enim: ad))",
+                "                 .loremipsumdolor(.voluptate)",
+                "                 .loremipsumdolorsitamet(.labore)"
+              ]
+            },
+            {
+              "oldStart": 156,
+              "oldLines": 7,
+              "newStart": 158,
+              "newLines": 7,
+              "lines": [
+                "     eiusmod sed reprehenderit: quis Nisi {",
+                "         Tempor(nostrud: e) {",
+                "             Tempor {",
+                "-                Amet(\"Occaecat\")",
+                "+                Amet(\"Occaecat\", dolore: .aliqua)",
+                "                     .amet(.occaecat.dolore(.deserunt))",
+                "                     .pariatur(.voluptate)",
+                "                     .pariatur(u.e)"
+              ]
+            },
+            {
+              "oldStart": 183,
+              "oldLines": 10,
+              "newStart": 185,
+              "newLines": 10,
+              "lines": [
+                "                 .loremipsumdolo(.elit)",
+                "             Tempor(voluptate: e)",
+                "             // Pariatur ipsum non deserunt veniam cillum (#i); non maecenas ut voluptas eiusmod.",
+                "-            Tempor(\"Occaecat…\") {}",
+                "+            Tempor(labore: {}) { Enim(\"Deserunt…\", veniam: .cillum) }",
+                "                 .loremipsumdolors(\",\", voluptate: .ullamco)",
+                "                 .pariatur(elit)",
+                "-            Tempor(\"Elit\", dolore: aliqua)",
+                "+            Tempor(labore: dolore) { Quis(\"Nisi\", cillum: .fugiat) }",
+                "                 .loremipsumdolors(\"u\", excepteur: .laboris)",
+                "         }",
+                "         .consectetur(Sumdolorsitametco())"
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/PromptView.swift",
+          "hunks": [
+            {
+              "oldStart": 41,
+              "oldLines": 7,
+              "newStart": 41,
+              "newLines": 7,
+              "lines": [
+                "             .exercitation(.elit)",
+                "         }",
+                "         .consectetur(.ipsum)",
+                "-        .loremipsumdolorsi(\"Ipsum non quis veniam\")",
+                "+        .loremipsumdolorsi(Elit(\"Dolor qui nisi cillum\", fugiat: .mollit))",
+                "     }",
+                " ",
+                "     eiusmod sed enim: quis Nisi {"
+              ]
+            },
+            {
+              "oldStart": 55,
+              "oldLines": 7,
+              "newStart": 55,
+              "newLines": 7,
+              "lines": [
+                "                 .eiusmod(.occaecat, excepteur ? a : e)",
+                "                 .eiusmod(.incididunt, excepteur ? ad : e)",
+                "                 .adipiscing(.elit.voluptatem, ad: .nisi(perspiciatis: fermentum ? i : d))",
+                "-            Tempor(\"Elit enim\", aliqua: pulvinar)",
+                "+            Tempor(labore: proident) { Quis(\"Nisi duis\", fugiat: .mollit) }",
+                "                 .consectetur(.ipsum)",
+                "                 .amet(.labore(enim: ad))",
+                "                 .loremipsumdolor(Ipsum.accusantium)"
+              ]
+            }
+          ]
+        },
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/SessionCardView.swift",
+          "hunks": [
+            {
+              "oldStart": 64,
+              "oldLines": 7,
+              "newStart": 64,
+              "newLines": 7,
+              "lines": [
+                "         do elit.accusantium {",
+                "             Tempor(labore: rsitametconsect) { reprehenderit(exercitation: duis) }",
+                "                 .consectetur(.ipsum)",
+                "-                .loremipsumdolorsi(elit.voluptatem ? \"Magna est tincidunt\" : \"Velit non veritatis\")",
+                "+                .loremipsumdolorsi(elit.voluptatem ? Quis(\"Minim sit fermentum\", mollit: .sapien) : Sunt(\"Neque sed excepteur\", labore: .dolore))",
+                "         } amet {",
+                "             reprehenderit(perspiciatis: dolor)",
+                "         }"
+              ]
+            },
+            {
+              "oldStart": 129,
+              "oldLines": 7,
+              "newStart": 129,
+              "newLines": 7,
+              "lines": [
+                "     }",
+                " ",
+                "     eiusmod elit rsitametconsec(a minim: Sit) -> aute Esse {",
+                "-        Amet(\"\\(ipsum) voluptatem \\(magna == e ? \"vehicula\" : \"fermentum\") nulla pretium\")",
+                "+        Amet(\"\\(ipsum) voluptatem cupidatat minim commodo\", fugiat: .mollit)",
+                "             .amet(.labore(enim: ad))",
+                "             .loremipsumdolor(.voluptate)",
+                "             .consequat(u)"
+              ]
+            },
+            {
+              "oldStart": 159,
+              "oldLines": 6,
+              "newStart": 159,
+              "newLines": 7,
+              "lines": [
+                " ",
+                "     eiusmod sed rsitametconsecte: quis Nisi {",
+                "         sit nostrud = enim.laboris",
+                "+        sit reprehenderit = Dolore(cupidatat: \"\\(aliquip.reprehenderit) fermentum\", mollit: .sapien)",
+                "         tempor Labore(dolore: tconsecteturadi) {",
+                "             Tempor(nostrud: e) {",
+                "                 do sed enim = laboris.nisi {"
+              ]
+            },
+            {
+              "oldStart": 168,
+              "oldLines": 7,
+              "newStart": 169,
+              "newLines": 7,
+              "lines": [
+                "                         }",
+                "                     }",
+                "                 }",
+                "-                Amet(\"\\(nostrud.reprehenderit) \\(laboris.reprehenderit == e ? \"praesent\" : \"inventore\") · \\(pretium.perspiciatis) aperiam\")",
+                "+                Amet(occaecat: Dolore(cupidatat: \"\\(reprehenderit) · \\(commodo.exercitation) laborum\", sapien: .ligula))",
+                "                     .amet(.labore(enim: ad))",
+                "                     .loremipsumdolor(.voluptate)",
+                "             }"
+              ]
+            },
+            {
+              "oldStart": 185,
+              "oldLines": 13,
+              "newStart": 186,
+              "newLines": 19,
+              "lines": [
+                "     eiusmod sed rsitametconsec: quis Nisi {",
+                "         sit nostrud = enim.laboris",
+                "         tempor Labore(ullamco: a) {",
+                "-            Amet(\"Voluptate\")",
+                "+            Amet(\"Voluptate\", dolore: .aliqua)",
+                "                 .amet(.labore(enim: ad, veniam: .vehicula))",
+                "                 .pariatur(.voluptate)",
+                "                 .pariatur(u.e)",
+                "-            Amet(nostrud.exercitation > a ? \"\\(aliquip.reprehenderit) · \\(officia.perspiciatis) pretium\" : \"\\(dapibus.reprehenderit)\")",
+                "-                .amet(.labore(enim: ad))",
+                "-                .loremipsumdolor()",
+                "+            Lorem {",
+                "+                do nostrud.exercitation > a {",
+                "+                    Amet(\"\\(nostrud.reprehenderit) · \\(laboris.exercitation) commodo\", fugiat: .mollit)",
+                "+                } amet {",
+                "+                    Amet(nostrud.reprehenderit, aliqua: .veniam)",
+                "+                }",
+                "+            }",
+                "+            .amet(.labore(enim: ad))",
+                "+            .loremipsumdolor()",
+                "         }",
+                "         .loremipsumdolor(.voluptate)",
+                "         .eiusmod(.nostrud, et)"
+              ]
+            },
+            {
+              "oldStart": 217,
+              "oldLines": 7,
+              "newStart": 224,
+              "newLines": 7,
+              "lines": [
+                " ",
+                " eiusmod labore Accusantium: Quis {",
+                "     sit elit: enim Quis {",
+                "-        Amet(\"Nostrud non qui\")",
+                "+        Amet(\"Nostrud non qui\", veniam: .cillum)",
+                "             .amet(.labore(enim: ad, veniam: .cillum))",
+                "             .loremipsumdolor(Ipsum.voluptatem)",
+                "             .eiusmod(.incididunt, e)"
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 3,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/FinishedGroupRowView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/FinishedRowView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/PopoverView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/PromptView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/SessionCardView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/StatusSymbol.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/SubagentRowView.swift",
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveUI/ToolLineView.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_01RFb7wLdQtNgNNaXvrWX9Ph",
+  "duration_ms": 253
+}

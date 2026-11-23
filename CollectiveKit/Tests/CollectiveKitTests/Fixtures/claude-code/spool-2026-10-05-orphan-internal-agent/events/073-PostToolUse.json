@@ -1,0 +1,29 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "b29994e2-1bb6-418c-b95a-0d5e7fb25e4e",
+  "permission_mode": "auto",
+  "agent_id": "a80d1cef23c24d600",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && velit esse d>&u | anim -A \"omnis|ullamco:|Ipsa sit illo|Praesent\" ; et .. && architecto -dapibus Sed/Incididunt.cupidatat -tempor Laudantium -reprehenderit Irure RUREINREPREHENDERITV=EA -deritvoluptatev /dapibus/non/ligula-est/-Natus-illo-non-commodo/praesent-amet-elit-enim-perspiciatis/voluptatem/ea dolor i>&d | sunt -E \"nulla:|pretium:|LACUS\" | ipsa -i | illo; non mauris --totam; amet /officia/non/aliqua-est/-Fugit-aute-non-ullamco/deserunt-anim-nunc-unde-perspiciatis/laudantium/ad/Neque/Pariatur -quia \"*Udantiumtotamaperiameaqueip.sapien*\" -elit \"*.commodo*\"",
+    "timeout": 600000,
+    "description": "Sit elit dolor qui est irure"
+  },
+  "tool_response": {
+    "stdout": "\t Pariatur u dolor, quis e vehicula (i adipiscing) do u.sit (a.non) ullamco\n􁁛  Ipsa sit illo non vitae ad ex ligula mauris ipsum d.sit aliquip.\n** IRURE VERITATIS **\nsunt-in-id do:ut:et.sit riaturexcepteursintoccaecat[totam:vehicula] officia: Accumsan aspernatur dapibus, ad Voluptatem.tincidunt laudantium magna\n D Reprehenderit/Officia.nulla\n E Reprehenderit/Aperiam/Reprehenderit/Exercitation/Perspiciatis.error\n A Reprehenderit/Officia/Reprehenderit/Perspiciatis/Exercitation.fugit\n E Reprehenderit/Ullamco/Perspiciatis/Iciatisundeomni.irure\n D Reprehenderit/Culpa/Tatemaccusantiumdo/Cusantiumdoloremq.porta\n?? .omnis/\n?? MOLLIT.do\n?? Reprehenderit/Commodo/Reprehenderit/Exercitation/Pretium.ipsam\n?? Reprehenderit/Eiusmod/Reprehenderit/Consequat/Consequatur.excepteur\n/commodo/est/beatae-sed/-Lacus-quia-est-nostrud/proident-enim-quis-nisi-perspiciatis/incididunt/ad/Ipsam/Voluptas/Lorem/Remagnaaliquaenimadminimven.veniam/Deserunt/Curabitur/ad.velit/Consectetur.pretium\n/dapibus/sit/labore-non/-Natus-nisi-sit-commodo/praesent-sint-sunt-anim-perspiciatis/aspernatur/ea/Dolor/Deserunt/Minim/Occaecatcupidatatnonproiden.fugiat/Accumsan/Consequat/ea.neque/Accusantium.consectetur\n/ullamco/sed/aliqua-qui/-Quasi-anim-sed-dapibus/voluptas-ipsa-quae-illo-perspiciatis/laudantium/id/Velit/Accumsan/Culpa/Voluptatem.est/Pariatur/Fermentum/Ipitperspiciatisundeomnisis.tempor/Pulvinar/Consequat/ad.vitae/Accusantium.dapibus\n/aperiam/sed/ligula-qui/-Magna-amet-sed-officia/accumsan-nisi-duis-aute-perspiciatis/aspernatur/ea/Error/Pulvinar/Eaque/Laudantium.est/Maecenas/Fermentum/Emipsumdolorsitametconsecte.fugiat/Occaecat/Consequat/ut.minim/Accusantium.consectetur",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01KacBEfQpX6FPtXLazRmbMU",
+  "duration_ms": 23111
+}

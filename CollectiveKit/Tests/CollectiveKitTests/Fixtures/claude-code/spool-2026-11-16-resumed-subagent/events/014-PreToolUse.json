@@ -1,0 +1,52 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0524016e-4402-41b4-ab09-beb551661d10",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "AskUserQuestion",
+  "tool_input": {
+    "questions": [
+      {
+        "question": "#sit: Sed enim quis est Ipiscingelitse praesent --esse-culpa est --anim-beatae unde? Proident ipsa id sed Praesent accumsan mollit, sit ea enim nostrud est duis↔minim. Irure ex laborum: Maecenas Dapibus d,qui, Omnis Natus Illo e,in, Aliqua Vitae u,non. Ad Lorem duis dolor magna d,ut sit ad non. Qui Aperiam: Porta illo non Deserunt odit commodo, sed Vitae qui suscipit duis sed ipsum qui e,sit Commodo.",
+        "header": "lorem↔labore",
+        "options": [
+          {
+            "label": "d,ut, enim aliqua (Consequatur)",
+            "description": "Lorem ipsum et Deserunt Aliquip, Irure Velit Esse qui Ligula Neque Pariatur unde. --iste dolore quae vehicula, non et pretium sapien fugit Consequatur, quis nisi labore Minim non qui Nulla-Anim."
+          },
+          {
+            "label": "d,ut",
+            "description": "--amet incididunt enim qui ex Vehicula Officia, id do lacus neque laudantium non (EA ≈ i,id). Eaque quasi et a Suscipit. Elit lorem qui dolor Laboris, et non sint sunt sit mollit Aperiam architecto."
+          },
+          {
+            "label": "d,ut non ad Minim",
+            "description": "--amet incididunt enim quis ex Irure (#fugiat → ≈ #mollit, DO u,sit) sed Unde Iste Ipsa, quae illo ut Laborum-Dicta-Ipsam, voluptas in Voluptatem Dolor, Tincidunt Minim non Praesent Laborum. Sit sed Unde iste et natus, laboris nemo veritatis quasi Consequatur."
+          }
+        ],
+        "multiSelect": false
+      },
+      {
+        "question": "#sit: Ut Proident Magna veniam --cillum sed --nulla-sint est Neque pariatur consectetur (EA i,sit, Eaque quasi Quia), odit amet ligula enim (i,do:u). Et aliqua Sint ea fugiat, mollit non UT-Occaecat quae e,non dolore. Odit veniam elit enim perspiciatis Lorem ea Fermentum, Laboris qui labore dolore/laborum-Veniam laudantium. Est sit?",
+        "header": "Amet/Labore",
+        "options": [
+          {
+            "label": "Reprehenderit, ut dolore (Consectetur)",
+            "description": "Sit Occaecat ullamco qui veniam, sit aute id \"Maecenas lacus\" consequat. Porta omnis, natus ipsa Madminimveniamqu sed Nemo vitae Mollit sapien sed eiusmod Beatae."
+          },
+          {
+            "label": "Loremipsumdolors ipsum",
+            "description": "Amet consequatur Dolor: Quis est Cillum fugiat esse do est Doloremque (Pariatur architecto) natus Iquaenimadmini aliqua. Eaque cillum #qui mollit."
+          }
+        ],
+        "multiSelect": false
+      }
+    ]
+  },
+  "tool_use_id": "toolu_019DK3uZfDtzm3rdiE2fbx4Q"
+}

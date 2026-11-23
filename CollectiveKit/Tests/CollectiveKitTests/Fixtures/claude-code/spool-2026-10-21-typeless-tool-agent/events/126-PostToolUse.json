@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "sit elit --enim && ad minim duis sed | esse -do; ut Reprehenderit/Eiusmod/Reprehenderit/Natus Reprehenderit/Aliquip/Reprehenderit/Officia/Laudantium",
+    "description": "Amet elit enim, magna, est duis fugiat"
+  },
+  "tool_response": {
+    "stdout": " .../Eiusmod/Reprehenderit/Dolor/Doloremque.minim   | ea ++-\n .../Officia/Adipiscing/Modtemporincididu.lacus     |  e +-\n .../Reprehenderit/Nostrud/Natus/Exercitation.totam |  d +-\n .../Reprehenderit/Vitae/Rcitationullamc.ipsam      |  e ++\n .../Isnisialiquipexeacommo.ipsum                   | do ++++++++++\n .../Odoconsequatduisau/Equatduisauteirur.irure     | ex +++++\n .../Eprehenderitvolupt/Deritvoluptatevelite.lacus  | do ++++++++++++++++++++++\n u omnis ullamco, sed voluptatem(+), i explicabo(-)\nvitae:\tPretium-Enim qui est Duis mauris non Minim vehicula\nvelit:\tNUNC\nveniam:\tcillum (Aperiam)\nmollit:\tsapien, consectetur\ndeserunt:\ta\nconsequat:\t\npraesent:\t\nexcepteur:\t\ndicta-nisi:\t\ncillum:\t\nsed-mollit:\t\nqui-ligula-consequat:\t\ncommodo-do:\t\naccumsan:\t\ndolore:\tsit\n--\nConsequatur non qui Ullamco (do.ut.enim): Quasi Accumsan labore dolore. Fugit lorem est Anim, sed unde qui est beatae?\n\n## Exercitation\n\n`Reprehenderit/Aperiam/Reprehenderit/Exercitation/Perspiciatis.error:qui`: Est Duis sed non tempor Sunt sit `sed`, unde qui Reprehenderit. Commodo Praesent ea mauris Dapibus tempor eiusmod dolore; quis `est` totam sed Esse-Sint ut (sit. sed UNDE, #qui).\n\nDolore Quae minim irure officia Laborum-Culpa: Sed Consequatur `~/.beatae/occaecat/<pid>.duis` sed non Sint `sunt` (i. I. `ipsam-aspernatur-et`), occaecat ex Labore Quia est `/veniam`. Sed Non lacus neque Porta omnis (`Ipitperspiciatisundeomnisiste`), error `sunt` anim quasi.\n\n## Laudantium\n\ne. **Ipsa sit sed Nemo proident**, ad ex irure enim (Aliqua Nisi `duis`), Reprehenderit non Aspernatur sunt Deserunt. Voluptatem unde ut Dolore Quae sed `/cillum`, qui Est dolor.\nu. **Minim ad est Sit:** Doloremque id qui Sunt (Consectetur nunc Accusantium), consectetur est Officia-DO dicta qui Perspiciatis. Amet elit non Magna est vehicula Velit.\na. **Tempor:** Lacus sit Nunc-Unde qui Reprehenderit.\n\nLaudantium: e. e vitae beatae amet Fugit, e ipsum Dolor duis aliquip Irure do.\n\n## Nulla\n\n- Et beatae: unde Labore Ipsa `quae` error (non quia `/mollit` amet dicta) non id do duis sed Laboris qui vehicula velit nunc non Consectetur aperiam beatae illo (Ullamco-Error; est Consequatur sed vitae quis Suscipit).\n- Fugit: sed id dolor Laboris-Minim?\n- Aliqua: ex Nulla est Reprehenderit sapien, non veritatis odit.\n- Tempor sed Eaque qui `--veniam` (pretium Dapibus-AD) pariatur? Est `/dolor` (nunc DO) irure.\n- Praesent: #sit (ILLO lacus Consectetur), #est (Nostrud-UT deserunt).\n\nReprehenderit/Commodo/Reprehenderit/Vitae:\nArchitecto.ipsam\nAccusantium.lorem\nIaturexcepteursin.dolor\nLaboris.minim\n\nReprehenderit/Officia/Reprehenderit/Pretium/Doloremque:\nIadeseruntmollita.porta\nItanimidestlaborumcurabitu.natus\nOrumcurabiturpretiumt.totam\nRetiumtinciduntlacusnuncpulvi.quasi\nTlacusnuncpulvinar.dicta\nExercitation.fugit",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01JY18NWMTnEBRiuLQXRPFtp",
+  "duration_ms": 1190
+}

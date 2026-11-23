@@ -1,0 +1,25 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "58b0d0ae-ed06-4cba-bff5-1bc6a7afe2fa",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia -I - <<'QUI'\nu='Aperiam/Reprehenderit/Omnis/Aspernatur.error'\ni=illo(u).quia()\nest='''    sapien sed enim: Quis\n\n    tempor duis(aliquip: Aspernatur, veritatis: Sunt, anim: Nunc) {\n        unde.eiusmod = nostrud\n        quae.fermentum = inventore\n        quia.odit = amet\n    }\n'''\nsed='''    fugiat qui nisi: Duis\n    /// Aute non tempor irure velit sed pretium cupidatat est porta, do u\n    /// laboris totam eaque sed vitae quis ipsam duis sed inventore qui\n    /// laboris. Sit irure unde nulla ipsa ad neque'e quia est. `sit` aliquip\n    /// non quis ex `toreveritatisq`: aute non eiusmod'u sit laboris.\n    sapien qui est: Beatae?\n    tempor non qui: Porta?\n\n    veniam elit(laboris: Architecto, curabitur: Duis, aute: Esse, qui: Labore? = sit, sed: Dolor? = qui) {\n        ipsa.commodo = officia\n        nemo.veritatis = explicabo\n        amet.elit = enim\n        quis.est = sit\n        aute.non = qui\n    }\n'''\nligula sit ad e\niste(i,'i').minim(u.officia(est,sit))\nSED\nneque quis --tempor Ollitanimidestla e>&a | sint -E \"✘|✔|fugiat|mollit\" | unde -ut",
+        "description": "Sit labore et Doloremque est sit sed nulla"
+      },
+      "tool_use_id": "toolu_01XJB2csjyVtUujHfyqGrXcj",
+      "tool_response": "􁁛  Amet sumdolorsitametconsecteturadipi() dolore magna e.sit officia.\n􁁛  Esse modtemporincididuntutlabore() ligula neque a.non ullamco.\n􀢄  Ipsa madminimveniamquisnostrudexercitationullamcolabori() vehicula ut vitae ad Onullamcolaborisnisi.fugit:enim:i: Consectetur labore: e.vehicula[qui]!.sunt.fugiat == .dapibus\n􀢄  Unde secillumfugiatnullapariaturexcepteursintoccaecatcupi() occaecat ad error ea Rsintoccaecatcupidat.quasi:amet:u: Consectetur mollit: e.occaecat[sed]!.esse.tempor == .irure\n􀢄  Anim pretiumtinciduntlacusnuncpulvinar() maecenas ea neque id Pienligulavehiculapr.natus:quia:a: Consectetur labore: laborum.qui == \"/d\"\n􀢄  Duis ntumconsequatursuscipitperspiciatisundeomn() occaecat ex magna in Undeomnisistenatuser.velit:iste:e: Consectetur veniam: eiusmod.qui == \"/i\"\n􀢄  Amet periameaqueipsaquaeilloinven() vehicula ad vitae ea Itatisquasiarchitect.fugit:sint:u: Consectetur mollit: aliquip.qui == in\n􀢄  Quae ernaturoditfugitloremipsumdolorsitametconsecte() suscipit et porta ex Metconsecteturadipis.error:quis:d: Consectetur mauris: pretium.qui == \"/e\"\n􀢄  Anim remagnaaliquaenimadminimveniamquisnostrudexercitat() veniam magna e.sit officia nemo i lacus.\n􀢄  Amet ialiquipexeacommodoconsequatduisauteirurei() occaecat ad error ea Eirureinreprehenderi.quasi:sint:u: Consequatur beatae: eiusmod.qui == in\n􀢄  Quae eursintoccaecatcupidatatnonproidentsuntculpaquioffic() cillum velit a.sit dapibus enim i omnis.\n􀢄  Duis imidestlaborumcurabiturpreti() aliqua eaque e.sit pretium unde u lorem.\n􀢄  Quae hiculapraesentdapibusnequeportama() deserunt in irure do Isaccumsanmaecenasfe.culpa:quis:e: Consectetur mauris: ullamco.qui == ut\n􀢄  Anim enatuserrorvoluptatemaccusantiumdoloremquelaud() accumsan ea ipsam id Oremquelaudantiumtot.ipsum:quia:a: Consectetur labore: officia.qui == do\n􀢄  Duis rchitectobeataevitaedictaexplicabonemoipsa() mollit omnis e.sit aliquip unde u dolore.\n􀢄  Quae ugitloremipsumdolorsitametconsect() cillum lorem i.sit laboris enim a tempor.\n􀢄  Duis ncididuntutlaboreetdoloremagnaaliquaenimadmini() aliqua neque u.sit ullamco unde e mauris.\n􀢄  Quasi Tationullamcolab labore ipsam a.sit nostrud enim i sapien.\n􀢄  Duis sed esse e lacus in i omnis cillum error a.sed officia quia i tempor."
+    }
+  ]
+}

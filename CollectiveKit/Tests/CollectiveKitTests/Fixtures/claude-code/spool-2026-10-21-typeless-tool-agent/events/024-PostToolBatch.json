@@ -1,0 +1,25 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "b85601ca-9092-4fd7-bc5f-ed28a988a2da",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && aute -id \"d.u.sit\\|voluptate-non-iste\" Error/Madminimveniamquis/*.eaque | nemo; et Dicta/Onullamcolaborisni/Voluptas/mauris-quis/d.u.sed/a-veritatis-est-anim/ Lacus/Velitessecillumfug/Pariatur/mauris-quae/e.e.qui/i-consequat-sed-enim/mollit; ex Ipsum/Runtmollitanimides/Deserunt/minim/u.sit.a/e-suscipit-voluptas-mollit-omnis-ullamco/mauris | odit",
+        "description": "Tempor nostrud dolor qui minim"
+      },
+      "tool_use_id": "toolu_01Y31tTii4AeV934x3RawpA2",
+      "tool_response": "Lorem/Sumdolorsitametcon/Rsitametconsecteturadi.magna:est:/// Duis in i.d.est anim nunc ex proident ipsa totam.\nEaque/Quisnostrudexercit/Trudexercitationullamc.dicta:sit:            .colaborisnisialiquipex(\"Pariatur/beatae-nisi/u.e.non\")\nVelit/Eprehenderitvolupt/Deritvoluptatevelitess.lacus:non:    -Iste ipsa nullapariaturexcepteursintoccaecatcupidatatnonproi() tempor {\nTotam/Rsintoccaecatcupid/Caecatcupidatatnonproidentsuntculp.vitae:ut:/// Non voluptas sapien ipsum in Beatae Sint u.e.sed (maecenas `suscipit/`), aperiam\nPorta/Pienligulavehicula/Ulavehiculapraesentdapibusnequepor.error:ad:        \"e-voluptate-non-quis\", \"d-tincidunt-sed-esse\", \"e-laboris-adipiscing-vehicula\", \"d-doloremque-curabitur\",\nLacus/Cusantiumdoloremqu/Umdoloremquelaudantiumtotamaperiam.omnis:id:        Mtotamaperiamea.elit.aqueipsaquaeilloinvent(\"praesent/tempor-duis/i.i.qui/\\(est)/\\(anim)\", consequatur: unde)\nIrure/Uiavoluptasasperna/Ptasaspernaturoditfugitloremipsumd.culpa:ut:        qui odit = sit Elit(laudantium: Quis.sapien(\"u-fermentum-non-sint\", \"labore\").eetdoloremagnaaliquaen(\"sed-veniam.iste\"))\nMinim/Amquisnostrudexerc/Ostrudexercitationullamcola.nulla:i:/// I voluptas sed et a.e.sit: aute praesent qui pretium mauris voluptate ex qui\nDolor/Rexcepteursintocca/Eursintoccaecatcupidatatnon.irure:et:        Mollit.sapien.consectetur!.paquiofficiadeseruntmo(\"Pariatur/tempor-duis/e.a.qui/\\(est)\")\nVitae/Duntlacusnuncpulvi/Usnuncpulvinarsapienligulav.fugit:est:        sit sed = Deserunt(\"i-explicabo-sit-elit\")\nCulpa/Enasfermentumconse/Voluptas/ligula-aute/i.d.est/e-voluptate-non-iste/:\nfugiat\nmollit\npariatur.ipsum\n\nDolor/Maperiameaqueipsaq/Pulvinar/labore-enim/i.d.sit/e-inventore-qui-sunt/mauris:\nsed-Exercitation.iste\nest-Uroditfugitloremip.illo\nnon-Dolorsitametconsec.odit\nsit-Uradipiscingelit.enim\nqui-Eiusmodtemporinc.duis\nsed-Laudantium.sint\nest-Exercitation.nunc\nnon-Niamquisnostrude.ipsa\nsit-Aspernatur.nemo\nqui-Consectetur.amet\nsed-Architecto.quis\nest-Consectetur.aute\nnon-Laudantium.sunt\nsit-Consectetur.unde\nqui-Reprehenderit.quae\nsed-Aspernatur.quia"
+    }
+  ]
+}

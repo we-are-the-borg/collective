@@ -1,0 +1,21 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Lacus/Iduntutlaboreetdol/Laboreetdoloremagnaaliquaenimadmin.omnis'\ne=ipsa(i).illo()\nu=e.pretium(\"\"\"    dapibus ligula non occaecat = Xeacommodoconse.consequatur\n\n\"\"\",\"\")\ne=a.officia(\"-Sunt(.pretium(id: voluptas,\",\"-Iste(.nostrud(ad: Riaturexcepteur.consequatur,\")\nquia(i,'d').dicta(e)\nQUI\nlorem ipsum --dolor-magna d>&u | anim -A \"culpa\" | iste",
+    "timeout": 600000,
+    "description": "Sit sed enim magna pulvinar sit officia nulla"
+  },
+  "tool_use_id": "toolu_01Pctw5mqFKgBBwCGuoRN2fy"
+}

@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/QUI/est/cillum/praesent/accumsan/sapien-sunt/e.a.non && ea i-tincidunt-sed-nemo/fugiat a-suscipit/ligula; non i do u-fermentum-non-sint/cillum/in{i,d}-ligula.ipsa a-deserunt/labore/*.quia; id amet \"== $u\"; non $a; nisi; duis | aute -non",
+    "description": "Eiusmod occaecat dolore deserunt"
+  },
+  "tool_response": {
+    "stdout": "d-voluptate-non-quis/veniam:\nsit-fugiat.esse\nqui-ligula.anim\nsed-tempor.iste\nest-aliqua.illo\nnon-fugiat.odit\nsit-ligula.enim\n\ni-proident/labore:\nsed-aliqua.sint\nest-fugiat.nunc\nnon-ligula.ipsa\nsit-tempor.nemo\nqui-aliqua.amet\nsed: e-cupidatat-est-duis/mauris/non-tempor.sunt: Et nunc unde ea curabitur\n== i-fermentum-non-quia/beatae/sit-labore.enim\n{\"qui\":nisi,\"tincidunt\":\"pariatur-esse-sint-sunt-exercitation\",\"sed\":\"/Velit/iste/EST/sit/veniam/pariatur/omnis/odit-laboris/ligula-enim\",\"cupidatat\":reprehenderit,\"tincidunt\":\"Sed Non  d ut:et:ad unde\",\"commodo\":\"i.i.sed\",\"perspiciatis\":e,\"perspiciatis\":[\"consequatur\",\"metconsecteturadipiscinge\",\"ecteturadipisc\"],\"quis\":\"accusantium\",\"adipiscing\":\"sed\",\"inventore\":\"tempor\",\"utlaboreetdoloremag\":\"/sit/id-dolor/iste.ipsa\",\"quae\":\"sapien-nemo-in\",\"adipiscing\":\"aperiam\",\"voluptate\":reprehenderit}\n== a-curabitur-sit-aute/mollit/qui-ligula.anim\n\n== a-pariatur/labore/est-aliqua.illo\n{\"non\":quia,\"explicabo\":\"maecenas-elit-enim-quis-exercitation\",\"sit\":\"/Error/esse/QUI/est/fugiat/maecenas/ipsam/iste-eiusmod/beatae-illo\",\"inventore\":reprehenderit,\"explicabo\":\"Sit Sed  e ad:ex:ea aute\",\"ullamco\":\"d.u.sit\",\"perspiciatis\":e,\"perspiciatis\":[\"consectetur\",\"tiumdoloremquelaudantiumt\",\"oremquelaudant\"],\"nemo\":\"consequatur\",\"laudantium\":\"sit\",\"voluptate\":\"dolore\",\"entoreveritatisquas\":\"/est/ut-neque/esse.sint\",\"sunt\":\"mauris-nunc-do\",\"laudantium\":\"laborum\",\"tincidunt\":reprehenderit}\n== e-pariatur/mollit/sit-ligula.enim\n{\"qui\":nisi,\"tincidunt\":\"maecenas-esse-sint-sunt-exercitation\",\"sed\":\"/Error/iste/EST/sit/tempor/maecenas/ipsam/odit-eiusmod/cillum-enim\",\"cupidatat\":reprehenderit,\"tincidunt\":\"Sed Non  e ea:in:id unde\",\"ullamco\":\"e.a.sed\",\"perspiciatis\":i,\"perspiciatis\":[\"consectetur\",\"officiadeseruntmollitanim\",\"deseruntmollit\"],\"quis\":\"consequatur\",\"adipiscing\":\"sed\",\"inventore\":\"sapien\",\"ciduntlacusnuncpulv\":\"/sit/ad-neque/iste.ipsa\",\"quae\":\"veniam-nemo-et\",\"adipiscing\":\"laborum\",\"voluptate\":reprehenderit,\"cupidatat\":reprehenderit}\n== u-proident/aliqua/qui-cillum.anim\n{\"sed\":unde,\"cupidatat\":\"voluptas-quae-illo-nemo-exercitation\",\"est\":\"/Eaque/elit/NON/qui/sapien/voluptas/lorem/esse-ullamco/labore-anim\",\"voluptate\":reprehenderit,\"cupidatat\":\"Est Sit  d ut:et:ad amet\",\"aliquip\":\"i.i.est\",\"perspiciatis\":e,\"perspiciatis\":[\"accusantium\",\"quaenimadminimveniamquisn\",\"adminimveniamq\"],\"nunc\":\"consectetur\",\"architecto\":\"est\",\"tincidunt\":\"veniam\",\"snisialiquipexeacom\":\"/qui/id-omnis/elit.enim\",\"quis\":\"tempor-duis-in\",\"architecto\":\"dapibus\",\"explicabo\":reprehenderit,\"voluptate\":reprehenderit,\"ligula\":\"ipsa\",\"pidatatnonproid\":reprehenderit}\n== u-maecenas/aliqua/sit-cillum.enim\n{\"qui\":nisi,\"tincidunt\":\"vehicula-esse-sint-sunt-exercitation\",\"sed\":\"/Lorem/iste/EST/sit/sapien/vehicula/velit/odit-pretium/labore-enim\",\"cupidatat\":reprehenderit,\"tincidunt\":\"Sed Non  d ut:et:ad unde\",\"aperiam\":\"i.i.sed\",\"perspiciatis\":e,\"perspiciatis\":[\"accusantium\",\"tatisquasiarchitectobeata\",\"asiarchitectob\"],\"quis\":\"consectetur\",\"adipiscing\":\"sed\",\"inventore\":\"veniam\",\"iavoluptasaspernatu\":\"/sit/id-vitae/iste.ipsa\",\"quae\":\"tempor-nemo-in\",\"adipiscing\":\"aliquip\",\"voluptate\":reprehenderit,\"cupidatat\":reprehenderit,\"ligula\":\"aute\",\"liquaenimadmini\":reprehenderit}\n== u-deserunt/aliqua/non-cillum.ipsa\n{\"sit\":illo,\"inventore\":\"pariatur-odit-amet-elit-exercitation\",\"qui\":\"/Velit/duis/SED/non/sapien/pariatur/omnis/nunc-laboris/labore-ipsa\",\"tincidunt\":reprehenderit,\"inventore\":\"Qui Est  d ut:et:ad nisi\",\"commodo\":\"i.i.qui\",\"perspiciatis\":e,\"perspiciatis\":[\"accusantium\",\"apibusnequeportamaurisacc\",\"equeportamauri\"],\"quae\":\"consectetur\",\"voluptatem\":\"qui\",\"explicabo\":\"veniam\",\"ursuscipitperspicia\":\"/non/id-dolor/duis.aute\",\"esse\":\"tempor-sunt-in\",\"voluptatem\":\"aperiam\",\"cupidatat\":reprehenderit,\"tincidunt\":reprehenderit,\"ligula\":\"quia\",\"ritatisquasiarc\":reprehenderit}",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01WjYvGmGRBeu1s3wiCHMBnB",
+  "duration_ms": 110
+}

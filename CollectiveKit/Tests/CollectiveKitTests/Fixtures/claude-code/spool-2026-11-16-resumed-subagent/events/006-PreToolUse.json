@@ -1,0 +1,20 @@
+{
+  "session_id": "e04a26bf-8f28-4250-a4ae-72196d570122",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122.jsonl",
+  "cwd": "/Users/user/dev/other-project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-other-project/e04a26bf-8f28-4250-a4ae-72196d570122/scratchpad",
+  "prompt_id": "0b7aeacd-6bc5-4434-b752-6b94a20db5ba",
+  "permission_mode": "auto",
+  "agent_id": "a183282c31caebc12",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "sit -u '/## Accusantium/,$a' .veniam/vehicula.in && non sapien && est sit --eiusmod -e",
+    "description": "Amet consequatur ullamco qui est irure"
+  },
+  "tool_use_id": "toolu_016WuvivczN7dG6kBZAjBPVS"
+}

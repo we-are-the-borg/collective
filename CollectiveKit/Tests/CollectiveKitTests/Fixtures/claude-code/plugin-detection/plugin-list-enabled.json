@@ -1,0 +1,71 @@
+[
+  {
+    "id": "frontend-design@claude-plugins-official",
+    "version": "d182ca456ca0",
+    "scope": "user",
+    "enabled": false,
+    "installPath": "/Users/user/.claude/plugins/cache/claude-plugins-official/frontend-design/d182ca456ca0",
+    "installedAt": "2026-07-15T20:29:11.305Z",
+    "lastUpdated": "2026-10-05T12:57:21.585Z",
+    "projectEnabled": false
+  },
+  {
+    "id": "mattpocock-skills@mattpocock",
+    "version": "1.2.0",
+    "scope": "project",
+    "enabled": true,
+    "installPath": "/Users/user/.claude/plugins/cache/mattpocock/mattpocock-skills/1.2.0",
+    "installedAt": "2026-07-21T06:10:17.350Z",
+    "lastUpdated": "2026-07-21T06:10:17.350Z",
+    "projectPath": "/Users/user/dev/other-project",
+    "projectEnabled": false
+  },
+  {
+    "id": "mattpocock-skills@mattpocock",
+    "version": "1.2.0",
+    "scope": "user",
+    "enabled": true,
+    "installPath": "/Users/user/.claude/plugins/cache/mattpocock/mattpocock-skills/1.2.0",
+    "installedAt": "2026-07-23T11:04:12.764Z",
+    "lastUpdated": "2026-07-23T11:04:12.764Z",
+    "projectEnabled": false
+  },
+  {
+    "id": "subspace@subspace",
+    "version": "0.11.0",
+    "scope": "user",
+    "enabled": true,
+    "installPath": "/Users/user/.claude/plugins/cache/subspace/subspace/0.11.0",
+    "installedAt": "2026-10-02T16:56:01.795Z",
+    "lastUpdated": "2026-10-05T10:38:49.249Z",
+    "projectEnabled": false,
+    "hasUserConfig": true
+  },
+  {
+    "id": "swift-lsp@claude-plugins-official",
+    "version": "1.0.0",
+    "scope": "user",
+    "enabled": false,
+    "installPath": "/Users/user/.claude/plugins/cache/claude-plugins-official/swift-lsp/1.0.0",
+    "installedAt": "2026-04-25T14:51:24.669Z",
+    "lastUpdated": "2026-04-25T14:51:24.669Z",
+    "projectEnabled": false
+  },
+  {
+    "id": "warp@claude-code-warp",
+    "version": "2.2.0",
+    "scope": "user",
+    "enabled": true,
+    "installPath": "/Users/user/.claude/plugins/cache/claude-code-warp/warp/2.2.0",
+    "installedAt": "2026-09-03T06:54:38.086Z",
+    "lastUpdated": "2026-09-03T06:54:38.086Z",
+    "projectEnabled": false
+  },
+  {
+    "id": "superset@skills-dir",
+    "version": "0.3.0",
+    "scope": "user",
+    "enabled": true,
+    "installPath": "/Users/user/.claude/skills/superset"
+  }
+]

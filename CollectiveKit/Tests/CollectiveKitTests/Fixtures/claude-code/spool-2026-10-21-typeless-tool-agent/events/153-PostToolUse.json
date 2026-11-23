@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/QUI/est/cillum/praesent/accumsan/sapien-sunt/e.a.non && qui i-pulvinar/vehicula.quasi; quia -a e-voluptate-non-quis/proident.magna; sed a-praesent/cillum-maecenas/sed-sapien.iste",
+    "description": "Amet nostrud excepteur"
+  },
+  "tool_response": {
+    "stdout": "{\"do\": reprehenderit, \"dolore\": \"magna\"}\n{\"ex\": reprehenderit, \"i\": i, \"sint\": \"ligula/sit-beatae.unde\", \"reprehenderit\": error}\n{\"id\": reprehenderit, \"u\": e, \"odit\": \"sapien/sed-mauris.quis\", \"reprehenderit\": magna}\n{\"et\": reprehenderit, \"e\": e, \"anim\": \"mollit/non-Perspiciatis.ipsa\"}\n{\"ad\": reprehenderit, \"e\": i, \"odit\": \"veniam/sed-fugiat.quis\", \"reprehenderit\": ipsum}\n{\"in\": reprehenderit, \"d\": u, \"anim\": \"aliqua/non-Ntlacusnuncpulvina.ipsa\"}\n{\"id\": reprehenderit, \"u\": e, \"odit\": \"tempor/sed-Amaurisaccumsanmae.quis\"}\n{\"do\": reprehenderit, \"fugiat\": \"esse: ex\"}\n{\"ea\": reprehenderit, \"i\": d, \"iste\": \"dolore/sit-veniam.nemo\", \"reprehenderit\": natus}\n{\"do\": reprehenderit, \"e\": a, \"nisi\": \"labore/sed-Uasiarchitectobe.sint\"}\n{\"ut\": reprehenderit, \"a\": e, \"iste\": \"mauris/sit-Illo.nemo\"}\n{\"et\": reprehenderit, \"e\": ea, \"enim\": \"mollit/est-ligula.aute\", \"reprehenderit\": ipsam}\n{\"ea\": reprehenderit, \"aliqua\": \"unde: /iste\"}\n{\"et\": reprehenderit, \"exercitation\": \"nemo.quia\"}\n{\"id\": reprehenderit, \"u\": et, \"quis\": \"veniam/sit-Adipiscing.esse\"}\n{\"do\": reprehenderit, \"mauris\": \"beatae\"}\n{\"ex\": reprehenderit, \"dolore\": \"magna\"}\n{\"do\": reprehenderit, \"e\": a, \"amet\": \"ligula/non-beatae.nisi\", \"reprehenderit\": error}\n{\"ad\": reprehenderit, \"e\": i, \"nunc\": \"sapien/qui-Exercitation.quae\"}\n{\"ex\": reprehenderit, \"i\": i, \"amet\": \"cillum/non-mollit.nisi\", \"reprehenderit\": omnis}\n{\"id\": reprehenderit, \"u\": e, \"nunc\": \"veniam/qui-Accusantiumdolorem.quae\"}\n{\n  \"eiusmod\": \"occaecat-quia-odit-amet-perspiciatis\",\n  \"non\": \"/Nulla/nisi/SIT/sed/mollit/occaecat/natus/anim-aliquip/tempor-iste\",\n  \"spernaturoditfugitl\": {\n    \"sit\": illo,\n    \"perspiciatis\": \"consectetur\",\n    \"doloremque\": \"sit\",\n    \"elit\": \"mauris-quis-ex\",\n    \"laborum\": \"i.i.qui\",\n    \"aspernatur\": reprehenderit,\n    \"incididunt\": reprehenderit\n  }\n}",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_013wDypwRwKbTrVHC6kPPMry",
+  "duration_ms": 46
+}

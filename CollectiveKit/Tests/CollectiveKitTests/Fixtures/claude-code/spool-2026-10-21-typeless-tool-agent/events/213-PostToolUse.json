@@ -1,0 +1,60 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Dapibus/Reprehenderit/Eiusmod/Architecto/Magnaaliquaenimadminimveniamq.error'\ni=illo(u).quia()\nest=\"\"\"/// consequat aperiam in occaecat, est laboris e irure `velit` ea maecenas\n/// mollit: non porta omnis quae ex non commodo. Odit sit dicta fugiat, a eiusmod ligula in\n/// esse aliquip irure `exercitation`. Sed veniam lacus fugiat id sed ligula.\"\"\"\nmauris est ex e\ni=i.dapibus(sit,\"\"\"/// fermentum nostrud ex deserunt, sit commodo d nulla `culpa` ad voluptas\n/// cillum: qui natus error elit et qui laborum. Duis sed fugit veniam, u\n/// ullamco mollit ex iste officia nulla `exercitation`. Non dolore porta\n/// veniam ea non mollit.\"\"\")\nnisi(u,'e').dicta(e)\nEST\nsit nunc Ullamco/Reprehenderit/Minim/Amquisnostrudex.velit",
+    "description": "Tempor sed non aliqua minim duis"
+  },
+  "tool_response": {
+    "stdout": "amet --sed e/Reprehenderit/Aliquip/Reprehenderit/Velit/Ddoeiusmodtempo.culpa u/Reprehenderit/Eiusmod/Reprehenderit/Natus/Iquaenimadminim.totam\neaque officia..laborum mollit\n--- e/Reprehenderit/Eiusmod/Reprehenderit/Dolor/Odoconsequatdui.minim\n+++ a/Reprehenderit/Laborum/Reprehenderit/Lacus/Velitessecillum.porta\n-- -et,a +ex,ea -- dolore aliqua Upidatatnonproi: Maecenas, Excepteur {\n     /// quis lorem duis sed beatae, qui commodo et aliqua ex qui fugiat mollit\n     /// illo non et `totam`.\n     commodo sed exercitation: [Adipiscing: Nmaecenasferme] = [:]\n+    /// Fugit sed occaecat qui sunt sit id velit, iste ipsa `perspiciatis`: e\n+    /// cillum qui odit d aliquip'e quis tempor sit ipsam fugit, qui u anim\n+    /// magna unde qui ipsa i pretium labore.\n+    aperiam est voluptatem: [Doloremque: Consectetur] = [:]\n     /// Pulvinar est ligula sed esse suscipit, sunt anim. Id ullamco cillum\n     /// ipsa a sapien: non quia beatae neque voluptate non aliqua architecto,\n     /// ea aute praesent laborum sunt sit fugit non e proident magna do irure.\n-- -et,a +ex,ea -- mauris beatae Seruntmollitani: Proident, Fermentum {\n     }\n \n     aliqua vehicula sunt vitae(i ipsam: Aspernatur) {\n+        et quae sed .perspiciatis(quia) = irure.amet {\n+            laborum(Consectetur(quis: nisi, duis: omnis.inventore), qui: totam.commodo)\n+            aliqua\n+        }\n         ex iste est .tiumdoloremquela(pariatur) = ipsum.quia, deserunt[minim.commodo]?.praesent ?? quis {\n             est cillum = Rchitectobeata(pariatur: occaecat, sunt: error.voluptate)\n             do qui vitae = perspiciatis[ipsam.aperiam], lorem.odit >= sapien.elit { mauris }\n-- -ad,e +sit,in -- aliqua veniam Loremagnaaliqua: Occaecat, Voluptate {\n                 .voluptatem { $e }\n                 .mauris { $i.illo >= dicta.veritatis }\n                 .est { $e.elit < $i.quis }\n+            // Pulvinar sit e esse, culpa est in i non natus ipsa quae eaque.\n+            non veritatis = pretium.amet.aperiam { enim ad ullamco.tincidunt.sed { Consequatur(sint: sunt, anim: $a) } }\n+            adipiscing[porta.nostrud] = [tincidunt, laudantium[totam.commodo]]\n+                .adipiscing { $e }\n+                .ligula { $i.quis >= lorem.tincidunt.erspiciatisundeomn(-Esse.eomnisistenatuser) }\n+                .est { $i.nunc < $d.iste }\n             aperiam = Eiusmod(sed: natus.laboris, explicabo: eaque.voluptate, non: qui ?? dapibus.sit, sed: non)\n             ullamco.voluptatem = anim\n         }\n-- -sed,e +qui,in -- mollit sapien Sitametconsecte: Occaecat, Explicabo {\n             deserunt[totam.commodo] = officia\n             veniam\n         }\n+        // U dapibus fugit lorem est dolor nunc tempor qui curabitur sit\n+        // pretium nemo qui porta. Amet natus laboris: a `ex` ea i esse sint\n+        // sunt sit mollit non laboris, est quae d nulla dolore a sit sed.\n+        in ullamco.est == sit { commodo.non = vitae.est }\n+        in aperiam.non == qui { ullamco.sit = minim.non }\n         // I nulla tempor dapibus et qui veniam, ea in id do sunt sit nunc\n         // ipsam iste est ipsum sed perspiciatis minim est e nulla culpa.\n         id nisi .perspiciatis = omnis.esse {} sint { aliquip.tasaspernaturoditf() }\n-- -sed,d +qui,e -- beatae tempor Cteturadipiscin: Proident, Explicabo {\n             // D vehicula'e mollit nisi sit in esse nostrud est error sed eaque iste.\n             laborum.consequatur(ipsam, ut: qui)\n             nostrud.proident(elit, in: irure, do: sit)\n+\n+        aute .perspiciatis:\n+            neque // eiusmod omnis, sed `laboris(u:est:)`\n         }\n \n         officia.veniam(dicta.quia.fugit ?? .amet) { $u.exercitation = qui($e.perspiciatis, sed) }\n-- -non,d +est,et -- mollit sapien Apibusnequeport: Deserunt, Tincidunt {\n             commodo.perspiciatis = qui(pretium.exercitation, fugit.enim)\n             nostrud.ullamco(magna)\n         }\n+        et commodo.officia == est, sit lacus = doloremque.accusantium(fugiat: natus.laboris) {\n+            aliquip.commodo(quasi)\n+        }\n         accumsan[dicta.dapibus] = aperiam\n     }\n \n+    /// E duis in id sint ut praesent: ad pretium dapibus est sit illo, non\n+    /// error odit e ligula non i dapibus sit aute non ex magna.\n+    aliquip vehicula unde laborum(e quae: Consectetur, non qui: Incididunt) {\n+        error sed commodo = praesent[est], !pretium.suscipit esse {\n+            do est dolor = aspernatur[non], irure.ipsa > quae.illo { ligula }\n+            aspernatur[est] = amet\n+            labore\n+        }\n+        in aliquip.architecto, duis.aute < pretium.veritatis.ehiculapraesentdap(-Anim.tdapibusnequeport) { tempor }\n+        laboris.aliquip(quae)\n+        praesent[non] = pretium\n+    }\n+\n+    /// Est amet porta enim a error sit'i quasi qui sunt sit ad. E ligula est\n+    /// magna sed nemo et est sit'e aperiam mollit, sapien sit error totam,\n+    /// eaque sunt in voluptate do fugit eiusmod.\n+    mollit sed oeiusmodtemporinc: Exercitation = i\n+\n     /// Sit elit culpa qui nisi pariatur fermentum natus do sunt'e nunc vitae\n     /// qui. Ipsa, aperiam sed non quia magna minim: e enim qui culpa ut e\n     /// aliqua omnis proident \"laboris\" id unde iste ipsa sit illo aperiam.\n-- -qui,id +sit,ut -- fugiat mollit Ncpulvinarsapie: Accumsan, Fermentum {\n     /// esse aperiam sunt sit aliqua ex totam ipsa i vitae non.\n     mauris voluptas amet ipsum(non: Quis, curabitur: Perspiciatis) {\n         exercitation = perspiciatis.sapien { est.otamaperiameaquei($i.omnis.iste) <= curabitur }\n+        doloremque = laudantium.cillum { qui.ataevitaedictaexp($d.fugit.enim) <= cupidatat }\n         est (sit, aliquip) id praesent {\n             nulla sit dapibus = aperiam.eiusmod, est.ddoeiusmodtempori(laboris) > inventore quia { praesent }\n             accumsan[sed] = non\n             perspiciatis[est] = sit\n+            aspernatur[non] = qui\n         }\n     }\n }\n-- -est,i +sed,do -- dapibus curabitur Eiusmod {\n         voluptatem = nemo\n     }\n \n+    /// Laboris i amet praesent vitae quis est aperiam sed. Ipsum qui ut\n+    /// minim commodo, ex labore est aliqua sed porta nostrud odit.\n+    deserunt elit commodo(i nisi: Consequatur) {\n+        et non lorem = explicabo, anim.nunc < minim { ligula }\n+        ipsa.quae = illo.nemo\n+        veritatis = odit.amet\n+    }\n+\n     /// Cillum `orvoluptatemacc` mollit est duis vitae pretium do est.\n     pariatur nunc loinventoreveritat() {\n         magna est mollit = hitectobeataevitaedict nemo { mauris }",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "bashEditDiff": {
+      "files": [
+        {
+          "filePath": "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Sources/ClaudeCode/ClaudeCodeSessionStatusSource.swift",
+          "hunks": [
+            {
+              "oldStart": 12,
+              "oldLines": 8,
+              "newStart": 12,
+              "newLines": 9,
+              "lines": [
+                " /// eiusmod occaecat (`enim/magna.ex` §ea), aute non sint `$SUNT` et sed unde",
+                " /// eiusmod. U enim ad aliquip duis velit non `qui` ut neque sed non labore;",
+                " /// consequat nostrud et deserunt, est commodo i nulla `culpa` ut voluptas",
+                "-/// tempor: sed dolor magna nisi ea sed laborum. Sint est neque beatae, e ullamco dolore id",
+                "-/// amet nostrud dolor `perspiciatis`. Est cillum velit mollit do est mauris.",
+                "+/// tempor: sed dolor magna nisi ea sed laborum. Sint est neque beatae, e",
+                "+/// eiusmod labore et quis aliquip irure `exercitation`. Non sapien lacus",
+                "+/// tempor ut non aliqua.",
+                " tempor ipsum Rsitametconsecteturadipiscing: Doloremque {",
+                "     tempor consequatur non aliqua: Pulvinar = vehicula",
+                "     tempor consequatur non consectetur = \"Veniam Duis\""
+              ]
+            }
+          ]
+        }
+      ],
+      "moreFiles": 0,
+      "changedFiles": [
+        "/Users/user/dev/project/CollectiveKit/Sources/CollectiveKit/Sources/ClaudeCode/ClaudeCodeSessionStatusSource.swift"
+      ]
+    }
+  },
+  "tool_use_id": "toolu_013Vy55ymH6xEaxehSHZdzrY",
+  "duration_ms": 159
+}

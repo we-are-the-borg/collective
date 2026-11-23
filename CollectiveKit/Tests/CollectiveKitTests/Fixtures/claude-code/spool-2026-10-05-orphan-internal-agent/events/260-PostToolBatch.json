@@ -1,0 +1,23 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "16f1b7c0-2d79-46e2-b926-fc6e0906a94a",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sit labore --dolor && qui est Reprehenderit velit/esse.do && est mauris --porta",
+        "description": "Lorem nostrud non quis veniam"
+      },
+      "tool_use_id": "toolu_01AEhAdi7HJhyttLxsHvrMf7",
+      "tool_response": " D Reprehenderit/Ullamco.magna\n E Reprehenderit/Officia/Reprehenderit/Exercitation/Perspiciatis.neque\n A Reprehenderit/Ullamco/Reprehenderit/Perspiciatis/Exercitation.quasi\n E Reprehenderit/Dapibus/Perspiciatis/Isnisialiquipexeacom.ipsum\n D Reprehenderit/Aliquip/Perspiciatis/Rureinreprehend.nulla\n I Reprehenderit/Aperiam/Perspiciatis/Consequatur.natus\n E Reprehenderit/Commodo/Perspiciatis/Architecto.dicta\n E Reprehenderit/Eiusmod/Perspiciatis/Runtmollitanimi.magna\n D Reprehenderit/Officia/Perspiciatis/Exercitation.lacus\n I Reprehenderit/Nostrud/Perspiciatis/Culapraesentdap.totam\n E Reprehenderit/Laborum/Perspiciatis/Exercitation.fugit\n E Reprehenderit/Dolor/Itperspiciatisunde/Iciatisundeomnisi.irure\n D nulla/ipsa.ad\n?? .neque/\n?? CILLUM.in\n?? Reprehenderit/Laboris/Reprehenderit/Exercitation/Officia.vitae\n?? Reprehenderit/Dapibus/Reprehenderit/Veritatis/Accusantium.consequat\n?? Reprehenderit/Aliquip/Perspiciatis/Exercitation.nulla\n?? Reprehenderit/Dapibus/Exercitation/Explicabo/\n?? Reprehenderit/Natus/Ecteturadipiscinge/Adipiscingelitsedd.eaque\nU  Reprehenderit/Pretium.ipsam\nE  Reprehenderit/Nostrud/Reprehenderit/Perspiciatis/Exercitation.irure\nE  Reprehenderit/Pretium/Reprehenderit/Exercitation/Eiusmod.omnis\nA  Reprehenderit/Aliquip/Reprehenderit/Perspiciatis/Exercitation.dicta\nE  Reprehenderit/Eiusmod/Reprehenderit/Curabitur/Consectetur.fermentum\nU  Reprehenderit/Laborum/Exercitation/Perspiciatis.neque\nI  Reprehenderit/Ullamco/Exercitation/Laborumcurabiturpret.eaque\nE  Reprehenderit/Pretium/Exercitation/Ulvinarsapienli.lorem\nA  Reprehenderit/Laboris/Exercitation/Consectetur.velit\nU  Reprehenderit/Dapibus/Exercitation/Laudantium.omnis\nI  Reprehenderit/Aliquip/Exercitation/Voluptate/Consequatur.cupidatat\nI  Reprehenderit/Eiusmod/Perspiciatis/Iumtotamaperiam.magna\nE  Reprehenderit/Officia/Perspiciatis/Exercitation.lacus\nE  Reprehenderit/Nostrud/Perspiciatis/Licabonemoipsam.totam\nD  Reprehenderit/Laborum/Perspiciatis/Exercitation.fugit\nI  Reprehenderit/Dolor/Uradipiscingelitse/Scingelitseddoeiu.irure\nE  Reprehenderit/Culpa/Ntutlaboreetdolore/Oreetdoloremagnaal.porta\nE  natus/unde.ea\n?? .eaque/\n?? BEATAE.do"
+    }
+  ]
+}

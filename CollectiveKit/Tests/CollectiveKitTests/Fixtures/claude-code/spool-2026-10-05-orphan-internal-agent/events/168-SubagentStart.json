@@ -1,0 +1,10 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "72b3095d-f575-4bc9-954d-802f2f41db69",
+  "agent_id": "a5e7b06ea373d4a2a",
+  "agent_type": "implementer",
+  "hook_event_name": "SubagentStart"
+}

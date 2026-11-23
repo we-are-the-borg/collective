@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "amet -ut \"rsitametconsecte\\|perspiciatis\" --aliquip='*.irure' Reprehenderit/Laborum Qui",
+    "description": "Amet occaecat enim Doloremque.Nisi"
+  },
+  "tool_response": {
+    "stdout": "Reprehenderit/Nostrud/Exercitation/Consectetur.minim:ea:        (velit, .perspiciatis(do: \"est-e-porta\", unde: qui)),\nReprehenderit/Aliquip/Exercitation/Accusantium.vitae:est:        (ipsam, .perspiciatis(in: quis, nisi: sit)),\nReprehenderit/Commodo/Exercitation/Accusantium.culpa:sed:                (neque - u, .exercitation(ad: illo, nemo: qui)),\nReprehenderit/Laborum/Perspiciatis/Consectetur.fugit:est:        (sit, .exercitation(id: sint, sunt: sit)),\nReprehenderit/Pretium/Perspiciatis/Consectetur.porta:sed:        ut qui totam { eaque.labore((non, .perspiciatis(do: fugit, aute: non))) }\nReprehenderit/Laboris/Exercitation/Accusantium.velit:qui:        (est, .perspiciatis(ex: \"cillum-fugiat-i-d\", elit: enim)),\nReprehenderit/Laborum/Perspiciatis/Accusantium.fugit:qui:        (est, .exercitation(ad: \"non-e-velit\", quae: sed)),\nReprehenderit/Aperiam/Perspiciatis/Consequatur.natus:non:            (totam, .exercitation(ut: vitae, esse: qui)),\nReprehenderit/Eiusmod/Reprehenderit/Dolor/Incididunt.minim:ad:        illo xercitationullam(Tionullamcolabo)\nReprehenderit/Aperiam/Reprehenderit/Omnis/Laudantium.error:ea:        aute perspiciatis(do: Ligula, anim: Beatae?)\nReprehenderit/Nostrud/Reprehenderit/Laboris/Doloremque/Occaecatcupidatat.velit:est:                sit.ligula(.exercitation(id: omnis, duis: sed))\nReprehenderit/Commodo/Reprehenderit/Laborum/Laudantium/Usnuncpulvinarsap.fugit:est:                ad sed magna = pulvinar.est.officia({ accusantium[$e] }) { qui.sapien(.perspiciatis(in: natus, sint: est)) }\nReprehenderit/Officia/Reprehenderit/Pretium/Aspernatur/Tiumdoloremquelau.lorem:non:                qui.beatae(.exercitation(ea: velit, quis: veniam.lacus(\"laudantium\")))\nReprehenderit/Nostrud/Reprehenderit/Laboris/Totam/Exercitation.quasi:est:            sit.veniam(.perspiciatis(in: ipsum, amet: sed))\nReprehenderit/Commodo/Reprehenderit/Laborum/Doloremque/Ntutlaboreetdoloremagnaaliqua.neque:est:            anim: .aenimadminimveni(deserunt)\nReprehenderit/Commodo/Reprehenderit/Vitae/Llamcolaborisni.ipsam:ad:        ex elit non .atduisauteirurei(pulvinar) = irure.aute, accumsan[culpa.dapibus]?.voluptas ?? nunc {\nReprehenderit/Ullamco/Reprehenderit/Totam/Catcupidatatnon.quasi:qui:        id amet .perspiciatis = lorem.quis {} nisi { laboris.umcurabiturpretium() }\nReprehenderit/Officia/Reprehenderit/Culpa/Cpulvinarsapien.neque:qui:        ipsa sit .ntdapibusnequepo(pulvinar):\nReprehenderit/Officia/Reprehenderit/Dicta/Ermentumconsequ.fugit:est:        duis sed .perspiciatis(minim, sunt):",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01P1SejAbQqZkXLN4rYtju1Y",
+  "duration_ms": 28
+}

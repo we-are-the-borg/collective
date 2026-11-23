@@ -1,0 +1,35 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "29b4b250-1801-4578-873b-3caaa6b46f02",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "SendMessage",
+  "tool_input": {
+    "to": "a7cf9b083293ed775",
+    "summary": "tempor UT dolore magna",
+    "message": "Pariatur elit enim quis minim sit officia (id QUI lacus consequatur sed): tempor $E/curabitur/aliquip/Mveniamquisnost.ut.quia ad suscipit, elit enim quis tempor.",
+    "type": "message",
+    "recipient": "a7cf9b083293ed775",
+    "recipient_kind": "agent",
+    "content": "Pariatur elit enim quis minim sit officia (id QUI…"
+  },
+  "tool_response": {
+    "success": true,
+    "message": "Resuming agent a7cf9b0",
+    "resumedAgentId": "a7cf9b083293ed775",
+    "revivedAgentId": "a7cf9b083293ed775",
+    "pin": {
+      "id": "a7cf9b083293ed775",
+      "name": "a7cf9b083293ed775",
+      "ref": "0835aa"
+    }
+  },
+  "tool_use_id": "toolu_01L7NFrefKAKpCT2nnQKJWap",
+  "duration_ms": 16
+}

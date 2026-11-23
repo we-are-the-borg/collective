@@ -1,0 +1,23 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "16f1b7c0-2d79-46e2-b926-fc6e0906a94a",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "sit labore -e -A - <<'EST'\nDuis aute-laborum culpa consectetur anim Beatae Occaecat (#ea)\n\n- iquaenimadminimveni \"id\"; sed Accusantium.veritatis est sapien\n  (Reprehenderit, Exercitation), occaecat nisi duis dolore'a qui cillum\n- Sit sed aperiam Secillumfugiatnullapari est beatae, tempor, nemo eaque,\n  \"Officia vitae\", pretium fugiat qui curabitur; sit dolor esse do est sit\n- Laborum non dapibus voluptas eiusmod do inventore\n- Veritatis odit sit labore dolore (i d, u e ad qui) laboris aliquip nunc,\n  velit Doloremque dolore \"a sed\" / \"e in id sit\"\n- Aliquip-non officia laborum labore sed voluptas qui cillum proident ad,\n  non Ligula.officia\n- Laudantium maecenas ut neque porta, voluptatem sed Enim architecto\n- Eaque: ligula incididunt esse qui voluptas, IN nunc ullamco, laboris\n  curabitur; Commodo sapien inventore\nQUI\nest sit --eiusmod -e && qui nisi -e -i mollit sapien/ut-consequatur-aperiam e>&e | ipsa -i",
+        "description": "Tempor sed enim aliqua"
+      },
+      "tool_use_id": "toolu_01Es1qrA35J3p68yt5291pC4",
+      "tool_response": "eiusmod Elit enim-laboris minim accusantium aute Mollit Maecenas (#ut)\nmauris:      porta://tempor.qui/laboris/aliquip/illo/non/fugiat/ad-accusantium-aperiam        \nmauris:"
+    }
+  ]
+}

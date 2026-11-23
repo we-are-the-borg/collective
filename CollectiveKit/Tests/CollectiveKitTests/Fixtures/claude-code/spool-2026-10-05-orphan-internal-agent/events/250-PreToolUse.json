@@ -1,0 +1,19 @@
+{
+  "session_id": "ac6ac571-b59d-48b9-ae1b-55601ac47b4b",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/ac6ac571-b59d-48b9-ae1b-55601ac47b4b/scratchpad",
+  "prompt_id": "f4c9915c-cd82-4cc0-b07c-5ae200f6ec63",
+  "permission_mode": "auto",
+  "agent_id": "a057bec6d7d6745bc",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "sit > /nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing/i.sed <<'NON'\n- [e] #ad Ipsam reprehenderit mauris: Beatae Proident ut Dolore (`isauteirureinrepreh` ex), Est pretium `Luptatevelitessecillumf` non qui nostrud Ullamco, Laboris non Commodo-Explicabo; Architecto pretium et Mollit-Sapien (`e i`, `i d ut sit`), nunc unde Dapibus-Curabitur, quae Adipiscing `u qui`/`a ex ea non` maecenas; Incididunt (\"Sit et Esse\") ex est Aliquip, sed non Labore pretium, lacus `Veniam.eiusmod`; Quia-Mollit sit Laudantium-Excepteur; Accusantium tempor labore (in.id.sint)\nEST\nullamco - <<'SED'\ne='irure/ipsa.id'\nd=nemo('/aperiam/est/veniam-sed/-Error-quis-est-officia/accumsan-esse-sint-sunt-exercitation/aspernatur/d.qui').ipsa().mollit('\\e')\nE=quia(i).amet().porta('\\e')\nA=[e ea i.incididunt('- [ ] #do Dicta reprehenderit beatae:') unde e est i do U]\nquia(a,'e').lacus('\\i'.quis(D))\nSIT\nsed esse eaque/sunt.in"
+  },
+  "tool_use_id": "toolu_01S8ZF73zeGiAw9NRa853yBm"
+}

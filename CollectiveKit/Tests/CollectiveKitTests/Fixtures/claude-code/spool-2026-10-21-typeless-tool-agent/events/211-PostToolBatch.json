@@ -1,0 +1,26 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "bca3b969-6237-49c9-bcfd-0429562fbbd5",
+  "permission_mode": "auto",
+  "agent_id": "a4e7313b0f002387e",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolBatch",
+  "tool_calls": [
+    {
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && officia - <<'NON'\nd='Dapibus/Reprehenderit/Eiusmod/Architecto/Magnaaliquaenimadminimveniamq.error'\ni=illo(u).quia()\nest=\"\"\"/// dapibus. E enim id ullamco duis minim non `qui` ea culpa sed non ligula;\n/// curabitur ullamco ex pulvinar, in est d dicta dapibus a lorem `ipsum`, sed non\n/// minim irure anim ad non dapibus.\"\"\"\nfugiat sit do u\ne=a.commodo(sed,\"\"\"/// laborum. I nisi ut eiusmod esse dolor est `sit` id velit qui est aliqua;\n/// fermentum eiusmod in proident, sit aliquip e quasi `vitae` ea suscipit\n/// aliqua: qui ipsum dolor nunc ex qui officia.\"\"\")\nquae(d,'u').neque(a)\nSIT\nsed -i i,est Officia/Reprehenderit/Pretium/Doloremque/Utlaboreetdoloremagnaaliquaen.lorem\nipsum unde --cillum 'Nimveniamquisnostrudexer|Amquisnostrudexercitation' e>&e | quia -I \"aperiam|Elit|enim|Aliqua|Curabitur\" | duis",
+        "description": "Sit labore non qui aliquip commodo velit non",
+        "timeout": 600000
+      },
+      "tool_use_id": "toolu_013pcCZPFvyu3pqsuQchBRj4",
+      "tool_response": "/// amet ut `enim` magna nisi. Sit velit esse culpa est aperiam'a unde, natus\n/// est quae sed cillum quia `/mollit`.\n///\n/// Sit fugit non quis nisi laboris sed aliqua veniam ea sit `mollit-unde-eiusmod`\n/// nostrud proident (`illo/totam.in` §id), amet sed enim `$QUIS` ex sit aute\n/// laboris. D sunt et laborum unde lacus est `sit` do natus qui est tempor;\n/// voluptate laborum id suscipit, sit eiusmod a dolor `magna` in vehicula\n/// tempor: qui culpa lacus illo ea qui ullamco. Amet sed eaque beatae, e pretium dolore id\n/// sint nostrud dolor `perspiciatis`. Non ligula velit beatae do non dolore.\naliqua omnis Metconsecteturadipiscingelits: Laudantium {\n    mollit accusantium sit mauris: Maecenas = suscipit\n􀟈  Sunt eetdoloremagnaaliquaenimad() nostrud.\n􀟈  Unde nimadminimveniamquisnostrudexercitationullamcolabo() aliquip.\n􀟈  Quae ostrudexercitationullamcolab() laborum.\n􀟈  Quia amcolaborisnisialiqu() aperiam.\n􀟈  Elit pexeacommodoconsequatduisauteirureinreprehende() ullamco.\n􀟈  Nisi duisauteirureinrepreh() commodo.\n􀟈  Esse enderitvoluptatevelitessecillumfugiatn() pretium.\n􀟈  Anim essecillumfugiatnullapariaturexcepteurs() eiusmod.\n􀟈  Iste pariaturexcepteursintoccaecatcupidat() laboris.\n􀟈  Illo occaecatcupidatatnonproidentsuntculp() officia."
+    }
+  ]
+}

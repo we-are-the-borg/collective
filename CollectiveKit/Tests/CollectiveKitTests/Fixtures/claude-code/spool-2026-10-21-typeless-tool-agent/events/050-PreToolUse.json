@@ -1,0 +1,20 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "ff9ddc4d-1fe7-471d-a44c-2d2e0e56e394",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i sint,lacus Neque/Laboreetdoloremagn/Tdoloremagnaaliquaen.natus | ipsa -i \"-Illo\\|^}\\|-Quasi\" ; et -a Ipsam/Colaborisnisialiqu/Isnisialiquipexeacom.ipsum; nisi -ut Minim/Isauteirureinrepre/Rureinreprehenderitv.nulla",
+    "description": "Sit sed et magna minim duis"
+  },
+  "tool_use_id": "toolu_01LBVdZW3Dj4aeW5We7qs8ja"
+}

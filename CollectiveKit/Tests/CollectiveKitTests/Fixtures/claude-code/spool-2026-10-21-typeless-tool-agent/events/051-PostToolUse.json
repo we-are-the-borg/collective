@@ -1,0 +1,28 @@
+{
+  "session_id": "800dce8e-418e-472b-8f66-8b9d20541cdf",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/800dce8e-418e-472b-8f66-8b9d20541cdf/scratchpad",
+  "prompt_id": "ff9ddc4d-1fe7-471d-a44c-2d2e0e56e394",
+  "permission_mode": "auto",
+  "agent_id": "a04fa4778180bb7b5",
+  "agent_type": "implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "do /Ipsum/enim/qui/aliquip/Reprehenderit && sed -i sint,lacus Neque/Laboreetdoloremagn/Tdoloremagnaaliquaen.natus | ipsa -i \"-Illo\\|^}\\|-Quasi\" ; et -a Ipsam/Colaborisnisialiqu/Isnisialiquipexeacom.ipsum; nisi -ut Minim/Isauteirureinrepre/Rureinreprehenderitv.nulla",
+    "description": "Sit sed et magna minim duis"
+  },
+  "tool_response": {
+    "stdout": "d:    -Elit enim tconsecteturadipiscingelitseddoeiusmodtempori() {\nex:    -Duis aute ddoeiusmodtemporincididuntutlaboreetdoloremagna() {\ndo:    -Sunt(consequat: [\nad:    -Unde(cupidatat: [i, i] do [Perspiciatis])\net:    -Odit(consequat: [\nea:    -Enim quis xeacommodoconsequatduisauteirureinre() {\nut:    -Aute esse rureinreprehenderitvoluptatevelitessecillumf() {\nea:    -Anim nunc velitessecillumfugiatnullapari() {\nqui:    -Ipsa quae riaturexcepteursintoccaecatcupidatatnonp() {\nnon:    -Quia odit upidatatnonproidentsuntculpaquiofficiadese() {\nsed:    -Enim quis quiofficiadeseruntmollitanimidestlaborumcurabiturpretiu() {\nsit:    -Aute esse idestlaborumcurabiturpretiumtinciduntlacusnuncpu() {\nest:    -Anim nunc tinciduntlacusnuncpulvinarsapienligulavehicul() {\nqui:    -Ipsa quae pienligulavehiculapraesentdapibusnequepo() {\nnon:    -Quia odit pibusnequeportamaurisaccumsanmaecenasfer() {\n    elit Vitae/Accumsanmaecenasfe/Nmaecenasfermentumco.fugit\n        #fugiat(nostrud.sint.sunt.mauris == \"id\")\n        #tempor(laborum.dolore[.suscipit(\"e\")]?.cillum == .nostrud)\n    }\n\n    -Odit amet periameaqueipsaquaeilloinventoreveritatisquas() {\n        non a = vitae([\n            .toreveritatisq(sed: \"/i\", qui: est),\n            .itaedictaexplic(\"ad\"),\n            .exercitation(ea: \"i\", beatae: .illo, nemo: Veritatis()),\n        ])\n        a.consequat(sed: in.adipiscingelitsedd(est), seddoeiusmodte: sed) { a ex est }\n        i.ipsum(dolor(.nimadminimveni(est: sit, sed: non), in: est))\n\n        sit eiusmod = e.proident[est]!\n        #cillum(commodo.officia == qui)\n        #ligula(dapibus.voluptate == ex)\n        #labore(ullamco.quae.veniam == .commodo)\n        #fugiat(laborum.sapien[.suscipit(\"i\")]?.beatae == .nostrud)\n    }\n}",
+    "stderr": "",
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false
+  },
+  "tool_use_id": "toolu_01LBVdZW3Dj4aeW5We7qs8ja",
+  "duration_ms": 36
+}

@@ -1,0 +1,20 @@
+{
+  "session_id": "70fde325-d096-4cf5-83dc-209523e7884f",
+  "transcript_path": "/Users/user/.claude/projects/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f.jsonl",
+  "cwd": "/Users/user/dev/project",
+  "scratchpad_dir": "/private/tmp/claude-501/-Users-user-dev-project/70fde325-d096-4cf5-83dc-209523e7884f/scratchpad",
+  "prompt_id": "66b688a3-7a5e-48a2-a867-31b8e89a74bb",
+  "permission_mode": "auto",
+  "agent_id": "a7cf9b083293ed775",
+  "agent_type": "workflow:implementer",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "D=/nostrud/non/aliqua-est/-Irure-aute-non-pretium/suscipit-anim-nunc-unde-perspiciatis/adipiscing; id $D/praesent/vitae.ad $E/colaborisnisia/isnisialiquipex.id; ullamco -U -e \"\naliqua sint;e=anim.nunc(unde('$U/nostrud/adipiscing.illo'))\ntotam([ (i['id'],d['pretium']) non a ex e in i['aliquip']=='irure'])\nvelit(sed(e['dapibus']=='ipsa' sit d ut e))\ntotam([e['ea'] non i do u et 'esse' ex e['in']])\"; sed -d 'u,est' $A/voluptas/porta.in",
+    "description": "Amet ipsum ullamco magna est irure velit mollit"
+  },
+  "tool_use_id": "toolu_01KhW8dbbXWmt6s6pvEjdXAv"
+}
