@@ -21,7 +21,7 @@ jobs:
     # Xcode 27 format, and `swift test` compiles the string catalogs only
     # from Swift 6.4 on; older toolchains copy them and every plural fails.
     runs-on: xcode-27
-    timeout-minutes: 30
+    timeout-minutes: 45
     env:
       # The tests check the mapping and the payloads against the subspace dev
       # repo (fixtures, golden files); without it they are skipped.
@@ -55,9 +55,11 @@ jobs:
       - name: Test SubspaceKit
         working-directory: SubspaceKit
         run: swift test --quiet
+      # One test at a time: on the runner's three cores the spool tests, which
+      # wait for a reader on the wall clock, time out next to 2500 others.
       - name: Test CollectiveKit
         working-directory: CollectiveKit
-        run: swift test --quiet
+        run: swift test --quiet --no-parallel
       - name: Build the app
         run: >
           xcodebuild -project App/Collective.xcodeproj -scheme Collective
