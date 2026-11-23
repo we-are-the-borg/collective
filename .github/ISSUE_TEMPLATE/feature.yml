@@ -1,0 +1,15 @@
+name: Feature request
+description: Something The Collective should show or do.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you need, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: For a new agent or a missing field, note whether subspace already delivers it; hook and mapping changes belong in we-are-the-borg/subspace.

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Tests for scripts/public-check.sh, run against a copy of it and its allow
 # file in a throwaway repo with findings and allowed cases per rule. Every
-# name, address and token below is invented; the login and host name are
-# read at run time and never written down.
+# name, address and token below is invented, the login and host name too:
+# stubs for `id` and `hostname` stand in for this machine's, so that the
+# result does not depend on who runs the tests (a CI login is generic).
 #
 #   scripts/test-public-check.sh
 set -euo pipefail
@@ -50,8 +51,8 @@ expect_absent() {
 }
 
 # Strings the check looks for, built from halves so that this file passes
-# the check itself. The identity in the throwaway repo is invented; the
-# login and host name are this machine's, read at run time.
+# the check itself. The identity in the throwaway repo is invented, and so
+# are the login and host name, which the stubs below print.
 users="Us"
 users="${users}ers"
 home="ho"
@@ -71,9 +72,24 @@ at="@"
 # Prefix letters of design item ids; with a digit right after them in this
 # file they would be findings.
 a="A" f="F" g="G" h="H" n="N" o="O" r="R" s="S" u="U"
-login="$(id -un)"
-host="$(hostname -s)"
+login="qwaldo"
+host="vexbox"
 readonly users home owner dev hash dcn ent planning at a f g h n o r s u login host
+
+# Stubs for `id` and `hostname`, which print what PC_STUB_LOGIN and
+# PC_STUB_HOST say, first in PATH for every run of the check.
+stubs="$TMP/stubs"
+mkdir -p "$stubs"
+cat >"$stubs/id" <<'EOF'
+#!/bin/sh
+echo "$PC_STUB_LOGIN"
+EOF
+cat >"$stubs/hostname" <<'EOF'
+#!/bin/sh
+echo "$PC_STUB_HOST"
+EOF
+chmod +x "$stubs/id" "$stubs/hostname"
+export PATH="$stubs:$PATH" PC_STUB_LOGIN="$login" PC_STUB_HOST="$host"
 
 # A repo with the checker in scripts/, findings and allowed cases for every
 # rule, a planning folder and an untracked file.
@@ -168,6 +184,7 @@ myhome/jroe
 double-escaped home: "\\\\/$users\\\\/$login\\\\/x"
 after an escaped newline: "x\n/$users/$login/x"
 Generic: user on dev
+CI: the runner starts
 EOF
 
   # A long line whose snippet is cut inside multi-byte characters.
@@ -408,31 +425,20 @@ expect_prefix "src/people.txt:9: [identity] "
 expect_line "identity       16"
 [[ $failures -eq $before ]] && pass
 
-# Stubs for `id` and `hostname`, which print what PC_STUB_LOGIN and
-# PC_STUB_HOST say.
-stubs="$TMP/stubs"
-mkdir -p "$stubs"
-cat >"$stubs/id" <<'EOF'
-#!/bin/sh
-echo "$PC_STUB_LOGIN"
-EOF
-cat >"$stubs/hostname" <<'EOF'
-#!/bin/sh
-echo "$PC_STUB_HOST"
-EOF
-chmod +x "$stubs/id" "$stubs/hostname"
-
 current="a generic login or host name is no identity"
 before=$failures
-run env PATH="$stubs:$PATH" PC_STUB_LOGIN=user PC_STUB_HOST=dev "$CHECK" --rule identity
+run env PC_STUB_LOGIN=user PC_STUB_HOST=dev "$CHECK" --rule identity
 expect_code 1
 expect_prefix "src/people.txt:1: [identity] "
 expect_absent "src/people.txt:16:"
 expect_absent "src/paths.txt:2:"
 expect_absent "src/paths.txt:5:"
-run env PATH="$stubs:$PATH" PC_STUB_LOGIN=zorblax PC_STUB_HOST=Root "$CHECK" --rule identity
+run env PC_STUB_LOGIN=zorblax PC_STUB_HOST=Root "$CHECK" --rule identity
 expect_prefix "src/people.txt:9: [identity] "
 expect_absent "src/people.txt:16:"
+# The login of a hosted CI machine.
+run env PC_STUB_LOGIN=runner PC_STUB_HOST=dev "$CHECK" --rule identity
+expect_absent "src/people.txt:17:"
 [[ $failures -eq $before ]] && pass
 
 current="snippets stay valid UTF-8"

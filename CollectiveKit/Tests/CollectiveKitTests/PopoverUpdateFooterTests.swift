@@ -20,7 +20,7 @@ private func tool(_ source: SourceID, _ plugin: IntegrationStatus.Plugin = .enab
 private let available = UpdateAvailability.available(installed: version("1.0.1"), latest: version("1.3.0"))
 private let required = UpdateAvailability.required(installed: version("1.0.1"), minimum: version("1.1.0"), latest: nil)
 
-private func link(
+private func makeLink(
     _ statuses: [IntegrationStatus],
     _ availability: [SourceID: UpdateAvailability],
     checksForUpdates: Bool = true
@@ -36,34 +36,34 @@ private func en(_ resource: LocalizedStringResource) -> String {
 
 @Suite struct UpdateFooterLinkTests {
     @Test func availableUpdateLinksToItsSource() throws {
-        let link = try #require(link([tool("a")], ["a": available]))
+        let link = try #require(makeLink([tool("a")], ["a": available]))
         #expect(link.source == "a")
         #expect(en(link.text) == "Update available")
         #expect(link.role == .info)
     }
 
     @Test func requiredBeatsAnEarlierAvailable() throws {
-        let link = try #require(link([tool("a"), tool("b")], ["a": available, "b": required]))
+        let link = try #require(makeLink([tool("a"), tool("b")], ["a": available, "b": required]))
         #expect(link.source == "b")
         #expect(en(link.text) == "Update required")
         #expect(link.role == .warning)
     }
 
     @Test func firstInOrderWinsAmongEquals() {
-        #expect(link([tool("b"), tool("a")], ["a": available, "b": available])?.source == "b")
-        #expect(link([tool("b"), tool("a")], ["a": required, "b": required])?.source == "b")
+        #expect(makeLink([tool("b"), tool("a")], ["a": available, "b": available])?.source == "b")
+        #expect(makeLink([tool("b"), tool("a")], ["a": required, "b": required])?.source == "b")
     }
 
     @Test func noLinkWithoutAnUpdate() {
-        #expect(link([tool("a")], [:]) == nil)
-        #expect(link([tool("a")], ["a": .upToDate]) == nil)
+        #expect(makeLink([tool("a")], [:]) == nil)
+        #expect(makeLink([tool("a")], ["a": .upToDate]) == nil)
         // The pane offers nothing for a source that isn't installed either.
-        #expect(link([tool("a", .notInstalled)], ["a": required]) == nil)
+        #expect(makeLink([tool("a", .notInstalled)], ["a": required]) == nil)
     }
 
     @Test func switchOffLeavesOnlyRequired() {
-        #expect(link([tool("a")], ["a": available], checksForUpdates: false) == nil)
-        #expect(link([tool("a"), tool("b")], ["a": available, "b": required], checksForUpdates: false)?.source == "b")
+        #expect(makeLink([tool("a")], ["a": available], checksForUpdates: false) == nil)
+        #expect(makeLink([tool("a"), tool("b")], ["a": available, "b": required], checksForUpdates: false)?.source == "b")
     }
 }
 

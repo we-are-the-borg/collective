@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/we-are-the-borg/collective/security/advisories/new
+    about: Please report vulnerabilities privately, not as an issue.
+  - name: Hooks, contract or mapping
+    url: https://github.com/we-are-the-borg/subspace/issues
+    about: Problems with the events themselves belong in subspace.

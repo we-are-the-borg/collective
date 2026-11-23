@@ -62,6 +62,10 @@ Then start a new session in the tool. Codex holds the plugin's hooks back until 
 
 ## FAQ
 
+### AI usage
+
+Surprise, this is a tool to monitor AI agents, so I obviously wrote it using AI (Claude Code in my case, mostly Opus 5.5). I test and review everything on my Mac though. Never trust Open Source projects no one knows, and if you like to, build the app in Xcode yourself. Remember that you need an active Apple Developer account, to sign the app and use it without annoying side effects. 
+
 ### What if I don't see any sessions?
 
 If the menu bar icon shows a warning, subspace may be missing or disabled.
