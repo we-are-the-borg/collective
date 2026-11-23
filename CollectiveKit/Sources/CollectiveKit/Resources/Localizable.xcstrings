@@ -1,6 +1,116 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "About, update available" : {
+      "comment" : "Settings window, sidebar: what VoiceOver reads for the About row while a newer version of the app is published.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About, update available"
+          }
+        }
+      }
+    },
+    "App update available" : {
+      "comment" : "Popover, status bar at the bottom: link right before the gear while a newer version of the app is published; it opens the update window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App update available"
+          }
+        }
+      }
+    },
+    "· automatic checks are off" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version, after \"Up to date\", replacing the time of the last check while \"Check for updates automatically\" is off. Keep the leading dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· automatic checks are off"
+          }
+        }
+      }
+    },
+    "Check for updates automatically" : {
+      "comment" : "Settings window, General pane, Updates section: switch that lets the app look for new versions of itself and of subspace on its own. \"subspace\" is not in the text on purpose.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for updates automatically"
+          }
+        }
+      }
+    },
+    "Check Now" : {
+      "comment" : "Settings window, About pane: button that checks for new versions of the app and of subspace right away, also when automatic checks are off.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Now"
+          }
+        }
+      }
+    },
+    "· checked on %@" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version, after \"Up to date\": when the last check ran before yesterday. The argument is a day, e.g. \"Nov 12\" or \"Nov 12, 2023\". Keep the leading dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· checked on %@"
+          }
+        }
+      }
+    },
+    "· checked today at %@" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version, after \"Up to date\": when the last check ran today. The argument is a time, e.g. \"2:02 PM\". Keep the leading dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· checked today at %@"
+          }
+        }
+      }
+    },
+    "· checked yesterday at %@" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version, after \"Up to date\": when the last check ran yesterday. The argument is a time, e.g. \"9:15 AM\". Keep the leading dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· checked yesterday at %@"
+          }
+        }
+      }
+    },
+    "Checking for updates…" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version: status while a check runs.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Checking for updates…"
+          }
+        }
+      }
+    },
+    "Couldn’t check for updates" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version: status after \"Check Now\" failed. Shown in red.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t check for updates"
+          }
+        }
+      }
+    },
     " · Default" : {
       "comment" : "Settings window, Appearance pane: marker after the scheme family (e.g. \"Catppuccin\") in the list row of the scheme used when the user picked none. Keep the leading space and dot.",
       "localizations" : {
@@ -8,6 +118,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : " · Default"
+          }
+        }
+      }
+    },
+    "GitHub didn’t answer. Check your connection, then try again." : {
+      "comment" : "Settings window, About pane: the update status line under the app's version: second line under \"Couldn’t check for updates\". \"GitHub\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub didn’t answer. Check your connection, then try again."
           }
         }
       }
@@ -30,6 +151,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ can’t be read. Using %@."
+          }
+        }
+      }
+    },
+    "%@ is available" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version: status word when a newer version of the app is published. The argument is that version, e.g. \"1.3.0\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is available"
           }
         }
       }
@@ -85,6 +217,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ · not on this Mac"
+          }
+        }
+      }
+    },
+    "Once a day, The Collective asks GitHub whether a new version of the app or of subspace is published. Nothing about you or your sessions is sent. Updates are only installed when you choose to. A required subspace update is shown even when this is off." : {
+      "comment" : "Settings window, General pane: footnote under \"Check for updates automatically\". \"The Collective\" is the app's name, \"GitHub\" and \"subspace\" are product names, do not translate them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Once a day, The Collective asks GitHub whether a new version of the app or of subspace is published. Nothing about you or your sessions is sent. Updates are only installed when you choose to. A required subspace update is shown even when this is off."
+          }
+        }
+      }
+    },
+    "The Collective %@ is available" : {
+      "comment" : "Popover, status bar: tooltip and VoiceOver text of the \"App update available\" link. \"The Collective\" is the app's name, do not translate it. The argument is the new version, e.g. \"1.3.0\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Collective %@ is available"
+          }
+        }
+      }
+    },
+    "Up to date" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version: status word when the last check found no newer version. Shown in green.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up to date"
+          }
+        }
+      }
+    },
+    "Update…" : {
+      "comment" : "Settings window, About pane: primary button while a newer version of the app is published; it opens the update window. Replaces \"Check Now\".",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update…"
           }
         }
       }
@@ -1325,6 +1501,17 @@
         }
       }
     },
+    "· you have %@" : {
+      "comment" : "Settings window, About pane: the update status line under the app's version, after \"%@ is available\": the installed version, e.g. \"1.2.0\". Keep the leading dot.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "· you have %@"
+          }
+        }
+      }
+    },
     "“%@” already exists. Do you want to replace it?" : {
       "comment" : "Alert when importing a custom theme whose file name the Themes folder already has; macOS's own wording for replacing a file. The argument is the file name, e.g. \"ocean.yaml\".",
       "localizations" : {
@@ -1959,17 +2146,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
-          }
-        }
-      }
-    },
-    "Check for subspace updates" : {
-      "comment" : "Settings window, General pane, section Updates: label of the switch that lets the app ask GitHub for new subspace versions. \"subspace\" is a product name, do not translate it.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check for subspace updates"
           }
         }
       }
@@ -3108,17 +3284,6 @@
         }
       }
     },
-    "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off." : {
-      "comment" : "Settings window, General pane, section Updates: footnote under the switch for subspace update checks. \"The Collective\" is the app's name; \"Setup\" is the setup window. \"subspace\" is a product name, do not translate it.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Once a day, and when you open Setup or a source, The Collective asks GitHub which versions of subspace are published. Nothing about you or your sessions is sent. A required update is shown even when this is off."
-          }
-        }
-      }
-    },
     "Only when an agent needs me" : {
       "comment" : "Settings window, Menu Bar pane: radio button that animates the menu bar icon only while a coding agent waits for the user's permission or answer.",
       "localizations" : {
@@ -4224,7 +4389,7 @@
       }
     },
     "Update available" : {
-      "comment" : "Settings window, sidebar, row of one coding tool: tooltip of the arrow shown while a newer subspace version is published. Also the status pill on that tool's card in the setup window, and the link in the popover footer, right before the gear, that opens the settings pane of that tool.",
+      "comment" : "Settings window, sidebar, row of one coding tool: tooltip of the arrow shown while a newer subspace version is published, and of the About row's arrow while a newer version of the app is published. Also the status pill on that tool's card in the setup window, and the link in the popover footer, right before the gear, that opens the settings pane of that tool.",
       "localizations" : {
         "en" : {
           "stringUnit" : {

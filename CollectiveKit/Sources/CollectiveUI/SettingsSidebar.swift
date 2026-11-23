@@ -76,6 +76,7 @@ struct SettingsSidebar: View {
         }
     }
 
+    /// About shows the arrow while an app update is known, like a source row.
     private func paneRow(_ pane: SettingsPane, icon: LucideIcon, name: LocalizedStringResource) -> some View {
         let isSelected = selection == pane
         return SidebarRow(
@@ -87,8 +88,13 @@ struct SettingsSidebar: View {
             LucideImage(icon, size: 16)
                 .foregroundStyle(.role(isSelected ? .text : .textMuted))
         } trailing: {
-            EmptyView()
+            if pane == .about, model.showsAboutUpdateArrow {
+                LucideImage(.circleArrowUp, size: 13)
+                    .foregroundStyle(.role(.info))
+                    .help(Text(SettingsText.updateAvailable))
+            }
         }
+        .accessibilityLabel(Text(pane == .about ? model.aboutRowAccessibilityLabel : name))
     }
 
     /// The status form in front instead of the tool's logo, so the names line up; an

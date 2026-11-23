@@ -61,6 +61,18 @@ final class CollectiveModel {
     @ObservationIgnored let releaseChecker = SubspaceReleaseChecker(
         client: URLSessionHTTPGetting(), store: UserDefaultsSubspaceReleaseStore()
     )
+    /// The app's own updates (Sparkle); its `state` is observed through itself.
+    @ObservationIgnored let appUpdater = SparkleUpdater()
+
+    /// "Check for updates automatically": one switch for the app and subspace,
+    /// stored by the release checker.
+    var checksForUpdates: Bool {
+        get { releaseChecker.checksForUpdates }
+        set {
+            releaseChecker.checksForUpdates = newValue
+            appUpdater.setChecksAutomatically(newValue)
+        }
+    }
     /// The registered push adapters, in registration order, for the settings window.
     private(set) var sources: [RegisteredSource] = []
     /// The event folders the user chose, by source; a source without one reads its default.
@@ -189,6 +201,7 @@ final class CollectiveModel {
 
     func start() {
         guard tasks.isEmpty else { return }
+        appUpdater.start(checksAutomatically: checksForUpdates)
         tasks.append(Task { [weak self] in
             while !Task.isCancelled {
                 self?.sweep()
@@ -457,7 +470,8 @@ final class CollectiveModel {
                 checksForUpdates: releaseChecker.checksForUpdates,
                 now: Date()
             )
-        }, storedEvents: StoredEventsModel(size: storedEventsSize, isClearing: isClearingStoredEvents))
+        }, storedEvents: StoredEventsModel(size: storedEventsSize, isClearing: isClearingStoredEvents),
+           appUpdateAvailable: appUpdater.state.available != nil)
     }
 
     /// Whether subspace is missing or disabled, from the last check.
@@ -512,6 +526,23 @@ final class CollectiveModel {
     var updateAvailabilities: [SourceID: UpdateAvailability] {
         Dictionary(integrations.map { ($0.source, releaseChecker.updateAvailability(for: $0)) },
                    uniquingKeysWith: { first, _ in first })
+    }
+
+    /// About's `Check Now`: the app and every subspace plugin at once, whatever the switch says.
+    func checkForUpdatesNow() {
+        appUpdater.checkNow()
+        releaseChecker.checkNow(now: Date(), sources: releaseSources)
+    }
+
+    /// `Update…` and the popover's app update link: Sparkle's update window.
+    func showAppUpdate() {
+        appUpdater.showUpdateWindow()
+    }
+
+    /// About's status line.
+    func appUpdateStatusLine(now: Date) -> AppUpdateStatusLine {
+        AppUpdateStatusLine(appUpdater.state, checksAutomatically: checksForUpdates,
+                            pluginsChecking: releaseChecker.isChecking, now: now)
     }
 
     /// When the setup window or a source pane opens; the checker decides whether it is due.
@@ -587,7 +618,8 @@ final class CollectiveModel {
             replyPreviewCache: replyPreviewCache,
             terminalApps: terminalApps,
             updateLink: UpdateFooterLink(statuses: integrations, availability: updateAvailabilities,
-                                         checksForUpdates: releaseChecker.checksForUpdates),
+                                         checksForUpdates: releaseChecker.checksForUpdates,
+                                         appUpdate: appUpdater.state.available),
             restartHints: restartHints
         )
     }

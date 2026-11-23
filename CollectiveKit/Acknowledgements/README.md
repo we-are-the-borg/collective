@@ -1,12 +1,13 @@
 # Acknowledgements input
 
 `acknowledgements.json` is the maintained half of the app's acknowledgements: display name,
-SPDX id and project URL for every package pinned in `../Package.resolved`, plus the material
+SPDX id and project URL for every package pinned in `../Package.resolved` or in the app's
+`Package.resolved` (packages only the app links, such as Sparkle), plus the material
 that is not a package (libyaml, fonts, icons, color schemes) with its license file.
 `scripts/acknowledgements.sh` merges it with the pins and the license texts of the package
 checkouts into `Sources/CollectiveKit/Resources/Acknowledgements.json` and the repository's
 `THIRD_PARTY_NOTICES.md`; `AcknowledgementsTests` fails when the resource no longer matches
-`Package.resolved`.
+either `Package.resolved`.
 
 Each section has an `id` (`libraries`, `fontsAndIcons` or `colorSchemes`; the script rejects any
 other). The titles come from the kit's string catalog (`SettingsText`), not from this file.

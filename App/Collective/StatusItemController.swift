@@ -60,7 +60,7 @@ final class StatusItemController: NSObject {
         super.init()
         popover.onSetUp = { [weak self] in self?.openSetUp() }
         popover.onSettings = { [weak self] in self?.openSettings() }
-        popover.onOpenUpdate = { [weak self] in self?.openSettingsPane(of: $0) }
+        popover.onOpenUpdate = { [weak self] in self?.openUpdate($0) }
         popover.onOpenChange = { [weak self] isOpen in self?.highlight(isOpen) }
         guard let button = statusItem.button else { return }
         button.imagePosition = .imageOnly
@@ -225,9 +225,12 @@ final class StatusItemController: NSObject {
         withOpenWindow { $0.openSettingsWindow() }
     }
 
-    private func openSettingsPane(of source: SourceID) {
+    private func openUpdate(_ target: UpdateFooterLink.Target) {
         popover.close()
-        withOpenWindow { $0.openSettingsWindow(on: .source(source)) }
+        switch target {
+        case .source(let source): withOpenWindow { $0.openSettingsWindow(on: .source(source)) }
+        case .app: model.showAppUpdate()
+        }
     }
 
     @objc private func openSetUp() {

@@ -19,7 +19,7 @@ struct GeneralPane: View {
                 EffortPreviewRow(preview: preview)
             }
             SettingsGroup(header: Text(SettingsText.updates), footnote: Text(SettingsModel.updatesFootnote)) {
-                SettingsToggleRow(isOn: $checksForUpdates, title: Text(SettingsText.checkForSubspaceUpdates))
+                SettingsToggleRow(isOn: $checksForUpdates, title: Text(SettingsText.checkForUpdatesAutomatically))
             }
         }
     }

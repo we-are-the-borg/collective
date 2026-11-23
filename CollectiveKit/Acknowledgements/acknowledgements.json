@@ -15,6 +15,7 @@
         { "package": "swift-markdown", "name": "Swift Markdown", "spdx": "Apache-2.0", "url": "https://github.com/swiftlang/swift-markdown" },
         { "package": "swift-cmark", "name": "swift-cmark", "spdx": "BSD-2-Clause", "url": "https://github.com/swiftlang/swift-cmark" },
         { "package": "yams", "name": "Yams", "spdx": "MIT", "url": "https://github.com/jpsim/Yams" },
+        { "package": "sparkle", "name": "Sparkle", "spdx": "MIT", "url": "https://sparkle-project.org" },
         { "bundledIn": "yams", "name": "libyaml", "spdx": "MIT", "url": "https://github.com/yaml/libyaml", "files": ["CollectiveKit/Acknowledgements/texts/libyaml-License"] }
       ]
     },

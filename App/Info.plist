@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Sparkle. The rest of the Info.plist is generated from the build settings. -->
+	<key>SUFeedURL</key>
+	<string>https://github.com/we-are-the-borg/collective/releases/latest/download/appcast.xml</string>
+	<!-- The maintainer's EdDSA public key; the private key is in the maintainer's keychain only (README › Releasing). -->
+	<key>SUPublicEDKey</key>
+	<string>ce4sz7KOFq7SMhYdV0D+zpwQvK91O5AWjcK9BpF06B8=</string>
+	<!-- Defined, so Sparkle never asks for permission: the switch in General › Updates decides. -->
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
+	<!-- Updates install only when the user clicks. -->
+	<key>SUAllowsAutomaticUpdates</key>
+	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
+</dict>
+</plist>

@@ -22,8 +22,8 @@ final class PopoverController: NSObject, NSWindowDelegate {
     var onSetUp: () -> Void = {}
     /// The gear in the footer; whoever opens the window closes the popover.
     var onSettings: () -> Void = {}
-    /// The footer's update link; whoever opens the source's settings pane closes the popover.
-    var onOpenUpdate: (SourceID) -> Void = { _ in }
+    /// The footer's update link; whoever opens the source's settings pane or the update window closes the popover.
+    var onOpenUpdate: (UpdateFooterLink.Target) -> Void = { _ in }
     /// Called after every open and close, for the status item's highlight.
     var onOpenChange: (Bool) -> Void = { _ in }
 
