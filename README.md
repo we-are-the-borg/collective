@@ -378,6 +378,10 @@ xcrun notarytool log <submission-id> \
   --keychain-profile notary
 ```
 
+## Privacy
+
+The app reads the agents' events from your disk and keeps them there. The only network request of its own is a check for subspace updates on GitHub, which you can turn off in Settings. Details in [`PRIVACY.md`](PRIVACY.md).
+
 ## License
 
 The Collective is released under the [MIT License](LICENSE). It covers `SubspaceKit/` too. Bundled fonts, icons and color schemes keep their own licenses, listed in `THIRD_PARTY_NOTICES.md` and in the app's About window.
