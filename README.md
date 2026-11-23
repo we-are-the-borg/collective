@@ -137,6 +137,7 @@ Releases follow SemVer, with version bumps determined by Conventional Commit PR 
 - `git-cliff` and `gh` installed (`brew install git-cliff gh`), with GitHub CLI authenticated.
 - A Developer ID certificate in the keychain.
 - A `notary` keychain profile configured as described under [Building for another Mac](#building-for-another-mac).
+- The Sparkle signing key in the login keychain, see [App updates](#app-updates).
 
 #### Release workflow
 
@@ -192,8 +193,10 @@ The script then:
 3. Notarizes it with Apple and staples the ticket.
 4. Verifies the app with `spctl`.
 5. Creates `build/release/vX.Y.Z/The-Collective-X.Y.Z.zip`.
+6. Signs the ZIP for Sparkle with `sign_update`, which reads the private key from the keychain. macOS may ask to allow it.
+7. Writes `build/release/vX.Y.Z/appcast.xml`: the `appcast.xml` of the latest GitHub release with the new version on top, its notes taken from the version's section of `ReleaseNotes.md`. The first release starts a new appcast. If the latest release has no appcast, or GitHub doesn't answer, publishing stops, so no version drops out of the feed.
 
-Before publishing, it asks for confirmation to tag the current HEAD as `vX.Y.Z`, push the tag and create the GitHub release.
+Before publishing, it asks for confirmation to tag the current HEAD as `vX.Y.Z`, push the tag and create the GitHub release with the ZIP and the appcast.
 
 The GitHub release contains the user-facing notes first, followed by the changelog under `### Changes`. HTML comments are stripped from the release notes.
 
@@ -233,7 +236,17 @@ After changing `scripts/release.sh`, run:
 scripts/test-release.sh
 ```
 
-This tests the release workflow in a temporary Git repository with a local `origin` and stubs for Xcode, `notarytool`, `spctl` and `gh`.
+This tests the release workflow in a temporary Git repository with a local `origin` and stubs for Xcode, `notarytool`, `spctl`, `gh`, Sparkle's `sign_update` and `swift run collective-appcast`. The appcast itself is tested by `AppcastTests` in `CollectiveKit`.
+
+#### App updates
+
+The app updates itself with [Sparkle](https://sparkle-project.org). It reads the appcast from `https://github.com/we-are-the-borg/collective/releases/latest/download/appcast.xml`, so every release carries the full history. Each update ZIP is signed with an EdDSA key. The app ships the public key (`SUPublicEDKey` in `App/Info.plist`); the private key is in the maintainer's login keychain and never in the repository or CI.
+
+Sparkle's tools come with the package. After a build they are in the DerivedData, for example `build/release/vX.Y.Z/DerivedData/SourcePackages/artifacts/sparkle/Sparkle/bin/`, or after `scripts/acknowledgements.sh` in `build/SourcePackages/artifacts/sparkle/Sparkle/bin/`.
+
+- **Set up a Mac for releasing:** import the private key with `generate_keys -f <file>`, from the backup below.
+- **Back up the key** after creating it: `generate_keys -x <file>` writes the private key to a file. Keep it in a password manager or an encrypted backup, then delete the file.
+- **If the key is lost**, updates can't be signed with it any more. Sparkle allows changing the EdDSA key in an update that is signed with the same Developer ID certificate as before, but not both at once. See [Sparkle's documentation](https://sparkle-project.org/documentation/) before relying on it.
 
 #### Checking for private data
 
@@ -380,7 +393,7 @@ xcrun notarytool log <submission-id> \
 
 ## Privacy
 
-The app reads the agents' events from your disk and keeps them there. The only network request of its own is a check for subspace updates on GitHub, which you can turn off in Settings. Details in [`PRIVACY.md`](PRIVACY.md).
+The app reads the agents' events from your disk and keeps them there. Its only network requests of its own are update checks on GitHub, for the app and for subspace, which you can turn off in Settings. Details in [`PRIVACY.md`](PRIVACY.md).
 
 ## License
 

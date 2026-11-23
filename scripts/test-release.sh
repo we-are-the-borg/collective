@@ -29,14 +29,27 @@ make_stubs() {
   local bin="$TMP/bin"
   mkdir -p "$bin"
 
+  # The archive step leaves Sparkle's sign_update in the DerivedData, as the
+  # package does; it prints a fixed signature and the zip's real length.
   cat >"$bin/xcodebuild" <<'EOF'
 #!/usr/bin/env bash
 echo "xcodebuild $*" >>"$STUB_LOG"
-export_path=""
+export_path="" derived_data=""
 while [[ $# -gt 0 ]]; do
   [[ "$1" == "-exportPath" ]] && export_path="$2"
+  [[ "$1" == "-derivedDataPath" ]] && derived_data="$2"
   shift
 done
+if [[ -n "$derived_data" ]]; then
+  tools="$derived_data/SourcePackages/artifacts/sparkle/Sparkle/bin"
+  mkdir -p "$tools"
+  cat >"$tools/sign_update" <<'SIGN'
+#!/usr/bin/env bash
+echo "sign_update $*" >>"$STUB_LOG"
+echo "sparkle:edSignature=\"c2lnbmF0dXJl\" length=\"$(stat -f %z "$1")\""
+SIGN
+  chmod +x "$tools/sign_update"
+fi
 if [[ -n "$export_path" ]]; then
   mkdir -p "$export_path/The Collective.app/Contents"
   cat >"$export_path/The Collective.app/Contents/Info.plist" <<'PLIST'
@@ -74,9 +87,32 @@ echo "$2: accepted"
 echo "source=Notarized Developer ID"
 EOF
 
+  # `api …/releases/latest` answers $GH_LATEST, or 404 while it is unset
+  # ($GH_API_FAILS: another error); `release download` writes a previous
+  # appcast unless $GH_NO_APPCAST is set.
   cat >"$bin/gh" <<'EOF'
 #!/usr/bin/env bash
 echo "gh $*" >>"$STUB_LOG"
+if [[ "$1" == "api" && "$2" == *"/releases/latest" ]]; then
+  if [[ -n "${GH_API_FAILS:-}" ]]; then echo "error connecting to api.github.com" >&2; exit 1; fi
+  if [[ -z "${GH_LATEST:-}" ]]; then echo "gh: Not Found (HTTP 404)" >&2; exit 1; fi
+  echo "$GH_LATEST"
+elif [[ "$1 $2" == "release download" ]]; then
+  [[ -z "${GH_NO_APPCAST:-}" ]] || { echo "no assets match the file pattern" >&2; exit 1; }
+  dir=""
+  while [[ $# -gt 0 ]]; do [[ "$1" == "--dir" ]] && dir="$2"; shift; done
+  echo "<rss>previous</rss>" >"$dir/appcast.xml"
+fi
+EOF
+
+  # `swift run … collective-appcast`: writes its arguments to --output.
+  cat >"$bin/swift" <<'EOF'
+#!/usr/bin/env bash
+echo "swift $*" >>"$STUB_LOG"
+output=""
+args=("$@")
+for ((i = 0; i < ${#args[@]}; i++)); do [[ "${args[i]}" == "--output" ]] && output="${args[i + 1]}"; done
+echo "appcast from: $*" >"$output"
 EOF
 
   # `--bumped-version` answers v9.10.0; `--tag vX.Y.Z --prepend <file>` puts a
@@ -655,9 +691,73 @@ case_prepare_failed_commit_restores_user_notes() {
   fi
 }
 
+# The zip is signed with sign_update from the build, the appcast is written
+# from the version, signature, length and user notes, and both go up.
+case_publish_first_appcast() {
+  current="publish signs the zip and attaches a first appcast"
+  new_repo publish-first-appcast
+  run /dev/null publish --yes
+  local zip="build/release/v9.9.9/The-Collective-9.9.9.zip" length
+  length="$(stat -f %z "$REPO/$zip" 2>/dev/null || echo missing)"
+  if [[ "$STATUS" -ne 0 ]]; then
+    fail "exit status $STATUS: $OUTPUT"
+  elif ! logged "^sign_update $zip\$"; then
+    fail "the zip was not signed: $(cat "$STUB_LOG")"
+  elif ! logged "^swift run --quiet --package-path CollectiveKit -c release collective-appcast --version 9.9.9 --length $length --ed-signature c2lnbmF0dXJl --notes ReleaseNotes.md --output build/release/v9.9.9/appcast.xml\$"; then
+    fail "collective-appcast did not get the signature, length and notes, or got a previous appcast: $(cat "$STUB_LOG")"
+  elif logged "^gh release download"; then
+    fail "there is no release to build on, yet one was downloaded: $(cat "$STUB_LOG")"
+  elif ! logged "^gh release create v9.9.9 $zip build/release/v9.9.9/appcast.xml "; then
+    fail "the appcast is not attached to the release: $(cat "$STUB_LOG")"
+  else
+    pass
+  fi
+}
+
+case_publish_appcast_on_latest() {
+  current="publish builds the appcast on the latest release's"
+  new_repo publish-appcast-on-latest
+  GH_LATEST=v9.9.8 run /dev/null publish --yes
+  if [[ "$STATUS" -ne 0 ]]; then
+    fail "exit status $STATUS: $OUTPUT"
+  elif ! logged "^gh release download v9.9.8 --pattern appcast.xml --dir build/release/v9.9.9/previous\$"; then
+    fail "the latest release's appcast was not downloaded: $(cat "$STUB_LOG")"
+  elif ! logged "--previous build/release/v9.9.9/previous/appcast.xml --output"; then
+    fail "collective-appcast did not get the previous appcast: $(cat "$STUB_LOG")"
+  else
+    pass
+  fi
+}
+
+# Without the latest appcast, or without an answer from GitHub, the new one
+# would drop every earlier version: nothing is tagged.
+case_publish_without_previous_appcast() {
+  current="publish stops when the latest release's appcast can't be had"
+  local variant
+  for variant in GH_NO_APPCAST GH_API_FAILS; do
+    new_repo "publish-without-previous-$variant"
+    if [[ "$variant" == GH_NO_APPCAST ]]; then
+      GH_LATEST=v9.9.8 GH_NO_APPCAST=1 run /dev/null publish --yes
+    else
+      GH_API_FAILS=1 run /dev/null publish --yes
+    fi
+    if [[ "$STATUS" -eq 0 ]]; then
+      fail "$variant: publish succeeded: $OUTPUT"
+      return
+    elif git -C "$ORIGIN" rev-parse --verify --quiet refs/tags/v9.9.9 >/dev/null || logged "^gh release create"; then
+      fail "$variant: tagged or released anyway: $(cat "$STUB_LOG")"
+      return
+    fi
+  done
+  pass
+}
+
 make_stubs
 case_no_terminal
 case_publish_yes
+case_publish_first_appcast
+case_publish_appcast_on_latest
+case_publish_without_previous_appcast
 case_publish_notes_file
 case_resume
 case_other_sha

@@ -1,6 +1,6 @@
 # Privacy
 
-The Collective is a macOS menu bar app that runs entirely on your own computer. It has no account, no telemetry, no analytics and no crash reporting. Neither the author nor anyone else receives data from it. The one exception is the update check described under [Network access](#network-access): it asks GitHub for public release tags and sends nothing about you or your sessions.
+The Collective is a macOS menu bar app that runs entirely on your own computer. It has no account, no telemetry, no analytics and no crash reporting. Neither the author nor anyone else receives data from it. The one exception is the update check described under [Network access](#network-access): it reads public release information from GitHub and sends nothing about you or your sessions.
 
 ## What the app reads
 
@@ -16,7 +16,7 @@ The app only reads these files. It never changes or deletes them.
 All of it stays on your computer, readable by your user account:
 
 - **The event store,** an SQLite database in the app's folder in `~/Library/Application Support/`. It keeps the events the app has read, so that sessions survive a restart of the app after subspace has deleted its files. Events older than the retention period are deleted: 3 days by default, adjustable in Settings › Sessions to 1 day, 1 week or unlimited. Settings › Sessions also clears all stored events.
-- **Your settings** in the app's preferences (`UserDefaults`): retention, notifications, appearance, the chosen subspace folders, and the time and result of the last update check.
+- **Your settings** in the app's preferences (`UserDefaults`): retention, notifications, appearance, the chosen subspace folders, and the time and result of the last update check (including Sparkle's own entries such as a version you chose to skip).
 - **Custom color schemes** you add, in `~/Library/Application Support/The Collective/Themes/`.
 
 Deleting the app's folder in `~/Library/Application Support/` and its preferences removes everything the app has stored.
@@ -27,7 +27,12 @@ When enabled, the app shows macOS notifications when an agent needs permission, 
 
 ## Network access
 
-- **subspace update check.** When "Check for subspace updates" is on (the default), the app asks GitHub's public API for the release tags of the subspace plugin repositories (`api.github.com/repos/we-are-the-borg/subspace-claude-code/tags` and `…/subspace-codex/tags`): at launch at most once a day, and when you open Setup or a source's settings at most once an hour. The request carries no cookies, credentials or identifiers of yours, only the app's name as User-Agent, and nothing is cached. Like any web request it reaches GitHub with your IP address; GitHub's [privacy statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement) covers how GitHub handles that. Turn the switch off in Settings and the app asks GitHub nothing.
+- **Update checks.** When "Check for updates automatically" is on (the default), the app looks for new versions on GitHub, and "Check Now" in About does the same on request, also with the switch off:
+  - For the app itself, [Sparkle](https://sparkle-project.org) reads the appcast of the latest release (`github.com/we-are-the-borg/collective/releases/latest/download/appcast.xml`) at most once a day. Its User-Agent names the app and Sparkle with their versions; it sends no system profile.
+  - For the subspace plugins, the app asks GitHub's public API for the release tags of their repositories (`api.github.com/repos/we-are-the-borg/subspace-claude-code/tags` and `…/subspace-codex/tags`): at most once a day, and when you open Setup or a source's settings at most once an hour. These requests carry no cookies, credentials or identifiers of yours, only the app's name as User-Agent, and nothing is cached.
+  - When you choose to install an app update, Sparkle downloads it from the same GitHub release and checks its signature before installing.
+
+  Like any web request, these reach GitHub with your IP address; GitHub's [privacy statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement) covers how GitHub handles that. Turn the switch off in Settings and the app asks GitHub nothing on its own.
 - **Commands you start.** Setup and Settings offer to install, enable or update the subspace plugins. When you click one of these, the app runs the agent's own command line (for example `claude plugin install …`) in your login shell. That command downloads the plugin from GitHub under the agent's own terms. The app runs none of these on its own.
 - **Links.** Links in the app (release notes, documentation, the subspace repository, links in agent replies) open in your browser only when you click them.
 
