@@ -37,7 +37,7 @@ private func codex(_ plugin: IntegrationStatus.Plugin = .enabled(version: "1.0.1
 
 private let available = UpdateAvailability.available(installed: version("1.0.1"), latest: version("1.3.0"))
 
-private func model(
+private func makeModel(
     _ status: IntegrationStatus,
     _ availability: UpdateAvailability = available,
     run: SetupCommandRun.Snapshot? = nil,
@@ -104,7 +104,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 
 @Suite struct SourceUpdateModelTests {
     @Test func anAvailableUpdateNumbersTheAdapterLinesAndOffersUpdate() throws {
-        let model = try #require(model(claudeCode()))
+        let model = try #require(makeModel(claudeCode()))
         #expect(model.state == .available)
         #expect(header(model) == "circleArrowUp: subspace 1.3.0 is available | You have 1.0.1")
         #expect(lines(model) == ["1 \(marketplaceUpdate)", "2 \(pluginUpdate)"])
@@ -120,7 +120,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func theUpdatePlanRunsTheAdapterLinesWithTheFoundCLI() throws {
-        let plan = try #require(model(claudeCode())?.runPlan)
+        let plan = try #require(makeModel(claudeCode())?.runPlan)
         #expect(plan.kind == .update(from: version("1.0.1"), to: version("1.3.0")))
         #expect(plan.lines == [marketplaceUpdate, pluginUpdate])
         #expect(plan.skipping == [])
@@ -129,7 +129,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func codexAsksToApproveTheChangedHooksInsteadOfRestarting() {
-        let model = model(codex())
+        let model = makeModel(codex())
         #expect(lines(model) == ["1 \(codexUpgrade)", "2 \(codexAdd)"])
         #expect(footer(model) == "Runs both commands in your login shell. \(codexHint)")
         #expect(model?.commands?.footer?.link?.url
@@ -137,7 +137,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func aRunningUpdateMarksItsLinesAndDisablesTheButton() {
-        let model = model(claudeCode(), run: run(.running(line: 1), [
+        let model = makeModel(claudeCode(), run: run(.running(line: 1), [
             (marketplaceUpdate, .succeeded, "$ \(marketplaceUpdate)"), (pluginUpdate, .running, nil),
         ]))
         #expect(model?.state == .running)
@@ -150,7 +150,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func aFailedUpdateShowsTheFailedOutputAndOffersTryAgain() {
-        let model = model(claudeCode(), run: run(.failed(line: 1), [
+        let model = makeModel(claudeCode(), run: run(.failed(line: 1), [
             (marketplaceUpdate, .succeeded, "$ \(marketplaceUpdate)"), (pluginUpdate, .failed, "$ \(pluginUpdate)\nNetwork down"),
         ]))
         #expect(model?.state == .failed)
@@ -168,7 +168,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     /// The recheck after the run reports the new version and nothing left to
     /// update; the group stays with the run until the windows close.
     @Test func aSucceededUpdateStaysAfterTheRecheckWithItsOutputFolded() {
-        let model = model(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checkedAt: afterSuccess)
+        let model = makeModel(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checkedAt: afterSuccess)
         #expect(model?.state == .updated)
         #expect(header(model) == "dot: Updated to 1.3.0")
         #expect(lines(model) == ["done \(marketplaceUpdate)", "done \(pluginUpdate)"])
@@ -179,14 +179,14 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 
     /// The marketplace may have known a newer release than the lookup.
     @Test func aSucceededUpdateNamesTheVersionTheRecheckFound() {
-        #expect(header(model(claudeCode(.enabled(version: "1.4.0")), .upToDate, run: succeeded, checkedAt: afterSuccess))
+        #expect(header(makeModel(claudeCode(.enabled(version: "1.4.0")), .upToDate, run: succeeded, checkedAt: afterSuccess))
             == "dot: Updated to 1.4.0")
     }
 
     /// The commands' exit codes don't prove the update; until a probe taken
     /// after the success reports, the check is still part of the update.
     @Test func aSucceededUpdateKeepsRunningUntilAProbeAfterItReports() {
-        let model = model(claudeCode(), run: succeeded)
+        let model = makeModel(claudeCode(), run: succeeded)
         #expect(model?.state == .running)
         #expect(header(model) == "haloDot: Updating to 1.3.0… | You have 1.0.1")
         #expect(lines(model) == ["done \(marketplaceUpdate)", "done \(pluginUpdate)"])
@@ -201,7 +201,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     /// The visual check of 05.11.2026: every command exited 0, but the
     /// marketplace said "already up to date" and Codex kept 1.0.1.
     @Test func aProbeAfterTheSuccessStillReportingTheOldVersionFailsTheUpdate() throws {
-        let model = try #require(model(codex(), run: codexSucceeded, checkedAt: afterSuccess))
+        let model = try #require(makeModel(codex(), run: codexSucceeded, checkedAt: afterSuccess))
         #expect(model.state == .failed)
         #expect(header(model) == "circleX: Update to 1.1.0 failed | You still have 1.0.1")
         #expect(lines(model) == ["done \(codexUpgrade)", "done \(codexAdd)"])
@@ -213,7 +213,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 
     /// Codex's plugin list can time out right after the update; that says nothing either way.
     @Test func anUnknownPluginStateAfterTheSuccessKeepsItRunning() {
-        let model = model(codex(.unknown), run: codexSucceeded, checkedAt: afterSuccess, now: succeededAt.addingTimeInterval(29))
+        let model = makeModel(codex(.unknown), run: codexSucceeded, checkedAt: afterSuccess, now: succeededAt.addingTimeInterval(29))
         #expect(model?.state == .running)
         #expect(footer(model) == "Updating subspace…")
     }
@@ -223,7 +223,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     @Test func aStateCarriedOverFromAnEarlierCheckKeepsItRunning() throws {
         let carried = codex(.unknown).keepingKnownPlugin(from: codex())
         #expect(carried.plugin == .enabled(version: "1.0.1"))
-        let model = try #require(model(carried, run: codexSucceeded, checkedAt: afterSuccess, now: succeededAt.addingTimeInterval(29)))
+        let model = try #require(makeModel(carried, run: codexSucceeded, checkedAt: afterSuccess, now: succeededAt.addingTimeInterval(29)))
         #expect(model.state == .running)
         #expect(footer(model) == "Updating subspace…")
     }
@@ -232,7 +232,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     func withoutAConfirmingProbeFor30SecondsTheUpdateFails(plugin: IntegrationStatus.Plugin) throws {
         // The 1.0.1 probe started before the success, so it doesn't count either.
         let checkedAt = plugin == .unknown ? afterSuccess : succeededAt.addingTimeInterval(-1)
-        let model = try #require(model(codex(plugin), run: codexSucceeded, checkedAt: checkedAt, now: succeededAt.addingTimeInterval(30)))
+        let model = try #require(makeModel(codex(plugin), run: codexSucceeded, checkedAt: checkedAt, now: succeededAt.addingTimeInterval(30)))
         #expect(model.state == .failed)
         #expect(header(model) == "circleX: Update to 1.1.0 failed")
         #expect(footer(model) == "! The commands finished, but Codex doesn’t report the new version.")
@@ -242,13 +242,13 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     /// A probe running while the last command ran may have read the old plugin.
     @Test(arguments: [succeededAt.addingTimeInterval(-1), succeededAt])
     func aProbeFromBeforeTheSuccessNeverCounts(checkedAt: Date) {
-        #expect(model(codex(), run: codexSucceeded, checkedAt: checkedAt)?.state == .running)
-        #expect(model(codex(.enabled(version: "1.1.0")), .upToDate, run: codexSucceeded, checkedAt: checkedAt)?.state == .running)
+        #expect(makeModel(codex(), run: codexSucceeded, checkedAt: checkedAt)?.state == .running)
+        #expect(makeModel(codex(.enabled(version: "1.1.0")), .upToDate, run: codexSucceeded, checkedAt: checkedAt)?.state == .running)
     }
 
     @Test(arguments: [IntegrationStatus.Plugin.enabled(version: nil), .disabled(version: "unknown")])
     func anInstalledPluginWithoutAReadableVersionFailsTheUpdate(plugin: IntegrationStatus.Plugin) throws {
-        let model = try #require(model(codex(plugin), run: codexSucceeded, checkedAt: afterSuccess))
+        let model = try #require(makeModel(codex(plugin), run: codexSucceeded, checkedAt: afterSuccess))
         #expect(model.state == .failed)
         #expect(header(model) == "circleX: Update to 1.1.0 failed")
         #expect(footer(model) == "! The commands finished, but Codex doesn’t report the new version.")
@@ -256,32 +256,32 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 
     // Pins the current behavior (green from the start): a plugin that vanished after the run is no confirmation either.
     @Test func aProbeAfterTheSuccessReportingNoPluginFailsTheUpdate() throws {
-        let model = try #require(model(codex(.notInstalled), run: codexSucceeded, checkedAt: afterSuccess))
+        let model = try #require(makeModel(codex(.notInstalled), run: codexSucceeded, checkedAt: afterSuccess))
         #expect(model.state == .failed)
         #expect(header(model) == "circleX: Update to 1.1.0 failed")
         #expect(footer(model) == "! The commands finished, but Codex doesn’t report the new version.")
     }
 
     @Test func aProbeAfterTheSuccessReportingTheTargetConfirmsIt() {
-        let model = model(codex(.enabled(version: "1.1.0")), .upToDate, run: codexSucceeded, checkedAt: afterSuccess)
+        let model = makeModel(codex(.enabled(version: "1.1.0")), .upToDate, run: codexSucceeded, checkedAt: afterSuccess)
         #expect(model?.state == .updated)
         #expect(header(model) == "dot: Updated to 1.1.0")
     }
 
     @Test func anUnconfirmedUpdateShowsItsOutputWhenAsked() {
-        let model = model(codex(), run: codexSucceeded, outputShown: true, checkedAt: afterSuccess)
+        let model = makeModel(codex(), run: codexSucceeded, outputShown: true, checkedAt: afterSuccess)
         #expect(lines(model) == ["done \(codexUpgrade)\n$ \(codexUpgrade)\nalready up to date", "done \(codexAdd)\n$ \(codexAdd)"])
         #expect(model?.commands?.footer?.outputToggle == .showing)
     }
 
     @Test func aSucceededUpdateShowsItsOutputWhenAsked() {
-        let model = model(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, outputShown: true, checkedAt: afterSuccess)
+        let model = makeModel(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, outputShown: true, checkedAt: afterSuccess)
         #expect(lines(model) == ["done \(marketplaceUpdate)\n$ \(marketplaceUpdate)", "done \(pluginUpdate)\n$ \(pluginUpdate)\nUpdated"])
         #expect(model?.commands?.footer?.outputToggle == .showing)
     }
 
     @Test func aSucceededCodexUpdateAsksToApproveTheChangedHooks() {
-        let model = model(codex(.enabled(version: "1.3.0")), .upToDate, run: run(.succeeded(at: succeededAt), [
+        let model = makeModel(codex(.enabled(version: "1.3.0")), .upToDate, run: run(.succeeded(at: succeededAt), [
             (codexUpgrade, .succeeded, nil), (codexAdd, .succeeded, nil),
         ]), checkedAt: afterSuccess)
         #expect(footer(model) == "Updated at 3:46\u{202F}AM. \(codexHint)")
@@ -298,7 +298,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     @Test func aRequiredUpdateWarnsAndOffersUpdate() throws {
         let status = claudeCode(commands: requiring("1.2.0"))
         let required = UpdateAvailability(installed: "1.0.1", latest: version("1.3.0"), minimum: version("1.2.0"))
-        let model = try #require(model(status, required))
+        let model = try #require(makeModel(status, required))
         #expect(model.state == .required)
         #expect(header(model)
             == "triangle: The Collective needs subspace 1.2.0 or later | You have 1.0.1 | Until you update, some events from Claude Code sessions won’t show up here.")
@@ -314,7 +314,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     @Test func aRequiredUpdateShowsWithTheSwitchOffAndUpdatesToTheMinimum() {
         let status = claudeCode(commands: requiring("1.2.0"))
         let required = UpdateAvailability(installed: "1.0.1", latest: nil, minimum: version("1.2.0"))
-        let model = model(status, required, checksForUpdates: false)
+        let model = makeModel(status, required, checksForUpdates: false)
         #expect(model?.state == .required)
         #expect(model?.runPlan?.kind == .update(from: version("1.0.1"), to: version("1.2.0")))
         #expect(model?.commands?.footer?.link?.url
@@ -322,28 +322,28 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func anAvailableUpdateHidesWithTheSwitchOff() {
-        #expect(model(claudeCode(), checksForUpdates: false) == nil)
+        #expect(makeModel(claudeCode(), checksForUpdates: false) == nil)
     }
 
     /// The user started the run, so its result stays until the windows close
     /// even after the switch goes off; only a group without a run follows it.
     @Test func aFailedUpdateStaysWithTheSwitchOff() {
         let failed = run(.failed(line: 1), [(marketplaceUpdate, .succeeded, nil), (pluginUpdate, .failed, "Network down")])
-        #expect(model(claudeCode(), run: failed, checksForUpdates: false)?.state == .failed)
+        #expect(makeModel(claudeCode(), run: failed, checksForUpdates: false)?.state == .failed)
     }
 
     @Test func aSucceededUpdateStaysWithTheSwitchOff() {
-        #expect(model(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checksForUpdates: false, checkedAt: afterSuccess)?.state
+        #expect(makeModel(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checksForUpdates: false, checkedAt: afterSuccess)?.state
             == .updated)
     }
 
     @Test func nothingWhileUpToDate() {
-        #expect(model(claudeCode(), .upToDate) == nil)
+        #expect(makeModel(claudeCode(), .upToDate) == nil)
     }
 
     @Test(arguments: [IntegrationStatus.Plugin.enabled(version: nil), .disabled(version: nil), .enabled(version: "unknown")])
     func nothingWithoutAReadableVersion(plugin: IntegrationStatus.Plugin) {
-        #expect(model(claudeCode(plugin)) == nil)
+        #expect(makeModel(claudeCode(plugin)) == nil)
     }
 
     @Test(arguments: [
@@ -352,7 +352,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         claudeCode(.disabled(version: "1.0.1")),
     ])
     func connectedWaitingAndDisabledSourcesShowIt(status: IntegrationStatus) {
-        #expect(model(status)?.state == .available)
+        #expect(makeModel(status)?.state == .available)
     }
 
     @Test(arguments: [
@@ -361,13 +361,13 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         claudeCode(.notInstalled, cli: .notFound),
     ])
     func notSetUpOrNotFoundSourcesShowNothing(status: IntegrationStatus) {
-        #expect(model(status) == nil)
+        #expect(makeModel(status) == nil)
     }
 
     /// The plugin read from the tool's settings without its CLI: nothing can
     /// run, so the lines are only there to copy, as on the setup card.
     @Test func withoutTheCLITheLinesAreOnlyCopied() {
-        let model = model(claudeCode(cli: .notFound))
+        let model = makeModel(claudeCode(cli: .notFound))
         #expect(model?.state == .available)
         #expect(lines(model) == [marketplaceUpdate, pluginUpdate])
         #expect(model?.commands?.footer == nil)
@@ -377,13 +377,13 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     /// An idle run was made but never started; the group is the one without it.
     @Test func anIdleRunChangesNothing() {
         let idle = run(.idle, [(marketplaceUpdate, .pending, nil), (pluginUpdate, .pending, nil)])
-        #expect(model(claudeCode(), run: idle) == model(claudeCode()))
+        #expect(makeModel(claudeCode(), run: idle) == makeModel(claudeCode()))
     }
 
     /// An install run belongs to the setup card, never to the update group.
     @Test func anInstallRunIsNotTheGroups() {
         let install = SetupCommandRun.Snapshot(kind: .install, lines: [RunLine(command: "claude x", state: .running)], phase: .running(line: 0))
-        #expect(model(claudeCode(), run: install) == model(claudeCode()))
+        #expect(makeModel(claudeCode(), run: install) == makeModel(claudeCode()))
     }
 
     /// The sources' status forms in their roles: a running
@@ -393,11 +393,11 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         let failed = run(.failed(line: 1), [(marketplaceUpdate, .succeeded, nil), (pluginUpdate, .failed, "Network down")])
         let running = run(.running(line: 0), [(marketplaceUpdate, .running, nil), (pluginUpdate, .pending, nil)])
         let marks = [
-            model(claudeCode()),
-            model(claudeCode(), run: running),
-            model(claudeCode(), run: failed),
-            model(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checkedAt: afterSuccess),
-            model(claudeCode(commands: requiring("1.2.0")), required),
+            makeModel(claudeCode()),
+            makeModel(claudeCode(), run: running),
+            makeModel(claudeCode(), run: failed),
+            makeModel(claudeCode(.enabled(version: "1.3.0")), .upToDate, run: succeeded, checkedAt: afterSuccess),
+            makeModel(claudeCode(commands: requiring("1.2.0")), required),
         ].map { $0.map { "\($0.state) \($0.statusMark.shape) \($0.statusMark.role)" } }
         #expect(marks == [
             "available circleArrowUp info",
@@ -419,7 +419,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func oneLine() {
-        let model = model(tool(["tt update"]))
+        let model = makeModel(tool(["tt update"]))
         #expect(footer(model) == "Runs this command in your login shell. Restart running sessions afterwards.")
         #expect(button(model) == "Update (enabled) / Update subspace: runs tt update")
         // Without a release there is no comparison to link.
@@ -427,7 +427,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
     }
 
     @Test func threeLines() {
-        let model = model(tool(["tt a", "tt b", "tt c"]))
+        let model = makeModel(tool(["tt a", "tt b", "tt c"]))
         #expect(lines(model) == ["1 tt a", "2 tt b", "3 tt c"])
         #expect(footer(model) == "Runs these 3 commands in your login shell. Restart running sessions afterwards.")
         #expect(button(model) == "Update (enabled) / Update subspace: runs tt a, tt b, then tt c")
@@ -435,7 +435,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 
     /// An adapter without update lines has nothing to offer.
     @Test func noLinesNoGroup() {
-        #expect(model(tool([])) == nil)
+        #expect(makeModel(tool([])) == nil)
     }
 
     /// The status row still says an update is required; without lines there
@@ -445,7 +445,7 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         status.commands.release = SubspaceRelease(tagsRepository: "example/subspace-test-tool", tagPrefix: "test-tool-",
                                                   minimumVersion: "1.2.0", changesRepository: "example/subspace")
         let required = UpdateAvailability(installed: "1.0.1", latest: nil, minimum: version("1.2.0"))
-        #expect(model(status, required, checksForUpdates: false) == nil)
-        #expect(model(status, required) == nil)
+        #expect(makeModel(status, required, checksForUpdates: false) == nil)
+        #expect(makeModel(status, required) == nil)
     }
 }

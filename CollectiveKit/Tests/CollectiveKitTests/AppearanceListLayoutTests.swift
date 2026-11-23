@@ -61,8 +61,11 @@ import Testing
 
     /// The box is only as high as its items, up to its maximum.
     @Test func theContentHeightAddsUpHeadersAndRows() throws {
-        #expect(try browser(match, .dark, catalog: horizonDark()).contentHeight == 24 + 32 + 24 + (38 - lightCount) * 32)
-        #expect(try browser(fixed, .fixed).contentHeight == 24 + 24 + 24 + 24 + 38 * 32)
+        // Typed sums: Swift 6.3 gives up type-checking them inside `#expect`.
+        let withCustomRow: Double = 24 + 32 + 24 + (38 - lightCount) * 32
+        let allSections: Double = 24 + 24 + 24 + 24 + 38 * 32
+        #expect(try browser(match, .dark, catalog: horizonDark()).contentHeight == withCustomRow)
+        #expect(try browser(fixed, .fixed).contentHeight == allSections)
     }
 
     // MARK: pinned headers
