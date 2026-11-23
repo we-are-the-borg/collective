@@ -105,7 +105,7 @@ owner="${owner}lin"
 
 # Who runs the check (see the header). Too short a string, a generic local
 # part or a mail provider's domain would match what is nobody's.
-readonly GENERIC_LOCALS=" admin administrator contact dev developer git guest hello info mail noreply root test user "
+readonly GENERIC_LOCALS=" admin administrator contact dev developer git guest hello info mail noreply root runner test user "
 readonly GENERIC_DOMAINS=" gmail.com googlemail.com icloud.com me.com mac.com outlook.com hotmail.com live.com yahoo.com gmx.de gmx.net web.de proton.me protonmail.com pm.me posteo.de mailbox.org fastmail.com users.noreply.github.com "
 ere_escape() {
   printf '%s' "$1" | sed 's/[][\.*^$+?(){}|/]/\\&/g'
@@ -133,8 +133,9 @@ add_address() {
     *) [[ " $GENERIC_DOMAINS " == *" $domain "* ]] || add_identity "$domain" ;;
   esac
 }
-# A generic login or host name (a container's `root`, a VM's `dev`) names
-# nobody and would fight the allowed scrubbed home `/Users/user`.
+# A generic login or host name (a container's `root`, a VM's `dev`, the
+# `runner` of a hosted CI machine) names nobody and would fight the allowed
+# scrubbed home `/Users/user`.
 add_word() {
   local word
   word="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
