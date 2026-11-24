@@ -13,7 +13,8 @@
 # Both ask in the terminal; `--yes` (`-y`) after the command answers every
 # question with yes. Without a terminal and without `--yes` they abort.
 #
-# Needs git-cliff, gh, Xcode and the notarytool keychain profile `notary`
+# Needs git-cliff, gh, Xcode, the notarytool keychain profile `notary` and,
+# for publish, the Sparkle signing key in the keychain
 # (see README).
 set -euo pipefail
 
@@ -325,6 +326,53 @@ build_notarized() {
   git rev-parse HEAD >"$out/notarized-commit"
 }
 
+# Sparkle's tools come with the package in the build's DerivedData.
+readonly SPARKLE_BIN="SourcePackages/artifacts/sparkle/Sparkle/bin"
+
+# Prints "<EdDSA signature> <length>" of the zip. sign_update reads the
+# private key from the maintainer's keychain (README › Releasing); macOS may
+# ask to allow it.
+sign_archive() {
+  local out="$1" zip="$2"
+  local tool="$out/DerivedData/$SPARKLE_BIN/sign_update" line
+  [[ -x "$tool" ]] || die "Sparkle's sign_update is missing in $out/DerivedData; delete $out and run publish again"
+  line="$("$tool" "$zip")" || die "sign_update failed; is the Sparkle key in this Mac's keychain? (README › Releasing)"
+  [[ "$line" =~ sparkle:edSignature=\"([^\"]+)\"\ length=\"([0-9]+)\" ]] ||
+    die "unexpected output of sign_update: $line"
+  printf '%s %s\n' "${BASH_REMATCH[1]}" "${BASH_REMATCH[2]}"
+}
+
+# The tag of the latest GitHub release, empty when there is none yet. Any
+# other failure stops: a fresh appcast would drop every earlier version.
+latest_release_tag() {
+  local output
+  if output="$(gh api 'repos/{owner}/{repo}/releases/latest' --jq .tag_name 2>&1)"; then
+    printf '%s\n' "$output"
+  elif [[ "$output" != *"HTTP 404"* ]]; then
+    die "could not ask GitHub for the latest release: $output"
+  fi
+}
+
+# Writes $out/appcast.xml: the latest release's appcast with this version on
+# top, its notes from $RELEASE_NOTES. The app reads it from
+# releases/latest/download/appcast.xml, so every release carries all versions.
+write_appcast() {
+  local version="$1" out="$2" signature="$3" length="$4"
+  local latest previous=()
+  latest="$(latest_release_tag)"
+  rm -rf "$out/previous"
+  if [[ -n "$latest" ]]; then
+    mkdir -p "$out/previous"
+    gh release download "$latest" --pattern appcast.xml --dir "$out/previous" ||
+      die "release $latest has no appcast.xml to build on; attach the last one before publishing"
+    previous=(--previous "$out/previous/appcast.xml")
+  fi
+  swift run --quiet --package-path CollectiveKit -c release collective-appcast \
+    --version "$version" --length "$length" --ed-signature "$signature" \
+    --notes "$RELEASE_NOTES" ${previous[@]+"${previous[@]}"} --output "$out/appcast.xml" ||
+    die "could not write the appcast"
+}
+
 # Building and notarizing takes about ten minutes; a run that got that far
 # but not to the tag (declined or interrupted) can be continued with its
 # build, as long as it is of the same commit and Gatekeeper still accepts it.
@@ -351,7 +399,7 @@ reusable_build() {
 }
 
 cmd_publish() {
-  require_tools gh xcodebuild xcrun
+  require_tools gh xcodebuild xcrun swift
   require_clean_main
 
   local version tag
@@ -395,6 +443,10 @@ cmd_publish() {
   else
     build_notarized "$version" "$out" "$app" "$zip"
   fi
+  local signature length
+  read -r signature length <<<"$(sign_archive "$out" "$zip")"
+  write_appcast "$version" "$out" "$signature" "$length"
+
   # User notes on top, the developer changelog below; the blank lines the
   # stripped comments leave behind are squeezed and trimmed.
   local user_notes
@@ -403,6 +455,7 @@ cmd_publish() {
 
   echo
   echo "Notarized build: $zip"
+  echo "Appcast:         $out/appcast.xml"
   echo
   echo "Release notes (from $RELEASE_NOTES and $CHANGELOG):"
   echo
@@ -414,7 +467,7 @@ cmd_publish() {
 
 Nothing was tagged or pushed. The notarized build stays in $out.
 To continue:  git tag -a $tag -m "The Collective $version" && git push origin $tag \\
-                && gh release create $tag "$zip" --verify-tag --title "The Collective $version" --notes-file "$out/notes.md"
+                && gh release create $tag "$zip" "$out/appcast.xml" --verify-tag --title "The Collective $version" --notes-file "$out/notes.md"
 Or run scripts/release.sh publish again; it reuses this notarized build as long as HEAD stays $(git rev-parse --short HEAD).
 EOF
     return
@@ -422,7 +475,7 @@ EOF
 
   git tag -a "$tag" -m "The Collective $version"
   git push --quiet origin "$tag"
-  gh release create "$tag" "$zip" --verify-tag --title "The Collective $version" --notes-file "$out/notes.md"
+  gh release create "$tag" "$zip" "$out/appcast.xml" --verify-tag --title "The Collective $version" --notes-file "$out/notes.md"
 }
 
 [[ $# -ge 1 ]] || usage

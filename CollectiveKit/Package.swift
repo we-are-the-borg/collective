@@ -10,6 +10,8 @@ let package = Package(
         .library(name: "CollectiveUI", targets: ["CollectiveUI"]),
         // Measures the cold spool backlog; not part of the app.
         .executable(name: "collective-bench", targets: ["CollectiveBench"]),
+        // Writes the Sparkle appcast for scripts/release.sh; not part of the app.
+        .executable(name: "collective-appcast", targets: ["CollectiveAppcast"]),
     ],
     dependencies: [
         .package(path: "../SubspaceKit"),
@@ -60,6 +62,10 @@ let package = Package(
                 .process("Resources/Lucide.xcassets"),
                 .copy("Resources/Lucide"),
             ]
+        ),
+        .executableTarget(
+            name: "CollectiveAppcast",
+            dependencies: ["CollectiveKit"]
         ),
         .executableTarget(
             name: "CollectiveBench",
