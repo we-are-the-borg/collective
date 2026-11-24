@@ -18,7 +18,6 @@ First release from the public repository.
 - Fixed idle sessions turning active when opening the popover right after launch.
 - Restored italic rendering for emphasis in replies.
 
-
 ## 1.2.0
 
 - Redesigned the app with a new look, IBM Plex type and new icons.
