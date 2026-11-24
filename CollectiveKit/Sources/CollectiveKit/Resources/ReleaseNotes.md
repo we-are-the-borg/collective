@@ -2,6 +2,23 @@
 
 Handwritten changelog and release notes for each version of The Collective. See the full list of changes in [`CHANGELOG.md`](CHANGELOG.md).
 
+## 1.3.0
+
+First release from the public repository.
+
+- **Auto-updates:** The Collective can now update itself. Available updates appear in Settings › About, the sidebar, and the bottom of the popover, and only install when you choose to.
+- **Check Now** in Settings › About checks for both app and subspace updates. The toggle in Settings › General is now called **Check for updates automatically** and covers both.
+- **Show more** on a reply opens the full text in a card.
+- Sessions with unread replies are now marked.
+- Focusing a session's terminal now uses a dedicated button on its last line instead of clicking anywhere on the row.
+- Permission requests now show the full command.
+- **Release Notes…** in Settings › About shows the changelog for each version.
+- Switched from polling to file system events to detect new activity, reducing energy usage while sessions are running.
+- Fixed sessions getting stuck waiting for input after a subagent was resumed or interrupted.
+- Fixed idle sessions turning active when opening the popover right after launch.
+- Restored italic rendering for emphasis in replies.
+
+
 ## 1.2.0
 
 - Redesigned the app with a new look, IBM Plex type and new icons.
