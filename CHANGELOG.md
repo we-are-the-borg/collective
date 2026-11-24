@@ -5,6 +5,61 @@ each section lists the merged pull requests by type.
 
 <!-- git-cliff: end of header -->
 
+## 1.3.0
+
+### Features
+
+- **updates:** Update the app with Sparkle
+- **updates:** Sign releases for Sparkle and publish appcast
+- **claude-code:** Show the whole command of a permission request from the mapped command field
+- **settings:** Read the release notes in a sheet from About
+- **release:** Hand-written user release notes in ReleaseNotes.md
+- **popover:** Mark sessions with an unread reply
+- **popover:** Jump to the session's app with a button in the last line, not the whole row
+- **popover:** Read the whole reply in a card that "Show more" opens
+- **settings:** Control borders and accent states from the theme roles, quieter popover frame
+- **release:** Resume publish from the notarized build, add --yes, never a silent no
+
+### Bug Fixes
+
+- **popover:** Resting sessions stay idle when the popover opens while the backlog is read
+- **popover:** Idle preview opens under the reply text, not under the whole card
+- **popover:** Emphasis in replies is italic again
+- **claude-code:** Resumed and interrupted subagents no longer leave the session "waiting for you"
+- **popover:** Draw the shadow on a sublayer AppKit leaves alone
+
+### Performance
+
+- **popover:** Keep the working halo still
+- **claude-code:** Name models without compiling a regex per call
+- **spool:** Watch the spool with file events
+
+### Refactoring
+
+- **kit:** Move SubspaceKit into the repo as a local package
+
+### Documentation
+
+- Add privacy policy
+- Add the MIT licence and a README for users
+- Add dark screenshots to the README
+- English CLAUDE.md and links for the public repository
+- **kit:** Drop planning references from comments
+
+### Tests
+
+- **codex:** Back the whole-command box with a real multi-line capture
+- **kit:** Carry only scrubbed fixtures the tests read
+
+### CI
+
+- Run tests, the privacy check and the PR title lint on every PR
+
+### Chores
+
+- **kit:** Drop private paths and names from code and tests
+- **scripts:** Add a check for private data before going public
+
 ## 1.2.0
 
 ### Features
