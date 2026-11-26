@@ -3804,6 +3804,28 @@
         }
       }
     },
+    "Start a new Antigravity conversation." : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"Waiting for the first session\" for Antigravity, whose hooks run from the next conversation on. \"Antigravity\" is a product name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a new Antigravity conversation."
+          }
+        }
+      }
+    },
+    "Start a new Antigravity conversation to use the updated subspace." : {
+      "comment" : "Detail after updating subspace for Antigravity, whose running conversations keep the old hooks. \"Antigravity\" and \"subspace\" are product names, do not translate them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start a new Antigravity conversation to use the updated subspace."
+          }
+        }
+      }
+    },
     "Start a new Codex session, then approve subspace’s changed hooks with /hooks." : {
       "comment" : "Detail after updating subspace for Codex, which holds a plugin's changed hooks back until the user approves them again. \"Codex\" and \"subspace\" are product names, do not translate them; \"/hooks\" is a command typed in Codex, keep it as is.",
       "localizations" : {
@@ -4145,13 +4167,13 @@
         }
       }
     },
-    "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here." : {
-      "comment" : "Popover warning block, shown above the session list while subspace is not installed: explanation under the title, followed by the install commands to copy. \"The Collective\" is the app name; \"Claude Code\" and \"Codex\" are coding tools and \"subspace\" a product name, do not translate them.",
+    "The Collective sees your agents through subspace, a small plugin for %@ that records session events. Install it once; sessions you start afterwards appear here." : {
+      "comment" : "Popover warning block, shown above the session list while subspace is not installed: explanation under the title, followed by the install commands to copy. The argument is the name of the coding tool those commands are for, e.g. \"Claude Code\". \"The Collective\" is the app name and \"subspace\" a product name, do not translate them.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here."
+            "value" : "The Collective sees your agents through subspace, a small plugin for %@ that records session events. Install it once; sessions you start afterwards appear here."
           }
         }
       }

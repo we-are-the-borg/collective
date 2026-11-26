@@ -139,6 +139,20 @@ private final class StubAdapter: PushAdapter {
     func spoolRoot(environment: [String: String], home: URL) -> URL { root }
 }
 
+/// An adapter whose source spools into several roots, the first its primary.
+private final class MultiRootAdapter: PushAdapter {
+    let source: SourceID
+    let displayName = "Multi"
+    let roots: [URL]
+    init(source: SourceID = "multi", roots: [URL]) { self.source = source; self.roots = roots }
+    /// One event per envelope, told apart by its `ts`.
+    func events(from envelope: Envelope) throws -> [AgentEvent] {
+        [AgentEvent(session: SessionKey(source: source, sessionID: "x"), timestamp: envelope.receivedAt, kind: .turnStarted)]
+    }
+    func spoolRoot(environment: [String: String], home: URL) -> URL { roots[0] }
+    func spoolRoots(environment: [String: String], home: URL) -> [URL] { roots }
+}
+
 private let home = URL(fileURLWithPath: "/Users/user", isDirectory: true)
 
 /// The adapter reads its mapping from the same root the reader reads its events from, as in production,
@@ -202,6 +216,69 @@ private func claudeCode(environment: [String: String]) -> ClaudeCodeAdapter {
         // `SUBSPACE_DIR` still moves the sources without a chosen folder.
         #expect(SpoolReader.roots(of: adapters, chosen: chosen, environment: ["SUBSPACE_DIR": "/shared"], home: home).map(\.path)
             == ["/shared", "/chosen"])
+    }
+
+    @Test func aSourceWithTwoRootsReadsBothUnlessAFolderIsChosenOrShared() {
+        let adapter = MultiRootAdapter(roots: [URL(fileURLWithPath: "/cli/./spool/", isDirectory: true),
+                                               URL(fileURLWithPath: "/desktop/spool", isDirectory: true)])
+        #expect(SubspaceRoot.resolveAll(adapter: adapter, environment: [:], home: home).map(\.path) == ["/cli/spool", "/desktop/spool"])
+        // A chosen folder or `SUBSPACE_DIR` replaces all of them, with the same precedence as for one root.
+        let chosen = URL(fileURLWithPath: "/chosen", isDirectory: true)
+        #expect(SubspaceRoot.resolveAll(adapter: adapter, chosen: chosen, environment: ["SUBSPACE_DIR": "/shared"], home: home).map(\.path)
+            == ["/chosen"])
+        #expect(SubspaceRoot.resolveAll(adapter: adapter, environment: ["SUBSPACE_DIR": "/shared"], home: home).map(\.path) == ["/shared"])
+        #expect(SubspaceRoot.resolveAll(adapter: adapter, chosen: URL(string: "file:"), environment: [:], home: home).map(\.path)
+            == ["/cli/spool", "/desktop/spool"])
+    }
+
+    @Test func aSingleRootSourceResolvesToItsOneRoot() {
+        let adapter = StubAdapter(source: "a", root: URL(fileURLWithPath: "/own/", isDirectory: true))
+        #expect(SubspaceRoot.resolveAll(adapter: adapter, environment: [:], home: home).map(\.path) == ["/own"])
+    }
+
+    @Test func theReaderWatchesEveryRootOfASourceEachFolderOnce() {
+        let adapters: [any PushAdapter] = [
+            StubAdapter(source: "a", root: URL(fileURLWithPath: "/a", isDirectory: true)),
+            MultiRootAdapter(roots: [URL(fileURLWithPath: "/cli", isDirectory: true), URL(fileURLWithPath: "/./a/", isDirectory: true),
+                                     URL(fileURLWithPath: "/desktop", isDirectory: true), URL(fileURLWithPath: "/cli/", isDirectory: true)]),
+        ]
+        #expect(SpoolReader.roots(of: adapters, environment: [:], home: home).map(\.path) == ["/a", "/cli", "/desktop"])
+        #expect(SpoolReader.roots(of: adapters, chosen: ["multi": URL(fileURLWithPath: "/chosen")], environment: [:], home: home).map(\.path)
+            == ["/a", "/chosen"])
+    }
+
+    // MARK: choosing a folder
+
+    let twoRoots: [SourceID: [URL]] = ["multi": [URL(fileURLWithPath: "/cli/spool", isDirectory: true),
+                                                 URL(fileURLWithPath: "/desktop/spool", isDirectory: true)]]
+
+    /// One of the source's own folders is no choice: the reader keeps reading all of them.
+    @Test(arguments: ["/cli/spool", "/cli/spool/", "/desktop/spool/", "/desktop/./spool", "/cli/x/../spool"])
+    func choosingOneOfTheDefaultFoldersResetsToAllOfThem(path: String) {
+        let folder = URL(fileURLWithPath: path, isDirectory: true)
+        let chosen = SubspaceRoot.choice(folder, defaults: twoRoots["multi"]!)
+        #expect(chosen == nil)
+        // Nothing chosen before: nothing to read anew.
+        #expect(!SubspaceRoot.rootsChange(defaults: twoRoots, from: [:], to: ["multi": chosen].compactMapValues { $0 }))
+        // Another folder chosen before: back to both defaults.
+        let other: [SourceID: URL] = ["multi": URL(fileURLWithPath: "/elsewhere", isDirectory: true)]
+        #expect(SubspaceRoot.rootsChange(defaults: twoRoots, from: other, to: ["multi": chosen].compactMapValues { $0 }))
+    }
+
+    @Test func choosingAnotherFolderReplacesAllDefaults() {
+        let folder = URL(fileURLWithPath: "/elsewhere/", isDirectory: true)
+        #expect(SubspaceRoot.choice(folder, defaults: twoRoots["multi"]!) == folder)
+        #expect(SubspaceRoot.choice(URL(fileURLWithPath: "/cli", isDirectory: true), defaults: twoRoots["multi"]!)?.path == "/cli")
+        #expect(SubspaceRoot.rootsChange(defaults: twoRoots, from: [:], to: ["multi": folder]))
+        #expect(SubspaceRoot.choice(nil, defaults: twoRoots["multi"]!) == nil)
+    }
+
+    @Test func choosingTheOneDefaultFolderOfASingleRootSourceIsAReset() {
+        let defaults = [URL(fileURLWithPath: "/own", isDirectory: true)]
+        #expect(SubspaceRoot.choice(URL(fileURLWithPath: "/own/", isDirectory: true), defaults: defaults) == nil)
+        #expect(SubspaceRoot.choice(URL(fileURLWithPath: "/chosen", isDirectory: true), defaults: defaults)?.path == "/chosen")
+        // An unregistered source has no defaults to fall back to.
+        #expect(SubspaceRoot.choice(URL(fileURLWithPath: "/own", isDirectory: true), defaults: [])?.path == "/own")
     }
 }
 
@@ -1323,6 +1400,55 @@ private final class ExcludingAdapter: PushAdapter {
         #expect(live.count == 2)
         #expect(Set(live.map(\.session.source)) == ["claude-code", "other"])
         #expect(await recorder.backlogFinished == [1])
+    }
+
+    /// One source, two roots (e.g. a tool's CLI and its desktop app) and a third
+    /// path that is a link to the first: both folders are watched once each, and
+    /// every file of either arrives once, at start, live and in the next start's replay.
+    @Test(arguments: [true, false])
+    func aSourceWithTwoRootsGetsEveryFileOfEitherOnce(stored: Bool) async throws {
+        let base = try temporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: base) }
+        let cli = base.appendingPathComponent("cli", isDirectory: true)
+        let desktop = base.appendingPathComponent("desktop", isDirectory: true)
+        let link = base.appendingPathComponent("link", isDirectory: true)
+        try writeEvent(envelopeJSON(source: "multi", ts: 1_790_000_001, payload: payload("Stop")), in: cli, name: "1")
+        try writeEvent(envelopeJSON(source: "multi", ts: 1_790_000_002, payload: payload("Stop")), in: desktop, name: "2")
+        try FileManager.default.createSymbolicLink(at: link, withDestinationURL: cli)
+        let store = SpoolReader.Store(path: base.appendingPathComponent("store/events.sqlite"), maxAge: nil)
+        func reader(_ watcher: ManualWatcher) -> SpoolReader {
+            SpoolReader(adapters: [MultiRootAdapter(roots: [cli, link, desktop])], environment: [:], watcher: watcher,
+                        pollInterval: .milliseconds(20), store: stored ? store : nil)
+        }
+        let times = { (events: [AgentEvent]) in events.map { Int($0.timestamp.timeIntervalSince1970) }.sorted() }
+
+        let watcher = ManualWatcher()
+        let first = reader(watcher)
+        let recorder = Recorder(await first.events())
+        #expect(await eventually { await !recorder.backlogFinished.isEmpty })
+        #expect(times(await recorder.events) == [1_790_000_001, 1_790_000_002])
+        // Without a store each root's watch subscribes on its own, in no set order.
+        #expect(watcher.directories.map(\.path).sorted() == [cli, desktop].map(\.standardizedFileURL.path))
+
+        let cliDay = try writeEvent(envelopeJSON(source: "multi", ts: 1_790_000_003, payload: payload("Stop")), in: cli, name: "3")
+            .deletingLastPathComponent()
+        let desktopDay = try writeEvent(envelopeJSON(source: "multi", ts: 1_790_000_004, payload: payload("Stop")), in: desktop, name: "4")
+            .deletingLastPathComponent()
+        watcher.send([cliDay, desktopDay])
+        _ = await recorder.waitFor(4)
+        watcher.send(nil)
+        try await Task.sleep(for: .milliseconds(100))
+        let all = [1_790_000_001, 1_790_000_002, 1_790_000_003, 1_790_000_004]
+        #expect(times(await recorder.events) == all)
+        await first.stop()
+        await recorder.stop()
+
+        let second = reader(ManualWatcher())
+        let restarted = Recorder(await second.events())
+        defer { Task { await restarted.stop() } }
+        #expect(await eventually { await !restarted.backlogFinished.isEmpty })
+        #expect(times(await restarted.events) == all)
+        await second.stop()
     }
 
     // MARK: Retention

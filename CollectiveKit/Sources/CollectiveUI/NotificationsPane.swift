@@ -80,7 +80,7 @@ private struct NotificationsPanePreview: View {
         PreviewData.sourceIDs.map { id in
             SettingsSourceModel(
                 source: id, name: PreviewData.sourceNames[id] ?? id.rawValue, status: PreviewData.readyIntegration,
-                defaultFolder: URL(fileURLWithPath: "/Users/user/.claude/plugins/data/subspace-subspace"), chosenFolder: nil,
+                defaultFolders: [URL(fileURLWithPath: "/Users/user/.claude/plugins/data/subspace-subspace")], chosenFolder: nil,
                 home: "/Users/user", now: PreviewData.now
             )
         }

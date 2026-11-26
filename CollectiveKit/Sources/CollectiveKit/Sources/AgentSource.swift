@@ -30,6 +30,10 @@ public protocol PushAdapter: AnyObject {
     /// The folder subspace spools this source's events into (subspace contract §2),
     /// without the shared `SUBSPACE_DIR` override, which the reader applies.
     func spoolRoot(environment: [String: String], home: URL) -> URL
+    /// Every folder subspace spools this source's events into, for a tool that
+    /// writes to more than one (e.g. a CLI and a desktop app), the primary
+    /// `spoolRoot` first. As there, without the `SUBSPACE_DIR` override.
+    func spoolRoots(environment: [String: String], home: URL) -> [URL]
 }
 
 public extension PushAdapter {
@@ -46,6 +50,10 @@ public extension PushAdapter {
     }
     /// Adapters that name nothing have every field kept.
     var excludedFields: Set<String> { [] }
+    /// Most tools spool into one root.
+    func spoolRoots(environment: [String: String], home: URL) -> [URL] {
+        [spoolRoot(environment: environment, home: home)]
+    }
 }
 
 /// A source that produces events by itself, e.g. by watching a tool's session files.

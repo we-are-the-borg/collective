@@ -6,14 +6,14 @@ body:
     id: agent
     attributes:
       label: Agent
-      options: [Claude Code, Codex, Both, Not agent-specific]
+      options: [Claude Code, Codex, Antigravity, Several, Not agent-specific]
     validations:
       required: true
   - type: input
     id: versions
     attributes:
       label: Versions
-      description: The Collective (Settings › About), subspace (Settings › Sources), the agent (`claude --version` / `codex --version`) and macOS.
+      description: The Collective (Settings › About), subspace (Settings › Sources), the agent (`claude --version` / `codex --version` / `agy --version`) and macOS.
     validations:
       required: true
   - type: textarea

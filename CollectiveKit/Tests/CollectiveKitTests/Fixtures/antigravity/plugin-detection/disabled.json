@@ -1,0 +1,12 @@
+[
+  {
+    "name": "subspace",
+    "enabled": false,
+    "version": "1.0.0",
+    "source": "antigravity",
+    "path": "/Users/user/.gemini/config/plugins/subspace",
+    "hooks": [
+      "subspace"
+    ]
+  }
+]

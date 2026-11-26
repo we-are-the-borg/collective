@@ -14,7 +14,7 @@ import Testing
         #expect(status.logoName == "claude-code")
     }
 
-    @Test(arguments: ["claude-code", "codex"])
+    @Test(arguments: ["claude-code", "codex", "antigravity"])
     func eachLogoLoadsAsATemplate(name: String) throws {
         let image = try #require(ToolLogo.bundle.image(forResource: name))
         #expect(image.isTemplate)
@@ -23,7 +23,7 @@ import Testing
 
     /// CoreSVG (asset catalog, `NSImage`) rejects arc flags glued to each other or to the
     /// next number (`a6 6 0 013 -.4`, valid per the SVG grammar) and draws a blob.
-    @Test(arguments: ["claude-code/claude", "codex/codex"])
+    @Test(arguments: ["claude-code/claude", "codex/codex", "antigravity/antigravity"])
     func arcFlagsAreSeparateNumbers(path: String) throws {
         let parts = path.split(separator: "/").map(String.init)
         let url = URL(fileURLWithPath: #filePath)

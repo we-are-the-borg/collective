@@ -114,7 +114,7 @@ func writeEvent(_ data: Data, in root: URL, day: String = "2026-10-01", name: St
     }
 
     @Test func choosingTheDefaultFolderChangesNoRoot() {
-        let defaults: [SourceID: URL] = ["a": URL(fileURLWithPath: "/a"), "b": URL(fileURLWithPath: "/b")]
+        let defaults: [SourceID: [URL]] = ["a": [URL(fileURLWithPath: "/a")], "b": [URL(fileURLWithPath: "/b")]]
         // The open panel hands out directories with a trailing slash.
         let same: [SourceID: URL] = ["a": URL(fileURLWithPath: "/a/", isDirectory: true)]
         #expect(!SubspaceRoot.rootsChange(defaults: defaults, from: [:], to: same))
@@ -123,7 +123,7 @@ func writeEvent(_ data: Data, in root: URL, day: String = "2026-10-01", name: St
     }
 
     @Test func choosingAnotherFolderOrResettingChangesARoot() {
-        let defaults: [SourceID: URL] = ["a": URL(fileURLWithPath: "/a"), "b": URL(fileURLWithPath: "/b")]
+        let defaults: [SourceID: [URL]] = ["a": [URL(fileURLWithPath: "/a")], "b": [URL(fileURLWithPath: "/b")]]
         let chosen: [SourceID: URL] = ["b": URL(fileURLWithPath: "/chosen", isDirectory: true)]
         #expect(SubspaceRoot.rootsChange(defaults: defaults, from: [:], to: chosen))
         // Reset: back to the default.
@@ -131,6 +131,17 @@ func writeEvent(_ data: Data, in root: URL, day: String = "2026-10-01", name: St
         #expect(SubspaceRoot.rootsChange(defaults: defaults, from: chosen, to: ["b": URL(fileURLWithPath: "/other")]))
         // A choice for a source that isn't registered moves nothing.
         #expect(!SubspaceRoot.rootsChange(defaults: defaults, from: [:], to: ["gone": URL(fileURLWithPath: "/x")]))
+    }
+
+    /// A chosen folder replaces all of a source's roots, so choosing its primary
+    /// one still stops reading the others.
+    @Test func choosingThePrimaryOfSeveralRootsChangesTheRoots() {
+        let defaults: [SourceID: [URL]] = ["a": [URL(fileURLWithPath: "/a"), URL(fileURLWithPath: "/a-app")]]
+        let primary: [SourceID: URL] = ["a": URL(fileURLWithPath: "/a/", isDirectory: true)]
+        #expect(SubspaceRoot.rootsChange(defaults: defaults, from: [:], to: primary))
+        #expect(SubspaceRoot.rootsChange(defaults: defaults, from: primary, to: [:]))
+        #expect(!SubspaceRoot.rootsChange(defaults: defaults, from: primary, to: ["a": URL(fileURLWithPath: "/a")]))
+        #expect(!SubspaceRoot.rootsChange(defaults: defaults, from: [:], to: [:]))
     }
 }
 

@@ -20,6 +20,10 @@ private struct NoRollouts: RolloutMetaReading {
     func effort(rolloutPath: String, turnID: String) -> String? { nil }
 }
 
+private struct NoTranscripts: AntigravityTranscriptReading {
+    func origin(transcriptPath: String) -> AntigravityTranscriptOrigin? { nil }
+}
+
 private final class NoDisk: MappingFileSystem {
     func modificationDate(of url: URL) -> Date? { nil }
     func contents(of url: URL) throws -> Data { throw CocoaError(.fileNoSuchFile) }
@@ -33,7 +37,8 @@ private func bundledMapping() -> MappingLoader {
 /// Fresh adapters keep per-session memory, so the reader and the reference need one set each.
 private func adapters() -> [any PushAdapter] {
     [ClaudeCodeAdapter(metaReader: NoMeta(), mapping: bundledMapping()),
-     CodexAdapter(rolloutReader: NoRollouts(), mapping: bundledMapping())]
+     CodexAdapter(rolloutReader: NoRollouts(), mapping: bundledMapping()),
+     AntigravityAdapter(transcriptReader: NoTranscripts(), mapping: bundledMapping())]
 }
 
 /// `adapters()` for other files; that name is taken there by private helpers.
@@ -52,12 +57,13 @@ struct CapturedRun: CustomTestStringConvertible {
     /// identifies itself.
     var yieldsEvents: Bool { name != "claude-code/spool-2026-10-03-internal-agent-tool" }
 
-    /// Every `events/` folder below `Fixtures/claude-code` and `Fixtures/codex`
-    /// (version captures and spool captures alike); their files hold bare payloads.
+    /// Every `events/` folder below `Fixtures/claude-code`, `Fixtures/codex` and
+    /// `Fixtures/antigravity` (version captures and spool captures alike); their
+    /// files hold bare payloads.
     static let all: [CapturedRun] = {
         let fixtures = Bundle.module.resourceURL!.appendingPathComponent("Fixtures", isDirectory: true)
         var runs: [CapturedRun] = []
-        for source in ["claude-code", "codex"] {
+        for source in ["claude-code", "codex", "antigravity"] {
             let base = fixtures.appendingPathComponent(source, isDirectory: true)
             let paths = (FileManager.default.subpaths(atPath: base.path) ?? []).sorted()
             for path in paths where path.hasSuffix("/events") {
@@ -173,8 +179,8 @@ func temporaryRoot() throws -> URL {
         #expect(state(after: backlog) == state(after: reference.events))
     }
 
-    @Test func thereAreCapturedRunsOfBothSources() {
-        #expect(Set(CapturedRun.all.map(\.source)) == ["claude-code", "codex"])
+    @Test func thereAreCapturedRunsOfEverySource() {
+        #expect(Set(CapturedRun.all.map(\.source)) == ["claude-code", "codex", "antigravity"])
     }
 
     @Test(arguments: CapturedRun.all)
@@ -182,7 +188,7 @@ func temporaryRoot() throws -> URL {
         try await expectEquivalent([run])
     }
 
-    /// Every capture in one root: many sessions of both sources across days.
+    /// Every capture in one root: many sessions of every source across days.
     @Test func theBacklogOfAllRunsTogetherEqualsTheSequentialReplay() async throws {
         try await expectEquivalent(CapturedRun.all)
     }
@@ -283,7 +289,7 @@ private struct StoredStarts: Sendable {
         expectEquivalent(try await StoredStarts([run]), yieldsEvents: run.yieldsEvents)
     }
 
-    /// Every capture in one root: many sessions of both sources across days.
+    /// Every capture in one root: many sessions of every source across days.
     @Test func theStoredBacklogOfAllRunsTogetherEqualsTheSequentialReplay() async throws {
         expectEquivalent(try await StoredStarts.ofAllRuns.value)
     }
@@ -291,18 +297,22 @@ private struct StoredStarts: Sendable {
     /// Seam `PushAdapter.excludedFields`, read back through the store: a tool's
     /// output is the bulk of the payloads and no adapter reads it, so no row keeps it.
     @Test func noStoredRowKeepsAToolResponse() async throws {
-        // The captures do hold tool responses, of both sources.
+        // The captures do hold tool responses, of the sources that send them.
         for source in ["claude-code", "codex"] {
-            let payloads = CapturedRun.all.filter { $0.source == source }.flatMap(\.payloads)
-            #expect(try payloads.contains { payload in
-                let object = try #require(try JSONSerialization.jsonObject(with: payload) as? [String: Any])
-                return object["hook_event_name"] as? String == "PostToolUse" && object["tool_response"] != nil
-            }, "no PostToolUse with a tool_response among the \(source) captures")
+            #expect(try postToolUses(of: source).contains { $0["tool_response"] != nil },
+                    "no PostToolUse with a tool_response among the \(source) captures")
         }
+        // Antigravity's carry no tool output at all (contract §6), but a
+        // call's whole arguments (`tool_input`), which its adapter doesn't read.
+        let antigravityPosts = try postToolUses(of: "antigravity")
+        #expect(!antigravityPosts.isEmpty)
+        #expect(antigravityPosts.allSatisfy { $0["tool_response"] == nil && $0["toolResponse"] == nil })
+        #expect(antigravityPosts.contains { ($0["toolCall"] as? [String: Any])?["args"] != nil })
         let starts = try await StoredStarts.ofAllRuns.value
         #expect(!starts.first.isEmpty)
 
         var posts = 0
+        var antigravityCalls = 0
         for row in starts.rows {
             guard case let .mapped(result) = row.content else {
                 Issue.record("\(row.name) is not mapped")
@@ -311,8 +321,23 @@ private struct StoredStarts: Sendable {
             if result.block["kind"] == .string("tool.post") { posts += 1 }
             #expect(result.core["tool_response"] == nil, "\(row.name)")
             #expect(result.block["tool_response"] == nil, "\(row.name)")
+            if row.source == "antigravity", result.block["tool_name"] != nil {
+                antigravityCalls += 1
+                #expect(result.block["tool_input"] == nil, "\(row.name)")
+            }
         }
         #expect(posts > 0)
+        #expect(antigravityCalls > 0)
+    }
+
+    /// The `PostToolUse` payloads among `source`'s captures, whichever case its
+    /// payloads name the hook in (`hook_event_name`, Antigravity's `hookEventName`).
+    private func postToolUses(of source: String) throws -> [[String: Any]] {
+        try CapturedRun.all.filter { $0.source == source }.flatMap(\.payloads).compactMap { payload in
+            let object = try #require(try JSONSerialization.jsonObject(with: payload) as? [String: Any])
+            let hook = object["hook_event_name"] ?? object["hookEventName"]
+            return hook as? String == "PostToolUse" ? object : nil
+        }
     }
 }
 
@@ -367,7 +392,8 @@ private final class CountingFileSystem: MappingFileSystem, Sendable {
         let mapping = { MappingLoader(root: URL(filePath: "/spool/root", directoryHint: .isDirectory), fileSystem: fileSystem) }
         let reader = SpoolReader(
             adapters: [ClaudeCodeAdapter(metaReader: NoMeta(), mapping: mapping()),
-                       CodexAdapter(rolloutReader: NoRollouts(), mapping: mapping())],
+                       CodexAdapter(rolloutReader: NoRollouts(), mapping: mapping()),
+                       AntigravityAdapter(transcriptReader: NoTranscripts(), mapping: mapping())],
             environment: ["SUBSPACE_DIR": root.path], watcher: SilentWatcher())
         var events: [AgentEvent] = []
         for await output in await reader.events() {
@@ -376,6 +402,7 @@ private final class CountingFileSystem: MappingFileSystem, Sendable {
         #expect(!events.isEmpty)
         #expect(fileSystem.count("claude-code.json") <= 1)
         #expect(fileSystem.count("codex.json") <= 1)
+        #expect(fileSystem.count("antigravity.json") <= 1)
     }
 
     /// With a store the pass is the root's ingest.
@@ -393,7 +420,8 @@ private final class CountingFileSystem: MappingFileSystem, Sendable {
         let mapping = { MappingLoader(root: URL(filePath: "/spool/root", directoryHint: .isDirectory), fileSystem: fileSystem) }
         let reader = SpoolReader(
             adapters: [ClaudeCodeAdapter(metaReader: NoMeta(), mapping: mapping()),
-                       CodexAdapter(rolloutReader: NoRollouts(), mapping: mapping())],
+                       CodexAdapter(rolloutReader: NoRollouts(), mapping: mapping()),
+                       AntigravityAdapter(transcriptReader: NoTranscripts(), mapping: mapping())],
             environment: ["SUBSPACE_DIR": root.path], watcher: SilentWatcher(),
             store: SpoolReader.Store(path: storeFolder.appendingPathComponent("events.sqlite"), maxAge: nil))
         var events: [AgentEvent] = []
@@ -406,5 +434,6 @@ private final class CountingFileSystem: MappingFileSystem, Sendable {
         #expect(!events.isEmpty)
         #expect(fileSystem.count("claude-code.json") <= 1)
         #expect(fileSystem.count("codex.json") <= 1)
+        #expect(fileSystem.count("antigravity.json") <= 1)
     }
 }

@@ -757,7 +757,7 @@ SOFTWARE.
 
 MIT License (`MIT`) · <https://github.com/lobehub/lobe-icons>
 
-The MIT license covers the SVG files. The logos themselves are trademarks of Anthropic (Claude) and OpenAI (Codex); they are used only to show which tool a session runs in and do not imply endorsement.
+The MIT license covers the SVG files. The logos themselves are trademarks of Anthropic (Claude), OpenAI (Codex) and Google (Antigravity); they are used only to show which tool a session runs in and do not imply endorsement.
 
 `lobe-icons-LICENSE`:
 

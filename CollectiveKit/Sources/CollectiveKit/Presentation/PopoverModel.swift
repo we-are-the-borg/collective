@@ -266,7 +266,8 @@ public struct WarningBlock: Sendable, Equatable {
     private let problem: Problem
 
     private enum Problem: Sendable, Equatable {
-        case missing
+        /// Named after the tool whose install commands follow.
+        case missing(toolName: String)
         case disabled(toolName: String)
     }
 
@@ -275,7 +276,7 @@ public struct WarningBlock: Sendable, Equatable {
         case .ok:
             return nil
         case .missing(let status):
-            problem = .missing
+            problem = .missing(toolName: status.toolName)
             commands = status.commands.install
         case .disabled(let status):
             problem = .disabled(toolName: status.toolName)
@@ -292,10 +293,10 @@ public struct WarningBlock: Sendable, Equatable {
 
     public var text: LocalizedStringResource {
         switch problem {
-        case .missing:
+        case let .missing(toolName):
             .kit(
-                "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here.",
-                defaultValue: "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here."
+                "The Collective sees your agents through subspace, a small plugin for %@ that records session events. Install it once; sessions you start afterwards appear here.",
+                defaultValue: "The Collective sees your agents through subspace, a small plugin for \(toolName) that records session events. Install it once; sessions you start afterwards appear here."
             )
         case let .disabled(toolName):
             .kit(

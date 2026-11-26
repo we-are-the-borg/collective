@@ -20,7 +20,7 @@ public struct ClaudeCodeIntegrationProbe: IntegrationProbe {
     private let isExecutable: @Sendable (String) -> Bool
     private let environment: [String: String]
     private let home: URL
-    private let spoolRoot: URL
+    private let spoolRoots: [URL]
 
     public init(
         runner: any CommandRunner = ProcessCommandRunner(),
@@ -35,7 +35,7 @@ public struct ClaudeCodeIntegrationProbe: IntegrationProbe {
         self.isExecutable = isExecutable
         self.environment = environment
         self.home = home
-        self.spoolRoot = SubspaceRoot.resolve(adapter: adapter, chosen: chosenRoot, environment: environment, home: home)
+        self.spoolRoots = SubspaceRoot.resolveAll(adapter: adapter, chosen: chosenRoot, environment: environment, home: home)
     }
 
     public func check() async -> IntegrationStatus {
@@ -146,7 +146,6 @@ public struct ClaudeCodeIntegrationProbe: IntegrationProbe {
 
     /// subspace rewrites `$ROOT/plugin.json` on every session start.
     func lastSessionStart() -> Date? {
-        let path = spoolRoot.appendingPathComponent("plugin.json").path
-        return (try? FileManager.default.attributesOfItem(atPath: path))?[.modificationDate] as? Date
+        SubspaceRoot.lastSessionStart(in: spoolRoots)
     }
 }

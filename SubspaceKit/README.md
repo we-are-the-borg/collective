@@ -15,7 +15,7 @@ doesn't read every file again.
 
 When an agent update renames or moves fields, an updated mapping can keep
 the app working without an app update. The package reads mappings from
-the installed plugin and ships fallback copies for Claude Code and Codex.
+the installed plugin and ships fallback copies for Claude Code, Codex and Antigravity.
 It uses the supported mapping with the higher revision, preferring the
 plugin's copy on a tie.
 
@@ -58,7 +58,7 @@ events. The folder layout and file format are defined in subspace's
 
 ```mermaid
 flowchart TB
-    agents["Claude Code, Codex"] -->|"hook events"| plugin["subspace plugin"]
+    agents["Claude Code, Codex, Antigravity"] -->|"hook events"| plugin["subspace plugin"]
     plugin --> events
     plugin --> model
 

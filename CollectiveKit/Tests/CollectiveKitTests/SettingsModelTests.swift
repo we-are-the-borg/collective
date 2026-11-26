@@ -6,10 +6,10 @@ import Testing
     let home = "/Users/user"
     let defaultFolder = URL(filePath: "/Users/user/.tool/data/subspace")
 
-    func row(_ status: IntegrationStatus?, chosen: URL? = nil, default folder: URL? = nil, sourceURL: URL? = nil) -> SettingsSourceModel {
+    func row(_ status: IntegrationStatus?, chosen: URL? = nil, defaults folders: [URL]? = nil, sourceURL: URL? = nil) -> SettingsSourceModel {
         SettingsSourceModel(
             source: "test-tool", name: "Test Tool", sourceURL: sourceURL, status: status,
-            defaultFolder: folder ?? defaultFolder, chosenFolder: chosen, home: home
+            defaultFolders: folders ?? [defaultFolder], chosenFolder: chosen, home: home
         )
     }
 
@@ -111,7 +111,7 @@ import Testing
         let event = Date(timeIntervalSince1970: 1)
         let model = SettingsSourceModel(
             source: "test-tool", name: "Test Tool", status: status, lastEventAt: event,
-            defaultFolder: defaultFolder, chosenFolder: nil, home: home
+            defaultFolders: [defaultFolder], chosenFolder: nil, home: home
         )
         let card = SetupCardModel(status, lastEventAt: event, now: .now, home: home)
         #expect(card.state == .ready)
@@ -125,21 +125,37 @@ import Testing
 
     @Test func unchosenFolderIsTheDefault() {
         let model = row(nil)
-        #expect(model.eventFolderPath == "~/.tool/data/subspace")
+        #expect(model.eventFolderPaths == ["~/.tool/data/subspace"])
         #expect(model.showsDefaultMarker)
         #expect(!model.canReset)
     }
 
     @Test func chosenFolder() {
         let model = row(nil, chosen: URL(filePath: "/Users/user/Dropbox/events"))
-        #expect(model.eventFolderPath == "~/Dropbox/events")
+        #expect(model.eventFolderPaths == ["~/Dropbox/events"])
         #expect(!model.showsDefaultMarker)
         #expect(model.canReset)
     }
 
     @Test func folderOutsideHomeStaysAbsolute() {
         let model = row(nil, chosen: URL(filePath: "/Volumes/Data/events"))
-        #expect(model.eventFolderPath == "/Volumes/Data/events")
+        #expect(model.eventFolderPaths == ["/Volumes/Data/events"])
+    }
+
+    @Test func everyDefaultFolderShowsWhileNoneIsChosen() {
+        let defaults = [URL(filePath: "/Users/user/.tool/cli/subspace"), URL(filePath: "/Users/user/.tool/app/subspace")]
+        let model = row(nil, defaults: defaults)
+        #expect(model.eventFolderPaths == ["~/.tool/cli/subspace", "~/.tool/app/subspace"])
+        #expect(model.showsDefaultMarker)
+        #expect(!model.canReset)
+    }
+
+    @Test func aChosenFolderShowsAloneInsteadOfAllDefaults() {
+        let defaults = [URL(filePath: "/Users/user/.tool/cli/subspace"), URL(filePath: "/Users/user/.tool/app/subspace")]
+        let model = row(nil, chosen: URL(filePath: "/Users/user/Dropbox/events"), defaults: defaults)
+        #expect(model.eventFolderPaths == ["~/Dropbox/events"])
+        #expect(!model.showsDefaultMarker)
+        #expect(model.canReset)
     }
 
     // MARK: source link
@@ -179,6 +195,7 @@ import Testing
         let probes: [(any IntegrationProbe, String)] = [
             (ClaudeCodeIntegrationProbe(environment: [:], home: home), "we-are-the-borg/subspace-claude-code"),
             (CodexIntegrationProbe(environment: [:], home: home), "we-are-the-borg/subspace-codex"),
+            (AntigravityIntegrationProbe(environment: [:], home: home), "we-are-the-borg/subspace-antigravity"),
         ]
         for (probe, name) in probes {
             #expect(row(nil, sourceURL: probe.commands.sourceURL).repositoryName == name)
@@ -187,7 +204,8 @@ import Testing
 
     @Test func realAdaptersNameTheirRepository() {
         for (commands, name) in [(ClaudeCodeSubspace.commands, "we-are-the-borg/subspace-claude-code"),
-                                 (CodexSubspace.commands, "we-are-the-borg/subspace-codex")] {
+                                 (CodexSubspace.commands, "we-are-the-borg/subspace-codex"),
+                                 (AntigravitySubspace.commands, "we-are-the-borg/subspace-antigravity")] {
             var status = integration(.enabled(version: "1.0.1"))
             status.commands = commands
             #expect(row(status).repositoryName == name)
@@ -198,7 +216,7 @@ import Testing
 
     @Test func paneOrder() {
         let a = row(nil)
-        let b = SettingsSourceModel(source: "other", name: "Other", status: nil, defaultFolder: defaultFolder, chosenFolder: nil, home: home)
+        let b = SettingsSourceModel(source: "other", name: "Other", status: nil, defaultFolders: [defaultFolder], chosenFolder: nil, home: home)
         #expect(SettingsModel(sources: [a, b]).panes == [.general, .appearance, .sessions, .notifications, .menuBar, .source("test-tool"), .source("other"), .about])
         #expect(SettingsModel(sources: []).panes == [.general, .appearance, .sessions, .notifications, .menuBar, .about])
     }

@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "subspace": {
+      "enabled": false
+    },
+    "swarm": {
+      "enabled": true
+    }
+  }
+}

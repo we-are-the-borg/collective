@@ -215,6 +215,25 @@ private func check(_ checker: SubspaceReleaseChecker, now: Date, _ sources: [Sou
         #expect(checker.latest(for: "codex") == nil)
     }
 
+    /// Antigravity's distribution repo is not published yet: its 404 offers no
+    /// update and leaves the other sources' lookups alone.
+    @Test func aMissingRepoOffersNoUpdate() async throws {
+        let commands = AntigravitySubspace.commands
+        let release = try #require(commands.release)
+        let github = try FakeGitHub.real()
+        github.answer("https://api.github.com/repos/we-are-the-borg/subspace-antigravity/tags?per_page=100",
+                      with: .response(status: 404, body: Data(#"{"message": "Not Found"}"#.utf8)))
+        let checker = SubspaceReleaseChecker(client: github, store: MemoryStore())
+        await check(checker, now: start, ["claude-code": claudeCode, "codex": codex, "antigravity": release])
+        #expect(github.requests.count == 3)
+        #expect(checker.latest(for: "antigravity") == nil)
+        #expect(checker.latest(for: "codex") == v1_1_0)
+        let status = IntegrationStatus(source: "antigravity", toolName: "Antigravity", cliName: "agy",
+                                       cli: .found(path: "/Users/user/.local/bin/agy", version: "1.5.17"),
+                                       plugin: .enabled(version: "1.0.0"), commands: commands)
+        #expect(checker.updateAvailability(for: status) == .upToDate)
+    }
+
     /// Checking is on until the user switches it off, and the choice outlives a relaunch.
     @Test func checkingIsOnByDefaultAndTheSwitchPersists() throws {
         let store = MemoryStore()

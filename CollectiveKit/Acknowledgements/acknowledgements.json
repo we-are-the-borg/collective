@@ -23,7 +23,7 @@
       "id": "fontsAndIcons",
       "entries": [
         { "name": "Lucide", "version": "1.72.0", "spdx": "ISC", "url": "https://lucide.dev", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Lucide/LICENSE"] },
-        { "name": "Lobe Icons", "version": "1.104.0", "spdx": "MIT", "url": "https://github.com/lobehub/lobe-icons", "note": "The MIT license covers the SVG files. The logos themselves are trademarks of Anthropic (Claude) and OpenAI (Codex); they are used only to show which tool a session runs in and do not imply endorsement.", "files": ["CollectiveKit/Acknowledgements/texts/lobe-icons-LICENSE"] },
+        { "name": "Lobe Icons", "version": "1.104.0", "spdx": "MIT", "url": "https://github.com/lobehub/lobe-icons", "note": "The MIT license covers the SVG files. The logos themselves are trademarks of Anthropic (Claude), OpenAI (Codex) and Google (Antigravity); they are used only to show which tool a session runs in and do not imply endorsement.", "files": ["CollectiveKit/Acknowledgements/texts/lobe-icons-LICENSE"] },
         { "name": "IBM Plex Sans", "version": "1.1.0", "spdx": "OFL-1.1", "url": "https://github.com/IBM/plex", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Fonts/ibm-plex-sans/license.txt"] },
         { "name": "IBM Plex Mono", "version": "2.5.0", "spdx": "OFL-1.1", "url": "https://github.com/IBM/plex", "files": ["CollectiveKit/Sources/CollectiveUI/Resources/Fonts/ibm-plex-mono/license.txt"] }
       ]
