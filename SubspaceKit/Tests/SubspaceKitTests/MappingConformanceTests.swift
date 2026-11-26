@@ -35,6 +35,9 @@ private enum Subspace {
              mapping: { "\($0)-session" }, sources: ["claude-code"]),
     ]
 
+    /// Fewest pairs a mapping must have per kind (golden files committed with it).
+    static let minimumPairs: [String: [String: Int]] = ["events": ["antigravity": 130]]
+
     /// Pairs for one kind plus the problems found while pairing (an input
     /// without expectation or the other way round).
     static func discover(_ kind: Kind) -> (pairs: [Pair], problems: [String]) {
@@ -107,6 +110,12 @@ struct MappingConformanceTests {
         let (pairs, problems) = Subspace.discover(kind)
         #expect(problems.isEmpty, "unpaired fixtures:\n\(problems.joined(separator: "\n"))")
         #expect(!pairs.isEmpty, "no \(kind.name) pairs found under \(Subspace.root.path)")
+        // Sources are discovered by folder, so a source that vanished from the
+        // fixtures would otherwise pass unseen.
+        for (mapping, minimum) in Subspace.minimumPairs[kind.name] ?? [:] {
+            let count = pairs.filter { $0.mapping == mapping }.count
+            #expect(count >= minimum, "expected at least \(minimum) \(kind.name) pairs for \(mapping), found \(count)")
+        }
 
         var documents: [String: MappingDocument] = [:]
         var mismatches = 0

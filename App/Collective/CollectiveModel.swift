@@ -224,15 +224,18 @@ final class CollectiveModel {
         // The adapter knows its own id; its mapping is only read on first use.
         let claudeCodeRoot = chosen[ClaudeCodeAdapter().source]
         let codexRoot = chosen[CodexAdapter().source]
+        let antigravityRoot = chosen[AntigravityAdapter().source]
         return Registration(
             adapters: [
                 ClaudeCodeAdapter(mapping: ClaudeCodeAdapter.defaultMapping(chosen: claudeCodeRoot)),
                 CodexAdapter(mapping: CodexAdapter.defaultMapping(chosen: codexRoot)),
+                AntigravityAdapter(mapping: AntigravityAdapter.defaultMapping(chosen: antigravityRoot)),
             ],
             pullSources: [ClaudeCodeSessionStatusSource(chosenRoot: claudeCodeRoot)],
             probes: [
                 ClaudeCodeIntegrationProbe(chosenRoot: claudeCodeRoot),
                 CodexIntegrationProbe(chosenRoot: codexRoot),
+                AntigravityIntegrationProbe(chosenRoot: antigravityRoot),
             ]
         )
     }
@@ -345,16 +348,17 @@ final class CollectiveModel {
         }
     }
 
-    /// `folder` nil goes back to the default. Rebuilds only if a source now
-    /// reads from another root: choosing the default folder changes nothing.
+    /// `folder` nil, or one of the source's default folders, goes back to the
+    /// defaults. Rebuilds only if a source now reads from other roots:
+    /// choosing a default folder while none is chosen changes nothing.
     func chooseFolder(_ folder: URL?, for source: SourceID) {
         let old = chosenFolders
-        chosenFolders[source] = folder
+        let defaults = Dictionary(sources.map { ($0.source, $0.defaultFolders) }, uniquingKeysWith: { first, _ in first })
+        chosenFolders[source] = SubspaceRoot.choice(folder, defaults: defaults[source] ?? [])
         UserDefaults.standard.set(
             Dictionary(uniqueKeysWithValues: chosenFolders.map { ($0.key.rawValue, $0.value.path) }),
             forKey: Self.chosenFoldersKey
         )
-        let defaults = Dictionary(sources.map { ($0.source, $0.defaultFolder) }, uniquingKeysWith: { first, _ in first })
         if SubspaceRoot.rootsChange(defaults: defaults, from: old, to: chosenFolders) { restartReading() }
     }
 
@@ -462,7 +466,7 @@ final class CollectiveModel {
                 status: integrations.first { $0.source == source.source },
                 checkedAt: integrationsCheckedAt,
                 lastEventAt: lastEvents.bySource[source.source],
-                defaultFolder: source.defaultFolder,
+                defaultFolders: source.defaultFolders,
                 chosenFolder: chosenFolders[source.source],
                 availability: updateAvailability(for: source.source),
                 updateRun: setupRuns.updateSnapshots[source.source],
@@ -831,7 +835,7 @@ final class CollectiveModel {
         StoredEvents(
             store: Self.storeURL,
             leftovers: [Self.storeURL.deletingLastPathComponent().appendingPathComponent("spool-mirror", isDirectory: true)],
-            roots: sources.map { chosenFolders[$0.source] ?? $0.defaultFolder }
+            roots: sources.flatMap { chosenFolders[$0.source].map { [$0] } ?? $0.defaultFolders }
         )
     }
 
@@ -935,8 +939,11 @@ final class CollectiveModel {
 nonisolated struct RegisteredSource: Sendable {
     let source: SourceID
     let name: String
-    /// Where its events are without a chosen folder, `SUBSPACE_DIR` applied.
+    /// Where its events are without a chosen folder, `SUBSPACE_DIR` applied:
+    /// the primary of `defaultFolders`, where the folder panel opens.
     let defaultFolder: URL
+    /// Every root it reads without a chosen folder, the primary first, as the settings window lists them.
+    let defaultFolders: [URL]
     /// Its probe's plugin repository, so About and the source pane link it before the first check returns.
     let sourceURL: URL?
 }
@@ -961,6 +968,7 @@ nonisolated private struct Registration {
             RegisteredSource(
                 source: adapter.source, name: adapter.displayName,
                 defaultFolder: SubspaceRoot.resolve(adapter: adapter),
+                defaultFolders: SubspaceRoot.resolveAll(adapter: adapter),
                 sourceURL: probes.first { $0.source == adapter.source }?.commands.sourceURL
             )
         }

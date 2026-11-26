@@ -4,10 +4,10 @@ The Collective is a macOS menu bar app that runs entirely on your own computer. 
 
 ## What the app reads
 
-- **The subspace event files.** The [subspace](https://github.com/we-are-the-borg/subspace) plugins write every hook event of Claude Code and Codex as a file into their plugin data folders (`~/.claude/plugins/data/subspace-subspace/` and `~/.codex/plugins/data/subspace-subspace/`, or the equivalent under `CLAUDE_CONFIG_DIR` / `CODEX_HOME`). These events can contain your prompts, the agents' replies, their tool calls with input and output (for example commands, file paths and file contents), session identifiers and which terminal a session runs in. See [subspace's privacy policy](https://github.com/we-are-the-borg/subspace/blob/main/PRIVACY.md) for what the plugins record.
-- **Files the agents keep themselves,** for details the events don't carry: Claude Code's session status files (`~/.claude/sessions/`) and subagent metadata (`agent-<id>.meta.json`), and the first line and turn settings of a Codex session's rollout file.
-- **The agents' plugin configuration,** to show in Setup and Settings whether subspace is installed and enabled: Claude Code's `settings.json` and `plugins/installed_plugins.json`, and the output of `--version`, `plugin list` and `plugin marketplace list` of the `claude` and `codex` command lines, which the app runs for that purpose.
-- **Process information** of the agents' processes (whether a process still runs and when it started), so a session whose agent has quit is shown as ended.
+- **The subspace event files.** The [subspace](https://github.com/we-are-the-borg/subspace) plugins write every hook event of Claude Code, Codex and Antigravity as a file into their plugin data folders (`~/.claude/plugins/data/subspace-subspace/` and `~/.codex/plugins/data/subspace-subspace/`, and for Antigravity `~/.gemini/antigravity-cli/plugin_data/subspace/` for the CLI and `~/.gemini/antigravity/plugin_data/subspace/` for the Desktop App, or the equivalent under `CLAUDE_CONFIG_DIR` / `CODEX_HOME`). These events can contain your prompts, the agents' replies, their tool calls with input and output (for example commands, file paths and file contents), session identifiers and which terminal a session runs in. See [subspace's privacy policy](https://github.com/we-are-the-borg/subspace/blob/main/PRIVACY.md) for what the plugins record.
+- **Files the agents keep themselves,** for details the events don't carry: Claude Code's session status files (`~/.claude/sessions/`) and subagent metadata (`agent-<id>.meta.json`), the first line and turn settings of a Codex session's rollout file, and the beginning of an Antigravity subagent conversation's transcript (its first record, at most 256 KiB, under `~/.gemini/…/brain/<conversation id>/.system_generated/logs/`), which links the subagent to its parent.
+- **The agents' plugin configuration,** to show in Setup and Settings whether subspace is installed and enabled: Claude Code's `settings.json` and `plugins/installed_plugins.json`, Antigravity's subspace manifest (`~/.gemini/config/plugins/subspace/.antigravity-plugin/plugin.json`) and the `plugins` key of its `~/.gemini/config/config.json`, and the output of `--version`, `plugin list` and `plugin marketplace list` of the `claude` and `codex` command lines and `--version` and `plugin list --json` of the `agy` command line, which the app runs for that purpose.
+- **Process information** of the Claude Code and Codex processes (whether a process still runs and when it started), so a session whose agent has quit is shown as ended.
 
 The app only reads these files. It never changes or deletes them.
 
@@ -23,13 +23,13 @@ Deleting the app's folder in `~/Library/Application Support/` and its preference
 
 ## Notifications
 
-When enabled, the app shows macOS notifications when an agent needs permission, asks a question or finishes a turn. They show the session's name and agent (Claude Code or Codex) and, depending on the kind, the tool and command waiting for permission, the question with its options, or the start of the reply. They are local notifications, handled by macOS like those of any other app.
+When enabled, the app shows macOS notifications when an agent needs permission, asks a question or finishes a turn. They show the session's name and agent (Claude Code, Codex or Antigravity) and, depending on the kind, the tool and command waiting for permission, the question with its options, or the start of the reply. They are local notifications, handled by macOS like those of any other app.
 
 ## Network access
 
 - **Update checks.** When "Check for updates automatically" is on (the default), the app looks for new versions on GitHub, and "Check Now" in About does the same on request, also with the switch off:
   - For the app itself, [Sparkle](https://sparkle-project.org) reads the appcast of the latest release (`github.com/we-are-the-borg/collective/releases/latest/download/appcast.xml`) at most once a day. Its User-Agent names the app and Sparkle with their versions; it sends no system profile.
-  - For the subspace plugins, the app asks GitHub's public API for the release tags of their repositories (`api.github.com/repos/we-are-the-borg/subspace-claude-code/tags` and `…/subspace-codex/tags`): at most once a day, and when you open Setup or a source's settings at most once an hour. These requests carry no cookies, credentials or identifiers of yours, only the app's name as User-Agent, and nothing is cached.
+  - For the subspace plugins, the app asks GitHub's public API for the release tags of their repositories (`api.github.com/repos/we-are-the-borg/subspace-claude-code/tags`, `…/subspace-codex/tags` and `…/subspace-antigravity/tags`): at most once a day, and when you open Setup or a source's settings at most once an hour. These requests carry no cookies, credentials or identifiers of yours, only the app's name as User-Agent, and nothing is cached.
   - When you choose to install an app update, Sparkle downloads it from the same GitHub release and checks its signature before installing.
 
   Like any web request, these reach GitHub with your IP address; GitHub's [privacy statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement) covers how GitHub handles that. Turn the switch off in Settings and the app asks GitHub nothing on its own.
@@ -40,7 +40,7 @@ The app sends no event data, prompts, replies, file paths or settings anywhere.
 
 ## The agents themselves
 
-Claude Code and Codex process your data under their own terms and privacy policies (Anthropic, OpenAI). The Collective only shows what they and subspace have already written to your disk, and does not change what the agents collect or send.
+Claude Code, Codex and Antigravity process your data under their own terms and privacy policies (Anthropic, OpenAI, Google). The Collective only shows what they and subspace have already written to your disk, and does not change what the agents collect or send.
 
 ## Contact
 

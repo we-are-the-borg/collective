@@ -73,7 +73,7 @@ func capturedRuns(in fixtures: URL) -> [CapturedRun] {
         "(?<=\"agent_id\":\")[A-Za-z0-9_-]{12,}(?=\")",
     ].map { try! NSRegularExpression(pattern: $0) }
     var runs: [CapturedRun] = []
-    for source in ["claude-code", "codex"] {
+    for source in ["claude-code", "codex", "antigravity"] {
         let base = fixtures.appendingPathComponent(source, isDirectory: true)
         for path in (FileManager.default.subpaths(atPath: base.path) ?? []).sorted() where path.hasSuffix("/events") {
             let events = base.appendingPathComponent(path, isDirectory: true)
@@ -149,7 +149,8 @@ func measure(root: URL, store: URL? = nil) async -> (events: Int, seconds: Doubl
     // The adapters' defaults otherwise: real meta readers, mapping from the temporary root (bundled documents).
     let reader = SpoolReader(
         adapters: [ClaudeCodeAdapter(mapping: ClaudeCodeAdapter.defaultMapping(environment: environment)),
-                   CodexAdapter(mapping: CodexAdapter.defaultMapping(environment: environment))],
+                   CodexAdapter(mapping: CodexAdapter.defaultMapping(environment: environment)),
+                   AntigravityAdapter(mapping: AntigravityAdapter.defaultMapping(environment: environment))],
         environment: environment, watcher: SilentWatcher(), store: store.map { SpoolReader.Store(path: $0, maxAge: nil) })
     var events = 0
     let clock = ContinuousClock()

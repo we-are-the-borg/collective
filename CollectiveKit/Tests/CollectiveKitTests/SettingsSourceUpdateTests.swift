@@ -27,7 +27,7 @@ import Testing
     ) -> SettingsSourceModel {
         SettingsSourceModel(
             source: "test-tool", name: "Test Tool", status: status, checkedAt: checkedAt,
-            defaultFolder: URL(filePath: "/Users/user/.tool/data/subspace"), chosenFolder: nil,
+            defaultFolders: [URL(filePath: "/Users/user/.tool/data/subspace")], chosenFolder: nil,
             availability: availability, updateRun: run, checksForUpdates: checksForUpdates, home: "/Users/user",
             now: Date(timeIntervalSince1970: 3)
         )

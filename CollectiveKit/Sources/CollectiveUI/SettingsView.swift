@@ -253,7 +253,7 @@ private struct SettingsPreview: View {
                 status: status,
                 // A probe after the run, so a succeeded one shows what that probe found.
                 checkedAt: PreviewData.now.addingTimeInterval(1),
-                defaultFolder: URL(fileURLWithPath: "\(home)/.claude/plugins/data/subspace-subspace"),
+                defaultFolders: [URL(fileURLWithPath: "\(home)/.claude/plugins/data/subspace-subspace")],
                 chosenFolder: chosen ? URL(fileURLWithPath: "\(home)/Library/Mobile Documents/com~apple~CloudDocs/Shared/subspace/claude-code/events") : nil,
                 availability: updating.contains(index) ? availability : .upToDate,
                 updateRun: updating.contains(index) ? updateRun : nil,

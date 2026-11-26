@@ -41,11 +41,13 @@ private final class FakeRunner: CommandRunner, Sendable {
     }
 }
 
+/// For checks of strings only; a probe that reads files gets a temporary home.
 private let home = URL(fileURLWithPath: "/Users/user", isDirectory: true)
 private let cli = "/opt/homebrew/bin/codex"
 
-private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], environment: [String: String] = [:]) -> CodexIntegrationProbe {
-    CodexIntegrationProbe(runner: runner, isExecutable: { executables.contains($0) }, environment: environment, home: home)
+private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], environment: [String: String] = [:],
+                   home probeHome: URL = home) -> CodexIntegrationProbe {
+    CodexIntegrationProbe(runner: runner, isExecutable: { executables.contains($0) }, environment: environment, home: probeHome)
 }
 
 @Suite struct CodexSetupCommandsTests {
@@ -168,11 +170,18 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
     }
 }
 
-@Suite struct CodexIntegrationCheckTests {
+/// A class for its `deinit`: every test gets an empty home of its own, so a
+/// check reads no file of the real one.
+@Suite final class CodexIntegrationCheckTests {
+    private let home: URL
+
+    init() throws { home = try temporaryDirectory() }
+    deinit { try? FileManager.default.removeItem(at: home) }
+
     /// The settings window links the plugin before the first check returns, so the
     /// probe names its commands up front and every check reports the same ones.
     @Test func theCommandsAreKnownBeforeTheCheckAndTheCheckReportsThem() async {
-        let probe = probe(FakeRunner())
+        let probe = probe(FakeRunner(), home: home)
         #expect(probe.commands == CodexSubspace.commands)
         #expect(probe.commands.sourceURL == URL(string: "https://github.com/we-are-the-borg/subspace-codex"))
         #expect(await probe.check().commands == probe.commands)
@@ -184,7 +193,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
             "codex plugin list --json": CommandResult(exitCode: 0, stdout: String(decoding: try fixture("plugin-list.json"), as: UTF8.self),
                                           stderr: "warning: something\n"),
         ])
-        let status = await probe(runner).check()
+        let status = await probe(runner, home: home).check()
         #expect(status.source == "codex")
         #expect(status.toolName == "Codex")
         #expect(status.cliName == "codex")
@@ -207,7 +216,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
         let runner = FakeRunner([
             "codex plugin marketplace list --json": CommandResult(exitCode: 0, stdout: String(decoding: try fixture(capture), as: UTF8.self)),
         ])
-        #expect(await probe(runner).check().marketplaceAdded == added)
+        #expect(await probe(runner, home: home).check().marketplaceAdded == added)
     }
 
     @Test(arguments: [
@@ -217,14 +226,14 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
     ])
     func aFailedMarketplaceListIsUnknown(list: CommandResult) async {
         let runner = FakeRunner(["codex plugin marketplace list --json": list])
-        #expect(await probe(runner).check().marketplaceAdded == nil)
+        #expect(await probe(runner, home: home).check().marketplaceAdded == nil)
     }
 
     /// A cold `codex plugin list --json` took 38 s; the lists get the
     /// long timeout, the version stays quick.
     @Test func theListsWaitLongerThanTheVersion() async {
         let runner = FakeRunner()
-        _ = await probe(runner).check()
+        _ = await probe(runner, home: home).check()
         let timeouts = Dictionary(uniqueKeysWithValues: runner.calls.map { ($0.arguments, $0.timeout) })
         #expect(timeouts == [
             ["--version"]: .seconds(5),
@@ -234,7 +243,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
     }
 
     @Test func withoutTheCLIThePluginIsUnknown() async {
-        let status = await probe(FakeRunner(), executables: []).check()
+        let status = await probe(FakeRunner(), executables: [], home: home).check()
         #expect(status.cli == .notFound)
         #expect(status.plugin == .unknown)
         #expect(status.marketplaceAdded == nil)
@@ -247,7 +256,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
     ])
     func aFailedListIsUnknown(list: CommandResult) async {
         let runner = FakeRunner(["codex --version": CommandResult(exitCode: 1), "codex plugin list --json": list])
-        let status = await probe(runner).check()
+        let status = await probe(runner, home: home).check()
         #expect(status.cli == .found(path: cli, version: nil))
         #expect(status.plugin == .unknown)
     }
@@ -277,7 +286,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
         let folder = try temporaryDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
         try pluginJSON(in: folder.appendingPathComponent("plugins/data/subspace-subspace"), at: started)
-        let status = await probe(FakeRunner(), executables: [], environment: ["CODEX_HOME": folder.path]).check()
+        let status = await probe(FakeRunner(), executables: [], environment: ["CODEX_HOME": folder.path], home: folder).check()
         #expect(status.lastSessionStartAt == started)
     }
 
@@ -286,14 +295,14 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [cli], envir
         defer { try? FileManager.default.removeItem(at: folder) }
         try pluginJSON(in: folder, at: started)
         let probe = CodexIntegrationProbe(runner: FakeRunner(), isExecutable: { _ in false }, chosenRoot: folder,
-                                          environment: ["CODEX_HOME": "/nowhere", "SUBSPACE_DIR": "/nowhere"], home: home)
+                                          environment: ["CODEX_HOME": "/nowhere", "SUBSPACE_DIR": "/nowhere"], home: folder)
         #expect(await probe.check().lastSessionStartAt == started)
     }
 
     @Test func noPluginJSONMeansNoSessionYet() async throws {
         let folder = try temporaryDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
-        let status = await probe(FakeRunner(), executables: [], environment: ["CODEX_HOME": folder.path]).check()
+        let status = await probe(FakeRunner(), executables: [], environment: ["CODEX_HOME": folder.path], home: folder).check()
         #expect(status.lastSessionStartAt == nil)
     }
 }

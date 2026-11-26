@@ -55,12 +55,13 @@ private func en(_ resource: LocalizedStringResource) -> String {
         #expect(popover.footerParts(at: t0.addingTimeInterval(10)).map(en) == ["Linked to subspace", "last event 10 s ago"])
     }
 
-    @Test func missingWarnsWithInstallCommands() throws {
+    /// It names the tool whose install commands follow, not a fixed list of tools.
+    @Test func missingWarnsWithInstallCommandsAndNamesTheTool() throws {
         let status = integration(.notInstalled)
         let popover = model(connection: .missing(status))
         let warning = try #require(popover.warning)
         #expect(en(warning.title) == "subspace isn’t installed")
-        #expect(en(warning.text) == "The Collective sees your agents through subspace, a small plugin for Claude Code and Codex that records session events. Install it once; sessions you start afterwards appear here.")
+        #expect(en(warning.text) == "The Collective sees your agents through subspace, a small plugin for Test Tool that records session events. Install it once; sessions you start afterwards appear here.")
         #expect(warning.commands == status.commands.install)
         #expect(en(warning.hint) == "Restart running sessions afterwards.")
         #expect(warning.showsSetUp)
@@ -76,7 +77,11 @@ private func en(_ resource: LocalizedStringResource) -> String {
         disabled.commands = ClaudeCodeSubspace.commands
         var codex = integration(.notInstalled, source: "codex", toolName: "Codex")
         codex.commands = CodexSubspace.commands
-        for connection in [ConnectionStatus.missing(missing), .disabled(disabled), .missing(codex)] {
+        var antigravity = integration(.notInstalled, source: "antigravity", toolName: "Antigravity")
+        antigravity.commands = AntigravitySubspace.commands
+        var antigravityOff = integration(.disabled(version: "1.0.0"), source: "antigravity", toolName: "Antigravity")
+        antigravityOff.commands = AntigravitySubspace.commands
+        for connection in [ConnectionStatus.missing(missing), .disabled(disabled), .missing(codex), .missing(antigravity), .disabled(antigravityOff)] {
             let warning = try #require(model(connection: connection).warning)
             #expect(!warning.commands.isEmpty)
             for line in warning.commands {

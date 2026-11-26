@@ -27,7 +27,7 @@ copyright lines checked against `Sources/CollectiveKit/Resources/Schemes/NOTICE.
 | File | Upstream |
 |---|---|
 | `libyaml-License` | https://github.com/yaml/libyaml/blob/master/License (Yams vendors libyaml as `CYaml` without it) |
-| `lobe-icons-LICENSE` | https://github.com/lobehub/lobe-icons/blob/9752d967494e48d8f83f2808feb2b0207bf70997/LICENSE (fetched 19.11.2026; the tool logos in `Sources/CollectiveKit/Resources/SourceIcons.xcassets` come from `@lobehub/icons-static-svg` 1.104.0, `icons/claude.svg` and `icons/codex.svg`, with the arc flags separated for CoreSVG and the geometry unchanged) |
+| `lobe-icons-LICENSE` | https://github.com/lobehub/lobe-icons/blob/9752d967494e48d8f83f2808feb2b0207bf70997/LICENSE (fetched 19.11.2026; the tool logos in `Sources/CollectiveKit/Resources/SourceIcons.xcassets` come from `@lobehub/icons-static-svg` 1.104.0, `icons/claude.svg`, `icons/codex.svg` and `icons/antigravity.svg`; claude and codex with the arc flags separated for CoreSVG and the geometry unchanged, antigravity byte-equal) |
 | `catppuccin-LICENSE` | https://github.com/catppuccin/catppuccin/blob/main/LICENSE (the palette) |
 | `primer-primitives-LICENSE` | https://github.com/primer/primitives/blob/main/LICENSE (GitHub's colors) |
 | `tinted-theming-schemes-LICENSE` | https://github.com/tinted-theming/schemes/blob/spec-0.11/LICENSE (the scheme files; same text as `Sources/CollectiveKit/Resources/Schemes/NOTICE.md`) |

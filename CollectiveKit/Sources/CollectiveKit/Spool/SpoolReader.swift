@@ -4,8 +4,9 @@ import SubspaceKit
 
 /// Reads the subspace spool (contract v1) and turns its event files into `AgentEvent`s.
 ///
-/// Each adapter names its source's root (§2); `SUBSPACE_DIR` replaces all of them
-/// with one shared root. Roots that are one folder, e.g. one a link to another,
+/// Each adapter names its source's roots (§2), usually one; a tool with a CLI
+/// and a desktop app may have two. `SUBSPACE_DIR` replaces all of them with one
+/// shared root. Roots that are one folder, e.g. one a link to another,
 /// are read as one, so a file is applied once. A root may not exist yet (§3),
 /// e.g. when the tool or subspace isn't installed: until it appears the reader
 /// only checks for it every `pollInterval`, so an idle app costs nothing.
@@ -147,8 +148,9 @@ public actor SpoolReader {
         var roots: [URL] = []
         var folders: Set<String> = []
         for adapter in adapters {
-            let root = SubspaceRoot.resolve(adapter: adapter, chosen: chosen[adapter.source], environment: environment, home: home)
-            if folders.insert(resolved(root).path).inserted { roots.append(root) }
+            for root in SubspaceRoot.resolveAll(adapter: adapter, chosen: chosen[adapter.source], environment: environment, home: home) {
+                if folders.insert(resolved(root).path).inserted { roots.append(root) }
+            }
         }
         return roots
     }

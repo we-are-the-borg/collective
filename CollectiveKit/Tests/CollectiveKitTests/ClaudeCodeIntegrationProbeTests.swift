@@ -179,10 +179,12 @@ private final class FakeRunner: CommandRunner, Sendable {
     }
 }
 
+/// For checks of strings only; a probe that reads files gets a temporary home.
 private let home = URL(fileURLWithPath: "/Users/user", isDirectory: true)
 
-private func probe(_ runner: FakeRunner, executables: Set<String> = [], environment: [String: String] = [:]) -> ClaudeCodeIntegrationProbe {
-    ClaudeCodeIntegrationProbe(runner: runner, isExecutable: { executables.contains($0) }, environment: environment, home: home)
+private func probe(_ runner: FakeRunner, executables: Set<String> = [], environment: [String: String] = [:],
+                   home probeHome: URL = home) -> ClaudeCodeIntegrationProbe {
+    ClaudeCodeIntegrationProbe(runner: runner, isExecutable: { executables.contains($0) }, environment: environment, home: probeHome)
 }
 
 // MARK: - Fallback files
@@ -287,13 +289,19 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
 
 // MARK: - The whole check
 
-@Suite struct ClaudeCodeIntegrationCheckTests {
+/// A class for its `deinit`: every test gets an empty home of its own, so a
+/// check reads no file of the real one.
+@Suite final class ClaudeCodeIntegrationCheckTests {
     private static let cli = "/opt/homebrew/bin/claude"
+    private let home: URL
+
+    init() throws { home = try temporaryDirectory() }
+    deinit { try? FileManager.default.removeItem(at: home) }
 
     /// The settings window links the plugin before the first check returns, so the
     /// probe names its commands up front and every check reports the same ones.
     @Test func theCommandsAreKnownBeforeTheCheckAndTheCheckReportsThem() async {
-        let probe = probe(FakeRunner())
+        let probe = probe(FakeRunner(), home: home)
         #expect(probe.commands == ClaudeCodeSubspace.commands)
         #expect(probe.commands.sourceURL == URL(string: "https://github.com/we-are-the-borg/subspace-claude-code"))
         #expect(await probe.check().commands == probe.commands)
@@ -304,7 +312,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
             "claude --version": CommandResult(exitCode: 0, stdout: try fixtureText("version.txt")),
             "claude plugin list --json": CommandResult(exitCode: 0, stdout: try fixtureText("plugin-list-enabled.json")),
         ])
-        let status = await probe(runner, executables: [Self.cli], environment: ["PATH": "/usr/bin"]).check()
+        let status = await probe(runner, executables: [Self.cli], environment: ["PATH": "/usr/bin"], home: home).check()
         #expect(status.source == "claude-code")
         #expect(status.toolName == "Claude Code")
         #expect(status.cliName == "claude")
@@ -327,7 +335,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
         let runner = FakeRunner([
             "claude plugin marketplace list --json": CommandResult(exitCode: 0, stdout: try fixtureText(capture)),
         ])
-        let status = await probe(runner, executables: [Self.cli]).check()
+        let status = await probe(runner, executables: [Self.cli], home: home).check()
         #expect(status.marketplaceAdded == added)
     }
 
@@ -338,14 +346,14 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
     ])
     func aFailedMarketplaceListIsUnknown(list: CommandResult) async {
         let runner = FakeRunner(["claude plugin marketplace list --json": list])
-        let status = await probe(runner, executables: [Self.cli]).check()
+        let status = await probe(runner, executables: [Self.cli], home: home).check()
         #expect(status.marketplaceAdded == nil)
     }
 
     /// The same lists as Codex's, so the same long timeout; the version stays quick.
     @Test func theListsWaitLongerThanTheVersion() async {
         let runner = FakeRunner()
-        _ = await probe(runner, executables: [Self.cli]).check()
+        _ = await probe(runner, executables: [Self.cli], home: home).check()
         let timeouts = Dictionary(uniqueKeysWithValues: runner.calls.map { ($0.arguments, $0.timeout) })
         #expect(timeouts == [
             ["--version"]: .seconds(5),
@@ -357,7 +365,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
     @Test func withoutTheCLITheMarketplaceIsUnknown() async throws {
         let folder = try configDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
-        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.marketplaceAdded == nil)
     }
 
@@ -370,7 +378,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
         let folder = try configDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
         let runner = FakeRunner(["claude --version": CommandResult(exitCode: 1), "claude plugin list --json": list])
-        let status = await probe(runner, executables: [Self.cli], environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(runner, executables: [Self.cli], environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.cli == .found(path: Self.cli, version: nil))
         #expect(status.plugin == .enabled(version: "0.11.0"))
     }
@@ -378,7 +386,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
     @Test func withoutTheCLITheFilesAnswer() async throws {
         let folder = try configDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
-        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.cli == .notFound)
         #expect(status.plugin == .enabled(version: "0.11.0"))
     }
@@ -386,7 +394,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
     @Test func withoutCLIOrFilesTheStateIsUnknown() async throws {
         let folder = try temporaryDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
-        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.plugin == .unknown)
     }
 
@@ -400,7 +408,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
         let started = Date(timeIntervalSince1970: 1_790_000_000)
         try FileManager.default.setAttributes([.modificationDate: started], ofItemAtPath: file.path)
 
-        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.lastSessionStartAt == started)
     }
 
@@ -412,7 +420,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
         let started = Date(timeIntervalSince1970: 1_790_000_000)
         try FileManager.default.setAttributes([.modificationDate: started], ofItemAtPath: file.path)
 
-        let status = await probe(FakeRunner(), environment: ["SUBSPACE_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["SUBSPACE_DIR": folder.path], home: home).check()
         #expect(status.lastSessionStartAt == started)
     }
 
@@ -432,7 +440,7 @@ private func probe(_ runner: FakeRunner, executables: Set<String> = [], environm
     @Test func noPluginJSONMeansNoSessionYet() async throws {
         let folder = try temporaryDirectory()
         defer { try? FileManager.default.removeItem(at: folder) }
-        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path]).check()
+        let status = await probe(FakeRunner(), environment: ["CLAUDE_CONFIG_DIR": folder.path], home: home).check()
         #expect(status.lastSessionStartAt == nil)
     }
 }

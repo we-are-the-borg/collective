@@ -28,8 +28,10 @@ public struct DiskMappingFileSystem: MappingFileSystem {
 
 /// Finds the mapping document for a name (subspace contract §12): the one the
 /// installed plugin wrote to `$ROOT/model/<name>.json` or the copy bundled with
-/// this package, whichever has the higher revision (the root's on a tie). Documents
-/// of a format the interpreter does not know never win.
+/// this package, whichever has the higher revision (the root's on a tie). A
+/// source that spools into several roots has a copy in each: the highest
+/// revision among them counts, the earlier root's on a tie. Documents of a
+/// format the interpreter does not know never win.
 ///
 /// A plain class without its own lock: callers confine it to one actor. The
 /// plugin rewrites the file on every session start, so each call
@@ -42,28 +44,45 @@ public final class MappingLoader {
 
     private static let log = Logger(subsystem: "SubspaceKit", category: "mapping")
 
-    private let root: URL
+    private let roots: [URL]
     private let fileSystem: any MappingFileSystem
     private let bundled: (String) -> MappingDocument?
-    private var rootEntries: [String: RootEntry] = [:]
+    /// By the mapping file's URL, so each root's copy is cached on its own.
+    private var rootEntries: [URL: RootEntry] = [:]
     private var bundledEntries: [String: MappingDocument?] = [:]
     private var lastChoice: [String: String] = [:]
 
     /// `bundled` defaults to the documents shipped as package resources.
-    public init(
+    public convenience init(
         root: URL,
         fileSystem: any MappingFileSystem = DiskMappingFileSystem(),
         bundled: @escaping (String) -> MappingDocument? = MappingLoader.bundledDocument
     ) {
-        self.root = root
+        self.init(roots: [root], fileSystem: fileSystem, bundled: bundled)
+    }
+
+    /// `roots` are a source's roots in order of precedence, the primary first;
+    /// `bundled` as for `init(root:)`.
+    public init(
+        roots: [URL],
+        fileSystem: any MappingFileSystem = DiskMappingFileSystem(),
+        bundled: @escaping (String) -> MappingDocument? = MappingLoader.bundledDocument
+    ) {
+        self.roots = roots
         self.fileSystem = fileSystem
         self.bundled = bundled
     }
 
-    /// The document to apply for `name`, nil when neither the root nor the
+    /// The document to apply for `name`, nil when neither a root nor the
     /// package has a usable one. Logs when the choice changes.
     public func document(named name: String) -> MappingDocument? {
-        let fromRoot = rootDocument(named: name)
+        var fromRoot: MappingDocument?
+        for root in roots {
+            guard let document = rootDocument(named: name, in: root) else { continue }
+            // Strictly higher, so an earlier root keeps a tie.
+            if let best = fromRoot, (document.revision ?? 0) <= (best.revision ?? 0) { continue }
+            fromRoot = document
+        }
         let fromBundle = bundledDocument(named: name)
         let chosen: MappingDocument?
         let origin: String
@@ -97,10 +116,10 @@ public final class MappingLoader {
         Bundle.module.url(forResource: name, withExtension: "json", subdirectory: "Mappings")
     }
 
-    private func rootDocument(named name: String) -> MappingDocument? {
+    private func rootDocument(named name: String, in root: URL) -> MappingDocument? {
         let url = root.appending(path: "model/\(name).json", directoryHint: .notDirectory)
         let modified = fileSystem.modificationDate(of: url)
-        if let entry = rootEntries[name], entry.modified == modified { return entry.document }
+        if let entry = rootEntries[url], entry.modified == modified { return entry.document }
         var document: MappingDocument?
         if modified != nil {
             do {
@@ -115,7 +134,7 @@ public final class MappingLoader {
             Self.log.notice("Ignoring mapping file \(url.path, privacy: .public): unsupported format \(format, privacy: .public)")
         }
         document = Self.known(document)
-        rootEntries[name] = RootEntry(modified: modified, document: document)
+        rootEntries[url] = RootEntry(modified: modified, document: document)
         return document
     }
 

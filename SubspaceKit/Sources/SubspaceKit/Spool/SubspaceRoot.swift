@@ -18,14 +18,20 @@ public enum SubspaceRoot {
     }
 
     /// Whether going from the chosen folders `old` to `new` reads any source
-    /// from another root, i.e. whether the reader must start over. `defaults`
+    /// from other roots, i.e. whether the reader must start over. `defaults`
     /// are the registered sources' roots without a choice (`SUBSPACE_DIR`
-    /// applied). Compares paths, so choosing the folder that is the default
-    /// already, with or without a trailing slash, changes nothing.
-    public static func rootsChange(defaults: [SourceID: URL], from old: [SourceID: URL], to new: [SourceID: URL]) -> Bool {
-        defaults.contains { source, root in
-            resolve(root, chosen: old[source], environment: [:]).path
-                != resolve(root, chosen: new[source], environment: [:]).path
+    /// applied), the primary first; a chosen folder replaces all of them.
+    /// Compares paths, so choosing the folder that is a one-root source's
+    /// default already, with or without a trailing slash, changes nothing.
+    public static func rootsChange(defaults: [SourceID: [URL]], from old: [SourceID: URL], to new: [SourceID: URL]) -> Bool {
+        defaults.contains { source, roots in
+            paths(roots, chosen: old[source]) != paths(roots, chosen: new[source])
         }
+    }
+
+    /// The paths `roots` resolve to with `chosen`, each once.
+    private static func paths(_ roots: [URL], chosen: URL?) -> [String] {
+        var seen: Set<String> = []
+        return roots.map { resolve($0, chosen: chosen, environment: [:]).path }.filter { seen.insert($0).inserted }
     }
 }

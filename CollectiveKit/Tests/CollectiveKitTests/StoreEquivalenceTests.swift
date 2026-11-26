@@ -9,8 +9,11 @@ import Testing
 // from a plain sequential replay of the same files (`referenceReplay`).
 
 /// The fields the app will drop before storing: no adapter reads them, and
-/// they are the bulk of the payloads.
-private let exclusions: [SourceID: Set<String>] = ["claude-code": ["tool_response"], "codex": ["tool_response"]]
+/// they are the bulk of the payloads. Antigravity's payloads carry no tool
+/// output, but a call's whole arguments.
+private let exclusions: [SourceID: Set<String>] = [
+    "claude-code": ["tool_response"], "codex": ["tool_response"], "antigravity": ["tool_input"],
+]
 
 /// Stored rows through one fresh adapter set in the store's order, the way the
 /// reader feeds spool files: rows without an adapter and whatever throws skipped.
@@ -44,7 +47,7 @@ private func events(replaying rows: [StoredEvent]) -> [AgentEvent] {
 
         let path = storeFolder.appendingPathComponent("events.sqlite")
         let documents = Dictionary(uniqueKeysWithValues: backlogAdapters().map { ($0.source, $0.mappingDocument()) })
-        #expect(documents.values.allSatisfy { $0 != nil }, "both sources map with their bundled documents")
+        #expect(documents.values.allSatisfy { $0 != nil }, "every source maps with its bundled document")
         let result = try await EventStore(path: path, maxAge: nil).ingest(
             root: root, changed: nil, documents: documents, excluding: exclusions)
         // A fresh store: everything is new, nothing re-mapped.
@@ -69,7 +72,7 @@ private func events(replaying rows: [StoredEvent]) -> [AgentEvent] {
         try await expectEquivalent([run])
     }
 
-    /// Every capture in one store: many sessions of both sources across days.
+    /// Every capture in one store: many sessions of every source across days.
     @Test func theReplayOfAllStoredRunsTogetherEqualsTheSequentialReplay() async throws {
         try await expectEquivalent(CapturedRun.all)
     }

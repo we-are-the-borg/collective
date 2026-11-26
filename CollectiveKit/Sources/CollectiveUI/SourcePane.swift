@@ -64,8 +64,8 @@ struct SourcePane: View {
         return word + Text(verbatim: " · \(version)").foregroundStyle(.role(.textSubtle))
     }
 
-    /// `Event folder` with Reset and Choose…, the path box under it. The marker stays outside the
-    /// selectable path, so a copy is the path alone.
+    /// `Event folder` with Reset and Choose…, a path box per folder under it. The marker stays
+    /// outside the selectable path, so a copy is the path alone.
     private var eventFolderRow: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 8) {
@@ -78,18 +78,20 @@ struct SourcePane: View {
                     .buttonStyle(.settings)
             }
             .frame(minHeight: 24)
-            VStack(alignment: .leading, spacing: 2) {
-                PathText(text: source.eventFolderPath)
-                if source.showsDefaultMarker {
-                    Text(SettingsText.defaultMarker)
-                        .font(.plexSans(11))
-                        .plexLineHeight(15, size: 11)
-                        .foregroundStyle(.role(.textMuted))
+            ForEach(source.eventFolderPaths, id: \.self) { path in
+                VStack(alignment: .leading, spacing: 2) {
+                    PathText(text: path)
+                    if source.showsDefaultMarker {
+                        Text(SettingsText.defaultMarker)
+                            .font(.plexSans(11))
+                            .plexLineHeight(15, size: 11)
+                            .foregroundStyle(.role(.textMuted))
+                    }
                 }
+                .padding(EdgeInsets(top: 5, leading: 8, bottom: 5, trailing: 8))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .rowBox()
             }
-            .padding(EdgeInsets(top: 5, leading: 8, bottom: 5, trailing: 8))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .rowBox()
         }
         .settingsRowInsets()
     }
@@ -240,8 +242,9 @@ private struct UpdateStatusForm: View {
 private struct SourcePanePreview: View {
     let model: SettingsSourceModel
 
+    /// - Parameter defaultFolders: Relative to home; nil is the tool's one plugin data folder.
     init(
-        _ status: IntegrationStatus?, chosen: Bool = false,
+        _ status: IntegrationStatus?, chosen: Bool = false, defaultFolders: [String]? = nil,
         availability: UpdateAvailability = .upToDate, updateRun: SetupCommandRun.Snapshot? = nil
     ) {
         let home = "/Users/user"
@@ -252,7 +255,8 @@ private struct SourcePanePreview: View {
             status: status,
             // A probe after the run, so a succeeded one shows what that probe found.
             checkedAt: PreviewData.now.addingTimeInterval(1),
-            defaultFolder: URL(fileURLWithPath: "\(home)/\(tool)/plugins/data/subspace-subspace"),
+            defaultFolders: (defaultFolders ?? ["\(tool)/plugins/data/subspace-subspace"])
+                .map { URL(fileURLWithPath: "\(home)/\($0)") },
             chosenFolder: chosen ? URL(fileURLWithPath: "\(home)/Library/Mobile Documents/com~apple~CloudDocs/Shared/subspace/claude-code/events") : nil,
             availability: availability,
             updateRun: updateRun,
@@ -303,6 +307,12 @@ private enum SourcePreviews {
     }
 
     static var chosenFolder: SourcePanePreview { SourcePanePreview(PreviewData.readyIntegration, chosen: true) }
+
+    /// A source that reads two folders by default, e.g. a tool's CLI and its desktop app.
+    static var defaultFolders: SourcePanePreview {
+        SourcePanePreview(PreviewData.readyIntegration,
+                          defaultFolders: [".tool/cli/plugin_data/subspace", ".tool/app/plugin_data/subspace"])
+    }
 }
 
 extension View {
@@ -328,4 +338,6 @@ extension View {
 #Preview("Update required – Catppuccin Macchiato") { SourcePreviews.updateRequired.macchiato() }
 #Preview("Chosen folder – Catppuccin Latte") { SourcePreviews.chosenFolder.latte() }
 #Preview("Chosen folder – Catppuccin Macchiato") { SourcePreviews.chosenFolder.macchiato() }
+#Preview("Two default folders – Catppuccin Latte") { SourcePreviews.defaultFolders.latte() }
+#Preview("Two default folders – Catppuccin Macchiato") { SourcePreviews.defaultFolders.macchiato() }
 #endif

@@ -69,9 +69,10 @@ public struct SettingsSourceModel: Sendable, Equatable {
     public let statusMark: SourceStatusMark
     /// "Set Up…", which opens the setup window; nil while connected or not yet checked.
     public let setUpButton: ButtonStyle?
-    /// Home shown as `~`.
-    public let eventFolderPath: String
-    /// "(default)" follows the path while no folder is chosen.
+    /// The folders events come from, home shown as `~`: the chosen one, else
+    /// every default folder, the primary first.
+    public let eventFolderPaths: [String]
+    /// "(default)" follows each path while no folder is chosen.
     public let showsDefaultMarker: Bool
     /// Only a chosen folder can be reset.
     public let canReset: Bool
@@ -102,7 +103,7 @@ public struct SettingsSourceModel: Sendable, Equatable {
     ///   - lastEventAt: When the newest event the app read from the source's
     ///     spool happened; as in the setup window it stands in for a session
     ///     start subspace has no record of.
-    ///   - defaultFolder: Where subspace writes without a choice.
+    ///   - defaultFolders: Where subspace writes without a choice, the primary first.
     ///   - chosenFolder: The folder the user picked; nil = the default.
     ///   - availability: What the release check says about the installed plugin.
     ///   - updateRun: The source's update run as the windows show it.
@@ -118,7 +119,7 @@ public struct SettingsSourceModel: Sendable, Equatable {
         status: IntegrationStatus?,
         checkedAt: Date? = nil,
         lastEventAt: Date? = nil,
-        defaultFolder: URL,
+        defaultFolders: [URL],
         chosenFolder: URL?,
         availability: UpdateAvailability = .upToDate,
         updateRun: SetupCommandRun.Snapshot? = nil,
@@ -142,7 +143,7 @@ public struct SettingsSourceModel: Sendable, Equatable {
             setUpButton = nil
             update = nil
             showsUpdateArrow = false
-            (eventFolderPath, showsDefaultMarker, canReset) = Self.folder(defaultFolder, chosenFolder, home)
+            (eventFolderPaths, showsDefaultMarker, canReset) = Self.folders(defaultFolders, chosenFolder, home)
             return
         }
         let update = SourceUpdateModel(status, checkedAt: checkedAt, availability: availability, run: updateRun, outputShown: outputShown,
@@ -218,14 +219,14 @@ public struct SettingsSourceModel: Sendable, Equatable {
         statusWord = word
         statusVersion = shownVersion
         statusMark = mark
-        (eventFolderPath, showsDefaultMarker, canReset) = Self.folder(defaultFolder, chosenFolder, home)
+        (eventFolderPaths, showsDefaultMarker, canReset) = Self.folders(defaultFolders, chosenFolder, home)
     }
 
     private static let checking: LocalizedStringResource = .kit("Checking…", defaultValue: "Checking…")
 
-    private static func folder(_ defaultFolder: URL, _ chosen: URL?, _ home: String) -> (String, Bool, Bool) {
-        let shown = chosen ?? defaultFolder
-        return (SetupCardModel.abbreviating(shown.path, home: home), chosen == nil, chosen != nil)
+    private static func folders(_ defaultFolders: [URL], _ chosen: URL?, _ home: String) -> ([String], Bool, Bool) {
+        let shown = chosen.map { [$0] } ?? defaultFolders
+        return (shown.map { SetupCardModel.abbreviating($0.path, home: home) }, chosen == nil, chosen != nil)
     }
 
     /// A clone URL may end in `/` or `.git`; About names the repository without either.

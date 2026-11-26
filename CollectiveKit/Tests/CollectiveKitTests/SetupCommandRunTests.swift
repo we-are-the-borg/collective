@@ -142,6 +142,7 @@ private func makeRun(
     @Test(arguments: [
         (ClaudeCodeIntegrationProbe.cliName, ClaudeCodeSubspace.commands),
         (CodexIntegrationProbe.cliName, CodexSubspace.commands),
+        (AntigravityIntegrationProbe.cliName, AntigravitySubspace.commands),
     ])
     func adapterLinesStartWithTheirCLI(cliName: String, commands: SetupCommands) {
         #expect(!commands.update.isEmpty)

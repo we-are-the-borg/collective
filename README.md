@@ -1,6 +1,6 @@
 # The Collective
 
-The Collective is a macOS menu bar app for monitoring AI coding agents. It tracks running Claude Code and Codex sessions, including subagents, and shows when a session needs attention.
+The Collective is a macOS menu bar app for monitoring AI coding agents. It tracks running Claude Code, Codex and Google Antigravity sessions, including subagents, and shows when a session needs attention.
 
 The popover provides details for each session, including its prompt, model, current tool and runtime.
 
@@ -12,12 +12,12 @@ The menu bar icon shows how many agents are working and turns amber when one nee
 
 The app uses [subspace](https://github.com/we-are-the-borg/subspace), a shared, observe-only plugin that collects hook events without interfering with the agents.
 
-Claude Code and Codex are supported. Additional tools can be integrated through source adapters.
+Claude Code, Codex and Google Antigravity (the `agy` CLI and the Desktop App) are supported. Additional tools can be integrated through source adapters.
 
 ## Requirements
 
 - macOS 15 or later
-- Claude Code, Codex or both
+- Claude Code, Codex, Antigravity or any combination
 - The subspace plugin for each tool you use. The setup window installs it for you.
 
 ## Installation
@@ -48,6 +48,15 @@ claude plugin enable subspace@subspace
 codex plugin marketplace add we-are-the-borg/subspace-codex
 codex plugin add subspace@subspace
 ```
+
+**Antigravity**
+
+```sh
+agy plugin install https://github.com/we-are-the-borg/subspace-antigravity
+agy plugin enable subspace   # only if it is disabled
+```
+
+The same install command updates the plugin.
 
 Then start a new session in the tool. Codex holds the plugin's hooks back until you approve them with `/hooks` in that session.
 

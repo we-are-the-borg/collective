@@ -124,7 +124,7 @@ private func put(_ fs: FakeFileSystem, _ data: Data, at date: Date = Date(timeIn
 }
 
 @Suite struct BundledMappingTests {
-    @Test(arguments: [("claude-code", 9), ("claude-code-session", 3), ("codex", 2)] as [(String, Int64)])
+    @Test(arguments: [("antigravity", 1), ("claude-code", 9), ("claude-code-session", 3), ("codex", 2)] as [(String, Int64)])
     func bundledDocumentLoads(name: String, revision: Int64) {
         let document = MappingLoader.bundledDocument(named: name)
         #expect(document?.revision == revision)
@@ -137,7 +137,7 @@ private func put(_ fs: FakeFileSystem, _ data: Data, at date: Date = Date(timeIn
 
     @Test(.enabled(if: SubspaceDevRepo.isAvailable,
                   "subspace dev repo not found (expected at ../../we-are-the-borg/subspace or $SUBSPACE_DEV_DIR)"),
-          arguments: ["claude-code", "claude-code-session", "codex"])
+          arguments: ["antigravity", "claude-code", "claude-code-session", "codex"])
     func bundledCopyEqualsSubspaceModel(name: String) throws {
         let bundledURL = try #require(MappingLoader.bundledURL(named: name))
         let original = Self.subspaceModel.appending(path: "\(name).json")

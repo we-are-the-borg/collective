@@ -18,7 +18,7 @@ public struct CodexIntegrationProbe: IntegrationProbe {
     private let isExecutable: @Sendable (String) -> Bool
     private let environment: [String: String]
     private let home: URL
-    private let spoolRoot: URL
+    private let spoolRoots: [URL]
 
     public init(
         runner: any CommandRunner = ProcessCommandRunner(),
@@ -33,7 +33,7 @@ public struct CodexIntegrationProbe: IntegrationProbe {
         self.isExecutable = isExecutable
         self.environment = environment
         self.home = home
-        self.spoolRoot = SubspaceRoot.resolve(adapter: adapter, chosen: chosenRoot, environment: environment, home: home)
+        self.spoolRoots = SubspaceRoot.resolveAll(adapter: adapter, chosen: chosenRoot, environment: environment, home: home)
     }
 
     private var locator: CLILocator {
@@ -133,7 +133,6 @@ public struct CodexIntegrationProbe: IntegrationProbe {
 
     /// subspace rewrites `$ROOT/plugin.json` on every session start.
     func lastSessionStart() -> Date? {
-        let path = spoolRoot.appendingPathComponent("plugin.json").path
-        return (try? FileManager.default.attributesOfItem(atPath: path))?[.modificationDate] as? Date
+        SubspaceRoot.lastSessionStart(in: spoolRoots)
     }
 }
