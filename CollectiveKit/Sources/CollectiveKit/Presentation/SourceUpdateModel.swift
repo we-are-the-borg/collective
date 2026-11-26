@@ -144,8 +144,16 @@ public struct SourceUpdateModel: Sendable, Equatable {
     }
 
     /// How long a succeeded run waits for a probe to confirm it; an open
-    /// source pane probes every 5 s.
-    static let confirmationTimeout: TimeInterval = 30
+    /// source pane probes every 5 s. A single list may legitimately take up to
+    /// its timeout, so the window follows that bound plus a margin.
+    static let confirmationTimeout: TimeInterval = {
+        let bound = CLILocator.listTimeout + confirmationMargin
+        return TimeInterval(bound.components.seconds)
+    }()
+
+    /// Covers the runner's drain and terminate grace after a timed-out list
+    /// and the start of the next probe.
+    static let confirmationMargin: Duration = .seconds(15)
 
     private static func outcome(of phase: SetupCommandRun.Phase, to: SubspaceVersion, status: IntegrationStatus,
                                 checkedAt: Date?, now: Date) -> Outcome {

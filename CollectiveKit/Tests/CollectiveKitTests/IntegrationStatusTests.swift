@@ -63,11 +63,9 @@ import Testing
         #expect(twice.pluginIsCarriedOver)
     }
 
-    @Test func theListMatchesBySourceAndKeepsTheNewOrder() {
-        let previous = [integration(.enabled(version: "1.0.1"), source: "a"), integration(.disabled(version: nil), source: "b")]
-        let results = [integration(.unknown, source: "b"), integration(.unknown, source: "a"), integration(.unknown, source: "c")]
-        let kept = IntegrationStatus.keepingKnownPlugins(results, from: previous)
-        #expect(kept.map(\.source) == ["b", "a", "c"])
-        #expect(kept.map(\.plugin) == [.disabled(version: nil), .enabled(version: "1.0.1"), .unknown])
+    @Test func aPreviousStateOfAnotherSourceIsIgnored() {
+        let previous = integration(.enabled(version: "1.0.1"), source: "a")
+        let new = integration(.unknown, source: "b")
+        #expect(new.keepingKnownPlugin(from: previous) == new)
     }
 }

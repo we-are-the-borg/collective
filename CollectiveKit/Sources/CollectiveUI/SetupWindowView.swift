@@ -331,7 +331,7 @@ private struct SetupWindowPreview: View {
                 updateRuns: updateRuns,
                 availability: availability,
                 // A probe after the runs, so a succeeded one shows what that probe found.
-                checkedAt: PreviewData.now.addingTimeInterval(1),
+                checkedAt: Dictionary(uniqueKeysWithValues: integrations.map { ($0.source, PreviewData.now.addingTimeInterval(1)) }),
                 now: PreviewData.now.addingTimeInterval(2),
                 home: "/Users/user",
                 timeZone: TimeZone(identifier: "Europe/Berlin") ?? .current

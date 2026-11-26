@@ -342,7 +342,7 @@ public struct SetupWindowModel: Sendable, Equatable {
     ///     count as active: an update doesn't hold back Done.
     ///   - availability: What the release check says per tool; a missing tool is up to date.
     ///   - checksForUpdates: The switch in General › Updates.
-    ///   - checkedAt: When the probe that reported `integrations` started.
+    ///   - checkedAt: When the probe behind each tool's status in `integrations` started, by tool.
     public init(
         integrations: [IntegrationStatus],
         runs: [SourceID: SetupCommandRun.Snapshot] = [:],
@@ -351,7 +351,7 @@ public struct SetupWindowModel: Sendable, Equatable {
         updateRuns: [SourceID: SetupCommandRun.Snapshot] = [:],
         availability: [SourceID: UpdateAvailability] = [:],
         checksForUpdates: Bool = true,
-        checkedAt: Date? = nil,
+        checkedAt: [SourceID: Date] = [:],
         now: Date,
         home: String = NSHomeDirectory(),
         timeZone: TimeZone = .autoupdatingCurrent
@@ -365,7 +365,7 @@ public struct SetupWindowModel: Sendable, Equatable {
                 availability: availability[status.source] ?? .upToDate,
                 updateRun: updateRuns[status.source],
                 checksForUpdates: checksForUpdates,
-                checkedAt: checkedAt,
+                checkedAt: checkedAt[status.source],
                 now: now,
                 home: home,
                 timeZone: timeZone

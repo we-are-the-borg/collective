@@ -103,6 +103,14 @@ private func header(_ model: SourceUpdateModel?) -> String? {
 }
 
 @Suite struct SourceUpdateModelTests {
+    /// A single list may take its whole timeout, so the window must outlast it.
+    @Test func theConfirmationWindowFollowsTheListTimeoutPlusTheMargin() {
+        let list = Double(CLILocator.listTimeout.components.seconds)
+        let margin = Double(SourceUpdateModel.confirmationMargin.components.seconds)
+        #expect(SourceUpdateModel.confirmationTimeout > list)
+        #expect(SourceUpdateModel.confirmationTimeout == list + margin)
+    }
+
     @Test func anAvailableUpdateNumbersTheAdapterLinesAndOffersUpdate() throws {
         let model = try #require(makeModel(claudeCode()))
         #expect(model.state == .available)
@@ -228,11 +236,20 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         #expect(footer(model) == "Updating subspace…")
     }
 
+    /// One list may run up to its 60 s timeout, so the window must outlast a probe.
+    @Test(arguments: [31.0, 74.0])
+    func aSucceededUpdateWaitsForAProbeThatMayTakeAFullListTimeout(seconds: TimeInterval) throws {
+        let model = try #require(makeModel(codex(), run: codexSucceeded, checkedAt: succeededAt.addingTimeInterval(-1),
+                                           now: succeededAt.addingTimeInterval(seconds)))
+        #expect(model.state == .running)
+        #expect(footer(model) == "Updating subspace…")
+    }
+
     @Test(arguments: [IntegrationStatus.Plugin.unknown, .enabled(version: "1.0.1")])
-    func withoutAConfirmingProbeFor30SecondsTheUpdateFails(plugin: IntegrationStatus.Plugin) throws {
+    func withoutAConfirmingProbeFor75SecondsTheUpdateFails(plugin: IntegrationStatus.Plugin) throws {
         // The 1.0.1 probe started before the success, so it doesn't count either.
         let checkedAt = plugin == .unknown ? afterSuccess : succeededAt.addingTimeInterval(-1)
-        let model = try #require(makeModel(codex(plugin), run: codexSucceeded, checkedAt: checkedAt, now: succeededAt.addingTimeInterval(30)))
+        let model = try #require(makeModel(codex(plugin), run: codexSucceeded, checkedAt: checkedAt, now: succeededAt.addingTimeInterval(75)))
         #expect(model.state == .failed)
         #expect(header(model) == "circleX: Update to 1.1.0 failed")
         #expect(footer(model) == "! The commands finished, but Codex doesn’t report the new version.")

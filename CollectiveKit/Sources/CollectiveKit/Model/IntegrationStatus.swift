@@ -63,11 +63,6 @@ extension IntegrationStatus {
         if marketplaceAdded == nil { result.marketplaceAdded = previous.marketplaceAdded }
         return result
     }
-
-    /// The same for a whole check, matched by source; `results` keep their order.
-    public static func keepingKnownPlugins(_ results: [IntegrationStatus], from previous: [IntegrationStatus]) -> [IntegrationStatus] {
-        results.map { status in status.keepingKnownPlugin(from: previous.first { $0.source == status.source }) }
-    }
 }
 
 /// Tool-specific command lines delivered by the probe as plain strings, so presentation stays tool-neutral.

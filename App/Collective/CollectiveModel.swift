@@ -12,7 +12,7 @@ final class CollectiveModel {
     private(set) var state = CollectiveState() {
         didSet { refreshMenuBarIcon() }
     }
-    /// The aggregated icon, derived when `state` or `integrations` change
+    /// The aggregated icon, derived when `state` changes or a tool reports
     /// rather than per animation frame: it walks every agent of every session.
     private(set) var menuBarIcon = MenuBarIcon.idle
     /// What the user opened in the list (finished replies, the Finished group,
@@ -36,14 +36,16 @@ final class CollectiveModel {
     /// `loadingTask` updates this on time.
     private(set) var loadingIndicatorVisible = false
     private(set) var reduceMotion = NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
-    /// What the last check found per tool; empty until it finished, which warns about nothing.
-    private(set) var integrations: [IntegrationStatus] = [] {
-        didSet { refreshMenuBarIcon() }
-    }
-    /// When the check behind `integrations` started. Observed, so an update
-    /// group waiting for a probe after its run redraws even when the results
-    /// didn't change.
-    private(set) var integrationsCheckedAt: Date?
+    /// What each tool's last check found, in registration order; a tool that
+    /// hasn't reported yet is absent, which warns about nothing.
+    var integrations: [IntegrationStatus] { checks.statuses }
+    /// Checks the tools, each on its own, so a slow CLI holds back only its
+    /// own tool. Observed through itself, `checkedAt` too: an update group
+    /// waiting for a probe after its run redraws even when the result didn't change.
+    @ObservationIgnored private(set) lazy var checks = IntegrationChecks(
+        probes: [],
+        onResult: { [weak self] status, startedAt in self?.integrationChecked(status, startedAt: startedAt) }
+    )
     /// Since when a source runs a newer subspace, for the popover's restart hint.
     private(set) var restartHints = SubspaceRestartHints()
     /// Set when the setup window should open without the user asking (first
@@ -54,7 +56,7 @@ final class CollectiveModel {
     @ObservationIgnored private(set) lazy var setupRuns = SetupRuns(
         environment: ProcessInfo.processInfo.environment,
         runner: ProcessCommandRunner(),
-        onSuccess: { [weak self] in self?.checkIntegrations() }
+        onSuccess: { [weak self] in self?.checks.check() }
     )
     /// Which subspace releases are published; observed through itself.
     /// The settings window binds its switch to `checksForUpdates`.
@@ -180,12 +182,7 @@ final class CollectiveModel {
     /// Bumped with every size read; only the newest one publishes, so a read
     /// from before a clear never lands after the one that follows it.
     @ObservationIgnored private var storedEventsRefresh = 0
-    @ObservationIgnored private var probes: [any IntegrationProbe] = []
-    @ObservationIgnored private var checkTask: Task<Void, Never>?
-    /// A check was asked for while one ran; it runs once that one is done.
-    @ObservationIgnored private var checkPending = false
-    @ObservationIgnored private var lastCheckFinishedAt: Date?
-    /// The setup window opens by itself once, after the first check of the very first launch.
+    /// The setup window opens by itself once, after every tool reported for the first time on the very first launch.
     private static let setupOfferedKey = "setupOffered"
     private static let finishedRetentionKey = "finishedRetention"
     private static let idleAfterKey = "idleAfter"
@@ -195,7 +192,7 @@ final class CollectiveModel {
     private static let colorsEffortLevelsKey = "colorsEffortLevels"
     /// Paths by `SourceID` raw value; no sandbox, so plain paths keep working.
     private static let chosenFoldersKey = "eventFolders"
-    /// The popover checks again when it opens, unless a check finished this recently.
+    /// The popover checks a tool again when it opens, unless its check finished this recently.
     private static let checkFreshness: TimeInterval = 10
     private static let log = Logger(subsystem: Bundle.main.bundleIdentifier ?? "Collective", category: "StoredEvents")
 
@@ -277,7 +274,9 @@ final class CollectiveModel {
         // Only push adapters name models; pull sources report none.
         modelNaming = registration.modelNaming
         resumeCommands = registration.resumeCommands
-        probes = registration.probes
+        checks.replaceProbes(registration.probes)
+        // Statuses of tools no longer registered are gone.
+        refreshMenuBarIcon()
         let reader = SpoolReader(
             adapters: registration.adapters, chosenRoots: chosen,
             store: SpoolReader.Store(path: Self.storeURL, maxAge: eventRetention.interval)
@@ -309,7 +308,7 @@ final class CollectiveModel {
             })
         }
         updateAnimation()
-        checkIntegrations()
+        checks.check()
     }
 
     /// Stops the reader and the pull sources, waits until they have ended, and
@@ -464,7 +463,7 @@ final class CollectiveModel {
                 name: source.name,
                 sourceURL: source.sourceURL,
                 status: integrations.first { $0.source == source.source },
-                checkedAt: integrationsCheckedAt,
+                checkedAt: checks.checkedAt[source.source],
                 lastEventAt: lastEvents.bySource[source.source],
                 defaultFolders: source.defaultFolders,
                 chosenFolder: chosenFolders[source.source],
@@ -478,30 +477,14 @@ final class CollectiveModel {
            appUpdateAvailable: appUpdater.state.available != nil)
     }
 
-    /// Whether subspace is missing or disabled, from the last check.
-    var connection: ConnectionStatus { ConnectionStatus(integrations: integrations) }
+    /// Whether subspace is missing or disabled, from each tool's last check;
+    /// missing only once every tool has reported.
+    var connection: ConnectionStatus { ConnectionStatus(integrations: integrations, allReported: checks.allReported) }
 
-    /// Runs every probe off the main actor and publishes the results together.
-    /// Checks never overlap: one asked for meanwhile follows the running one,
-    /// so a "Check Again" after fixing something is never answered by a check
-    /// that started before the fix.
-    func checkIntegrations() {
-        guard checkTask == nil else {
-            checkPending = true
-            return
-        }
-        let probes = probes
-        let startedAt = Date()
-        checkTask = Task { [weak self] in
-            let results = await Self.run(probes)
-            self?.integrationsChecked(results, startedAt: startedAt)
-        }
-    }
-
-    /// When the popover opens; the probes run CLIs, so not on every open.
+    /// When the popover opens; the probes run CLIs, so not on every open. A
+    /// tool still in its check, the first one too, is not checked again.
     func checkIntegrationsIfStale() {
-        guard let last = lastCheckFinishedAt, Date().timeIntervalSince(last) > Self.checkFreshness else { return }
-        checkIntegrations()
+        checks.checkIfStale(freshness: Self.checkFreshness)
     }
 
     func setupWindowOpened() {
@@ -517,11 +500,11 @@ final class CollectiveModel {
     /// The update group's button; `SetupRuns` checks it against the group as the windows show it now.
     func runUpdate(_ source: SourceID, _ kind: SetupCardModel.CommandsBox.Footer.Button.Kind) {
         guard let status = integrations.first(where: { $0.source == source }) else { return }
-        setupRuns.runUpdate(kind, for: status, checkedAt: integrationsCheckedAt, availability: releaseChecker.updateAvailability(for: status),
+        setupRuns.runUpdate(kind, for: status, checkedAt: checks.checkedAt[source], availability: releaseChecker.updateAvailability(for: status),
                             checksForUpdates: releaseChecker.checksForUpdates)
     }
 
-    /// Whether the source's subspace should be updated, from the last check of the tools.
+    /// Whether the source's subspace should be updated, from its last check.
     func updateAvailability(for source: SourceID) -> UpdateAvailability {
         integrations.first { $0.source == source }.map(releaseChecker.updateAvailability) ?? .upToDate
     }
@@ -554,9 +537,11 @@ final class CollectiveModel {
         releaseChecker.checkOnOpen(now: Date(), sources: releaseSources)
     }
 
-    /// From the sweep and after every check of the tools; cheap when nothing is due.
-    /// Empty until the first check finished, so the launch lookup waits for it.
+    /// From the sweep and after every tool's result; cheap when nothing is due.
+    /// Nothing until every tool has reported once, so the launch lookup asks
+    /// for all of them together rather than for the first to report alone.
     private func checkSubspaceReleasesIfDue() {
+        guard checks.allReported else { return }
         releaseChecker.checkIfDue(now: Date(), sources: releaseSources)
     }
 
@@ -566,37 +551,17 @@ final class CollectiveModel {
                    uniquingKeysWith: { first, _ in first })
     }
 
-    /// Results keep the probes' order, so the first tool listed wins ties (`ConnectionStatus`).
-    @concurrent nonisolated private static func run(_ probes: [any IntegrationProbe]) async -> [IntegrationStatus] {
-        await withTaskGroup(of: (Int, IntegrationStatus).self) { group in
-            for (index, probe) in probes.enumerated() {
-                group.addTask { (index, await probe.check()) }
-            }
-            var results: [(Int, IntegrationStatus)] = []
-            for await result in group { results.append(result) }
-            return results.sorted { $0.0 < $1.0 }.map(\.1)
-        }
-    }
-
-    private func integrationsChecked(_ results: [IntegrationStatus], startedAt: Date) {
-        let isFirst = lastCheckFinishedAt == nil
-        // A list that failed keeps the last known plugin state.
-        let results = IntegrationStatus.keepingKnownPlugins(results, from: integrations)
-        integrations = results
-        integrationsCheckedAt = startedAt
-        restartHints.observe(results, probeStartedAt: startedAt)
-        lastCheckFinishedAt = Date()
-        checkTask = nil
+    /// Each tool's result as it arrives; `checks` holds it already.
+    private func integrationChecked(_ status: IntegrationStatus, startedAt: Date) {
+        refreshMenuBarIcon()
+        restartHints.observe([status], probeStartedAt: startedAt)
         checkSubspaceReleasesIfDue()
         updateAnimation()
+        // Only once every tool reported: one still in its first check may have subspace enabled.
         let defaults = UserDefaults.standard
-        if isFirst, !defaults.bool(forKey: Self.setupOfferedKey) {
+        if checks.allReported, !defaults.bool(forKey: Self.setupOfferedKey) {
             defaults.set(true, forKey: Self.setupOfferedKey)
             if connection != .ok { setupWindowRequested = true }
-        }
-        if checkPending {
-            checkPending = false
-            checkIntegrations()
         }
     }
 
