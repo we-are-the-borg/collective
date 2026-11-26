@@ -2,7 +2,8 @@
 
 Real outputs of the Antigravity CLI `agy` `1.5.17`, for
 `AntigravityIntegrationProbe` (subspace contract §11). subspace was installed
-locally from the subspace checkout `adapters/antigravity` (commit `c80aaab`).
+locally from the subspace checkout `adapters/antigravity` (commit `c80aaab`;
+unchanged on `main` at `0f9b53b`).
 
 - `version.txt`: stdout of `agy --version`.
 - `not-installed.json`: stdout of `agy plugin list --json` before subspace was

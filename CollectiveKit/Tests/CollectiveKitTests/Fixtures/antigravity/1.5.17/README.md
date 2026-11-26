@@ -7,7 +7,7 @@ denied permission in the interactive CLI in Warp (3), a running tool interrupted
 (6) and two conversations of the Desktop App on one shared host process (7).
 
 Copied from subspace's fixture of the same name, `fixtures/antigravity/1.5.17/`
-(subspace commit `c80aaab` on branch `feat/antigravity-capture`), anonymized there. Its
+(subspace commit `0f9b53b`), anonymized there. Its
 README describes the runs, the findings and the edited excerpts. Copied are `events/`
 of all seven runs, `transcripts/excerpt.jsonl` of runs 1, 2, 3 and 7 and
 `terminal.json` of runs 3 and 7, not the mapped results.

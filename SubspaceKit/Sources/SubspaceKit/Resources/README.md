@@ -6,7 +6,7 @@ something unusable). `MappingLoader` takes whichever known-format document has
 the higher revision. This README stays outside `Mappings/` so it is not
 shipped in the bundle.
 
-Source: subspace dev repo, `model/`, commit `c80aaab`.
+Source: subspace dev repo, `model/`, commit `0f9b53b`.
 
 | File | Revision |
 | --- | --- |
