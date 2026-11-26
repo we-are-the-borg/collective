@@ -71,4 +71,24 @@ import Testing
         let missing = integration(.notInstalled, source: "b")
         #expect(ConnectionStatus(integrations: [unknown, missing]) == .missing(missing))
     }
+
+    // MARK: Before every source reported
+
+    /// A source still in its first check may have subspace enabled.
+    @Test func missingWaitsUntilEverySourceReported() {
+        let missing = integration(.notInstalled, source: "a")
+        #expect(ConnectionStatus(integrations: [missing], allReported: false) == .ok)
+        #expect(ConnectionStatus(integrations: [missing], allReported: true) == .missing(missing))
+    }
+
+    @Test func disabledWarnsBeforeEverySourceReported() {
+        let disabled = integration(.disabled(version: nil), source: "a")
+        #expect(ConnectionStatus(integrations: [disabled], allReported: false) == .disabled(disabled))
+    }
+
+    @Test func aMissingSourceWaitingForOthersDoesNotHideADisabledOne() {
+        let missing = integration(.notInstalled, source: "a")
+        let disabled = integration(.disabled(version: nil), source: "b")
+        #expect(ConnectionStatus(integrations: [missing, disabled], allReported: false) == .disabled(disabled))
+    }
 }

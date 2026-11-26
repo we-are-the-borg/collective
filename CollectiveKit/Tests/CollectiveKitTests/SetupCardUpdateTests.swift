@@ -25,6 +25,13 @@ private func claudeCode(
     )
 }
 
+private func codex() -> IntegrationStatus {
+    IntegrationStatus(
+        source: "codex", toolName: "Codex", cliName: "codex", cli: .found(path: "/opt/homebrew/bin/codex", version: "0.160.0"),
+        plugin: .enabled(version: "1.0.1"), lastSessionStartAt: Date(timeIntervalSince1970: 1), commands: CodexSubspace.commands
+    )
+}
+
 private let available = UpdateAvailability.available(installed: version("1.0.1"), latest: version("1.3.0"))
 private let required = UpdateAvailability.required(installed: version("1.0.1"), minimum: version("1.1.0"), latest: version("1.3.0"))
 
@@ -228,7 +235,7 @@ private func pill(_ card: SetupCardModel) -> String? {
         availability: [SourceID: UpdateAvailability] = ["claude-code": available]
     ) -> SetupWindowModel {
         SetupWindowModel(integrations: [claudeCode()], updateRuns: updateRuns, availability: availability, checksForUpdates: true,
-                         checkedAt: nil, now: now, home: home, timeZone: gmt)
+                         now: now, home: home, timeZone: gmt)
     }
 
     /// An update never holds back Done.
@@ -256,10 +263,23 @@ private func pill(_ card: SetupCardModel) -> String? {
                 integrations: [claudeCode(.enabled(version: "1.3.0"), lastSessionStartAt: now.addingTimeInterval(-120))],
                 updateRuns: ["claude-code": updateRun(.succeeded(at: succeededAt), [.succeeded, .succeeded])],
                 availability: ["claude-code": .upToDate], checksForUpdates: true,
-                checkedAt: checkedAt, now: now, home: home, timeZone: gmt
+                checkedAt: ["claude-code": checkedAt], now: now, home: home, timeZone: gmt
             ).cards.first
         }
         #expect(cards(checkedAt: succeededAt.addingTimeInterval(1)).flatMap(pill) == "Connected (dot)")
         #expect(cards(checkedAt: succeededAt.addingTimeInterval(-1)).flatMap(pill) == "Updating… (haloDot)")
+    }
+
+    /// Each card's update is confirmed by its own source's probe: another
+    /// source still in its first check holds nothing back.
+    @Test func anUpdateIsConfirmedByItsOwnSourcesProbe() {
+        let succeededAt = now.addingTimeInterval(-10)
+        let window = SetupWindowModel(
+            integrations: [claudeCode(.enabled(version: "1.3.0"), lastSessionStartAt: now.addingTimeInterval(-120)), codex()],
+            updateRuns: ["claude-code": updateRun(.succeeded(at: succeededAt), [.succeeded, .succeeded])],
+            availability: ["claude-code": .upToDate], checksForUpdates: true,
+            checkedAt: ["claude-code": succeededAt.addingTimeInterval(1)], now: now, home: home, timeZone: gmt
+        )
+        #expect(window.cards.first.flatMap(pill) == "Connected (dot)")
     }
 }

@@ -18,9 +18,13 @@ public enum ConnectionStatus: Sendable, Equatable {
     /// source, even if another is enabled, since the user switched it off; missing
     /// wins over disabled. No status yet (the first check is still running) and
     /// an unknown one never warn.
-    public init(integrations: [IntegrationStatus]) {
+    /// - Parameter allReported: Whether every source has reported once
+    ///   (`IntegrationChecks.allReported`). Until then a missing plugin waits,
+    ///   since a source still in its first check may have subspace enabled; a
+    ///   disabled one warns at once.
+    public init(integrations: [IntegrationStatus], allReported: Bool = true) {
         let anyEnabled = integrations.contains { if case .enabled = $0.plugin { true } else { false } }
-        if !anyEnabled, let missing = integrations.first(where: { $0.plugin == .notInstalled }) {
+        if allReported, !anyEnabled, let missing = integrations.first(where: { $0.plugin == .notInstalled }) {
             self = .missing(missing)
         } else if let disabled = integrations.first(where: { if case .disabled = $0.plugin { true } else { false } }) {
             self = .disabled(disabled)

@@ -27,7 +27,7 @@ struct PopoverContent: View {
                 onUndoLast: model.undoLast,
                 onToggleSubagents: model.toggleSubagents,
                 onToggleSubagentFold: model.toggleSubagentFold,
-                onCheckAgain: model.checkIntegrations,
+                onCheckAgain: model.checks.check,
                 onSetUp: onSetUp,
                 onSettings: onSettings,
                 onOpenUpdate: onOpenUpdate,

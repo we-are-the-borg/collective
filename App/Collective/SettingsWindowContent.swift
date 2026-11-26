@@ -138,7 +138,7 @@ struct SettingsWindowContent: View {
             case .source:
                 model.checkSubspaceReleasesOnOpen()
                 while !Task.isCancelled {
-                    model.checkIntegrations()
+                    model.checks.check()
                     try? await Task.sleep(for: .seconds(5))
                 }
             default:

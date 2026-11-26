@@ -469,7 +469,7 @@ public struct PopoverModel: Sendable, Equatable {
     ///     loading state up even after `isLoading` ended, so the indicator
     ///     never vanishes right after it appeared.
     ///   - connection: Whether subspace is missing or disabled; `.ok` until
-    ///     the first check has finished.
+    ///     a source has reported, and never missing before every source has.
     ///   - replyPreviewCache: A presentation cache owned across rebuilds by
     ///     the caller. The default is fresh for a one-off model.
     ///   - terminalApps: Which app shows a session's terminal; the default

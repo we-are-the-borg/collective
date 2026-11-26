@@ -35,7 +35,7 @@ struct SetupWindowContent: View {
                     updateRuns: model.setupRuns.updateSnapshots,
                     availability: model.updateAvailabilities,
                     checksForUpdates: model.releaseChecker.checksForUpdates,
-                    checkedAt: model.integrationsCheckedAt,
+                    checkedAt: model.checks.checkedAt,
                     now: context.date
                 ),
                 appIcon: Image(nsImage: NSApp.applicationIconImage),
@@ -43,7 +43,7 @@ struct SetupWindowContent: View {
                 onRun: model.runSetup,
                 onRunUpdate: model.runUpdate,
                 onToggleOutput: model.setupRuns.toggleOutput(for:),
-                onCheckAgain: model.checkIntegrations,
+                onCheckAgain: model.checks.check,
                 onClose: { dismissWindow(id: SetupWindow.id) }
             )
         }
@@ -58,7 +58,7 @@ struct SetupWindowContent: View {
         // Cancelled when the window closes.
         .task {
             while !Task.isCancelled {
-                model.checkIntegrations()
+                model.checks.check()
                 try? await Task.sleep(for: .seconds(5))
             }
         }
