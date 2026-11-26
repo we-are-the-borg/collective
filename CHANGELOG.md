@@ -5,6 +5,17 @@ each section lists the merged pull requests by type.
 
 <!-- git-cliff: end of header -->
 
+## 1.4.0
+
+### Features
+
+- **antigravity:** Add Google Antigravity as a subspace source (#27)
+- **setup:** Support installing Antigravity plugin without agy CLI (#30)
+
+### Bug Fixes
+
+- **setup:** Update each source's status as soon as its probe finishes (#29)
+
 ## 1.3.0
 
 ### Features

@@ -2,6 +2,10 @@
 
 Handwritten changelog and release notes for each version of The Collective. See the full list of changes in [`CHANGELOG.md`](CHANGELOG.md).
 
+## 1.4.0
+
+<!-- What changed for users of The Collective, in their words. Required: publish stops while this section is empty. -->
+
 ## 1.3.0
 
 First release from the public repository.
