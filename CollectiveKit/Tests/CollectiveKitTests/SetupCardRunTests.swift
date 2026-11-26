@@ -124,8 +124,8 @@ private func pill(_ card: SetupCardModel) -> String? {
         #expect(plan.kind == .install)
         #expect(plan.lines == [marketplace, install])
         #expect(plan.skipping == [])
-        #expect(plan.cliName == "claude")
-        #expect(plan.cliPath == "\(home)/.local/bin/claude")
+        #expect(plan.programName == "claude")
+        #expect(plan.programPath == "\(home)/.local/bin/claude")
     }
 
     @Test func theInstallPlanSkipsAnAddedMarketplace() {
@@ -449,8 +449,8 @@ private func pill(_ card: SetupCardModel) -> String? {
         #expect(card.commands?.footer?.link?.url == URL(string: "https://github.com/we-are-the-borg/subspace-codex"))
         let plan = try #require(card.runPlan)
         #expect(plan.lines == [Self.codexMarketplace, Self.codexInstall])
-        #expect(plan.cliName == "codex")
-        #expect(plan.cliPath == "/opt/homebrew/bin/codex")
+        #expect(plan.programName == "codex")
+        #expect(plan.programPath == "/opt/homebrew/bin/codex")
     }
 
     @Test func codexRunningOnTheMarketplace() {

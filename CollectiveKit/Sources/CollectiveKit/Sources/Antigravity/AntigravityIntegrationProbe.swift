@@ -7,27 +7,36 @@ import SubspaceKit
 ///
 /// If the CLI is missing or its list fails, the probe falls back to the files
 /// `agy` keeps in `~/.gemini/config/`; those are internal and can change. Not
-/// to `plugin_data/`: `agy plugin uninstall` keeps it, so a `plugin.json` there
-/// only dates the last session.
+/// to `plugin_data/`: it can be left over (`agy` 1.5.16 kept it on uninstall,
+/// 1.5.17 removes both folders), so a `plugin.json` there only dates the last session.
+///
+/// Without `agy` but with the desktop app, the setup goes through `git`
+/// (`SetupCommands.withoutCLI`), which the probe only locates: `/usr/bin/git`
+/// without the Command Line Tools opens an install dialog when run.
 public struct AntigravityIntegrationProbe: IntegrationProbe {
     public let source: SourceID
     public var commands: SetupCommands { AntigravitySubspace.commands }
 
     static let candidateDirectories = CLILocator.candidateDirectories
     static let cliName = "agy"
+    static let appBundleIdentifier = "com.google.antigravity"
 
     private let runner: any CommandRunner
     private let isExecutable: @Sendable (String) -> Bool
     private let environment: [String: String]
     private let home: URL
     private let spoolRoots: [URL]
+    private let isAppInstalled: @Sendable (String) -> Bool
 
+    /// `isAppInstalled` answers for a bundle identifier; the kit doesn't import
+    /// AppKit, so the default knows no app and the app passes the real lookup.
     public init(
         runner: any CommandRunner = ProcessCommandRunner(),
         isExecutable: @escaping @Sendable (String) -> Bool = { FileManager.default.isExecutableFile(atPath: $0) },
         chosenRoot: URL? = nil,
         environment: [String: String] = ProcessInfo.processInfo.environment,
-        home: URL = FileManager.default.homeDirectoryForCurrentUser
+        home: URL = FileManager.default.homeDirectoryForCurrentUser,
+        isAppInstalled: @escaping @Sendable (String) -> Bool = { _ in false }
     ) {
         let adapter = AntigravityAdapter()
         self.source = adapter.source
@@ -35,6 +44,7 @@ public struct AntigravityIntegrationProbe: IntegrationProbe {
         self.isExecutable = isExecutable
         self.environment = environment
         self.home = home
+        self.isAppInstalled = isAppInstalled
         self.spoolRoots = SubspaceRoot.resolveAll(adapter: adapter, chosen: chosenRoot, environment: environment, home: home)
     }
 
@@ -57,6 +67,12 @@ public struct AntigravityIntegrationProbe: IntegrationProbe {
             cli = .found(path: path, version: versionResult.succeeded ? Self.version(fromVersionOutput: versionResult.stdout) : nil)
             if listResult.succeeded { plugin = Self.pluginState(fromList: Data(listResult.stdout.utf8)) }
         }
+        var alternative: IntegrationStatus.CLI?
+        if cli == .notFound, let program = commands.withoutCLI?.program, isAppInstalled(Self.appBundleIdentifier) {
+            let programLocator = CLILocator(cliName: program, runner: runner, isExecutable: isExecutable,
+                                            environment: environment, home: home)
+            alternative = await programLocator.locate().map { .found(path: $0, version: nil) } ?? .notFound
+        }
         return IntegrationStatus(
             source: source,
             toolName: "Antigravity",
@@ -65,7 +81,8 @@ public struct AntigravityIntegrationProbe: IntegrationProbe {
             plugin: plugin ?? Self.pluginState(home: home),
             lastSessionStartAt: SubspaceRoot.lastSessionStart(in: spoolRoots),
             commands: commands,
-            searchedLocations: Self.candidateDirectories
+            searchedLocations: Self.candidateDirectories,
+            alternative: alternative
         )
     }
 

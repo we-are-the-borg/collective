@@ -103,6 +103,18 @@ private func makeRuns(_ runner: FakeRunner, successes: Counter = Counter()) -> S
         #expect(successes.count == 1)
     }
 
+    /// A tool there without its CLI installs through the program of its path without it.
+    @Test func installWithoutTheCLIRunsTheAlternativeProgram() async {
+        let runner = FakeRunner()
+        let runs = makeRuns(runner)
+        var status = integration(.notInstalled, cli: .notFound)
+        status.commands.withoutCLI = SetupCommands.Alternative(program: "fetch", install: ["fetch clone https://example.com/subspace.git"])
+        status.alternative = .found(path: "/usr/bin/fetch", version: nil)
+        await runs.run(.install, for: status)?.value
+        #expect(runner.arguments == [["-l", "-c", "'/usr/bin/fetch' clone https://example.com/subspace.git"]])
+        #expect(runs.snapshots["test-tool"]?.phase == .succeeded(at: succeededAt))
+    }
+
     @Test(arguments: [
         claudeCode(.enabled(version: "0.4.0")),
         claudeCode(.notInstalled, cli: .notFound),

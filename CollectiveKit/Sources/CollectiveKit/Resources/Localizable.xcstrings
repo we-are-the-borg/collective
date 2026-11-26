@@ -188,6 +188,28 @@
         }
       }
     },
+    "%@ is not on this Mac, so The Collective can’t run these commands. %@" : {
+      "comment" : "Setup window, card of one coding tool that is on this Mac without its command-line program, while subspace is not installed: note above the install commands when the program those commands start with is missing too, so the card shows them only to copy. The first argument is the program's name as typed in a terminal; the second what the tool's integration says to do about it, e.g. how to install the program. \"The Collective\" is the app's name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is not on this Mac, so The Collective can’t run these commands. %@"
+          }
+        }
+      }
+    },
+    "%@ is not on this Mac, so The Collective can’t run these commands. Install it first." : {
+      "comment" : "Setup window, card of one coding tool that is on this Mac without its command-line program, while subspace is not installed: note above the install commands when the program those commands start with is missing too, so the card shows them only to copy. The argument is the program's name as typed in a terminal. \"The Collective\" is the app's name, do not translate it.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is not on this Mac, so The Collective can’t run these commands. Install it first."
+          }
+        }
+      }
+    },
     "(default)" : {
       "comment" : "Settings window, pane of one coding tool: marker after the event folder path while the default folder is used.",
       "localizations" : {
@@ -2623,6 +2645,17 @@
         }
       }
     },
+    "git comes with the Xcode Command Line Tools: run xcode-select --install." : {
+      "comment" : "Setup window, card of Antigravity when it is on this Mac without its command-line program and git, which its install commands start with, is missing too: hint after the note that the commands can only be copied. \"git\" and \"Xcode Command Line Tools\" are product names, \"xcode-select --install\" is a command typed in a terminal, do not translate them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "git comes with the Xcode Command Line Tools: run xcode-select --install."
+          }
+        }
+      }
+    },
     "has %lld questions" : {
       "comment" : "Popover, status word at the head of a session's row, next to its name and colored like the status shape: agents of the session wait for the user to answer this many questions; also the status word of a subagent's row in the session's subagent list. The singular names no number.",
       "localizations" : {
@@ -3394,6 +3427,17 @@
         }
       }
     },
+    "Quit Antigravity (⌘Q), open it again and start a new conversation." : {
+      "comment" : "Setup window, card of one coding tool, detail under the step \"Waiting for the first session\" for Antigravity, which loads a newly installed plugin only after it was started again. \"Antigravity\" is a product name, do not translate it; \"⌘Q\" is the keyboard shortcut, keep it as is.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit Antigravity (⌘Q), open it again and start a new conversation."
+          }
+        }
+      }
+    },
     "Quit The Collective" : {
       "comment" : "Status item menu (right-click on the menu bar icon): item that quits the app. The Collective is the app’s name.",
       "localizations" : {
@@ -3800,17 +3844,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start a new %@ session. Sessions that were already running pick up subspace after a restart."
-          }
-        }
-      }
-    },
-    "Start a new Antigravity conversation." : {
-      "comment" : "Setup window, card of one coding tool, detail under the step \"Waiting for the first session\" for Antigravity, whose hooks run from the next conversation on. \"Antigravity\" is a product name, do not translate it.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start a new Antigravity conversation."
           }
         }
       }

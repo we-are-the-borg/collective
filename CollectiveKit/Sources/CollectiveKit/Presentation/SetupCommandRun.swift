@@ -3,7 +3,8 @@ import Observation
 
 /// Runs one setup card's terminal commands for the user, behind the card's
 /// button ("Install", "Enable", "Try Again"). Tool-neutral: the card brings
-/// its lines and the CLI its probe found. Nothing runs before `start()`, and
+/// its lines and the program its probe found: the tool's CLI, or the
+/// program of the path without it (`SetupCommands.withoutCLI`). Nothing runs before `start()`, and
 /// a run outlives the view that started it: the task holds the run until its
 /// last command ends, and no command is cancelled.
 @MainActor @Observable
@@ -14,7 +15,7 @@ public final class SetupCommandRun {
 
     public struct Line: Sendable, Equatable {
         public enum State: Sendable, Equatable { case pending, skipped, running, succeeded, failed }
-        /// As the card shows it, starting with the CLI's name.
+        /// As the card shows it, starting with the program's name.
         public let command: String
         public internal(set) var state: State
         /// What the command left behind, shown verbatim: `$ <command>`, then
@@ -42,8 +43,8 @@ public final class SetupCommandRun {
     public let kind: SetupCardModel.RunPlan.Kind
     public private(set) var lines: [Line]
     public private(set) var phase: Phase = .idle
-    private let cliName: String
-    private let cliPath: String
+    private let programName: String
+    private let programPath: String
     private let environment: [String: String]
     private let runner: any CommandRunner
     private let now: @MainActor () -> Date
@@ -52,34 +53,36 @@ public final class SetupCommandRun {
     /// - Parameters:
     ///   - kind: Which of the card's buttons started the run.
     ///   - lines: The card's terminal commands, in order. Each starts with
-    ///     `cliName`; anything else is a programmer error, since the lines are
+    ///     `programName`; anything else is a programmer error, since the lines are
     ///     the adapters' own constants, and stops the app.
     ///   - skipping: Indices of lines already done (a marketplace already
     ///     added); they are never run.
-    ///   - cliPath: Where the probe found the CLI. It stands in for the name,
-    ///     so the run uses the CLI the card reports, whatever the login shell's
-    ///     `PATH` finds first.
+    ///   - programName: The program every line starts with: the tool's CLI, or
+    ///     the program of the path without it.
+    ///   - programPath: Where the probe found the program. It stands in for the
+    ///     name, so the run uses the program the card reports, whatever the
+    ///     login shell's `PATH` finds first.
     ///   - environment: The app's environment; the commands get the one the
-    ///     probes run the CLI in.
+    ///     probes run a CLI at `programPath` in.
     ///   - onSuccess: Called once when every line succeeded, so the app checks
     ///     the tools again at once. A failure does not call it: nothing changed
     ///     that a check would show sooner, and the output says what went wrong.
-    public init(kind: SetupCardModel.RunPlan.Kind, lines: [String], skipping: Set<Int> = [], cliName: String, cliPath: String,
+    public init(kind: SetupCardModel.RunPlan.Kind, lines: [String], skipping: Set<Int> = [], programName: String, programPath: String,
                 environment: [String: String], runner: any CommandRunner,
                 now: @escaping @MainActor () -> Date = { Date() }, onSuccess: @escaping @MainActor () -> Void) {
         // Deliberately a trap: the lines are adapter constants, programmer-controlled
         // and covered by tests (`adapterLinesStartWithTheirCLI`), so a malformed one
         // fails loudly in development rather than running some other command.
         for line in lines {
-            precondition(line == cliName || line.hasPrefix(cliName + " "), "Not a command of \(cliName): \(line)")
+            precondition(line == programName || line.hasPrefix(programName + " "), "Not a command of \(programName): \(line)")
         }
         self.kind = kind
         self.lines = lines.enumerated().map { index, command in
             Line(command: command, state: skipping.contains(index) ? .skipped : .pending, output: nil)
         }
-        self.cliName = cliName
-        self.cliPath = cliPath
-        self.environment = CLILocator.environment(forCLIAt: URL(fileURLWithPath: cliPath), base: environment)
+        self.programName = programName
+        self.programPath = programPath
+        self.environment = CLILocator.environment(forCLIAt: URL(fileURLWithPath: programPath), base: environment)
         self.runner = runner
         self.now = now
         self.onSuccess = onSuccess
@@ -130,9 +133,9 @@ public final class SetupCommandRun {
             for index in indices {
                 markRunning(index)
                 // A login shell reads the user's profile, as the terminal the card's commands are meant for does.
-                let rest = lines[index].command.dropFirst(cliName.count)
+                let rest = lines[index].command.dropFirst(programName.count)
                 let result = await runner.run(executable: shell,
-                                              arguments: ["-l", "-c", ShellQuoting.singleQuoted(cliPath) + rest],
+                                              arguments: ["-l", "-c", ShellQuoting.singleQuoted(programPath) + rest],
                                               environment: environment, timeout: Self.commandTimeout)
                 lines[index].output = Self.output(of: lines[index].command, result)
                 guard result.succeeded else {

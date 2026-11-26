@@ -23,6 +23,10 @@ public struct IntegrationStatus: Sendable, Equatable {
     /// `plugin` is an earlier check's, kept because this one couldn't read it
     /// (`keepingKnownPlugin(from:)`); it shows, but proves nothing about now.
     public var pluginIsCarriedOver = false
+    /// Where the program of `commands.withoutCLI` was found, or `.notFound`. Set by
+    /// a probe only when `cli` is `.notFound` while the tool itself is present
+    /// (an app without its CLI, say); nil = no path without the CLI applies.
+    public var alternative: CLI?
 
     public init(
         source: SourceID,
@@ -33,7 +37,8 @@ public struct IntegrationStatus: Sendable, Equatable {
         marketplaceAdded: Bool? = nil,
         lastSessionStartAt: Date? = nil,
         commands: SetupCommands,
-        searchedLocations: [String] = []
+        searchedLocations: [String] = [],
+        alternative: CLI? = nil
     ) {
         self.source = source
         self.toolName = toolName
@@ -44,6 +49,7 @@ public struct IntegrationStatus: Sendable, Equatable {
         self.lastSessionStartAt = lastSessionStartAt
         self.commands = commands
         self.searchedLocations = searchedLocations
+        self.alternative = alternative
     }
 }
 
@@ -87,6 +93,9 @@ public struct SetupCommands: Sendable, Equatable {
     public var updateHint: LocalizedStringResource?
     /// Where the published versions are listed; nil = they can't be looked up.
     public var release: SubspaceRelease?
+    /// How to install and update without the tool's CLI, for a tool that is
+    /// present without it (`IntegrationStatus.alternative`); nil = only through the CLI.
+    public var withoutCLI: Alternative?
 
     public init(
         install: [String],
@@ -98,7 +107,8 @@ public struct SetupCommands: Sendable, Equatable {
         firstSessionHint: LocalizedStringResource? = nil,
         update: [String] = [],
         updateHint: LocalizedStringResource? = nil,
-        release: SubspaceRelease? = nil
+        release: SubspaceRelease? = nil,
+        withoutCLI: Alternative? = nil
     ) {
         // Deliberately a trap: adapters pass constants, programmer-controlled and
         // covered by their probe tests, so a malformed one fails loudly in development.
@@ -113,6 +123,30 @@ public struct SetupCommands: Sendable, Equatable {
         self.update = update
         self.updateHint = updateHint
         self.release = release
+        self.withoutCLI = withoutCLI
+    }
+}
+
+extension SetupCommands {
+    /// Terminal lines that run another program than the tool's CLI, e.g. a
+    /// plain download of the plugin, for when the CLI is missing.
+    public struct Alternative: Sendable, Equatable {
+        /// The command every line starts with; the run puts the path the probe found in its place.
+        public var program: String
+        /// Typed in a terminal, in order, to install subspace.
+        public var install: [String]
+        /// Typed in a terminal, in order, to update an installed subspace; empty = no update to offer.
+        public var update: [String]
+        /// After the setup card's "not on this Mac" line when `program` is missing,
+        /// e.g. how to get it; nil keeps the general advice.
+        public var missingProgramHint: LocalizedStringResource?
+
+        public init(program: String, install: [String], update: [String] = [], missingProgramHint: LocalizedStringResource? = nil) {
+            self.program = program
+            self.install = install
+            self.update = update
+            self.missingProgramHint = missingProgramHint
+        }
     }
 }
 

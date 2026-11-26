@@ -58,7 +58,17 @@ agy plugin enable subspace   # only if it is disabled
 
 The same install command updates the plugin.
 
-Then start a new session in the tool. Codex holds the plugin's hooks back until you approve them with `/hooks` in that session.
+Without the `agy` CLI (only the Desktop App), install the plugin with `git`, for example from the Xcode Command Line Tools (`xcode-select --install`). Antigravity loads plugins from `~/.gemini/config/plugins/` for both the CLI and the Desktop App. The setup window shows these lines when `agy` is missing and the Desktop App is installed.
+
+```sh
+git clone --depth 1 https://github.com/we-are-the-borg/subspace-antigravity.git ~/.gemini/config/plugins/subspace
+```
+
+Quit Antigravity (⌘Q) and start it again. To update, run `git -C ~/.gemini/config/plugins/subspace pull --ff-only`. To enable or disable the plugin, use Customizations › Installed in the Desktop App.
+
+For install, update and uninstall with and without `agy`, and where the data folders are, see the [Antigravity instructions in subspace](https://github.com/we-are-the-borg/subspace/blob/main/tools/dist/antigravity/README.md).
+
+Then start a new session in the tool (a new conversation in Antigravity). Codex holds the plugin's hooks back until you approve them with `/hooks` in that session.
 
 ## Screenshots
 

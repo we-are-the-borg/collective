@@ -277,7 +277,7 @@ public struct WarningBlock: Sendable, Equatable {
             return nil
         case .missing(let status):
             problem = .missing(toolName: status.toolName)
-            commands = status.commands.install
+            commands = status.installLines
         case .disabled(let status):
             problem = .disabled(toolName: status.toolName)
             commands = status.commands.enable

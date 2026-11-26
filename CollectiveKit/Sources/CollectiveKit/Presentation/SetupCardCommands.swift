@@ -31,9 +31,11 @@ extension SetupCardModel {
         public let lines: [String]
         /// The marketplace line, once the tool already knows the marketplace.
         public let skipping: Set<Int>
-        public let cliName: String
-        /// Where the probe found the CLI; the run uses it in place of the name.
-        public let cliPath: String
+        /// The program every line starts with: the tool's CLI, or the program
+        /// of the path without it (`SetupCommands.withoutCLI`).
+        public let programName: String
+        /// Where the probe found the program; the run uses it in place of the name.
+        public let programPath: String
     }
 }
 
@@ -115,8 +117,15 @@ extension SetupCardModel.CommandsBox {
 
 extension SetupCardModel {
     /// Only a CLI the probe found can run, and only the state's own terminal
-    /// lines; a waiting or ready tool has nothing left to run.
+    /// lines; a waiting or ready tool has nothing left to run. Without the CLI,
+    /// the path without it installs through its own program, if that is found.
     static func runPlan(_ status: IntegrationStatus, state: State) -> RunPlan? {
+        if let alternative = status.withoutCLI {
+            guard state == .notInstalled, case .found(let path, _) = alternative.program,
+                  !alternative.commands.install.isEmpty else { return nil }
+            return RunPlan(kind: .install, lines: alternative.commands.install, skipping: [],
+                           programName: alternative.commands.program, programPath: path)
+        }
         guard case .found(let path, _) = status.cli else { return nil }
         let commands = status.commands
         let plan: RunPlan? = switch state {
@@ -127,11 +136,11 @@ extension SetupCardModel {
                 skipping: status.marketplaceAdded == true
                     ? Set(commands.install.indices.filter { commands.install[$0] == commands.marketplaceLine })
                     : [],
-                cliName: status.cliName,
-                cliPath: path
+                programName: status.cliName,
+                programPath: path
             )
         case .disabled:
-            RunPlan(kind: .enable, lines: commands.enable, skipping: [], cliName: status.cliName, cliPath: path)
+            RunPlan(kind: .enable, lines: commands.enable, skipping: [], programName: status.cliName, programPath: path)
         case .waiting, .ready, .notFound, .checking:
             nil
         }
@@ -139,7 +148,7 @@ extension SetupCardModel {
     }
 
     /// No box at all when a tool has nothing to type, e.g. no command to enable a plugin.
-    /// `run` is one still shown (see `standing(of:plan:state:cliFound:)`), not one that gave way.
+    /// `run` is one still shown (see `standing(of:plan:state:programFound:)`), not one that gave way.
     static func commandsBox(
         _ status: IntegrationStatus,
         state: State,
@@ -150,7 +159,8 @@ extension SetupCardModel {
     ) -> CommandsBox? {
         let commands = status.commands
         let (terminal, inApp): ([String], [String]) = switch state {
-        case .notInstalled, .notFound: (commands.install, commands.installInApp)
+        case .notInstalled: (status.installLines, commands.installInApp)
+        case .notFound: (commands.install, commands.installInApp)
         case .disabled: (commands.enable, commands.enableInApp)
         case .waiting, .ready, .checking: ([], [])
         }
@@ -352,21 +362,39 @@ extension SetupCardModel {
 
     /// A finished run stays only for its own step or an enabled plugin;
     /// otherwise it gives way and the card is the one without a run: the next
-    /// step's box, or the commands to copy once the CLI is gone.
+    /// step's box, or the commands to copy once the program that ran them
+    /// (the CLI, or the one of the path without it) is gone.
     /// A run made but not started shows nothing of its own yet.
-    static func standing(of run: SetupCommandRun.Snapshot, plan: RunPlan?, state: State, cliFound: Bool) -> RunStanding? {
+    static func standing(of run: SetupCommandRun.Snapshot, plan: RunPlan?, state: State, programFound: Bool) -> RunStanding? {
         switch run.phase {
         case .idle: nil
         case .running: .running
         case .succeeded, .failed:
             if let plan, plan.kind == run.kind, plan.lines == run.lines.map(\.command) {
                 .ownStep
-            } else if cliFound, state.pluginEnabled {
+            } else if programFound, state.pluginEnabled {
                 .pluginEnabled
             } else {
                 nil
             }
         }
+    }
+}
+
+extension IntegrationStatus {
+    /// The path without the CLI, when the probe says it applies: the CLI is
+    /// missing, the tool is there, and its adapter offers one. `program` is
+    /// where the probe found the path's program, or `.notFound`.
+    var withoutCLI: (commands: SetupCommands.Alternative, program: CLI)? {
+        guard cli == .notFound, let program = alternative, let commands = commands.withoutCLI else { return nil }
+        return (commands, program)
+    }
+
+    /// The terminal lines that install subspace: the path's without the CLI
+    /// when it applies, else the CLI's. The setup card and the popover's
+    /// warning both show these, so they never name different commands.
+    var installLines: [String] {
+        withoutCLI?.commands.install ?? commands.install
     }
 }
 

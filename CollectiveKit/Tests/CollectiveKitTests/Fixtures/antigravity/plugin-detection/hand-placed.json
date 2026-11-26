@@ -1,0 +1,11 @@
+[
+  {
+    "name": "subspace",
+    "enabled": true,
+    "version": "1.0.0",
+    "path": "/Users/user/.gemini/config/plugins/subspace",
+    "hooks": [
+      "subspace"
+    ]
+  }
+]
