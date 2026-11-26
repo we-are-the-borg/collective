@@ -10,7 +10,8 @@ public struct SetupCardModel: Sendable, Equatable {
         /// Enabled, but neither has subspace seen a session start nor the app an event.
         case waiting
         case ready
-        /// The tool's CLI is not on this Mac, and subspace is neither enabled nor disabled for it.
+        /// The tool's CLI is not on this Mac, no path without it applies, and
+        /// subspace is neither enabled nor disabled for it.
         case notFound
         /// The CLI is found, but its list could not be read and no earlier check
         /// knew the plugin: like Settings before the first check, no claim.
@@ -34,7 +35,7 @@ public struct SetupCardModel: Sendable, Equatable {
     public struct CommandsBox: Sendable, Equatable {
         /// Typed in a terminal, or run by the card's button.
         public let lines: [Line]
-        /// Under the terminal lines; nil when the card cannot run them (no CLI found)
+        /// Under the terminal lines; nil when the card cannot run them (no program found)
         /// or a failed run left nothing to try again (the plugin is enabled after all).
         public let footer: Footer?
         /// Typed in a session of the tool itself; never run by the card.
@@ -55,7 +56,8 @@ public struct SetupCardModel: Sendable, Equatable {
     public let subtitle: LocalizedStringResource
     /// Empty when ready or not found.
     public let steps: [Step]
-    /// Stands in for the steps when the CLI was not found.
+    /// Stands in for the steps when the CLI was not found, or the program of
+    /// the path without it (`SetupCommands.withoutCLI`).
     public let note: LocalizedStringResource?
     /// The update box's while `update` is set.
     public let commands: CommandsBox?
@@ -79,7 +81,7 @@ public struct SetupCardModel: Sendable, Equatable {
     ///   - run: This window's run of the card's commands, if one was started.
     ///     A running run always shows; a finished one only while the probe's
     ///     plan is its own step or the plugin is enabled, otherwise the card
-    ///     is the one without a run (`standing(of:plan:state:cliFound:)`).
+    ///     is the one without a run (`standing(of:plan:state:programFound:)`).
     ///   - outputShown: Whether the user asked to see a succeeded run's output.
     ///   - availability: What the release check says about the installed plugin.
     ///   - updateRun: The tool's update run as the windows show it (`SetupRuns.updateSnapshots`).
@@ -108,10 +110,14 @@ public struct SetupCardModel: Sendable, Equatable {
         state = Self.state(of: status, lastEventAt: lastEventAt)
         let plan = Self.runPlan(status, state: state)
         runPlan = plan
-        let cliFound = if case .found = status.cli { true } else { false }
+        // The CLI, or the program of the path without it: whichever ran the card's lines.
+        let programFound = switch (status.cli, status.withoutCLI?.program) {
+        case (.found, _), (_, .found?): true
+        default: false
+        }
         // An update run is the update box's (`SourceUpdateModel`), not one of the card's steps.
         let run: (snapshot: SetupCommandRun.Snapshot, standing: RunStanding, step: RunPlan.Step)? =
-            if let run, let step = run.kind.step, let standing = Self.standing(of: run, plan: plan, state: state, cliFound: cliFound) {
+            if let run, let step = run.kind.step, let standing = Self.standing(of: run, plan: plan, state: state, programFound: programFound) {
                 (run, standing, step)
             } else {
                 nil
@@ -232,7 +238,13 @@ public struct SetupCardModel: Sendable, Equatable {
             []
         }
 
-        note = state == .notFound ? Self.notFoundNote(status) : nil
+        note = if state == .notFound {
+            Self.notFoundNote(status)
+        } else if state == .notInstalled, let alternative = status.withoutCLI, alternative.program == .notFound {
+            Self.programMissingNote(alternative.commands)
+        } else {
+            nil
+        }
 
         commands = update?.commands ?? Self.commandsBox(status, state: state, plan: plan, run: run, outputShown: outputShown, timeZone: timeZone)
     }
@@ -252,15 +264,17 @@ public struct SetupCardModel: Sendable, Equatable {
 
     /// A known plugin state counts even without a CLI (read from the tool's
     /// settings as a fallback), so the card agrees with the popover's warning;
-    /// otherwise a missing CLI explains the rest. Events only stand in for a
-    /// session start, never for an enabled plugin. An unknown plugin with the
-    /// CLI found is a failed check, not a missing install.
+    /// otherwise a missing CLI explains the rest, unless the tool is there
+    /// with a path without it: then subspace is just not installed yet. Events
+    /// only stand in for a session start, never for an enabled plugin. An
+    /// unknown plugin with the CLI found is a failed check, not a missing install.
     static func state(of status: IntegrationStatus, lastEventAt: Date? = nil) -> State {
-        switch status.plugin {
+        let missing: State = status.withoutCLI == nil ? .notFound : .notInstalled
+        return switch status.plugin {
         case .enabled: connection(status, lastEventAt: lastEventAt) == nil ? .waiting : .ready
         case .disabled: .disabled
-        case .notInstalled: status.cli == .notFound ? .notFound : .notInstalled
-        case .unknown: status.cli == .notFound ? .notFound : .checking
+        case .notInstalled: status.cli == .notFound ? missing : .notInstalled
+        case .unknown: status.cli == .notFound ? missing : .checking
         }
     }
 
@@ -308,6 +322,22 @@ public struct SetupCardModel: Sendable, Equatable {
                 defaultValue: "The Collective looked in \(locations), and your login shell’s PATH. If you don’t use \(toolName), you can ignore this."
             )
         }
+    }
+
+    /// The tool is there, only the program its lines start with is missing, so
+    /// they are left to copy; the adapter may say how to get the program.
+    private static func programMissingNote(_ alternative: SetupCommands.Alternative) -> LocalizedStringResource {
+        let program = alternative.program
+        if let hint = alternative.missingProgramHint {
+            return .kit(
+                "%@ is not on this Mac, so The Collective can’t run these commands. %@",
+                defaultValue: "\(program) is not on this Mac, so The Collective can’t run these commands. \(hint)"
+            )
+        }
+        return .kit(
+            "%@ is not on this Mac, so The Collective can’t run these commands. Install it first.",
+            defaultValue: "\(program) is not on this Mac, so The Collective can’t run these commands. Install it first."
+        )
     }
 
     /// `~` only for the home folder itself or a path inside it, not for a sibling sharing its prefix.

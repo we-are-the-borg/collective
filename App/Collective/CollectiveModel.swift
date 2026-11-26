@@ -232,7 +232,10 @@ final class CollectiveModel {
             probes: [
                 ClaudeCodeIntegrationProbe(chosenRoot: claudeCodeRoot),
                 CodexIntegrationProbe(chosenRoot: codexRoot),
-                AntigravityIntegrationProbe(chosenRoot: antigravityRoot),
+                // The kit doesn't import AppKit: the desktop app without `agy` is found here.
+                AntigravityIntegrationProbe(chosenRoot: antigravityRoot, isAppInstalled: {
+                    NSWorkspace.shared.urlForApplication(withBundleIdentifier: $0) != nil
+                }),
             ]
         )
     }

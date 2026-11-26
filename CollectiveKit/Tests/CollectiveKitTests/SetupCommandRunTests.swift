@@ -73,7 +73,7 @@ private func makeRun(
     now: @escaping @MainActor () -> Date = { Date(timeIntervalSince1970: 0) },
     onSuccess: @escaping @MainActor () -> Void = {}
 ) -> SetupCommandRun {
-    SetupCommandRun(kind: .install, lines: lines, skipping: skipping, cliName: "tool", cliPath: cliPath, environment: environment,
+    SetupCommandRun(kind: .install, lines: lines, skipping: skipping, programName: "tool", programPath: cliPath, environment: environment,
                     runner: runner, now: now, onSuccess: onSuccess)
 }
 
@@ -127,6 +127,25 @@ private func makeRun(
         #expect(probe.environment(forCLIAt: URL(fileURLWithPath: path)) == expected)
     }
 
+    /// A source whose CLI is missing installs through another program (an alternative path):
+    /// that program's path stands in for its name, in the environment built for that path.
+    @Test func aProgramOtherThanTheCLIRunsFromItsOwnPath() async {
+        let runner = FakeRunner()
+        let base = ["SHELL": "/bin/bash", "PATH": "/usr/bin", "HOME": "/Users/user"]
+        let run = SetupCommandRun(kind: .install, lines: ["git clone --depth 1 https://example.com/plugin.git ~/plugins/example"],
+                                  programName: "git", programPath: "/Library/Developer/CommandLineTools/usr/bin/git",
+                                  environment: base, runner: runner, onSuccess: {})
+        await run.start()?.value
+        #expect(runner.calls.map(\.executable) == ["/bin/bash"])
+        #expect(runner.calls.map(\.arguments) == [
+            ["-l", "-c", "'/Library/Developer/CommandLineTools/usr/bin/git' clone --depth 1 https://example.com/plugin.git ~/plugins/example"],
+        ])
+        #expect(runner.calls.map(\.environment) == [[
+            "SHELL": "/bin/bash", "HOME": "/Users/user",
+            "PATH": "/Library/Developer/CommandLineTools/usr/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin",
+        ]])
+    }
+
     /// Installs clone from GitHub, which takes longer than the probes' few seconds.
     @Test func eachCommandMayTakeTwoMinutes() async {
         let runner = FakeRunner()
@@ -137,7 +156,8 @@ private func makeRun(
     }
 }
 
-/// Every terminal line the adapters offer starts with their CLI, so the run can put its path in front.
+/// Every terminal line the adapters offer starts with their CLI, or with the
+/// program of their path without it, so the run can put its path in front.
 @Suite struct SetupCommandRunAdapterLineTests {
     @Test(arguments: [
         (ClaudeCodeIntegrationProbe.cliName, ClaudeCodeSubspace.commands),
@@ -149,12 +169,18 @@ private func makeRun(
         for line in commands.install + commands.enable + commands.update {
             #expect(line.hasPrefix(cliName + " "), "\(line)")
         }
+        if let alternative = commands.withoutCLI {
+            #expect(!alternative.install.isEmpty)
+            for line in alternative.install + alternative.update {
+                #expect(line.hasPrefix(alternative.program + " "), "\(line)")
+            }
+        }
     }
 
     @Test func aLineForAnotherProgramIsAProgrammerError() async {
         await #expect(processExitsWith: .failure) {
             await MainActor.run {
-                _ = SetupCommandRun(kind: .install, lines: ["git clone example"], cliName: "tool", cliPath: "/usr/local/bin/tool",
+                _ = SetupCommandRun(kind: .install, lines: ["git clone example"], programName: "tool", programPath: "/usr/local/bin/tool",
                                     environment: [:], runner: ProcessCommandRunner(), onSuccess: {})
             }
         }

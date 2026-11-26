@@ -282,6 +282,26 @@ private func pill(_ card: SetupCardModel) -> String? {
         }
     }
 
+    /// The same with a path without the CLI: the warning names the card's
+    /// lines, whether its program was found or not.
+    @Test(arguments: [IntegrationStatus.CLI.found(path: "/usr/bin/fetch", version: nil), .notFound])
+    func popoverWarningAgreesWithTheCardWithoutTheCLI(alternative: IntegrationStatus.CLI) throws {
+        var status = integration(.notInstalled, cli: .notFound)
+        status.commands.withoutCLI = SetupCommands.Alternative(program: "fetch", install: ["fetch clone https://example.com/subspace.git"])
+        status.alternative = alternative
+        let warning = try #require(WarningBlock(ConnectionStatus(integrations: [status])))
+        #expect(warning.commands == ["fetch clone https://example.com/subspace.git"])
+        #expect(warning.commands == card(status).commands?.terminal)
+    }
+
+    @Test(arguments: [IntegrationStatus.CLI.found(path: "/usr/local/bin/tt", version: "1.2.3"), .notFound])
+    func popoverWarningAgreesWithTheCardWithoutAnAlternative(cli: IntegrationStatus.CLI) throws {
+        let status = integration(.notInstalled, cli: cli)
+        let warning = try #require(WarningBlock(ConnectionStatus(integrations: [status])))
+        #expect(warning.commands == status.commands.install)
+        #expect(warning.commands == card(status).commands?.terminal)
+    }
+
     @Test func notFoundWithoutListedLocationsNamesOnlyThePath() {
         let card = card(integration(.notInstalled, cli: .notFound, searchedLocations: []))
         #expect(card.note.map(en) == "The Collective looked in your login shell’s PATH. If you don’t use Test Tool, you can ignore this.")

@@ -43,14 +43,18 @@ private func runner(list capture: String) throws -> FakeRunner {
 /// `agy` where the probe looks first, in `home`.
 private func agyPath(in home: URL) -> String { home.path + "/.local/bin/agy" }
 
-/// Without `executables`, `agy` is found in `home`.
-private func probe(_ runner: FakeRunner, home: URL, executables: Set<String>? = nil, chosenRoot: URL? = nil) -> AntigravityIntegrationProbe {
+/// Without `executables`, `agy` is found in `home`; `apps` are the installed bundle IDs.
+private func probe(_ runner: FakeRunner, home: URL, executables: Set<String>? = nil, apps: Set<String> = [],
+                   chosenRoot: URL? = nil) -> AntigravityIntegrationProbe {
     let executables = executables ?? [agyPath(in: home)]
     return AntigravityIntegrationProbe(runner: runner, isExecutable: { executables.contains($0) }, chosenRoot: chosenRoot,
-                                       environment: [:], home: home)
+                                       environment: [:], home: home, isAppInstalled: { apps.contains($0) })
 }
 
 private let installLine = "agy plugin install https://github.com/we-are-the-borg/subspace-antigravity"
+private let cloneLine = "git clone --depth 1 https://github.com/we-are-the-borg/subspace-antigravity.git ~/.gemini/config/plugins/subspace"
+private let pullLine = "git -C ~/.gemini/config/plugins/subspace pull --ff-only"
+private let desktopApp = "com.google.antigravity"
 
 @Suite struct AntigravitySetupCommandsTests {
     @Test func commandsInstallFromTheRepoAndEnableByName() {
@@ -60,8 +64,8 @@ private let installLine = "agy plugin install https://github.com/we-are-the-borg
             marketplaceLine: nil,
             sourceURL: URL(string: "https://github.com/we-are-the-borg/subspace-antigravity"),
             firstSessionHint: .kit(
-                "Start a new Antigravity conversation.",
-                defaultValue: "Start a new Antigravity conversation."
+                "Quit Antigravity (⌘Q), open it again and start a new conversation.",
+                defaultValue: "Quit Antigravity (⌘Q), open it again and start a new conversation."
             ),
             update: [installLine],
             updateHint: .kit(
@@ -71,6 +75,13 @@ private let installLine = "agy plugin install https://github.com/we-are-the-borg
             release: SubspaceRelease(
                 tagsRepository: "we-are-the-borg/subspace-antigravity", tagPrefix: "antigravity-",
                 minimumVersion: "1.0.0", changesRepository: "we-are-the-borg/subspace"
+            ),
+            withoutCLI: SetupCommands.Alternative(
+                program: "git", install: [cloneLine], update: [pullLine],
+                missingProgramHint: .kit(
+                    "git comes with the Xcode Command Line Tools: run xcode-select --install.",
+                    defaultValue: "git comes with the Xcode Command Line Tools: run xcode-select --install."
+                )
             )))
     }
 
@@ -92,6 +103,11 @@ private let installLine = "agy plugin install https://github.com/we-are-the-borg
 @Suite struct AntigravityPluginListTests {
     @Test func enabledWithTheVersionFromTheCapture() throws {
         #expect(AntigravityIntegrationProbe.pluginState(fromList: Data(try fixture("enabled.json").utf8)) == .enabled(version: "1.0.0"))
+    }
+
+    /// Cloned by hand into the plugin folder, without `agy plugin install`: no `source` key.
+    @Test func aHandPlacedPluginIsEnabledWithItsVersion() throws {
+        #expect(AntigravityIntegrationProbe.pluginState(fromList: Data(try fixture("hand-placed.json").utf8)) == .enabled(version: "1.0.0"))
     }
 
     @Test func disabledWithTheVersionFromTheCapture() throws {
@@ -158,8 +174,8 @@ private let installLine = "agy plugin install https://github.com/we-are-the-borg
         #expect(status.commands.install == [installLine])
     }
 
-    /// `agy plugin uninstall` keeps `plugin_data/`, so a `plugin.json` can outlive
-    /// the plugin: it only dates the last session, the list decides the state.
+    /// `plugin_data/` can outlive the plugin (`agy` 1.5.16 kept it on uninstall), so
+    /// a `plugin.json` there only dates the last session, the list decides the state.
     @Test func aLeftoverPluginJSONDoesNotMakeItInstalled() async throws {
         let root = try temporaryDirectory()
         defer { try? FileManager.default.removeItem(at: root) }
@@ -237,6 +253,89 @@ private let installLine = "agy plugin install https://github.com/we-are-the-borg
         #expect(status.plugin == .notInstalled)
     }
 
+    /// The desktop app without `agy`: the card offers `git`, which is only
+    /// located, never run (`/usr/bin/git` without the Command Line Tools opens
+    /// an install dialog).
+    @Test func withoutTheCLIButWithTheAppGitIsTheAlternative() async {
+        let runner = FakeRunner()
+        let status = await probe(runner, home: home, executables: ["/usr/local/bin/git"], apps: [desktopApp]).check()
+        #expect(status.cli == .notFound)
+        #expect(status.alternative == .found(path: "/usr/local/bin/git", version: nil))
+        #expect(status.plugin == .notInstalled)
+        #expect(runner.calls.allSatisfy { !$0.executable.hasSuffix("/git") })
+    }
+
+    @Test func gitFromTheLoginShellIsOnlyLocated() async {
+        let git = "/Library/Developer/CommandLineTools/usr/bin/git"
+        let runner = FakeRunner(["zsh -l -c command -v git": CommandResult(exitCode: 0, stdout: git + "\n")])
+        let status = await probe(runner, home: home, executables: [git], apps: [desktopApp]).check()
+        #expect(status.alternative == .found(path: git, version: nil))
+        #expect(runner.calls.map(\.arguments) == [["-l", "-c", "command -v agy"], ["-l", "-c", "command -v git"]])
+    }
+
+    @Test func withoutTheCLIOrGitTheAlternativeIsNotFound() async {
+        let status = await probe(FakeRunner(), home: home, executables: [], apps: [desktopApp]).check()
+        #expect(status.cli == .notFound)
+        #expect(status.alternative == .notFound)
+    }
+
+    /// Neither the CLI nor the app: Antigravity is not on this Mac, the card stays "Not found".
+    @Test func withoutTheCLIOrTheAppThereIsNoAlternative() async {
+        let runner = FakeRunner()
+        let status = await probe(runner, home: home, executables: ["/usr/local/bin/git"]).check()
+        #expect(status.cli == .notFound)
+        #expect(status.alternative == nil)
+        #expect(runner.calls.map(\.arguments) == [["-l", "-c", "command -v agy"]])
+    }
+
+    @Test func withTheCLIThereIsNoAlternative() async throws {
+        let status = await probe(try runner(list: "enabled.json"), home: home,
+                                 executables: [cli, "/usr/local/bin/git"], apps: [desktopApp]).check()
+        #expect(status.cli == .found(path: cli, version: "1.5.17"))
+        #expect(status.alternative == nil)
+    }
+
+    /// The state captured after a hand-placed clone: the manifest, and no entry in `config.json`.
+    @Test func aHandPlacedPluginWithoutTheCLIIsEnabledFromTheFiles() async throws {
+        let home = try temporaryHome(manifest: "manifest-plugin.json", config: "config-hand-placed.json")
+        defer { try? FileManager.default.removeItem(at: home) }
+        let status = await probe(FakeRunner(), home: home, executables: ["/usr/local/bin/git"], apps: [desktopApp]).check()
+        #expect(status.cli == .notFound)
+        #expect(status.plugin == .enabled(version: "1.0.0"))
+        #expect(status.alternative == .found(path: "/usr/local/bin/git", version: nil))
+    }
+
+    /// From the probe to the card: the clone runs with the `git` the probe found.
+    @Test func theCardOfTheAppWithoutTheCLIRunsTheCloneWithTheFoundGit() async throws {
+        let status = await probe(FakeRunner(), home: home, executables: ["/usr/local/bin/git"], apps: [desktopApp]).check()
+        let card = SetupCardModel(status, run: nil, now: Date(timeIntervalSince1970: 100_000), home: "/Users/user",
+                                  timeZone: TimeZone(identifier: "GMT")!)
+        #expect(card.state == .notInstalled)
+        #expect(card.commands?.lines.map(\.command) == [cloneLine])
+        let plan = try #require(card.runPlan)
+        #expect(plan.kind == .install)
+        #expect(plan.lines == [cloneLine])
+        #expect(plan.programName == "git")
+        #expect(plan.programPath == "/usr/local/bin/git")
+    }
+
+    /// From the probe to the update group: a hand-placed plugin is pulled with the `git` the probe found.
+    @Test func theUpdateOfAHandPlacedPluginWithoutTheCLIRunsThePullWithTheFoundGit() async throws {
+        let home = try temporaryHome(manifest: "manifest-plugin.json", config: "config-hand-placed.json")
+        defer { try? FileManager.default.removeItem(at: home) }
+        let status = await probe(FakeRunner(), home: home, executables: ["/usr/local/bin/git"], apps: [desktopApp]).check()
+        #expect(status.plugin == .enabled(version: "1.0.0"))
+        let availability = UpdateAvailability.available(installed: SubspaceVersion("1.0.0")!, latest: SubspaceVersion("1.1.0")!)
+        let model = try #require(SourceUpdateModel(status, checkedAt: nil, availability: availability, checksForUpdates: true,
+                                                   now: Date(timeIntervalSince1970: 100_000), timeZone: TimeZone(identifier: "GMT")!))
+        #expect(model.commands?.lines.map(\.command) == [pullLine])
+        let plan = try #require(model.runPlan)
+        #expect(plan.kind == .update(from: SubspaceVersion("1.0.0")!, to: SubspaceVersion("1.1.0")!))
+        #expect(plan.lines == [pullLine])
+        #expect(plan.programName == "git")
+        #expect(plan.programPath == "/usr/local/bin/git")
+    }
+
     @Test func withoutTheCLITheFilesDecide() async throws {
         let home = try temporaryHome(manifest: "manifest-plugin.json", config: "config-disabled.json")
         defer { try? FileManager.default.removeItem(at: home) }
@@ -287,13 +386,13 @@ private func temporaryHome(manifest: String?, config: String?, leftoverPluginDat
         #expect(try state(manifest: "manifest-plugin.json", config: "config-disabled.json") == .disabled(version: "1.0.0"))
     }
 
-    /// Right after `agy plugin install` the config has no entry, and the CLI lists it enabled.
-    @Test(arguments: ["config-no-entry.json", nil])
+    /// Right after `agy plugin install`, and after a clone by hand, the config has no entry, and the CLI lists it enabled.
+    @Test(arguments: ["config-no-entry.json", "config-hand-placed.json", nil])
     func noEntryOrNoConfigIsEnabled(config: String?) throws {
         #expect(try state(manifest: "manifest-plugin.json", config: config) == .enabled(version: "1.0.0"))
     }
 
-    /// `agy plugin uninstall` removes the manifest but keeps `plugin_data/`.
+    /// Without the manifest a leftover `plugin_data/` proves nothing.
     @Test func withoutTheManifestItIsNotInstalledEvenWithLeftoverPluginData() throws {
         #expect(try state(manifest: nil, config: "config-enabled.json", leftoverPluginData: true) == .notInstalled)
     }

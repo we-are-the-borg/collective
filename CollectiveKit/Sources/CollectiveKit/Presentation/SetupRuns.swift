@@ -113,7 +113,7 @@ public final class SetupRuns {
     private func start(_ plan: SetupCardModel.RunPlan?, for source: SourceID) -> Task<Void, Never>? {
         if let run = runs[source], run.isRunning { return nil }
         guard let plan else { return nil }
-        let run = SetupCommandRun(kind: plan.kind, lines: plan.lines, skipping: plan.skipping, cliName: plan.cliName, cliPath: plan.cliPath,
+        let run = SetupCommandRun(kind: plan.kind, lines: plan.lines, skipping: plan.skipping, programName: plan.programName, programPath: plan.programPath,
                                   environment: environment, runner: runner, now: now, onSuccess: onSuccess)
         runs[source] = run
         outputShown.remove(source)

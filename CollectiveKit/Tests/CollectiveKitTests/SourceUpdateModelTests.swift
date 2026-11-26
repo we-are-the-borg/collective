@@ -132,8 +132,8 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         #expect(plan.kind == .update(from: version("1.0.1"), to: version("1.3.0")))
         #expect(plan.lines == [marketplaceUpdate, pluginUpdate])
         #expect(plan.skipping == [])
-        #expect(plan.cliName == "claude")
-        #expect(plan.cliPath == "/Users/user/.local/bin/claude")
+        #expect(plan.programName == "claude")
+        #expect(plan.programPath == "/Users/user/.local/bin/claude")
     }
 
     @Test func codexAsksToApproveTheChangedHooksInsteadOfRestarting() {
@@ -464,5 +464,55 @@ private func header(_ model: SourceUpdateModel?) -> String? {
         let required = UpdateAvailability(installed: "1.0.1", latest: nil, minimum: version("1.2.0"))
         #expect(makeModel(status, required, checksForUpdates: false) == nil)
         #expect(makeModel(status, required) == nil)
+    }
+}
+
+/// A tool there without its CLI updates through the program of its path without it.
+@Suite struct SourceUpdateWithoutCLITests {
+    private let pull = "fetch -C ~/.test-tool/plugins/subspace pull"
+
+    private func tool(cli: IntegrationStatus.CLI = .notFound, alternative: IntegrationStatus.CLI?, update: [String]? = nil) -> IntegrationStatus {
+        IntegrationStatus(
+            source: "test-tool", toolName: "Test Tool", cliName: "tt", cli: cli,
+            plugin: .enabled(version: "1.0.1"), lastSessionStartAt: Date(timeIntervalSince1970: 1),
+            commands: SetupCommands(
+                install: [], installInApp: [], enable: [], enableInApp: [], update: ["tt update subspace"],
+                withoutCLI: SetupCommands.Alternative(program: "fetch", install: ["fetch clone example"], update: update ?? [pull])
+            ),
+            alternative: alternative
+        )
+    }
+
+    @Test func aFoundAlternativeOffersItsUpdateLines() throws {
+        let model = try #require(makeModel(tool(alternative: .found(path: "/usr/bin/fetch", version: nil))))
+        #expect(model.state == .available)
+        #expect(lines(model) == ["1 \(pull)"])
+        #expect(button(model) == "Update (enabled) / Update subspace: runs \(pull)")
+        let plan = try #require(model.runPlan)
+        #expect(plan.kind == .update(from: version("1.0.1"), to: version("1.3.0")))
+        #expect(plan.lines == [pull])
+        #expect(plan.programName == "fetch")
+        #expect(plan.programPath == "/usr/bin/fetch")
+    }
+
+    /// As without a found CLI: only there to copy.
+    @Test func aMissingAlternativeLeavesItsUpdateLinesToCopy() throws {
+        let model = try #require(makeModel(tool(alternative: .notFound)))
+        #expect(lines(model) == [pull])
+        #expect(model.commands?.footer == nil)
+        #expect(model.runPlan == nil)
+    }
+
+    /// "Empty = no update offered", as for the CLI's own lines.
+    @Test func anAlternativeWithoutUpdateLinesOffersNoGroup() {
+        #expect(makeModel(tool(alternative: .found(path: "/usr/bin/fetch", version: nil), update: [])) == nil)
+    }
+
+    /// The CLI is there: its own lines, whatever the adapter offers without it.
+    @Test func aFoundCLIKeepsItsOwnLines() throws {
+        let model = try #require(makeModel(tool(cli: .found(path: "/usr/local/bin/tt", version: nil), alternative: nil)))
+        #expect(lines(model) == ["1 tt update subspace"])
+        #expect(model.runPlan?.programName == "tt")
+        #expect(model.runPlan?.programPath == "/usr/local/bin/tt")
     }
 }

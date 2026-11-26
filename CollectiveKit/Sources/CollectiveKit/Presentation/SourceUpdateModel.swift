@@ -67,7 +67,7 @@ public struct SourceUpdateModel: Sendable, Equatable {
         }
         // Without lines there is no box and no button; a required update
         // still shows in the status row.
-        guard Self.installedVersion(status) != nil, !status.commands.update.isEmpty else { return nil }
+        guard Self.installedVersion(status) != nil, !Self.updateCommands(status).lines.isEmpty else { return nil }
         switch SetupCardModel.state(of: status) {
         case .ready, .waiting, .disabled: break
         case .notInstalled, .notFound, .checking: return nil
@@ -95,9 +95,9 @@ public struct SourceUpdateModel: Sendable, Equatable {
         }
     }
 
-    /// Before a run: the numbered lines and the Update button. Only a CLI the
-    /// probe found can run them; without one they are only there to copy, as
-    /// on the setup card.
+    /// Before a run: the numbered lines and the Update button. Only a program
+    /// the probe found can run them; without one they are only there to copy,
+    /// as on the setup card.
     private init(
         offering status: IntegrationStatus,
         from: SubspaceVersion,
@@ -113,13 +113,14 @@ public struct SourceUpdateModel: Sendable, Equatable {
         self.title = title
         subtitle = Self.youHave(from)
         self.text = text
-        let update = status.commands.update
-        guard case .found(let path, _) = status.cli else {
+        let (update, program) = Self.updateCommands(status)
+        guard let program else {
             let lines = update.map { SetupCardModel.CommandsBox.Line(command: $0, slot: nil, tag: nil, output: nil) }
             (commands, runPlan) = (SetupCardModel.CommandsBox(lines: lines, footer: nil, inApp: []), nil)
             return
         }
-        runPlan = SetupCardModel.RunPlan(kind: .update(from: from, to: to), lines: update, skipping: [], cliName: status.cliName, cliPath: path)
+        runPlan = SetupCardModel.RunPlan(kind: .update(from: from, to: to), lines: update, skipping: [],
+                                         programName: program.name, programPath: program.path)
         let lines = update.enumerated().map { index, command in
             SetupCardModel.CommandsBox.Line(command: command, slot: .number(index + 1), tag: nil, output: nil)
         }
@@ -274,6 +275,17 @@ public struct SourceUpdateModel: Sendable, Equatable {
             return SetupCardModel.CommandsBox.Line(command: line.command, slot: slot, tag: nil, output: output)
         }
         commands = SetupCardModel.CommandsBox(lines: lines, footer: footer, inApp: [])
+    }
+
+    /// The update's lines and, where the probe found it, the program they start
+    /// with: the CLI's own, or without it those of the path without it.
+    private static func updateCommands(_ status: IntegrationStatus) -> (lines: [String], program: (name: String, path: String)?) {
+        if let alternative = status.withoutCLI {
+            let path: String? = if case .found(let path, _) = alternative.program { path } else { nil }
+            return (alternative.commands.update, path.map { (alternative.commands.program, $0) })
+        }
+        let path: String? = if case .found(let path, _) = status.cli { path } else { nil }
+        return (status.commands.update, path.map { (status.cliName, $0) })
     }
 
     /// The installed version as the probe reports it, if it reads as one.
