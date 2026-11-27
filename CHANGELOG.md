@@ -9,12 +9,12 @@ each section lists the merged pull requests by type.
 
 ### Features
 
-- **antigravity:** Add Google Antigravity as a subspace source (#27)
-- **setup:** Support installing Antigravity plugin without agy CLI (#30)
+- **antigravity:** Add Google Antigravity as a subspace source
+- **setup:** Support installing Antigravity plugin without agy CLI
 
 ### Bug Fixes
 
-- **setup:** Update each source's status as soon as its probe finishes (#29)
+- **setup:** Update each source's status as soon as its probe finishes
 
 ## 1.3.0
 

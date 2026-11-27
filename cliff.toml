@@ -36,6 +36,13 @@ conventional_commits = true
 filter_unconventional = true
 split_commits = false
 protect_breaking_commits = false
+# A squash merge ends its title with the pull request number in parentheses. It
+# stays out: bare issue numbers of this repository are not kept in tracked files
+# (scripts/public-check.sh, rule `plan-refs`). `(?m)`: the title is the first
+# line of a message that usually has a body.
+commit_preprocessors = [
+  { pattern = "(?m) \\(#[0-9]+\\)$", replace = "" },
+]
 # The HTML comment only orders the groups; `striptags` removes it.
 commit_parsers = [
   { message = "^chore\\(release\\)", skip = true },
