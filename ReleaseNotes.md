@@ -4,7 +4,10 @@ Handwritten changelog and release notes for each version of The Collective. See 
 
 ## 1.4.0
 
-<!-- What changed for users of The Collective, in their words. Required: publish stops while this section is empty. -->
+- **Google Antigravity** is now supported, both the `agy` CLI and the Desktop App. Its conversations show in the popover like Claude Code and Codex sessions, with subagents under their parent, the current tool and the model. Set up subspace for Antigravity in Setup or Settings › Antigravity.
+- Without the `agy` CLI, Setup now offers to install subspace for the Antigravity Desktop App with `git`.
+- Setup and Settings now show each tool's status as soon as it has been checked. A tool that is slow to answer no longer holds back the others.
+- Fixed a successful subspace update being shown as failed when a tool was slow to answer.
 
 ## 1.3.0
 
