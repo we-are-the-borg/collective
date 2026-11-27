@@ -189,6 +189,8 @@ cp ReleaseNotes.md CollectiveKit/Sources/CollectiveKit/Resources/ReleaseNotes.md
 
 Commit the changes and squash-merge the PR.
 
+CI runs `scripts/release.sh check-notes` on every PR and push. It runs the same checks on the changelog, the release notes and the bundled copy as `publish` does (see below), for the version in `App/Version.xcconfig`. On an ordinary PR that is the released version, so the check passes. A release PR stays red until its user notes are written and the bundled copy matches. Run it locally to check before pushing.
+
 **2. Publish**
 
 After merging, update your local `main` and run:
@@ -199,6 +201,7 @@ scripts/release.sh publish
 
 Before building, the script checks that:
 
+- `CHANGELOG.md` contains a non-empty section for the current version.
 - The release notes exist and contain a non-empty section for the current version.
 - The bundled release notes match the source file.
 - The working tree is clean and `main` matches `origin/main`.
