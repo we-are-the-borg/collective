@@ -9,13 +9,18 @@
 #                                notarized build, tag and GitHub release
 #                                (after a prompt); run again, it reuses the
 #                                notarized build of the same HEAD
+#   scripts/release.sh check-notes  anywhere (CI runs it on every PR and
+#                                push): the checks `publish` runs on the
+#                                changelog, the user release notes and their
+#                                bundled copy, for the current version
 #
-# Both ask in the terminal; `--yes` (`-y`) after the command answers every
-# question with yes. Without a terminal and without `--yes` they abort.
+# prepare and publish ask in the terminal; `--yes` (`-y`) after the command
+# answers every question with yes. Without a terminal and without `--yes`
+# they abort. check-notes asks nothing.
 #
-# Needs git-cliff, gh, Xcode, the notarytool keychain profile `notary` and,
-# for publish, the Sparkle signing key in the keychain
-# (see README).
+# prepare and publish need git-cliff, gh, Xcode, the notarytool keychain
+# profile `notary` and, for publish, the Sparkle signing key in the keychain
+# (see README); check-notes needs only git and the usual shell tools.
 set -euo pipefail
 
 cd "$(git rev-parse --show-toplevel)"
@@ -47,6 +52,10 @@ usage: scripts/release.sh <command> [--yes]
             matches, build, notarize, tag
             vX.Y.Z and create the GitHub release; run again after a decline
             or failure, it reuses the notarized build of the same HEAD
+  check-notes
+            anywhere, also in CI: check that CHANGELOG.md and ReleaseNotes.md
+            have a written section for the current version and the app's
+            copy matches; asks nothing, needs no --yes
 
   --yes, -y answer every question with yes (needed without a terminal)
 EOF
@@ -398,23 +407,23 @@ reusable_build() {
   fi
 }
 
-cmd_publish() {
-  require_tools gh xcodebuild xcrun swift
-  require_clean_main
-
-  local version tag
+# The version in $VERSION_FILE, the one `prepare` wrote.
+marketing_version() {
+  local version
   version="$(sed -n -E 's/^MARKETING_VERSION = ([0-9]+\.[0-9]+\.[0-9]+)$/\1/p' "$VERSION_FILE")"
   [[ -n "$version" ]] || die "no line 'MARKETING_VERSION = X.Y.Z' in $VERSION_FILE"
-  tag="v$version"
+  printf '%s\n' "$version"
+}
 
-  local_tag_exists "$tag" && die "tag $tag already exists locally; $version is already released"
-  remote_tag_exists "$tag" && die "tag $tag already exists on origin; $version is already released"
+# Everything `publish` needs from the release PR for $1: the changelog
+# section, written user notes and their bundled copy. `publish` and
+# `check-notes` (CI) share it, so a release PR fails on exactly what would
+# stop `publish`.
+check_release_notes() {
+  local version="$1"
+  [[ -n "$(markdown_section "$CHANGELOG" "$version")" ]] ||
+    die "$CHANGELOG has no '## $version' section, or it is empty"
 
-  local notes
-  notes="$(markdown_section "$CHANGELOG" "$version")"
-  [[ -n "$notes" ]] || die "$CHANGELOG has no '## $version' section, or it is empty"
-
-  # Checked before building, so forgotten user notes cost no notarization.
   [[ -f "$RELEASE_NOTES" ]] || die "$RELEASE_NOTES is missing; it needs a '## $version' section with the user release notes"
   grep -qxF "## $version" "$RELEASE_NOTES" ||
     die "$RELEASE_NOTES has no '## $version' section; write the user release notes there in a PR first"
@@ -423,6 +432,33 @@ cmd_publish() {
   # The app shows its bundled copy; a stale one would ship without these notes.
   cmp -s "$RELEASE_NOTES" "$BUNDLED_RELEASE_NOTES" ||
     die "$BUNDLED_RELEASE_NOTES differs from $RELEASE_NOTES (or is missing); in a PR run: cp $RELEASE_NOTES $BUNDLED_RELEASE_NOTES"
+}
+
+# For CI on every PR and push: on an ordinary PR the version is the released
+# one, whose notes exist; a release PR stays red until its notes are written.
+# Reads only the working tree: no branch, clean-tree or network requirement.
+cmd_check_notes() {
+  local version
+  version="$(marketing_version)"
+  check_release_notes "$version"
+  echo "ok: $CHANGELOG, $RELEASE_NOTES and its bundled copy are ready for $version"
+}
+
+cmd_publish() {
+  require_tools gh xcodebuild xcrun swift
+  require_clean_main
+
+  local version tag
+  version="$(marketing_version)"
+  tag="v$version"
+
+  local_tag_exists "$tag" && die "tag $tag already exists locally; $version is already released"
+  remote_tag_exists "$tag" && die "tag $tag already exists on origin; $version is already released"
+
+  # Checked before building, so forgotten user notes cost no notarization.
+  check_release_notes "$version"
+  local notes
+  notes="$(markdown_section "$CHANGELOG" "$version")"
 
   # The tag goes on HEAD; a PR merged after the release PR would end up in
   # this release without being in its changelog section.
@@ -491,6 +527,11 @@ fi
 [[ $# -eq 0 ]] || usage
 
 case "$subcommand" in
+  # Asks nothing, so it runs in CI without a terminal and without --yes.
+  check-notes)
+    cmd_check_notes
+    exit
+    ;;
   prepare | publish) ;;
   *) usage ;;
 esac

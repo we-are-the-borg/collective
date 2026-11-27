@@ -50,6 +50,15 @@ jobs:
         run: |
           bash scripts/test-public-check.sh
           scripts/public-check.sh
+      # The checks `publish` runs on the notes, early so a release PR fails
+      # fast: on an ordinary PR MARKETING_VERSION is the released version,
+      # whose notes exist, so it passes; a release PR stays red until its user
+      # notes are written and the bundled copy matches. The script's own tests
+      # need nothing beyond the runner: stubs and a throwaway repo.
+      - name: Release notes
+        run: |
+          scripts/release.sh check-notes
+          bash scripts/test-release.sh
       # Quiet: failures and the summary only. Without it the parameterized
       # tests print every argument, tens of thousands of lines.
       - name: Test SubspaceKit

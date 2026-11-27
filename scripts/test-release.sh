@@ -530,6 +530,72 @@ case_publish_with_stale_bundled_copy() {
   done
 }
 
+# CI runs check-notes on every PR: without a terminal, without --yes, on a
+# branch with local edits, and without fetching.
+case_check_notes_passes() {
+  current="check-notes passes on a branch with local edits, without a terminal and --yes"
+  new_repo check-notes-ok
+  (cd "$REPO" && git switch --quiet -c some-pr && echo "edit" >local-edit.txt)
+  rm -rf "$ORIGIN"
+  run /dev/null check-notes
+  if [[ "$STATUS" -ne 0 ]]; then
+    fail "exit status $STATUS: $OUTPUT"
+  elif [[ "$OUTPUT" != *"9.9.9"* || "$(printf '%s\n' "$OUTPUT" | wc -l | tr -d ' ')" != 1 ]]; then
+    fail "expected one line naming 9.9.9: $OUTPUT"
+  elif [[ -s "$STUB_LOG" ]]; then
+    fail "tools were called: $(cat "$STUB_LOG")"
+  else
+    pass
+  fi
+}
+
+# The same checks as publish, so a release PR stays red until they pass.
+case_check_notes_fails() {
+  local variant
+  for variant in "no file" "no section" "comment only" "an outdated bundled copy" "no bundled copy" "no changelog section"; do
+    current="check-notes fails with $variant"
+    new_repo "check-notes-${variant// /-}"
+    case "$variant" in
+      "no file") set_release_notes ;;
+      "no section") set_release_notes $'# Release Notes\n\n## 9.9.8\n\nAn older release.\n' ;;
+      "comment only") set_release_notes $'# Release Notes\n\n## 9.9.9\n\n<!-- a hint -->\n\n## 9.9.8\n\nAn older release.\n' ;;
+      "an outdated bundled copy") printf '# Release Notes\n' >"$REPO/$BUNDLED_NOTES" ;;
+      "no bundled copy") rm "$REPO/$BUNDLED_NOTES" ;;
+      "no changelog section") printf '# Changelog\n\n## 9.9.8\n\n- An older release\n' >"$REPO/CHANGELOG.md" ;;
+    esac
+    local expected="ReleaseNotes.md"
+    [[ "$variant" != "no changelog section" ]] || expected="CHANGELOG.md has no '## 9.9.9' section"
+    [[ "$variant" != *"bundled copy" ]] || expected="cp ReleaseNotes.md $BUNDLED_NOTES"
+    run /dev/null check-notes
+    if [[ "$STATUS" -eq 0 ]]; then
+      fail "exit status 0: $OUTPUT"
+    elif [[ "$OUTPUT" != *"error: "*"$expected"* ]]; then
+      fail "message does not contain '$expected': $OUTPUT"
+    elif [[ -s "$STUB_LOG" ]]; then
+      fail "tools were called: $(cat "$STUB_LOG")"
+    else
+      pass
+    fi
+  done
+}
+
+case_publish_without_changelog_section() {
+  current="publish stops before building without a changelog section"
+  new_repo publish-no-changelog
+  (cd "$REPO" && printf '# Changelog\n\n## 9.9.8\n\n- An older release\n' >CHANGELOG.md &&
+    git add CHANGELOG.md && git commit --quiet --amend --no-edit && git push --quiet --force origin main)
+  run /dev/null publish --yes
+  if [[ "$STATUS" -eq 0 ]]; then
+    fail "exit status 0: $OUTPUT"
+  elif [[ "$OUTPUT" != *"CHANGELOG.md has no '## 9.9.9' section"* ]]; then
+    fail "message does not name the changelog section: $OUTPUT"
+  elif logged "^xcodebuild " || logged "^gh "; then
+    fail "built or released: $(cat "$STUB_LOG")"
+  else
+    pass
+  fi
+}
+
 case_prepare_adds_user_notes_section() {
   current="prepare adds an empty ## 9.10.0 section to ReleaseNotes.md in the release commit"
   new_repo prepare-notes
@@ -768,6 +834,9 @@ case_terminal_yes
 case_unknown_argument
 case_publish_without_user_notes
 case_publish_with_stale_bundled_copy
+case_publish_without_changelog_section
+case_check_notes_passes
+case_check_notes_fails
 case_prepare_adds_user_notes_section
 case_prepare_first_user_notes_section
 case_prepare_ignores_near_miss_headings
